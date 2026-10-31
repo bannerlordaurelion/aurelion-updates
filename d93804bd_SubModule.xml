@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Module>
+    <Name value="Bannerlord Co-op" />
+    <Id value="Coop" />
+    <Version value="v0.1.7" />
+    <SingleplayerModule value="true" />
+    <MultiplayerModule value="false" />
+    <DependedModules>
+        <DependedModule Id="Native" DependentVersion="v1.4.8" />
+        <DependedModule Id="SandBoxCore" DependentVersion="v1.4.8" />
+        <DependedModule Id="Sandbox" DependentVersion="v1.4.8" />
+        <DependedModule Id="CustomBattle" DependentVersion="v1.4.8" />
+        <DependedModule Id="StoryMode" DependentVersion="v1.4.8" />
+    </DependedModules>
+    <IncompatibleModules>
+        <Module Id="CoopNightly" />
+    </IncompatibleModules>
+    <SubModules>
+        <SubModule>
+            <Name value="Bannerlord Co-op" />
+            <DLLName value="Coop.dll" />
+            <SubModuleClassType value="Coop.CoopMod" />
+            <Tags>
+                <Tag key="DedicatedServerType" value="none" />
+                <Tag key="IsNoRenderModeElement" value="false" />
+            </Tags>
+        </SubModule>
+    <SubModule><Name value="Aurelion Core" /><DLLName value="Aurelion.Core.dll" /><SubModuleClassType value="Aurelion.Core.SubModule" /><Tags>
+                <Tag key="DedicatedServerType" value="none" />
+                <Tag key="IsNoRenderModeElement" value="false" />
+            </Tags></SubModule></SubModules>
+    <Xmls>
+        <XmlNode>
+            <XmlName id="GameText" path="global_strings" />
+        </XmlNode>
+        <XmlNode>
+            <XmlName id="NPCCharacters" path="coop_fixed_town_npcs" />
+            <IncludedGameTypes>
+                <GameType value="Campaign" />
+                <GameType value="CampaignStoryMode" />
+            </IncludedGameTypes>
+        </XmlNode>
+        <XmlNode>
+            <XmlName id="NPCCharacters" path="coop_wanderers" />
+            <IncludedGameTypes>
+                <GameType value="Campaign" />
+                <GameType value="CampaignStoryMode" />
+            </IncludedGameTypes>
+        </XmlNode>
+        <XmlNode>
+            <XmlName id="NPCCharacters" path="coop_minor_faction_lords" />
+            <IncludedGameTypes>
+                <GameType value="Campaign" />
+                <GameType value="CampaignStoryMode" />
+            </IncludedGameTypes>
+        </XmlNode>
+        <XmlNode>
+            <XmlName id="Factions" path="coop_minor_factions" />
+            <IncludedGameTypes>
+                <GameType value="Campaign" />
+                <GameType value="CampaignStoryMode" />
+            </IncludedGameTypes>
+        </XmlNode>
+        <XmlNode>
+            <XmlName id="GameText" path="coop_wanderer_strings" />
+            <IncludedGameTypes>
+                <GameType value="Campaign" />
+                <GameType value="CampaignStoryMode" />
+            </IncludedGameTypes>
+        </XmlNode>
+        <XmlNode>
+            <XmlName id="Items" path="tournament_spectator_throwables" />
+            <IncludedGameTypes>
+                <GameType value="Campaign" />
+                <GameType value="CampaignStoryMode" />
+                <GameType value="CustomGame" />
+                <GameType value="EditorGame" />
+            </IncludedGameTypes>
+        </XmlNode>
+    </Xmls>
+</Module>
