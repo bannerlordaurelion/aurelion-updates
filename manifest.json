@@ -1,0 +1,640 @@
+{
+  "schema": 1,
+  "serverName": "Bannerlord Aurelion",
+  "server": {
+    "host": "185.132.133.85",
+    "port": 4200
+  },
+  "gameVersion": "v1.4.8",
+  "baseUrl": "",
+  "statusUrl": "",
+  "links": {
+    "discord": "https://discord.gg/8gG6tXm7R",
+    "website": ""
+  },
+  "launcher": {
+    "version": "1.0.0",
+    "url": "",
+    "sha256": ""
+  },
+  "cleanExtraFiles": true,
+  "modules": [
+    {
+      "id": "Coop",
+      "folder": "Coop",
+      "name": "Bannerlord Co-op",
+      "version": "v0.1.7",
+      "files": [
+        {
+          "path": "Server Instructions.md",
+          "size": 5926,
+          "sha256": "42A80563856BEF43D274D5A36C5A704B397E9BF96CEF8F47FCB399950E3B9CAA",
+          "url": "Server%20Instructions.md"
+        },
+        {
+          "path": "SubModule.xml",
+          "size": 3010,
+          "sha256": "BDB42652B7ECA45090B6EDE4CB8C78237869FEF7E040E799E7E350273F1CCEC0",
+          "url": "SubModule.xml"
+        },
+        {
+          "path": "mod-config.default.json",
+          "size": 11942,
+          "sha256": "3DA4619BC58B1D79B7723BAF6C3DF749CBD3D0512A9DF9EA76F0E082A8C31E6C",
+          "url": "mod-config.default.json"
+        },
+        {
+          "path": "GUI/Brushes/CoopButtons.xml",
+          "size": 1303,
+          "sha256": "21A77286CFE9C826E66F4B36893E9E7EE6C8526FBEFF2470A034196E81EABDDE",
+          "url": "CoopButtons.xml"
+        },
+        {
+          "path": "GUI/Brushes/CoopPlayerList.xml",
+          "size": 957,
+          "sha256": "46E4AABDE60036ED82F9D3026D442AB0C0A2229972299D0D884FE77E0FBC8A38",
+          "url": "CoopPlayerList.xml"
+        },
+        {
+          "path": "GUI/Prefabs/CoopBugReportUIMovie.xml",
+          "size": 6389,
+          "sha256": "9FA2CDACCE7B889823274FEAB17108958E499B697A083697BFC9BAA4EDA00140",
+          "url": "CoopBugReportUIMovie.xml"
+        },
+        {
+          "path": "GUI/Prefabs/CoopChatUIMovie.xml",
+          "size": 12532,
+          "sha256": "4AC0210F9C12E04569C0CDABEC014CED7666534F6234C08E39D1A534522EA7F2",
+          "url": "CoopChatUIMovie.xml"
+        },
+        {
+          "path": "GUI/Prefabs/CoopConnectionUIMovie.xml",
+          "size": 28312,
+          "sha256": "C12ECA79FDAB4E5749560F1C63BE9F3C55A678883BB29649757CFFA6E3F47C1A",
+          "url": "CoopConnectionUIMovie.xml"
+        },
+        {
+          "path": "GUI/Prefabs/CoopJoinCancelOverlay.xml",
+          "size": 605,
+          "sha256": "7C20C2F5630F55335BDBB503BA8EB45A562E6043EF580976355D694567A952C4",
+          "url": "CoopJoinCancelOverlay.xml"
+        },
+        {
+          "path": "GUI/Prefabs/CoopLocationPlayerInteractionWaitingOverlay.xml",
+          "size": 1890,
+          "sha256": "C1D5F0563C307E88F0200766F6E1D74841BF6CB814B82D32C749D02E0396B674",
+          "url": "CoopLocationPlayerInteractionWaitingOverlay.xml"
+        },
+        {
+          "path": "GUI/Prefabs/CoopOptionsUIMovie.xml",
+          "size": 56176,
+          "sha256": "0F98C8A5C2B68346FF6D5D5F196DCD0C44CD177CA621C7E18AB9D485DD0DE607",
+          "url": "CoopOptionsUIMovie.xml"
+        },
+        {
+          "path": "GUI/Prefabs/CoopPlayerListUIMovie.xml",
+          "size": 10136,
+          "sha256": "249FB9C04892FFCEC628C9C885CA67C8C834CE777A25A4A32AB683D787E248E0",
+          "url": "CoopPlayerListUIMovie.xml"
+        },
+        {
+          "path": "GUI/Prefabs/CoopPlayerPartyTradeOverlay.xml",
+          "size": 849,
+          "sha256": "91E4E31CFFA9BB9281D7105F6884DFEA2FB4CAE9A3F703844404DF2B4CE41861",
+          "url": "CoopPlayerPartyTradeOverlay.xml"
+        },
+        {
+          "path": "GUI/Prefabs/CoopTournamentScreen.xml",
+          "size": 35453,
+          "sha256": "F5449EA591B4669BA268C7B447E782833BABC82C96CAE36269ACE40403985A7C",
+          "url": "CoopTournamentScreen.xml"
+        },
+        {
+          "path": "GUI/Prefabs/CoopVoiceSpeakers.xml",
+          "size": 2266,
+          "sha256": "9598F6B96CF2560CACA9FC1899DFDD5391AC866BED72733FD1A5B6E6A6211BF6",
+          "url": "CoopVoiceSpeakers.xml"
+        },
+        {
+          "path": "GUI/Prefabs/CreditsPopupUIMovie.xml",
+          "size": 8277,
+          "sha256": "E60C58DA6973603F436767B0F71B37B672A1C8143FFEC61E882B240CA68B50CB",
+          "url": "CreditsPopupUIMovie.xml"
+        },
+        {
+          "path": "GUI/Prefabs/DonatePopupUIMovie.xml",
+          "size": 3768,
+          "sha256": "F1DC61CC45C0DBAE2CE41E1ED785B918ADC039F614565F6E777C4ABBA681014F",
+          "url": "DonatePopupUIMovie.xml"
+        },
+        {
+          "path": "GUI/Prefabs/EncyclopediaSettlementPage.xml",
+          "size": 18587,
+          "sha256": "7CCED256C0C10417445EF227C0B776655AAF9DACC573908C959E140D1879184A",
+          "url": "EncyclopediaSettlementPage.xml"
+        },
+        {
+          "path": "GUI/Prefabs/MissionMapTime.xml",
+          "size": 1167,
+          "sha256": "ADE460C05E4260FC7A4DD7010ECCC8A5BDB6DF386932EE20221EC2397FE3EED7",
+          "url": "MissionMapTime.xml"
+        },
+        {
+          "path": "GUI/Prefabs/PlayerNameplates.xml",
+          "size": 2482,
+          "sha256": "4E8E9CFD33721C426089017452E055F5690DD857E42770F37FF432670607566C",
+          "url": "PlayerNameplates.xml"
+        },
+        {
+          "path": "ModuleData/coop_fixed_town_npcs.xml",
+          "size": 30658,
+          "sha256": "58FF0162AB06D008FAC2559F9E2A2E88E8592714290A4E4EBC6F3B0C79683034",
+          "url": "coop_fixed_town_npcs.xml"
+        },
+        {
+          "path": "ModuleData/coop_minor_faction_lords.xml",
+          "size": 3370,
+          "sha256": "C441089869FB2D1EC2C4FF954F9771946078D1977BF26F986E2B8399030DE5D6",
+          "url": "coop_minor_faction_lords.xml"
+        },
+        {
+          "path": "ModuleData/coop_minor_factions.xml",
+          "size": 895,
+          "sha256": "3A22C896F2B672FE0729901F8F0E54D6DFC1EBEE39FCE0740CBE801EF9A1FDFD",
+          "url": "coop_minor_factions.xml"
+        },
+        {
+          "path": "ModuleData/coop_wanderer_strings.xml",
+          "size": 31903,
+          "sha256": "08E2D3418EEBB6532F85DC5A8B517F430550C45090094C52005FE6E4AC830BB7",
+          "url": "coop_wanderer_strings.xml"
+        },
+        {
+          "path": "ModuleData/coop_wanderers.xml",
+          "size": 17587,
+          "sha256": "8B6064F2729F380BE6DB571BCD1E9AE50DF9C83669DF5DAC8B64E12E5BCFA5AB",
+          "url": "coop_wanderers.xml"
+        },
+        {
+          "path": "ModuleData/global_strings.xml",
+          "size": 16239,
+          "sha256": "B19B39B44DD797CFB38653FAED3825B672B9E503B888437EF6B3B54024DA5768",
+          "url": "global_strings.xml"
+        },
+        {
+          "path": "ModuleData/tournament_spectator_throwables.xml",
+          "size": 1045,
+          "sha256": "0D718F51534F4801793D1716C50E329531410A81C51B010B583BDCC9C277CDBB",
+          "url": "tournament_spectator_throwables.xml"
+        },
+        {
+          "path": "ThirdPartyNotices/Concentus-LICENSE.txt",
+          "size": 1779,
+          "sha256": "BF891F9684FBC35A92B2C922AA4328ACD5D1D7E97250DED4B165557E5B2064FF",
+          "url": "Concentus-LICENSE.txt"
+        },
+        {
+          "path": "ThirdPartyNotices/Microsoft-NET-LICENSE.txt",
+          "size": 1139,
+          "sha256": "D7A68596AB69B06F51CA278A6545148E4269A9381C26D597C13DF5D88E08CF5B",
+          "url": "Microsoft-NET-LICENSE.txt"
+        },
+        {
+          "path": "ThirdPartyNotices/Microsoft-NET-THIRD-PARTY-NOTICES.txt",
+          "size": 18886,
+          "sha256": "388C07F579998286E5DF706A2E68BF6E01100187CCB0FF0310E26C3383F7B2B2",
+          "url": "Microsoft-NET-THIRD-PARTY-NOTICES.txt"
+        },
+        {
+          "path": "ThirdPartyNotices/NAudio-LICENSE.txt",
+          "size": 1059,
+          "sha256": "303E01786B271EB464B3F43D18A375F2F17D37BC708A37C2FDF45B289FB5BFAA",
+          "url": "NAudio-LICENSE.txt"
+        },
+        {
+          "path": "ThirdPartyNotices/README.txt",
+          "size": 1648,
+          "sha256": "20D9ED782B00A5141D7FA275C338E95DAA62A429C1EC68B7C0478701EFAAC227",
+          "url": "README.txt"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/0Harmony.dll",
+          "size": 2477344,
+          "sha256": "7ECD8372D5F881D4FD938AB07C2ABA22944E0E7D16EC4E1BEA87A452B2CA3BD1",
+          "url": "0Harmony.dll"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/Autofac.dll",
+          "size": 390432,
+          "sha256": "61FA884D1CAF9BD251A5431B132CACFF627FA429D6DF309B5752F164673A1139",
+          "url": "Autofac.dll"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/Common.dll",
+          "size": 174368,
+          "sha256": "CD53FDC4AFDBBEC475F5F0A1C7D1A3E8806C590AF62CA2B9E0CCA98D5F2379C2",
+          "url": "Common.dll"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/Concentus.dll",
+          "size": 340768,
+          "sha256": "F03852844310ECEA6CC1D090D4117EE702FB5FCAF0E5E37E2A4CB93E68AD0866",
+          "url": "Concentus.dll"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/Coop.Core.dll",
+          "size": 673568,
+          "sha256": "E9AD612C6FE2BAD674341FF5084C66CA02C04D2DA7174ED3DC9EDA31E638228C",
+          "url": "Coop.Core.dll"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/Coop.CrashReporter.exe",
+          "size": 41760,
+          "sha256": "EC8D9A47C34179996C2DCB4B143BFFB5D18253F598A155B09953BF9FB5E33428",
+          "url": "Coop.CrashReporter.exe"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/Coop.Steam.dll",
+          "size": 87328,
+          "sha256": "D96471781B7547A3378C2158A20CA9FC710FBFFC92C32B5505380325A5F249CE",
+          "url": "Coop.Steam.dll"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/Coop.dll",
+          "size": 58144,
+          "sha256": "BF1D73DAA4BF0B22002E6DB1F06EBD13B94235F184FBFA739EF7CDD996F37128",
+          "url": "Coop.dll"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/DiscordRPC.dll",
+          "size": 108320,
+          "sha256": "8AC18D7AA20A46A294BFA3EA8F5BB7FBAC10868B8B762CCCFDC4D26A7A85F496",
+          "url": "DiscordRPC.dll"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/Fmod5Sharp.dll",
+          "size": 915744,
+          "sha256": "727FF05A819913406D2EEFC661ABF3C6E5B078C27C8A340E950C3274C668D8E9",
+          "url": "Fmod5Sharp.dll"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/GameInterface.dll",
+          "size": 5668640,
+          "sha256": "BEE3E589BAFD255757DF56E1237D948472FE591DDDC4FDC6A35447B1BA9373E9",
+          "url": "GameInterface.dll"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/K4os.Compression.LZ4.dll",
+          "size": 91936,
+          "sha256": "F750B4F1CEB55654E185519B80581D741A055AC19AF8E43B830C7348F16EA9F3",
+          "url": "K4os.Compression.LZ4.dll"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/LiteNetLib.dll",
+          "size": 126240,
+          "sha256": "181C247378A84BC37425A7A8C558062A56A44D8B40716DEE675FF00244D2D68F",
+          "url": "LiteNetLib.dll"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/Microsoft.Bcl.AsyncInterfaces.dll",
+          "size": 31520,
+          "sha256": "C337E4EBFAB31DCCB1518E14F50C4655EFA58F296306B74858460369F3F68809",
+          "url": "Microsoft.Bcl.AsyncInterfaces.dll"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/Microsoft.CodeAnalysis.CSharp.dll",
+          "size": 7079200,
+          "sha256": "E21BB813F276C585A51CE62234FB87F0D51B309195811BA061C06A4E2B9713FB",
+          "url": "Microsoft.CodeAnalysis.CSharp.dll"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/Microsoft.CodeAnalysis.dll",
+          "size": 5055776,
+          "sha256": "8C77EE065B22D943C59078D0B631B21304AFFE1144B38C25217BDC92AF483D84",
+          "url": "Microsoft.CodeAnalysis.dll"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/Microsoft.Win32.Registry.dll",
+          "size": 35616,
+          "sha256": "B439DC7F39BD4C3D7612BDB118CF8AEF7FB164A05C4D025C2BCA3C4006C1F6FC",
+          "url": "Microsoft.Win32.Registry.dll"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/Missions.dll",
+          "size": 1147680,
+          "sha256": "F1FD8A25A0E6FFC05A335EBE0A65371937CC650C0785B83AF9BB215533921469",
+          "url": "Missions.dll"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/Mono.Cecil.Mdb.dll",
+          "size": 59168,
+          "sha256": "811A45916E05C57D78F6A90F8B7F8CC7508480FED7969D009FFC48236C0DED8F",
+          "url": "Mono.Cecil.Mdb.dll"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/Mono.Cecil.Pdb.dll",
+          "size": 105760,
+          "sha256": "C75FCCB5DF80906CA1A284F4EB60FA410121204215EAA38FFA6BA6E0BE41CBC0",
+          "url": "Mono.Cecil.Pdb.dll"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/Mono.Cecil.Rocks.dll",
+          "size": 45344,
+          "sha256": "E2834BA8C881D64679CF588AB151565EDC21F08EBB426FD626D94DB06FE7546E",
+          "url": "Mono.Cecil.Rocks.dll"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/Mono.Cecil.dll",
+          "size": 378656,
+          "sha256": "E51B95D6831EA364F51DE8E53D8E8656746E7B16EF96C1D6AFD832B68A3CB106",
+          "url": "Mono.Cecil.dll"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/MonoMod.Backports.dll",
+          "size": 133408,
+          "sha256": "70765B524E51BF978AF716019E9BD899489C4F5D31047C418CF4FDB5D909809C",
+          "url": "MonoMod.Backports.dll"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/MonoMod.Core.dll",
+          "size": 248096,
+          "sha256": "9D66A734E8D7911210F96DEAF4853A9F4E22FD60583B6AEEDA2572E61BA6B0D7",
+          "url": "MonoMod.Core.dll"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/MonoMod.ILHelpers.dll",
+          "size": 22304,
+          "sha256": "59C7D9A47F807BDE46F5E0A9C4446AB592039982624C33F8FD5C8D3DB67EA2F6",
+          "url": "MonoMod.ILHelpers.dll"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/MonoMod.Iced.dll",
+          "size": 663840,
+          "sha256": "BC08733D820C458F8DB7886BAA50230CB8B12A007726EF57A02C8BD2B9488BAA",
+          "url": "MonoMod.Iced.dll"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/MonoMod.RuntimeDetour.dll",
+          "size": 90400,
+          "sha256": "AACC9448DA6F12E465317746E136878924DBB175A16CBE606C4D77DE615826CF",
+          "url": "MonoMod.RuntimeDetour.dll"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/MonoMod.Utils.dll",
+          "size": 357152,
+          "sha256": "D578018DF50668F81AC69244C517AB53493B37FFB95BC5994A3B3D102C674280",
+          "url": "MonoMod.Utils.dll"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/NAudio.Core.dll",
+          "size": 203552,
+          "sha256": "39360F5F157F7D829C51A9C1390144A2F486CD0CBFB113FC72FE6059278B1BAB",
+          "url": "NAudio.Core.dll"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/NAudio.WinMM.dll",
+          "size": 72992,
+          "sha256": "D142AFDB97FAAE64602989EC469167AAAA653B530814109523F07037D6C98F4E",
+          "url": "NAudio.WinMM.dll"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/Newtonsoft.Json.dll",
+          "size": 708896,
+          "sha256": "5D276A2B316B027331E6384A85807D723D90396ECEA18DED7355112C89E8907A",
+          "url": "Newtonsoft.Json.dll"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/OggVorbisEncoder.dll",
+          "size": 911136,
+          "sha256": "E104ED78C4C0410E0FB161799E0DD09CDCD8BEB6FAB9682B3DF52AC403F1A73E",
+          "url": "OggVorbisEncoder.dll"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/Scriban.dll",
+          "size": 579360,
+          "sha256": "6F8524C4FBED805A8AA13F885F790C55563C64140500203F91667AC9FB8BF41F",
+          "url": "Scriban.dll"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/Serilog.Enrichers.Process.dll",
+          "size": 22816,
+          "sha256": "AEAB48F31B994313C2FEF0756EDE3DF584589C5F5D7275E64CE1E886E9650999",
+          "url": "Serilog.Enrichers.Process.dll"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/Serilog.Sinks.Debug.dll",
+          "size": 22816,
+          "sha256": "5EDF8DA936372D40B3E30920E10376BDCD74D983024CDCA92609694298F90AD9",
+          "url": "Serilog.Sinks.Debug.dll"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/Serilog.Sinks.File.dll",
+          "size": 48416,
+          "sha256": "2CE1A04D86C5CAB1E64F85FB3681012EA069E8E6787F084F64E497BBC620D154",
+          "url": "Serilog.Sinks.File.dll"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/Serilog.Sinks.Seq.dll",
+          "size": 66848,
+          "sha256": "96102CFE84BEEFF6DB0FC571BD98DD1FD7279A0600829A4D6894F9260A0C434D",
+          "url": "Serilog.Sinks.Seq.dll"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/Serilog.dll",
+          "size": 178976,
+          "sha256": "9CCD0A7F06A61B0FB8A9CF3A535A5C296E58CE8D3DA570541F93DED953EAE1A7",
+          "url": "Serilog.dll"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/System.Buffers.dll",
+          "size": 28960,
+          "sha256": "58BF3F38E9B1A88C8253BDB47D687C5B23A8FED90AA0359D02A223AA9B65880B",
+          "url": "System.Buffers.dll"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/System.Collections.Immutable.dll",
+          "size": 264480,
+          "sha256": "6D7BB09FB850C23C0E1DFCF8E8C4D188872876C1E8680B16485DD771C7A578A5",
+          "url": "System.Collections.Immutable.dll"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/System.Diagnostics.DiagnosticSource.dll",
+          "size": 205088,
+          "sha256": "36423E704E0327653B93CAF3E39F0BB2A923F090A897A14C55A1E43F53AAC603",
+          "url": "System.Diagnostics.DiagnosticSource.dll"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/System.IO.Pipelines.dll",
+          "size": 89888,
+          "sha256": "13D1A717FA426047661BD79B41B58E66747EF1705BFB315EDE7C9AC9AC5A77F6",
+          "url": "System.IO.Pipelines.dll"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/System.Memory.dll",
+          "size": 150304,
+          "sha256": "1BD977EB8B27387B383C989546D8C6C14F0E93BB8F777F3BBCB741FCA3314277",
+          "url": "System.Memory.dll"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/System.Numerics.Vectors.dll",
+          "size": 115488,
+          "sha256": "4FC6741D94CCAE5775317BD1D409B841B099B6CC9123D8B2455CB2EA2848DF68",
+          "url": "System.Numerics.Vectors.dll"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/System.Reflection.Metadata.dll",
+          "size": 492832,
+          "sha256": "B60E87B75935EEB4F3892DC66759C899B8007E40CF71ECE88C4B16641D899D56",
+          "url": "System.Reflection.Metadata.dll"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/System.Runtime.CompilerServices.Unsafe.dll",
+          "size": 24352,
+          "sha256": "5DD3F31FF27D8144B5B95386DE97DC61FF8AB796D68C29A43E5B1A5B2586F358",
+          "url": "System.Runtime.CompilerServices.Unsafe.dll"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/System.Text.Encoding.CodePages.dll",
+          "size": 766240,
+          "sha256": "E735BC681533607C6E3F01290D735C8854B8E3AB42DE2220C52EC705B47FC3DD",
+          "url": "System.Text.Encoding.CodePages.dll"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/System.Text.Encodings.Web.dll",
+          "size": 84768,
+          "sha256": "4C2D0303F45504C50FDC7099B61058C85C6BAED92A4337DEC44FC168EEF14ADA",
+          "url": "System.Text.Encodings.Web.dll"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/System.Text.Json.dll",
+          "size": 731424,
+          "sha256": "7F1936478CD144AE6836DAD68AFF73A1D244C6292023561086E8750B0F114DC2",
+          "url": "System.Text.Json.dll"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/System.Threading.Channels.dll",
+          "size": 83744,
+          "sha256": "88FDF50506788C4CB814C749200892720ABCF7856071748C13B496DBA4DAC5A1",
+          "url": "System.Threading.Channels.dll"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/System.Threading.Tasks.Extensions.dll",
+          "size": 33056,
+          "sha256": "F568515ADEF8AD6595EE4283353A56BB8FD78B2FE61D3266D3A11A1FE8536675",
+          "url": "System.Threading.Tasks.Extensions.dll"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/System.ValueTuple.dll",
+          "size": 24864,
+          "sha256": "D416662CCEEC41D6B074486A17C3284A7B965655DCF87ED1AB0714C838A18E79",
+          "url": "System.ValueTuple.dll"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/protobuf-net.Core.dll",
+          "size": 308512,
+          "sha256": "A85BF18682C02B9BADBD4608872B7BBF8D7EB1B1A8F5A09571B0C23B6921A76B",
+          "url": "protobuf-net.Core.dll"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/protobuf-net.dll",
+          "size": 296224,
+          "sha256": "26A93F555A9097AEF22084EB0C370AF0A5D9F3217379019A8EAEC6EBB5460BBB",
+          "url": "protobuf-net.dll"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "Welcome to Bannerlord Aurelion",
+      "titleAr": "أهلاً بيك في Bannerlord Aurelion",
+      "body": "The Aurelion co-op campaign is live. Press PLAY and the launcher will install the server mods and take you straight into Calradia.",
+      "bodyAr": "حملة Aurelion التعاونية بدأت. دوس العب، واللانشر هيسطّب مودات السيرفر ويدخّلك كالراديا على طول."
+    },
+    {
+      "title": "Your progress is always safe",
+      "titleAr": "تقدّمك دايماً محفوظ",
+      "body": "The Aurelion server runs the Co-op mod around the clock, and the whole world is saved automatically every 5 minutes, so you can leave and come back whenever you like.",
+      "bodyAr": "سيرفر Aurelion شغّال بمود Co-op على مدار اليوم، والعالم كله بيتحفظ لوحده كل 5 دقايق، فتقدر تخرج وترجع وقت ما تحب."
+    },
+    {
+      "title": "Join the community",
+      "titleAr": "انضم للمجتمع",
+      "body": "Join our Discord to meet other players, get help and follow every update.",
+      "bodyAr": "ادخل الديسكورد بتاعنا عشان تتعرف على اللاعبين، وتاخد مساعدة، وتتابع كل جديد.",
+      "url": "https://discord.gg/8gG6tXm7R",
+      "button": "Join our Discord",
+      "buttonAr": "ادخل الديسكورد"
+    }
+  ],
+  "guide": [
+    {
+      "icon": "E768",
+      "numbered": true,
+      "title": "Getting started",
+      "titleAr": "إزاي تبدأ",
+      "items": [
+        "Own Mount & Blade II: Bannerlord on Steam and keep it updated.",
+        "Keep Steam open and signed in.",
+        "The first time, press INSTALL — the launcher downloads the server mods for you.",
+        "Press PLAY — the game opens and joins the server automatically."
+      ],
+      "itemsAr": [
+        "لازم تكون شاري Mount & Blade II: Bannerlord على Steam، واللعبة محدّثة لآخر نسخة.",
+        "خلّي Steam مفتوح ومسجّل دخول.",
+        "أول مرة دوس تسطيب، واللانشر هينزّل مودات السيرفر لوحده.",
+        "دوس العب، واللعبة هتفتح وتدخّلك السيرفر على طول."
+      ]
+    },
+    {
+      "icon": "E82F",
+      "title": "Good to know",
+      "titleAr": "نصايح مهمة",
+      "items": [
+        "Don't install server mods by hand — the launcher keeps everything in sync.",
+        "If Windows asks for permission, allow it. It is only used to write to the game folder.",
+        "A green ping means your connection to the server is great.",
+        "The world is saved every 5 minutes, so you can leave any time."
+      ],
+      "itemsAr": [
+        "متسطّبش مودات السيرفر بإيدك، اللانشر بيظبط كل حاجة لوحده.",
+        "لو Windows طلب إذن وافق عليه، ده بس عشان اللانشر يكتب في فولدر اللعبة.",
+        "البينج الأخضر معناه إن اتصالك بالسيرفر ممتاز.",
+        "العالم بيتحفظ كل 5 دقايق، فتقدر تخرج وقت ما تحب."
+      ]
+    },
+    {
+      "icon": "E90F",
+      "title": "Troubleshooting",
+      "titleAr": "مشاكل وحلولها",
+      "items": [
+        "Game not found: open Settings and press Auto-detect or Browse.",
+        "Wrong game version: update Bannerlord in Steam and leave any beta branch.",
+        "Conflicting copies: open the Mods page and press Fix.",
+        "Can't join: check that your ping isn't red, then try again in a minute."
+      ],
+      "itemsAr": [
+        "مش لاقي اللعبة: من الإعدادات دوس بحث تلقائي أو اختيار.",
+        "نسخة اللعبة مختلفة: حدّث Bannerlord من Steam واقفل أي نسخة Beta.",
+        "نسخ متعارضة: افتح صفحة المودات ودوس إصلاح.",
+        "مش قادر تدخل: اتأكد إن البينج مش أحمر، وجرّب تاني بعد دقيقة."
+      ]
+    },
+    {
+      "icon": "E716",
+      "title": "Need help?",
+      "titleAr": "محتاج مساعدة؟",
+      "items": [
+        "The Aurelion team and community are on Discord.",
+        "Report a problem, share an idea and follow every server update there."
+      ],
+      "itemsAr": [
+        "فريق Aurelion والمجتمع كله موجودين على الديسكورد.",
+        "بلّغ عن أي مشكلة، شارك أفكارك، وتابع كل جديد في السيرفر هناك."
+      ],
+      "url": "https://discord.gg/8gG6tXm7R",
+      "button": "Join our Discord",
+      "buttonAr": "ادخل الديسكورد"
+    }
+  ]
+}
