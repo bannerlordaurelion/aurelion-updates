@@ -13,9 +13,9 @@
     "website": ""
   },
   "launcher": {
-    "version": "1.0.0",
-    "url": "",
-    "sha256": ""
+    "version": "1.1.0",
+    "url": "BannerlordAurelion-1.1.0.exe",
+    "sha256": "BB14AD9DBAFAB2304066F732ED05233F28732FABC5B3EAFFE78825C59D89B3D7"
   },
   "cleanExtraFiles": true,
   "modules": [
@@ -540,6 +540,50 @@
           "size": 296224,
           "sha256": "26A93F555A9097AEF22084EB0C370AF0A5D9F3217379019A8EAEC6EBB5460BBB",
           "url": "protobuf-net.dll"
+        }
+      ]
+    },
+    {
+      "id": "Aurelion.Core",
+      "folder": "Aurelion.Core",
+      "name": "Aurelion Core",
+      "version": "v1.0.0",
+      "files": [
+        {
+          "path": "aurelion/build.json",
+          "size": 133,
+          "sha256": "779E771BC0C285530F500B78ACE33CD665850E5EE01F8B9DE785B6B8F515C54D",
+          "url": "779e771b_build.json"
+        },
+        {
+          "path": "aurelion/prices.json",
+          "size": 33,
+          "sha256": "9CF41DBCF476EF5744A6D4A8E13ED2CAE5341DEABAD8117420D4A8BA8FE28616",
+          "url": "9cf41dbc_prices.json"
+        },
+        {
+          "path": "aurelion/rules.json",
+          "size": 149,
+          "sha256": "3D3FE580AB1E0975B9691D262787E425FD5F17CA40D34C76897FAA6BAF0B1F2A",
+          "url": "3d3fe580_rules.json"
+        },
+        {
+          "path": "aurelion/server.json",
+          "size": 278,
+          "sha256": "088C92EC5B6C4A3CFE2A96332D6809164D82255E5ADC31839D10C960393D8CFE",
+          "url": "088c92ec_server.json"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/Aurelion.Core.dll",
+          "size": 13824,
+          "sha256": "098E40C8777ADB8F938BEDFF34BE6285C178FA4B7C336A05BCC98EB4F7EB1599",
+          "url": "098e40c8_Aurelion.Core.dll"
+        },
+        {
+          "path": "SubModule.xml",
+          "size": 1089,
+          "sha256": "8FAAA545B90A07FC6CC08EC6C269BE7CFD1B9EF3E0F6EE4B33FA643726232840",
+          "url": "8faaa545_SubModule.xml"
         }
       ]
     }

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Module>
+    <Name value="Aurelion Core"/>
+    <Id value="Aurelion.Core"/>
+    <Version value="v1.0.0"/>
+    <SingleplayerModule value="true"/>
+    <MultiplayerModule value="false"/>
+    <DependedModules>
+        <DependedModule Id="Native"/>
+        <DependedModule Id="SandBoxCore"/>
+        <DependedModule Id="Sandbox"/>
+        <DependedModule Id="Coop"/>
+    </DependedModules>
+    <DependedModuleMetadatas>
+        <DependedModuleMetadata id="Coop" order="LoadBeforeThis"/>
+        <DependedModuleMetadata id="Bannerlord.Harmony" order="LoadBeforeThis" optional="true"/>
+    </DependedModuleMetadatas>
+    <SubModules>
+        <SubModule>
+            <Name value="Aurelion Core"/>
+            <DLLName value="Aurelion.Core.dll"/>
+            <SubModuleClassType value="Aurelion.Core.SubModule"/>
+            <Tags>
+                <Tag key="DedicatedServerType" value="none"/>
+                <Tag key="IsNoRenderModeElement" value="false"/>
+            </Tags>
+        </SubModule>
+    </SubModules>
+</Module>

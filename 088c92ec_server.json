@@ -1,0 +1,16 @@
+{
+  "maintenance": {
+    "enabled": false,
+    "message": "",
+    "messageAr": ""
+  },
+  "steamMods": [
+    {
+      "workshopId": "2859188632",
+      "id": "Bannerlord.Harmony",
+      "name": "Harmony",
+      "version": "v2.4.2.248",
+      "timeUpdated": 1784662507
+    }
+  ]
+}

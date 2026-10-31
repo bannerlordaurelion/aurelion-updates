@@ -1,0 +1,10 @@
+{
+  "skillCap": {
+    "enabled": false,
+    "max": 100,
+    "start": "2026-10-31",
+    "days": 7
+  },
+  "xpMultiplier": 1,
+  "renownMultiplier": 1
+}
