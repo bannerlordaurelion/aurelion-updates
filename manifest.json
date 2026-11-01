@@ -13,9 +13,9 @@
     "website": ""
   },
   "launcher": {
-    "version": "1.2.0",
-    "url": "BannerlordAurelion-1.2.0.exe",
-    "sha256": "A0377B0DE73083760573F94154BC00A4081E308DB4182C71BDE4CBF4F2A0B114"
+    "version": "1.3.0",
+    "url": "BannerlordAurelion-1.3.0.exe",
+    "sha256": "380DF732ED76C12749DC20E70010F5A3C2083F3105F70DACB89A0C0864DF3B07"
   },
   "cleanExtraFiles": true,
   "modules": [
@@ -576,6 +576,15 @@
           "size": 1648,
           "sha256": "20D9ED782B00A5141D7FA275C338E95DAA62A429C1EC68B7C0478701EFAAC227",
           "url": "README.txt"
+        }
+      ],
+      "sources": [
+        {
+          "type": "steam",
+          "workshopId": ""
+        },
+        {
+          "type": "github"
         }
       ]
     }
