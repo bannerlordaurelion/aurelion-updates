@@ -13,9 +13,9 @@
     "website": ""
   },
   "launcher": {
-    "version": "1.1.1",
-    "url": "BannerlordAurelion-1.1.1.exe",
-    "sha256": "D0AF20E1BA1A1D2471757C89705E53343F2D4836B80CFB521761399573C070FC"
+    "version": "1.2.0",
+    "url": "BannerlordAurelion-1.2.0.exe",
+    "sha256": "A0377B0DE73083760573F94154BC00A4081E308DB4182C71BDE4CBF4F2A0B114"
   },
   "cleanExtraFiles": true,
   "modules": [
