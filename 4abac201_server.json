@@ -1,0 +1,37 @@
+{
+  "maintenance": {
+    "enabled": false,
+    "message": "",
+    "messageAr": ""
+  },
+  "steamMods": [
+    {
+      "workshopId": "2859188632",
+      "id": "Bannerlord.Harmony",
+      "name": "Harmony",
+      "version": "v2.4.2.248",
+      "timeUpdated": 1784662507
+    },
+    {
+      "workshopId": "2859232415",
+      "id": "Bannerlord.ButterLib",
+      "name": "ButterLib",
+      "version": "v2.12.0",
+      "timeUpdated": 1787517267
+    },
+    {
+      "workshopId": "2859222409",
+      "id": "Bannerlord.UIExtenderEx",
+      "name": "UIExtenderEx",
+      "version": "v3.0.3",
+      "timeUpdated": 1791404718
+    },
+    {
+      "workshopId": "3747620191",
+      "id": "Bannerlord.MBOptionScreen",
+      "name": "Mod Configuration Menu v5",
+      "version": "v5.11.99.0",
+      "timeUpdated": 1783624858
+    }
+  ]
+}
