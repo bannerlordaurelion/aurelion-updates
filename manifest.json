@@ -586,10 +586,6 @@
       ],
       "sources": [
         {
-          "type": "steam",
-          "workshopId": ""
-        },
-        {
           "type": "github"
         }
       ]
