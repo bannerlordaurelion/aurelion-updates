@@ -589,6 +589,101 @@
           "type": "github"
         }
       ]
+    },
+    {
+      "id": "MoreNationsRemastered",
+      "folder": "MoreNationsRemastered",
+      "name": "More Nations Remastered",
+      "version": "v1.0.3",
+      "files": [
+        {
+          "path": "bin/Win64_Shipping_Client/MoreNationsRemastered.dll",
+          "size": 8192,
+          "sha256": "226B1077773E8BCCD4C32FE4940B7DFD61850BB1598DDB1163BA2F1122629E12"
+        },
+        {
+          "path": "ModuleData/DistanceCaches/settlements_distance_cache_Default.bin",
+          "size": 3728332,
+          "sha256": "C7CD299347B820EE58239EAC93CA59B220764BE6AC4D0AF5415B409D36DBE6C8"
+        },
+        {
+          "path": "ModuleData/heroes.xml",
+          "size": 18883,
+          "sha256": "F29047ABEBD8AF0CA56BBA9D50FA0EF1E1D860CCAE7C72A75C4BACF966E51759"
+        },
+        {
+          "path": "ModuleData/lords.xml",
+          "size": 239163,
+          "sha256": "CB1E75902EBD2E58D8C2576B2F7A82F219492FC83C3641FBF2FF88FE51958338"
+        },
+        {
+          "path": "ModuleData/settlements.xml",
+          "size": 849641,
+          "sha256": "9F02399B043CB8987DD27D1AD3801CB60B398CF43C7DFD99865295E5F32B8985"
+        },
+        {
+          "path": "ModuleData/spclans.xml",
+          "size": 34461,
+          "sha256": "EDD40F4865955B17F6BE494EE5ED01FE45158E7630BEF7AF0D729B61A42D4EC9"
+        },
+        {
+          "path": "ModuleData/spkingdoms.xml",
+          "size": 10244,
+          "sha256": "94C9C29F7A787F510C1C1A52C7A23C61114378C30603BAFA2A1595E5F43147DC"
+        },
+        {
+          "path": "SceneObj/Main_map/atmosphere.xml",
+          "size": 4962,
+          "sha256": "7848867D9E0E72A5FBEC4DB20C9F022A7B3D77410DA52EAB7435F2A0D90D623D"
+        },
+        {
+          "path": "SceneObj/Main_map/flora.bin",
+          "size": 548861,
+          "sha256": "6D264D52EFFC66280AAF82047F893BFDC601EE5204D669B6019256CA75EBC4A4"
+        },
+        {
+          "path": "SceneObj/Main_map/flowmap.dds",
+          "size": 1048704,
+          "sha256": "1570EA217766F381FFB362B2170D141780BCFE2051DB0B1F98564DB28F73529F"
+        },
+        {
+          "path": "SceneObj/Main_map/navmesh.bin",
+          "size": 989026,
+          "sha256": "DF3530624AC43640D136F73DF17079F5995400503A8C0601218C286FD9FFF676"
+        },
+        {
+          "path": "SceneObj/Main_map/references.txt",
+          "size": 12856,
+          "sha256": "FB729CD7B23FFD45150E8B19B0B1FD39861371026C3902209D8990CBF1EE2638"
+        },
+        {
+          "path": "SceneObj/Main_map/scene.xscene",
+          "size": 30311208,
+          "sha256": "A6E9912A00C395EABE1DA877837EE795EEAFF0D6F352FC2FEC634CBF430BC4B1"
+        },
+        {
+          "path": "SceneObj/Main_map/ShaderCache/D3D11/terrain_shaders_header_data.bin",
+          "size": 37384,
+          "sha256": "1CF939025052EF02362EE0AAB917895CCCEB685C595FC81BE9C8350115CC8772"
+        },
+        {
+          "path": "SceneObj/Main_map/terrain.bin",
+          "size": 65294484,
+          "sha256": "90FB6F80D23EB52C181387D6FFC1F331B131DDFAC1075FAC7FDA1D3693882C22"
+        },
+        {
+          "path": "SubModule.xml",
+          "size": 1848,
+          "sha256": "13439C8DD3FD46BAE6AE0C551623C117BF5506D1493A5E64D906A5D6DB0960AA"
+        }
+      ],
+      "sources": [
+        {
+          "type": "nexus",
+          "url": "https://www.nexusmods.com/mountandblade2bannerlord/mods/12271",
+          "fileName": "MoreNationsRemastered(V1.0.3) 12271 1.0.3 2026-09-04T16-18Z ps0mrFgb3"
+        }
+      ]
     }
   ],
   "news": [
