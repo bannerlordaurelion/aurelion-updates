@@ -589,6 +589,106 @@
           "type": "github"
         }
       ]
+    },
+    {
+      "id": "MoreNations",
+      "folder": "MoreNations",
+      "name": "More Nations",
+      "version": "v1.1.5",
+      "files": [
+        {
+          "path": "bin/Win64_Shipping_Client/MoreNations.dll",
+          "size": 14848,
+          "sha256": "84907040E20E56F037EF57F4EF8E83C425BECA6320B958EC558C257681601740"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/MoreNations.pdb",
+          "size": 34304,
+          "sha256": "AEF4159FF15FBA00E84E2AA13074DA4B99EB6676AE50876D31A4B1D5590C3B17"
+        },
+        {
+          "path": "main_map_snow_flowmap.png",
+          "size": 773630,
+          "sha256": "03318B8D21DD87A1682094277B496A0D9AF961739157511401DC49E2F7248056"
+        },
+        {
+          "path": "ModuleData/heroes.xml",
+          "size": 15443,
+          "sha256": "893F0D2F687692DEF5D92044BAE2C88EFE85D34230FAD28AA958FAE691F61639"
+        },
+        {
+          "path": "ModuleData/lords.xml",
+          "size": 185718,
+          "sha256": "26CB1159D3C168A3A22B7C64A8183B77DC71F2154625E4F728362BDC0CC90BB5"
+        },
+        {
+          "path": "ModuleData/settlements.xml",
+          "size": 307591,
+          "sha256": "6C9163C9FD8944A8F070BE97F84D537EF0E23DDABC5DDB37C42836AE1E79661E"
+        },
+        {
+          "path": "ModuleData/settlements.xslt",
+          "size": 176065,
+          "sha256": "574EC8FDEC988311CCD88965224D61FCBDA9B4FC75AD9A49EB2EC958989C1A2D"
+        },
+        {
+          "path": "ModuleData/settlements_distance_cache.bin",
+          "size": 3786327,
+          "sha256": "79D8E4279ABAA7FFE76513721D0FA31BFA0827FE419012CCE6D5EF84D1774F9A"
+        },
+        {
+          "path": "ModuleData/spclans.xml",
+          "size": 25779,
+          "sha256": "7C01FBF5138D0D8C209C5FDF0280367EF6A50FFE770EC0181B85FD0FACD6978F"
+        },
+        {
+          "path": "ModuleData/spkingdoms.xml",
+          "size": 9118,
+          "sha256": "1DF6F29E43147A42DD7C257C786506C5B535D4A5450799FC8FA45AA6557BEAF2"
+        },
+        {
+          "path": "SceneObj/Main_map/atmosphere.xml",
+          "size": 4914,
+          "sha256": "215FB4955979B40EDB9053B6F72E45A94D2DEA96E25A1F7BAAFC8587C76A58B9"
+        },
+        {
+          "path": "SceneObj/Main_map/flora.bin",
+          "size": 8318782,
+          "sha256": "86C18CD4027B564FA01A236D18784EEB629BCE20649F504A8BAEA0C13D2125C5"
+        },
+        {
+          "path": "SceneObj/Main_map/navmesh.bin",
+          "size": 1163670,
+          "sha256": "8F2DD5064706A8CA756D4B5588C5213D705B04C6F152F338C214E1B8B0A14DEB"
+        },
+        {
+          "path": "SceneObj/Main_map/references.txt",
+          "size": 13965,
+          "sha256": "03B81B464156212EE00D59A1A3061A3FA66626562ADD772CFBB6BA82AC93F23F"
+        },
+        {
+          "path": "SceneObj/Main_map/scene.xscene",
+          "size": 37679927,
+          "sha256": "72523EECC4A459198BA55F2191E7B0D437200A6C76BE4FF64B851C0D4063601C"
+        },
+        {
+          "path": "SceneObj/Main_map/terrain.bin",
+          "size": 21115247,
+          "sha256": "B8E882CD3A14DAB7880D8F5E44C7A303B8565FC373C8232ECA451747FACE81AA"
+        },
+        {
+          "path": "SubModule.xml",
+          "size": 2004,
+          "sha256": "5725F13D84ACC64C9CFEB1A324C8B46462CD8619DB08CBC0011D439F206E29DB"
+        }
+      ],
+      "sources": [
+        {
+          "type": "nexus",
+          "url": "https://www.nexusmods.com/mountandblade2bannerlord/mods/8334",
+          "fileName": "More Nations (V1.1.5) 8334 v1.1.5 2026-07-24T07-54Z gMr2P8Wye.zip"
+        }
+      ]
     }
   ],
   "news": [
