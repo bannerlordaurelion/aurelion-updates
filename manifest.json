@@ -27,9 +27,9 @@
       "files": [
         {
           "path": "aurelion/build.json",
-          "size": 76,
-          "sha256": "1D7DE681B4292D569E16D41E923CF672A0FD743611C7BA477DBEF444FFBF7C63",
-          "url": "1d7de681_build.json"
+          "size": 143,
+          "sha256": "BFCBC2105FB67AF2C2AE1AEFBF18B0C52A4246CD9D5A7B7425E2A6B2B6D628BA",
+          "url": "bfcbc210_build.json"
         },
         {
           "path": "aurelion/prices.json",
@@ -39,9 +39,9 @@
         },
         {
           "path": "aurelion/rules.json",
-          "size": 149,
-          "sha256": "3D3FE580AB1E0975B9691D262787E425FD5F17CA40D34C76897FAA6BAF0B1F2A",
-          "url": "3d3fe580_rules.json"
+          "size": 169,
+          "sha256": "0859756249888622D115EC88CC7529DE577A7B40E9D00DBC451E17AD481BEEB8",
+          "url": "08597562_rules.json"
         },
         {
           "path": "aurelion/server.json",
@@ -51,9 +51,9 @@
         },
         {
           "path": "aurelion/studio-project.json",
-          "size": 23355,
-          "sha256": "BDCFE876994670685AB7C4E2D3453C1B6E743EC3E820400E2E0EE8AE6D619C9A",
-          "url": "bdcfe876_studio-project.json"
+          "size": 70198,
+          "sha256": "E231A2E284E4FEB067DE21998FC6FE66F851AD3E4425290A0375B52C74C35067",
+          "url": "e231a2e2_studio-project.json"
         },
         {
           "path": "aurelion/update-server.ps1",
@@ -69,9 +69,9 @@
         },
         {
           "path": "bin/Win64_Shipping_Client/Aurelion.Core.dll",
-          "size": 13824,
-          "sha256": "0212FC40AF60E134627D832A3DACC61D69D9E7506FE2CF59CC8158CC4E121DF9",
-          "url": "0212fc40_Aurelion.Core.dll"
+          "size": 43520,
+          "sha256": "FCE8A33A61F793AD5BDDD305BA0F5296C53F087497069D8A5BA35E5C3EDA7181",
+          "url": "fce8a33a_Aurelion.Core.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/Autofac.dll",
