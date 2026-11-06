@@ -1,0 +1,88 @@
+﻿<Brushes>
+  <!-- Aurelion identity (same as the launcher / Studio / Publisher):
+       black #0B0A0C (backgrounds), Night Bordeaux #5B0015 (+ #7A0B25 hover), Cool Horizon #80AEE8, Ivory Mist #F7F2E0.
+       Font: ShyizerArabic (shipped by the server's Arabic mod, loaded in every game language; it also shapes and orders Arabic). -->
+  <Brush Name="Aur.Text" Font="ShyizerArabic-Regular" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles><Style Name="Default" FontSize="18" FontColor="#F7F2E0FF" TextOutlineAmount="0" TextGlowRadius="0" TextBlur="0" TextShadowOffset="0" /></Styles>
+  </Brush>
+  <Brush Name="Aur.Muted" Font="ShyizerArabic-Regular" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles><Style Name="Default" FontSize="15" FontColor="#F7F2E099" TextOutlineAmount="0" TextGlowRadius="0" TextBlur="0" TextShadowOffset="0" /></Styles>
+  </Brush>
+  <!-- headings: ivory, bold -->
+  <Brush Name="Aur.Gold" Font="ShyizerArabic-Bold" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles><Style Name="Default" FontSize="21" FontColor="#F7F2E0FF" TextOutlineAmount="0" TextGlowRadius="0" TextBlur="0" TextShadowOffset="0" /></Styles>
+  </Brush>
+  <!-- accent: Cool Horizon -->
+  <Brush Name="Aur.Blue" Font="ShyizerArabic-Regular" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles><Style Name="Default" FontSize="15" FontColor="#80AEE8FF" TextOutlineAmount="0" TextGlowRadius="0" TextBlur="0" TextShadowOffset="0" /></Styles>
+  </Brush>
+  <Brush Name="Aur.Accent" Font="ShyizerArabic-Bold" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles><Style Name="Default" FontSize="17" FontColor="#80AEE8FF" TextOutlineAmount="0" TextGlowRadius="0" TextBlur="0" TextShadowOffset="0" /></Styles>
+  </Brush>
+  <!-- errors: ivory on the bordeaux strip of the status bar -->
+  <Brush Name="Aur.Red" Font="ShyizerArabic-Bold" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles><Style Name="Default" FontSize="16" FontColor="#F7F2E0FF" TextOutlineAmount="0" TextGlowRadius="0" TextBlur="0" TextShadowOffset="0" /></Styles>
+  </Brush>
+  <Brush Name="Aur.Brand" Font="ShyizerArabic-Bold" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles><Style Name="Default" FontSize="27" FontColor="#F7F2E0FF" TextOutlineAmount="0" TextGlowRadius="0" TextBlur="0" TextShadowOffset="0" /></Styles>
+  </Brush>
+  <Brush Name="Aur.BrandSmall" Font="ShyizerArabic-Regular" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles><Style Name="Default" FontSize="13" FontColor="#80AEE8FF" TextOutlineAmount="0" TextGlowRadius="0" TextBlur="0" TextShadowOffset="0" /></Styles>
+  </Brush>
+  <Brush Name="Aur.BtnText" Font="ShyizerArabic-Bold" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" FontSize="16" FontColor="#F7F2E0FF" TextOutlineAmount="0" TextGlowRadius="0" TextBlur="0" TextShadowOffset="0" />
+      <Style Name="Disabled" FontSize="16" FontColor="#F7F2E066" TextOutlineAmount="0" TextGlowRadius="0" TextBlur="0" TextShadowOffset="0" />
+    </Styles>
+  </Brush>
+  <!-- primary button: Night Bordeaux -->
+  <Brush Name="Aur.Btn">
+    <Layers><BrushLayer Name="Default" Sprite="BlankWhiteSquare_9" /></Layers>
+    <Styles>
+      <Style Name="Default"><BrushLayer Name="Default" Color="#5B0015FF" /></Style>
+      <Style Name="Hovered"><BrushLayer Name="Default" Color="#7A0B25FF" /></Style>
+      <Style Name="Pressed"><BrushLayer Name="Default" Color="#3E000EFF" /></Style>
+      <Style Name="Selected"><BrushLayer Name="Default" Color="#7A0B25FF" /></Style>
+      <Style Name="Disabled"><BrushLayer Name="Default" Color="#1C171BFF" /></Style>
+    </Styles>
+  </Brush>
+  <!-- secondary button: black with a horizon hover -->
+  <Brush Name="Aur.Btn2">
+    <Layers><BrushLayer Name="Default" Sprite="BlankWhiteSquare_9" /></Layers>
+    <Styles>
+      <Style Name="Default"><BrushLayer Name="Default" Color="#1A161BFF" /></Style>
+      <Style Name="Hovered"><BrushLayer Name="Default" Color="#2B3A4FFF" /></Style>
+      <Style Name="Pressed"><BrushLayer Name="Default" Color="#121014FF" /></Style>
+      <Style Name="Selected"><BrushLayer Name="Default" Color="#3D5C85FF" /></Style>
+      <Style Name="Disabled"><BrushLayer Name="Default" Color="#121014FF" /></Style>
+    </Styles>
+  </Brush>
+  <!-- dangerous actions: deep bordeaux, brighter on hover -->
+  <Brush Name="Aur.Danger">
+    <Layers><BrushLayer Name="Default" Sprite="BlankWhiteSquare_9" /></Layers>
+    <Styles>
+      <Style Name="Default"><BrushLayer Name="Default" Color="#3A000DFF" /></Style>
+      <Style Name="Hovered"><BrushLayer Name="Default" Color="#7A0B25FF" /></Style>
+      <Style Name="Pressed"><BrushLayer Name="Default" Color="#5B0015FF" /></Style>
+      <Style Name="Disabled"><BrushLayer Name="Default" Color="#1C171BFF" /></Style>
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.Row">
+    <Layers><BrushLayer Name="Default" Sprite="BlankWhiteSquare_9" /></Layers>
+    <Styles>
+      <Style Name="Default"><BrushLayer Name="Default" Color="#141116FF" /></Style>
+      <Style Name="Hovered"><BrushLayer Name="Default" Color="#1F2632FF" /></Style>
+      <Style Name="Pressed"><BrushLayer Name="Default" Color="#0E0C10FF" /></Style>
+      <Style Name="Selected"><BrushLayer Name="Default" Color="#3B0010FF" /></Style>
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.Tab">
+    <Layers><BrushLayer Name="Default" Sprite="BlankWhiteSquare_9" /></Layers>
+    <Styles>
+      <Style Name="Default"><BrushLayer Name="Default" Color="#14111600" /></Style>
+      <Style Name="Hovered"><BrushLayer Name="Default" Color="#1F2632FF" /></Style>
+      <Style Name="Pressed"><BrushLayer Name="Default" Color="#0E0C10FF" /></Style>
+      <Style Name="Selected"><BrushLayer Name="Default" Color="#5B0015FF" /></Style>
+    </Styles>
+  </Brush>
+</Brushes>
