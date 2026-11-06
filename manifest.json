@@ -618,8 +618,9 @@
         },
         {
           "path": "ModuleData/settlements.xml",
-          "size": 849641,
-          "sha256": "9F02399B043CB8987DD27D1AD3801CB60B398CF43C7DFD99865295E5F32B8985"
+          "size": 849598,
+          "sha256": "939F0D3D80A0AECE0812BA78820121A47F57E1F45319BD901F69CFB7B24AB89E",
+          "url": "939f0d3d_settlements.xml"
         },
         {
           "path": "ModuleData/spclans.xml",
@@ -648,8 +649,9 @@
         },
         {
           "path": "SceneObj/Main_map/navmesh.bin",
-          "size": 989026,
-          "sha256": "DF3530624AC43640D136F73DF17079F5995400503A8C0601218C286FD9FFF676"
+          "size": 1164267,
+          "sha256": "A06E9875C2694B51632DD1F1F4FEAEAC85510A81FE9E6D83AC4B3B7F667803D8",
+          "url": "a06e9875_navmesh.bin"
         },
         {
           "path": "SceneObj/Main_map/references.txt",
@@ -681,7 +683,7 @@
         {
           "type": "nexus",
           "url": "https://www.nexusmods.com/mountandblade2bannerlord/mods/12271",
-          "fileName": "MoreNationsRemastered(V1.0.3) 12271 1.0.3 2026-09-04T16-18Z ps0mrFgb3"
+          "fileName": "MoreNationsRemastered"
         }
       ]
     }
