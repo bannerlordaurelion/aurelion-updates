@@ -1,0 +1,71 @@
+﻿<Brushes>
+  <!-- Aurelion identity: black #0B0A0C, panel #17131A, field #100E12, bordeaux #5B0015 / #7A0B25, gold #E8B94E, ivory #F7F2E0, horizon #80AEE8 -->
+  <Brush Name="Aur.Text" Font="Galahad" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles><Style Name="Default" FontSize="18" FontColor="#F7F2E0FF" TextOutlineAmount="0" TextGlowRadius="0" TextBlur="0" TextShadowOffset="0" /></Styles>
+  </Brush>
+  <Brush Name="Aur.Muted" Font="Galahad" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles><Style Name="Default" FontSize="15" FontColor="#F7F2E0A6" TextOutlineAmount="0" TextGlowRadius="0" TextBlur="0" TextShadowOffset="0" /></Styles>
+  </Brush>
+  <Brush Name="Aur.Gold" Font="Galahad" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles><Style Name="Default" FontSize="22" FontColor="#E8B94EFF" TextOutlineAmount="0" TextGlowRadius="0" TextBlur="0" TextShadowOffset="0" /></Styles>
+  </Brush>
+  <Brush Name="Aur.Blue" Font="Galahad" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles><Style Name="Default" FontSize="15" FontColor="#80AEE8FF" TextOutlineAmount="0" TextGlowRadius="0" TextBlur="0" TextShadowOffset="0" /></Styles>
+  </Brush>
+  <Brush Name="Aur.Red" Font="Galahad" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles><Style Name="Default" FontSize="16" FontColor="#E56B6FFF" TextOutlineAmount="0" TextGlowRadius="0" TextBlur="0" TextShadowOffset="0" /></Styles>
+  </Brush>
+  <Brush Name="Aur.BtnText" Font="Galahad" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" FontSize="16" FontColor="#F7F2E0FF" TextOutlineAmount="0" TextGlowRadius="0" TextBlur="0" TextShadowOffset="0" />
+      <Style Name="Disabled" FontSize="16" FontColor="#F7F2E066" TextOutlineAmount="0" TextGlowRadius="0" TextBlur="0" TextShadowOffset="0" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.Btn">
+    <Layers><BrushLayer Name="Default" Sprite="BlankWhiteSquare_9" /></Layers>
+    <Styles>
+      <Style Name="Default"><BrushLayer Name="Default" Color="#5B0015FF" /></Style>
+      <Style Name="Hovered"><BrushLayer Name="Default" Color="#7A0B25FF" /></Style>
+      <Style Name="Pressed"><BrushLayer Name="Default" Color="#3E000EFF" /></Style>
+      <Style Name="Selected"><BrushLayer Name="Default" Color="#7A0B25FF" /></Style>
+      <Style Name="Disabled"><BrushLayer Name="Default" Color="#2A2329FF" /></Style>
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.Btn2">
+    <Layers><BrushLayer Name="Default" Sprite="BlankWhiteSquare_9" /></Layers>
+    <Styles>
+      <Style Name="Default"><BrushLayer Name="Default" Color="#221B27FF" /></Style>
+      <Style Name="Hovered"><BrushLayer Name="Default" Color="#30263AFF" /></Style>
+      <Style Name="Pressed"><BrushLayer Name="Default" Color="#17131AFF" /></Style>
+      <Style Name="Selected"><BrushLayer Name="Default" Color="#5B0015FF" /></Style>
+      <Style Name="Disabled"><BrushLayer Name="Default" Color="#17131AFF" /></Style>
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.Danger">
+    <Layers><BrushLayer Name="Default" Sprite="BlankWhiteSquare_9" /></Layers>
+    <Styles>
+      <Style Name="Default"><BrushLayer Name="Default" Color="#8C1A2BFF" /></Style>
+      <Style Name="Hovered"><BrushLayer Name="Default" Color="#A8283BFF" /></Style>
+      <Style Name="Pressed"><BrushLayer Name="Default" Color="#5B0015FF" /></Style>
+      <Style Name="Disabled"><BrushLayer Name="Default" Color="#2A2329FF" /></Style>
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.Row">
+    <Layers><BrushLayer Name="Default" Sprite="BlankWhiteSquare_9" /></Layers>
+    <Styles>
+      <Style Name="Default"><BrushLayer Name="Default" Color="#17131AFF" /></Style>
+      <Style Name="Hovered"><BrushLayer Name="Default" Color="#241B29FF" /></Style>
+      <Style Name="Pressed"><BrushLayer Name="Default" Color="#100E12FF" /></Style>
+      <Style Name="Selected"><BrushLayer Name="Default" Color="#3B0716FF" /></Style>
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.Tab">
+    <Layers><BrushLayer Name="Default" Sprite="BlankWhiteSquare_9" /></Layers>
+    <Styles>
+      <Style Name="Default"><BrushLayer Name="Default" Color="#17131A00" /></Style>
+      <Style Name="Hovered"><BrushLayer Name="Default" Color="#241B29FF" /></Style>
+      <Style Name="Pressed"><BrushLayer Name="Default" Color="#100E12FF" /></Style>
+      <Style Name="Selected"><BrushLayer Name="Default" Color="#5B0015FF" /></Style>
+    </Styles>
+  </Brush>
+</Brushes>
