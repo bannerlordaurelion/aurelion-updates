@@ -7,7 +7,7 @@
   },
   "gameVersion": "v1.4.8",
   "baseUrl": "",
-  "statusUrl": "",
+  "statusUrl": "http://185.132.133.85:4201/status",
   "links": {
     "discord": "https://discord.gg/8gG6tXm7R",
     "website": ""
@@ -27,9 +27,9 @@
       "files": [
         {
           "path": "aurelion/build.json",
-          "size": 141,
-          "sha256": "EF46382636EBE829D43E30DC69618EB1F92BEAF64D6F98EF5C5450B77868B652",
-          "url": "ef463826_build.json"
+          "size": 202,
+          "sha256": "756D7AA70CA5A49892CF81B49472E6A491A1D1D4C4AE3DCA0D8214D87B88E12D",
+          "url": "756d7aa7_build.json"
         },
         {
           "path": "aurelion/prices.json",
@@ -51,9 +51,9 @@
         },
         {
           "path": "aurelion/studio-project.json",
-          "size": 217695,
-          "sha256": "6A7C2EBD5FA2AD6B13FF07EF96C4150404A19DE6FB916AAFB039306DCA929179",
-          "url": "6a7c2ebd_studio-project.json"
+          "size": 233396,
+          "sha256": "33C70A3716708166317AE8714BA8A395F9C1EBEF14E7490EA6ED4FDFD597D228",
+          "url": "33c70a37_studio-project.json"
         },
         {
           "path": "aurelion/update-server.ps1",
@@ -69,9 +69,9 @@
         },
         {
           "path": "bin/Win64_Shipping_Client/Aurelion.Core.dll",
-          "size": 152576,
-          "sha256": "793873037A66394F85BD0FA2D769283661387DE54F4238588F541AFFB6E7EB36",
-          "url": "79387303_Aurelion.Core.dll"
+          "size": 163328,
+          "sha256": "B7DA1F2C16D536AC072350BA8C77EFD1CAAA7A00B82127266E73BD513362953B",
+          "url": "b7da1f2c_Aurelion.Core.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/Autofac.dll",
