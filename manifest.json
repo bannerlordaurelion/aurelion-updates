@@ -27,9 +27,9 @@
       "files": [
         {
           "path": "aurelion/build.json",
-          "size": 202,
-          "sha256": "756D7AA70CA5A49892CF81B49472E6A491A1D1D4C4AE3DCA0D8214D87B88E12D",
-          "url": "756d7aa7_build.json"
+          "size": 230,
+          "sha256": "311A019BFF78120087FC177F7722AC14FDCFFA9F6860F05D0013AB8203EF9302",
+          "url": "311a019b_build.json"
         },
         {
           "path": "aurelion/prices.json",
@@ -51,9 +51,9 @@
         },
         {
           "path": "aurelion/studio-project.json",
-          "size": 233396,
-          "sha256": "33C70A3716708166317AE8714BA8A395F9C1EBEF14E7490EA6ED4FDFD597D228",
-          "url": "33c70a37_studio-project.json"
+          "size": 237744,
+          "sha256": "9ED61B6D7BA3CA62B6810C8D69DE5984E4F0039FE56F1F97470AB896D9015F74",
+          "url": "9ed61b6d_studio-project.json"
         },
         {
           "path": "aurelion/update-server.ps1",
@@ -69,9 +69,9 @@
         },
         {
           "path": "bin/Win64_Shipping_Client/Aurelion.Core.dll",
-          "size": 163328,
-          "sha256": "B7DA1F2C16D536AC072350BA8C77EFD1CAAA7A00B82127266E73BD513362953B",
-          "url": "b7da1f2c_Aurelion.Core.dll"
+          "size": 166400,
+          "sha256": "56132EC49DC07854DC0FE7FDE8919D308957495DBDA9E7D621AF9C7570A70F10",
+          "url": "56132ec4_Aurelion.Core.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/Autofac.dll",
@@ -393,9 +393,9 @@
         },
         {
           "path": "GUI/Brushes/AurelionAdmin.xml",
-          "size": 5935,
-          "sha256": "AAC2F9B0B38137ECCDF3BBE6A98FA5073AA3A04F2EC968D8DF80B92C626188C0",
-          "url": "aac2f9b0_AurelionAdmin.xml"
+          "size": 11152,
+          "sha256": "20F9639F33EE5438CA402135A7FAF05C8E43DC1FF1FE3DF7921D27AAFBA936FD",
+          "url": "20f9639f_AurelionAdmin.xml"
         },
         {
           "path": "GUI/Brushes/CoopButtons.xml",
@@ -411,9 +411,9 @@
         },
         {
           "path": "GUI/Prefabs/AurelionAdmin.xml",
-          "size": 95643,
-          "sha256": "C6D4DD7FE550F1EDA730A2D593D87CA2CCB931832A2A49D43557ABB9D1814313",
-          "url": "c6d4dd7f_AurelionAdmin.xml"
+          "size": 130380,
+          "sha256": "0EF32CE5427AF1D367908F005AD54F40AB35AAE4B46639D87C86A0E8D6CFA07E",
+          "url": "0ef32ce5_AurelionAdmin.xml"
         },
         {
           "path": "GUI/Prefabs/CoopBugReportUIMovie.xml",
