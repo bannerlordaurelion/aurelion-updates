@@ -27,9 +27,9 @@
       "files": [
         {
           "path": "aurelion/build.json",
-          "size": 230,
-          "sha256": "311A019BFF78120087FC177F7722AC14FDCFFA9F6860F05D0013AB8203EF9302",
-          "url": "311a019b_build.json"
+          "size": 76,
+          "sha256": "787B9FB72F6819EEA7AB41D38BBD9BADE18DD9778818D061495D673E56E2E098",
+          "url": "787b9fb7_build.json"
         },
         {
           "path": "aurelion/prices.json",
@@ -51,9 +51,9 @@
         },
         {
           "path": "aurelion/studio-project.json",
-          "size": 237744,
-          "sha256": "9ED61B6D7BA3CA62B6810C8D69DE5984E4F0039FE56F1F97470AB896D9015F74",
-          "url": "9ed61b6d_studio-project.json"
+          "size": 243941,
+          "sha256": "7345A87DBA41D082714794AC066212EFEE2C2F952DBFAE49A44D67B07753C1CD",
+          "url": "7345a87d_studio-project.json"
         },
         {
           "path": "aurelion/update-server.ps1",
@@ -69,9 +69,9 @@
         },
         {
           "path": "bin/Win64_Shipping_Client/Aurelion.Core.dll",
-          "size": 166400,
-          "sha256": "56132EC49DC07854DC0FE7FDE8919D308957495DBDA9E7D621AF9C7570A70F10",
-          "url": "56132ec4_Aurelion.Core.dll"
+          "size": 169984,
+          "sha256": "268361770522F5F3A5D755EE404A37FBD1F940B25086A39E5C048A9AFF7FD7F6",
+          "url": "26836177_Aurelion.Core.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/Autofac.dll",
@@ -411,9 +411,9 @@
         },
         {
           "path": "GUI/Prefabs/AurelionAdmin.xml",
-          "size": 130380,
-          "sha256": "0EF32CE5427AF1D367908F005AD54F40AB35AAE4B46639D87C86A0E8D6CFA07E",
-          "url": "0ef32ce5_AurelionAdmin.xml"
+          "size": 130695,
+          "sha256": "69B5DAF18E84EC757AD4383DC0CBBD0921ABED32507EF177DFECFB40697E4076",
+          "url": "69b5daf1_AurelionAdmin.xml"
         },
         {
           "path": "GUI/Prefabs/CoopBugReportUIMovie.xml",
@@ -504,6 +504,18 @@
           "size": 2482,
           "sha256": "4E8E9CFD33721C426089017452E055F5690DD857E42770F37FF432670607566C",
           "url": "PlayerNameplates.xml"
+        },
+        {
+          "path": "GUI/SpriteSheets/aur_throne_1.png",
+          "size": 2021676,
+          "sha256": "F88892CC9820C4FFBEF6CCA6464294E90DDA978A42EDE6FBFE3F345FA6067516",
+          "url": "f88892cc_aur_throne_1.png"
+        },
+        {
+          "path": "GUI/Sprites/AurelionSpriteData.xml",
+          "size": 724,
+          "sha256": "9FEE728FB960589B15861DE0738845B360E6447CEC58D6C6979AA418F8631336",
+          "url": "9fee728f_AurelionSpriteData.xml"
         },
         {
           "path": "mod-config.default.json",
