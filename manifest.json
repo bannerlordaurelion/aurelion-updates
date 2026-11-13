@@ -27,9 +27,9 @@
       "files": [
         {
           "path": "aurelion/build.json",
-          "size": 161,
-          "sha256": "3B0AFAC0D137830E6648C5F67425319D99CB8F1D3D56AD48AEDA7F88E3EC7CD2",
-          "url": "3b0afac0_build.json"
+          "size": 220,
+          "sha256": "F2174A15996EEA7387D8B5D2F331D8839BB92D71E6C55F20B1C0911C7E6B4EB5",
+          "url": "f2174a15_build.json"
         },
         {
           "path": "aurelion/prices.json",
@@ -51,9 +51,9 @@
         },
         {
           "path": "aurelion/studio-project.json",
-          "size": 401180,
-          "sha256": "79A59DC2027191F217AA4CECF93683C2A3F3BDDDCAE07C5BB955F62826342B87",
-          "url": "79a59dc2_studio-project.json"
+          "size": 413197,
+          "sha256": "B7E46C6C3508CF605AF26498D8FB8D0E8C7BF99220EA002EF13D8D1559132C17",
+          "url": "b7e46c6c_studio-project.json"
         },
         {
           "path": "aurelion/update-server.ps1",
@@ -69,9 +69,9 @@
         },
         {
           "path": "bin/Win64_Shipping_Client/Aurelion.Core.dll",
-          "size": 293376,
-          "sha256": "074FF55C2C8C4CD4C1C26378D53DD030A591D998B5ED462502C7CA87C23C13B7",
-          "url": "074ff55c_Aurelion.Core.dll"
+          "size": 299520,
+          "sha256": "A60C137699F189618F61929824F22F6B9A63E7D0C1487A274F5BE06370CFBD7A",
+          "url": "a60c1376_Aurelion.Core.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/Autofac.dll",
