@@ -1,0 +1,57 @@
+﻿<Prefab>
+  <Parameters>
+    <Parameter Name="CancelButtonText" DefaultValue="- Missing -"/>
+    <Parameter Name="DoneButtonText" DefaultValue="- Missing -"/>
+    <Parameter Name="CancelButtonAction" DefaultValue=""/>
+    <Parameter Name="ResetButtonAction" DefaultValue=""/>
+    <Parameter Name="DoneButtonAction" DefaultValue=""/>
+    <Parameter Name="IsDoneEnabled" DefaultValue="true"/>
+    <Parameter Name="DoneButtonBrush" DefaultValue="Aur.UI.BtnPr"/>
+    <Parameter Name="ResetButtonHintDataSource" DefaultValue=""/>
+    <Parameter Name="DoneButtonHintDataSource" DefaultValue=""/>
+    <Parameter Name="ResetInputKeyDataSource" DefaultValue=""/>
+    <Parameter Name="CancelInputKeyDataSource" DefaultValue=""/>
+    <Parameter Name="DoneInputKeyDataSource" DefaultValue=""/>
+  </Parameters>
+  <Window>
+    <Widget DoNotAcceptEvents="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="636" SuggestedHeight="84" HorizontalAlignment="Center" VerticalAlignment="Top">
+      <Children>
+        <ButtonWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="230" SuggestedHeight="56" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="20" MarginTop="14" Brush="Aur.UI.Btn" Command.Click="*CancelButtonAction" UpdateChildrenStates="true">
+          <Children>
+            <TextWidget DoNotAcceptEvents="true" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" MarginLeft="10" MarginRight="10" Brush="Aur.UI.Btn.Text" Brush.TextHorizontalAlignment="Center" Brush.TextVerticalAlignment="Center" Text="*CancelButtonText"/>
+            <Widget DoNotAcceptEvents="true" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Left" VerticalAlignment="Center" PositionXOffset="-46">
+              <Children>
+                <InputKeyVisualWidget DataSource="*CancelInputKeyDataSource" DoNotAcceptEvents="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="42" SuggestedHeight="42" KeyID="@KeyID" IsVisible="@IsVisible"/>
+              </Children>
+            </Widget>
+          </Children>
+        </ButtonWidget>
+        <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="230" SuggestedHeight="56" HorizontalAlignment="Right" VerticalAlignment="Top" MarginRight="20" MarginTop="14">
+          <Children>
+            <ButtonWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Brush="*DoneButtonBrush" Command.Click="*DoneButtonAction" IsEnabled="*IsDoneEnabled" UpdateChildrenStates="true">
+              <Children>
+                <TextWidget DoNotAcceptEvents="true" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" MarginLeft="10" MarginRight="10" Brush="Aur.UI.Btn.Text" Brush.TextHorizontalAlignment="Center" Brush.TextVerticalAlignment="Center" Text="*DoneButtonText"/>
+                <Widget DoNotAcceptEvents="true" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Left" VerticalAlignment="Center" PositionXOffset="-46">
+                  <Children>
+                    <InputKeyVisualWidget DataSource="*DoneInputKeyDataSource" DoNotAcceptEvents="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="42" SuggestedHeight="42" KeyID="@KeyID" IsVisible="@IsVisible"/>
+                  </Children>
+                </Widget>
+              </Children>
+            </ButtonWidget>
+            <HintWidget DataSource="*DoneButtonHintDataSource" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" IsDisabled="true"/>
+          </Children>
+        </Widget>
+        <ButtonWidget MarginTop="14" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="56" SuggestedHeight="56" HorizontalAlignment="Center" VerticalAlignment="Top" Brush="Aur.UI.Btn" Command.Click="*ResetButtonAction" UpdateChildrenStates="true">
+          <Children>
+            <Widget DoNotAcceptEvents="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="28" SuggestedHeight="25" HorizontalAlignment="Center" VerticalAlignment="Center" Sprite="StdAssets\icon_reset_flipvertical" Color="#E8C77AFF" AlphaFactor="0.95">
+              <Children>
+                <InputKeyVisualWidget DataSource="*ResetInputKeyDataSource" DoNotAcceptEvents="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="38" SuggestedHeight="38" HorizontalAlignment="Center" VerticalAlignment="Top" PositionYOffset="-52" KeyID="@KeyID" IsVisible="@IsVisible"/>
+              </Children>
+            </Widget>
+            <HintWidget DataSource="*ResetButtonHintDataSource" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" IsDisabled="true"/>
+          </Children>
+        </ButtonWidget>
+      </Children>
+    </Widget>
+  </Window>
+</Prefab>

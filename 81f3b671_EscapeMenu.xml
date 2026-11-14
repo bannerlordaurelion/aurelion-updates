@@ -1,0 +1,62 @@
+﻿<Prefab>
+  <Window>
+    <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent">
+      <Children>
+        <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Sprite="aur_skin2\ink" AlphaFactor="0.55" DoNotAcceptEvents="true" />
+
+        <NavigationScopeTargeter ScopeID="EscapeMenuItemsScope" ScopeParent="..\EscapeMenu\Card\AurButtons" ScopeMovements="Vertical" HasCircularMovement="true" IsDefaultNavigationScope="true" />
+        <Widget Id="EscapeMenu" WidthSizePolicy="Fixed" HeightSizePolicy="CoverChildren" SuggestedWidth="574" HorizontalAlignment="Center" VerticalAlignment="Center" Sprite="aur_skin2\pop_9">
+          <Children>
+            <ListPanel Id="Card" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" StackLayout.LayoutMethod="VerticalTopToBottom" MarginLeft="41" MarginRight="41" MarginTop="36" MarginBottom="31">
+              <Children>
+                <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="48" Brush="Aur.UI.ClanName" Brush.TextHorizontalAlignment="Center" Text="A U R E L I O N" />
+                <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="29" MarginTop="7" MarginBottom="22" Brush="Aur.UI.Muted" Brush.TextHorizontalAlignment="Center" Text="اللعبة واقفة عندك بس · العالم شغّال" />
+
+                <!-- the Coop mod pushes 85px under a widget called ButtonsContainer (made for the game's own Esc layout): it gets this hidden stand-in, the real list keeps its own spacing -->
+                <Widget Id="ButtonsContainer" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="0" SuggestedHeight="0" IsVisible="false" />
+                <NavigatableListPanel Id="AurButtons" DataSource="{MenuItems}" StackLayout.LayoutMethod="VerticalTopToBottom" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" MinIndex="0" MaxIndex="100">
+                  <ItemTemplate>
+                    <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="44" MarginBottom="8" UseSiblingIndexForNavigation="true">
+                      <Children>
+                        <EscapeMenuButtonWidget DoNotPassEventsToChildren="true" Command.Click="ExecuteAction" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Brush="Aur.UI.Btn" PositiveBehaviorBrush="Aur.UI.BtnPr" IsDisabled="@IsDisabled" IsPositiveBehaviored="@IsPositiveBehaviored" UpdateChildrenStates="true">
+                          <Children>
+                            <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" MarginLeft="29" MarginRight="29" Brush="Aur.UI.Row.Text" Text="@ActionText" ClipContents="false" />
+                          </Children>
+                        </EscapeMenuButtonWidget>
+                        <Widget DoNotPassEventsToChildren="true" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" IsVisible="@IsDisabled">
+                          <Children>
+                            <HintWidget DataSource="{DisabledHint}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" />
+                          </Children>
+                        </Widget>
+                      </Children>
+                    </Widget>
+                  </ItemTemplate>
+                </NavigatableListPanel>
+
+                <!-- tip -->
+                <ListPanel Id="TipsContainer" DataSource="{Tips}" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" MarginTop="12" StackLayout.LayoutMethod="VerticalTopToBottom">
+                  <Children>
+                    <NavigationScopeTargeter ScopeID="EscapeMenuTipsScope" ScopeParent="..\TipBox" ScopeMovements="Horizontal" HasCircularMovement="false" IsScopeEnabled="@NavigationButtonsEnabled" />
+                    <Widget Id="TipBox" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" Sprite="aur_skin2\card_9">
+                      <Children>
+                        <ListPanel WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" StackLayout.LayoutMethod="VerticalTopToBottom" MarginLeft="19" MarginRight="19" MarginTop="17" MarginBottom="19">
+                          <Children>
+                            <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" Brush="Aur.UI.Lab" Text="@GameTipTitle" />
+                            <RichTextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" MarginTop="10" MarginLeft="22" MarginRight="22" Brush="Aur.UI.Body" Text="@CurrentTip" />
+                          </Children>
+                        </ListPanel>
+                        <ButtonWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="24" SuggestedHeight="34" HorizontalAlignment="Left" VerticalAlignment="Center" MarginLeft="5" Command.Click="ExecutePreviousTip" Brush="ButtonRightArrowBrush1" IsVisible="@NavigationButtonsEnabled" GamepadNavigationIndex="0" />
+                        <ButtonWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="24" SuggestedHeight="34" HorizontalAlignment="Right" VerticalAlignment="Center" MarginRight="5" Command.Click="ExecuteNextTip" Brush="ButtonLeftArrowBrush1" IsVisible="@NavigationButtonsEnabled" GamepadNavigationIndex="1" />
+                      </Children>
+                    </Widget>
+                  </Children>
+                </ListPanel>
+              </Children>
+            </ListPanel>
+          </Children>
+        </Widget>
+
+      </Children>
+    </Widget>
+  </Window>
+</Prefab>

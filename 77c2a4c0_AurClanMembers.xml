@@ -1,0 +1,191 @@
+﻿<Prefab>
+<Window>
+<Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" IsVisible="@IsSelected" DoNotAcceptEvents="true">
+  <Children>
+
+    <!-- 3D hero (rendered by the game) on the design's light beam and platform -->
+    <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" IsVisible="@IsAnyValidMemberSelected" DoNotAcceptEvents="true">
+      <Children>
+        <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="340" SuggestedHeight="64" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="424" MarginTop="982"  Sprite="aur_skin2\ground" DoNotAcceptEvents="true" />
+        <Widget DataSource="{CurrentSelectedMember}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" DoNotAcceptEvents="true">
+          <Children>
+            <CharacterTableauWidget DataSource="{HeroModel}" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="560" SuggestedHeight="933" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="314" MarginTop="226"  BannerCodeText="@BannerCodeText" BodyProperties="@BodyProperties" CharStringId="@CharStringId" ClipContents="false" EquipmentCode="@EquipmentCode" IsFemale="@IsFemale" MountCreationKey="@MountCreationKey" StanceIndex="@StanceIndex" ArmorColor1="@ArmorColor1" ArmorColor2="@ArmorColor2" Race="@Race" DoNotUseCustomScale="true" />
+            <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="34" SuggestedHeight="34" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="577" MarginTop="264"  Sprite="SPGeneral\Clan\Status\icon_pregnant" IsVisible="@IsPregnant">
+              <Children><HintWidget DataSource="{PregnantHint}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" /></Children>
+            </Widget>
+          </Children>
+        </Widget>
+      </Children>
+    </Widget>
+
+    <!-- left: members list -->
+    <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="324" SuggestedHeight="802" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="44" MarginTop="194"  Sprite="aur_skin\glass_9">
+      <Children>
+        <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="55" DoNotAcceptEvents="true">
+  <Children>
+    <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" MarginLeft="22" MarginRight="22" Brush="Aur.UI.Title" DataSource="{..}" Text="@MembersText" />
+    
+    <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="2" VerticalAlignment="Bottom" Sprite="aur_skin2\gh_line" />
+  </Children>
+</Widget>
+        <ListPanel DataSource="{SortController}" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="324" SuggestedHeight="36" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="0" MarginTop="55"  StackLayout.LayoutMethod="HorizontalLeftToRight">
+          <Children>
+            <SortButtonWidget DoNotPassEventsToChildren="true" WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="162" Brush="Aur.UI.Clear" Command.Click="ExecuteSortByName" IsSelected="@IsNameSelected" SortState="@NameState" SortVisualWidget="TextWidget\NameSortVisualWidget" UpdateChildrenStates="true">
+              <Children>
+                <TextWidget Id="TextWidget" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Left" VerticalAlignment="Center" MarginLeft="22" Brush="Aur.UI.Sh" ClipContents="false" Text="@NameText">
+                  <Children><BrushWidget Id="NameSortVisualWidget" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="14" SuggestedHeight="14" HorizontalAlignment="Right" VerticalAlignment="Center" PositionXOffset="18" Brush="ArmyManagement.Sort.ArrowBrush" /></Children>
+                </TextWidget>
+              </Children>
+            </SortButtonWidget>
+            <SortButtonWidget DoNotPassEventsToChildren="true" WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="162" Brush="Aur.UI.Clear" Command.Click="ExecuteSortByLocation" IsSelected="@IsLocationSelected" SortState="@LocationState" SortVisualWidget="TextWidget\LocationSortVisualWidget" UpdateChildrenStates="true">
+              <Children>
+                <TextWidget Id="TextWidget" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Right" VerticalAlignment="Center" MarginRight="40" Brush="Aur.UI.Sh.R" ClipContents="false" Text="@LocationText">
+                  <Children><BrushWidget Id="LocationSortVisualWidget" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="14" SuggestedHeight="14" HorizontalAlignment="Right" VerticalAlignment="Center" PositionXOffset="18" Brush="ArmyManagement.Sort.ArrowBrush" /></Children>
+                </TextWidget>
+              </Children>
+            </SortButtonWidget>
+          </Children>
+        </ListPanel>
+        <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="324" SuggestedHeight="1" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="0" MarginTop="91"  Sprite="aur_skin2\hline" />
+
+        <ScrollablePanel Id="AurMembersScroll" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="324" SuggestedHeight="641" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="0" MarginTop="92"  AutoHideScrollBars="true" ClipRect="AurMembersRect" InnerPanel="AurMembersRect\AurMembersList" MouseScrollAxis="Vertical" VerticalScrollbar="..\AurMembersScrollbar\Scrollbar">
+          <Children>
+            <Widget Id="AurMembersRect" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" ClipContents="true">
+              <Children>
+                <ListPanel Id="AurMembersList" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" StackLayout.LayoutMethod="VerticalTopToBottom">
+                  <Children>
+                    <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="36" MarginLeft="22" MarginRight="22" MarginTop="7" Brush="Aur.UI.Sh" Text="@PlayersText" IsVisible="@HasPlayers" />
+                    <ListPanel DataSource="{Players}" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" StackLayout.LayoutMethod="VerticalTopToBottom" IsVisible="@HasPlayers">
+                      <ItemTemplate><AurClanLordTuple /></ItemTemplate>
+                    </ListPanel>
+                    <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="36" MarginLeft="22" MarginRight="22" MarginTop="12" Brush="Aur.UI.Sh" Text="@FamilyText" />
+                    <ListPanel DataSource="{Family}" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" StackLayout.LayoutMethod="VerticalTopToBottom">
+                      <ItemTemplate><AurClanLordTuple /></ItemTemplate>
+                    </ListPanel>
+                    <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="36" MarginLeft="22" MarginRight="22" MarginTop="12" Brush="Aur.UI.Sh" Text="@OtherFamiliesText" IsVisible="@HasOtherFamilies" />
+                    <ListPanel DataSource="{OtherFamilies}" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" StackLayout.LayoutMethod="VerticalTopToBottom" IsVisible="@HasOtherFamilies">
+                      <ItemTemplate><AurClanLordTuple /></ItemTemplate>
+                    </ListPanel>
+                    <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="36" MarginLeft="22" MarginRight="22" MarginTop="12" Brush="Aur.UI.Sh" Text="@CompanionsText" />
+                    <ListPanel DataSource="{Companions}" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" StackLayout.LayoutMethod="VerticalTopToBottom">
+                      <ItemTemplate><AurClanLordTuple /></ItemTemplate>
+                    </ListPanel>
+                    <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="10" />
+                  </Children>
+                </ListPanel>
+              </Children>
+            </Widget>
+          </Children>
+        </ScrollablePanel>
+        <ButtonWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="300" SuggestedHeight="46" HorizontalAlignment="Left" VerticalAlignment="Bottom" MarginLeft="12" MarginBottom="12" Brush="Aur.UI.Btn" IsVisible="@CanLeaveClan" Command.Click="ExecuteLeaveClan" DoNotPassEventsToChildren="true" UpdateChildrenStates="true">
+          <Children>
+            <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Brush="Aur.UI.Btn.Text" Text="@LeaveClanText" />
+          </Children>
+        </ButtonWidget>
+        <Widget Id="AurMembersScrollbar" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="8" SuggestedHeight="629" HorizontalAlignment="Right" VerticalAlignment="Top" MarginRight="3" MarginTop="97">
+          <Children>
+            <ScrollbarWidget Id="Scrollbar" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" AlignmentAxis="Vertical" Handle="ScrollbarHandle" MaxValue="100" MinValue="0">
+              <Children>
+                <ImageWidget Id="ScrollbarHandle" WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="40" Brush="Aur.UI.Thumb" />
+              </Children>
+            </ScrollbarWidget>
+          </Children>
+        </Widget>
+      </Children>
+    </Widget>
+
+    <!-- right: the selected member -->
+    <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="840" SuggestedHeight="624" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="768" MarginTop="228"  Sprite="aur_skin\glass_9" IsVisible="@IsAnyValidMemberSelected">
+      <Children>
+        <Widget DataSource="{CurrentSelectedMember}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent">
+          <Children>
+            <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="55">
+              <Children>
+                <ListPanel WidthSizePolicy="CoverChildren" HeightSizePolicy="StretchToParent" MarginLeft="22" StackLayout.LayoutMethod="HorizontalLeftToRight">
+      <Children>
+        <ScrollingTextWidget WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" MaxWidth="420" VerticalAlignment="Center" Brush="Aur.UI.Title" Text="@Name" />
+        <ButtonWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="22" SuggestedHeight="22" VerticalAlignment="Center" MarginLeft="10" Brush="Aur.UI.Clear" Command.Click="ExecuteRename" IsVisible="@IsFamilyMember" DoNotPassEventsToChildren="true">
+          <Children><Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="18" SuggestedHeight="18" HorizontalAlignment="Center" VerticalAlignment="Center" Sprite="aur_skin2\edit" /></Children>
+        </ButtonWidget>
+      </Children>
+    </ListPanel>
+                <ListPanel WidthSizePolicy="CoverChildren" HeightSizePolicy="StretchToParent" HorizontalAlignment="Right" MarginRight="182" StackLayout.LayoutMethod="HorizontalLeftToRight">
+      <Children>
+        <ButtonWidget DataSource="{..}" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="190" SuggestedHeight="36" VerticalAlignment="Center" MarginRight="12" Brush="Aur.UI.Btn" IsVisible="@CanManagePlayer" Command.Click="ExecuteManagePlayer" DoNotPassEventsToChildren="true" UpdateChildrenStates="true">
+          <Children><TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Brush="Aur.UI.Btn.Text" Brush.FontSize="16" Text="@ManagePlayerText" /></Children>
+        </ButtonWidget>
+        <ButtonWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="33" SuggestedHeight="19" VerticalAlignment="Center" MarginRight="8" Brush="ShowOnMap.Button" IsVisible="@CanShowLocationOfHero" Command.Click="ExecuteShowOnMap" DoNotPassEventsToChildren="true">
+          <Children><HintWidget DataSource="{ShowOnMapHint}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" /></Children>
+        </ButtonWidget>
+        <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="34" SuggestedHeight="34" VerticalAlignment="Center" MarginRight="6" IsVisible="@IsTalkVisible">
+          <Children>
+            <ButtonWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Brush="SPClan.Members.TalkIcon" Command.Click="ExecuteTalk" IsEnabled="@IsTalkEnabled" DoNotPassEventsToChildren="true" />
+            <HintWidget DataSource="{TalkHint}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" />
+          </Children>
+        </Widget>
+        <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="34" SuggestedHeight="34" VerticalAlignment="Center" MarginRight="6" IsVisible="@IsRecallVisible">
+          <Children>
+            <ButtonWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Brush="SPClan.Members.RecallIcon" Command.Click="ExecuteRecall" IsEnabled="@IsRecallEnabled" DoNotPassEventsToChildren="true" />
+            <HintWidget DataSource="{RecallHint}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" />
+          </Children>
+        </Widget>
+      </Children>
+    </ListPanel>
+    <TextWidget Id="AurRole" WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="160" HorizontalAlignment="Right" MarginRight="22" Brush="Aur.UI.Lab.R" Text="" />
+                <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="2" VerticalAlignment="Bottom" Sprite="aur_skin2\gh_line" />
+              </Children>
+            </Widget>
+        <TextWidget Id="AurL_Age" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="255" SuggestedHeight="16" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="22" MarginTop="72"  Brush="Aur.UI.Lab" Text="" />
+        <TextWidget Id="AurV_Age" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="255" SuggestedHeight="26" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="22" MarginTop="90"  Brush="Aur.UI.Val" Text="" />
+        <TextWidget Id="AurL_Culture" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="255" SuggestedHeight="16" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="287" MarginTop="72"  Brush="Aur.UI.Lab" Text="" />
+        <TextWidget Id="AurV_Culture" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="255" SuggestedHeight="26" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="287" MarginTop="90"  Brush="Aur.UI.Val" Text="" />
+        <TextWidget Id="AurL_Location" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="255" SuggestedHeight="16" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="552" MarginTop="72"  Brush="Aur.UI.Lab" Text="" />
+        <RichTextWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="255" SuggestedHeight="26" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="552" MarginTop="90"  Brush="Aur.UI.Val" Text="@LocationText" Command.LinkClick="ExecuteLocationLink" Command.LinkAlternateClick="ExecuteLocationLink" ClipContents="true" />
+        <TextWidget Id="AurL_Health" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="255" SuggestedHeight="16" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="22" MarginTop="127"  Brush="Aur.UI.Lab" Text="" />
+        <TextWidget Id="AurV_Health" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="255" SuggestedHeight="26" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="22" MarginTop="145"  Brush="Aur.UI.Val" Text="" />
+        <TextWidget Id="AurL_Level" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="255" SuggestedHeight="16" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="287" MarginTop="127"  Brush="Aur.UI.Lab" Text="" />
+        <TextWidget Id="AurV_Level" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="255" SuggestedHeight="26" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="287" MarginTop="145"  Brush="Aur.UI.Val" Text="" />
+        <TextWidget DataSource="{..}" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="255" SuggestedHeight="16" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="552" MarginTop="127"  Brush="Aur.UI.Lab" Text="@TraitsText" />
+        <ListPanel DataSource="{Traits}" WidthSizePolicy="CoverChildren" HeightSizePolicy="Fixed" SuggestedHeight="30" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="548" MarginTop="144">
+          <ItemTemplate>
+            <EncyclopediaHeroTraitVisualWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="30" SuggestedHeight="30" MarginRight="4" TraitId="@TraitId" TraitValue="@Value">
+              <Children>
+                <HintWidget DataSource="{Hint}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" />
+              </Children>
+            </EncyclopediaHeroTraitVisualWidget>
+          </ItemTemplate>
+        </ListPanel>
+            <TextWidget DataSource="{..}" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="300" SuggestedHeight="18" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="22" MarginTop="187"  Brush="Aur.UI.Lab" Text="@SkillsText" />
+            <NavigatableGridWidget Id="AurSkillGrid" DataSource="{Skills}" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="22" MarginTop="213" DefaultCellWidth="201" DefaultCellHeight="80" ColumnCount="4">
+              <ItemTemplate>
+            <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="191" SuggestedHeight="70" Sprite="aur_skin2\card_9">
+              <Children>
+                <TextWidget Id="AurSkillName" WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="18" MarginLeft="12" MarginRight="12" MarginTop="9" Brush="Aur.UI.SkillName" Text="" />
+                <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="24" MarginLeft="12" MarginRight="12" MarginTop="27" Brush="Aur.UI.SkillVal" IntText="@SkillValue" />
+                <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="4" VerticalAlignment="Bottom" MarginLeft="12" MarginRight="12" MarginBottom="7" Sprite="aur_skin2\bar_bg_9">
+                  <Children>
+                    <FillBarWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" FillWidget="FillBarParent\FillWidget" InitialAmount="@SkillValue" MaxAmount="300">
+                      <Children>
+                        <Widget Id="FillBarParent" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent">
+                          <Children>
+                            <Widget Id="FillWidget" WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="167" Sprite="aur_skin2\bar_fill_9" />
+                          </Children>
+                        </Widget>
+                      </Children>
+                    </FillBarWidget>
+                  </Children>
+                </Widget>
+                <HintWidget DataSource="{Hint}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" />
+              </Children>
+            </Widget>
+              </ItemTemplate>
+            </NavigatableGridWidget>
+          </Children>
+        </Widget>
+      </Children>
+    </Widget>
+
+  </Children>
+</Widget>
+</Window>
+</Prefab>

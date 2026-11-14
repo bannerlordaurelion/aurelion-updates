@@ -1,0 +1,55 @@
+﻿<Prefab>
+  <Constants>
+
+    <Constant Name="ArmyManagement.Panel.Left.Width" BrushLayer="Frame" BrushName="ArmyManagement.Panel.Left" BrushValueType="Width" />
+    <Constant Name="ArmyManagement.Panel.Left.Height" BrushLayer="Frame" BrushName="ArmyManagement.Panel.Left" BrushValueType="Height" />
+
+    <Constant Name="ArmyManagement.Panel.Right.Width" BrushLayer="Frame" BrushName="ArmyManagement.Panel.Right" BrushValueType="Width" />
+    <Constant Name="ArmyManagement.Panel.Right.Height" BrushLayer="Frame" BrushName="ArmyManagement.Panel.Right" BrushValueType="Height" />
+
+  </Constants>
+  <Window>
+    <BrushWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="!ArmyManagement.Panel.Right.Width" SuggestedHeight="!ArmyManagement.Panel.Right.Height" HorizontalAlignment="Right" VerticalAlignment="Center" PositionYOffset="18" MarginRight="65" Brush="ArmyManagement.Panel.Right">
+      <Children>
+
+        <!--Party List Scrollable Panel-->
+        <NavigationScopeTargeter ScopeID="ArmyPartiesScope" ScopeParent="..\ArmyPartiesCart" ScopeMovements="Horizontal" AlternateScopeMovements="Vertical" AlternateMovementStepSize="4" ForceGainNavigationOnClosestChild="true" NavigateFromScopeEdges="true" UseDiscoveryAreaAsScopeEdges="true" ExtendDiscoveryAreaBottom="-65"/>
+        <ScrollablePanel Id="ArmyPartiesCart" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" AutoHideScrollBars="true" ClipRect="CartListClipRect" InnerPanel="CartListClipRect\CartList" VerticalScrollbar="..\CartListScrollbar\Scrollbar">
+          <Children>
+
+            <Widget Id="CartListClipRect" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" MarginBottom="13" ClipContents="true">
+              <Children>
+
+                <!-- ID= "CartList" is used in ArmyManagement inputs. If you update this, do not forget to also update them. -->
+                <NavigatableGridWidget Id="CartList" DataSource="{PartiesInCart}" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" MarginLeft="4" MarginTop="10" MarginBottom="50" ColumnCount="4" DefaultCellHeight="180" DefaultCellWidth="152" AutoScrollBottomOffset="100">
+                  <ItemTemplate>
+                    <ArmyCartItem />
+                  </ItemTemplate>
+                </NavigatableGridWidget>
+
+              </Children>
+            </Widget>
+
+          </Children>
+        </ScrollablePanel>
+
+        <Standard.VerticalScrollbar Id="CartListScrollbar" HeightSizePolicy="StretchToParent" HorizontalAlignment="Right" MarginRight="10" MarginTop="8" MarginBottom="15" />
+
+        <!--Disband Army Button-->
+        <NavigationScopeTargeter ScopeID="ArmyDisbandButtonScope" ScopeParent="..\DisbandButton" ExtendDiscoveryAreaLeft="140" ExtendDiscoveryAreaRight="140" />
+        <ButtonWidget Id="DisbandButton" DoNotPassEventsToChildren="true" UpdateChildrenStates="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="260" SuggestedHeight="50" HorizontalAlignment="Center" VerticalAlignment="Bottom" MarginBottom="16" Command.Click="ExecuteDisbandArmy" IsEnabled="@CanDisbandArmy" GamepadNavigationIndex="0" >
+          <Children>
+            <BrushWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Brush="Aur.UI.Btn">
+              <Children>
+                <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" MarginLeft="10" MarginRight="10" Brush="Aur.UI.Btn.Text" Text="@DisbandArmyText" />
+              </Children>
+            </BrushWidget>
+            <HintWidget DataSource="{DisbandArmyHint}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" IsDisabled="true" />
+          </Children>
+        </ButtonWidget>
+
+      </Children>
+    </BrushWidget>
+
+  </Window>
+</Prefab>

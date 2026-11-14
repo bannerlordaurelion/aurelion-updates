@@ -1,0 +1,10 @@
+﻿<Prefab>
+<Window>
+<ButtonWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="50" MarginLeft="12" MarginRight="12" MarginTop="7" Brush="Aur.UI.Row" Command.Click="OnCharacterSelect" IsSelected="@IsSelected" UpdateChildrenStates="true">
+  <Children>
+    <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" MarginLeft="14" MarginRight="120" Brush="Aur.UI.Row.Text" Text="@Name" DoNotAcceptEvents="true" />
+    <TextWidget WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="132" HorizontalAlignment="Right" MarginRight="14" Brush="Aur.UI.Row.Sub" Text="@CurrentActionText" DoNotAcceptEvents="true" />
+  </Children>
+</ButtonWidget>
+</Window>
+</Prefab>

@@ -1,0 +1,21 @@
+﻿<Prefab>
+  <Parameters>
+    <Parameter Name="DoneButtonText" DefaultValue="- Missing -"/>
+    <Parameter Name="DoneButtonAction" DefaultValue=""/>
+    <Parameter Name="DoneButtonDisabled" DefaultValue="false"/>
+    <Parameter Name="DoneButtonEnabled" DefaultValue="false"/>
+    <Parameter Name="DoneButtonHoverBegin" DefaultValue=""/>
+    <Parameter Name="DoneButtonHoverEnd" DefaultValue=""/>
+  </Parameters>
+  <Window>
+    <Widget DoNotAcceptEvents="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="290" SuggestedHeight="90" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+      <Children>
+        <ButtonWidget Id="DoneButton" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="250" SuggestedHeight="56" HorizontalAlignment="Center" VerticalAlignment="Bottom" MarginBottom="22" Brush="Aur.UI.BtnPr" Command.Click="*DoneButtonAction" Command.HoverBegin="*DoneButtonHoverBegin" Command.HoverEnd="*DoneButtonHoverEnd" IsDisabled="*DoneButtonDisabled" IsEnabled="*DoneButtonEnabled" UpdateChildrenStates="true">
+          <Children>
+            <TextWidget DoNotAcceptEvents="true" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" MarginLeft="10" MarginRight="10" Brush="Aur.UI.Btn.Text" Brush.TextHorizontalAlignment="Center" Brush.TextVerticalAlignment="Center" Text="*DoneButtonText"/>
+          </Children>
+        </ButtonWidget>
+      </Children>
+    </Widget>
+  </Window>
+</Prefab>

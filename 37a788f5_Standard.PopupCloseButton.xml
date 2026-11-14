@@ -1,0 +1,30 @@
+﻿<Prefab>
+  <Parameters>
+    <Parameter Name="ButtonText" DefaultValue="- Missing -"/>
+    <Parameter Name="ButtonAction" DefaultValue=""/>
+    <Parameter Name="IsEnabled" DefaultValue="true"/>
+    <Parameter Name="InputKeyDataSource" DefaultValue=""/>
+    <Parameter Name="DisabledHintDataSource" DefaultValue=""/>
+  </Parameters>
+  <Window>
+    <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="250" SuggestedHeight="52" HorizontalAlignment="Center" VerticalAlignment="Top">
+      <Children>
+        <ButtonWidget Id="ButtonWidget" DoNotPassEventsToChildren="true" Command.Click="*ButtonAction" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" IsEnabled="*IsEnabled" Brush="Aur.UI.BtnPr" UpdateChildrenStates="true">
+          <Children>
+            <TextWidget DoNotAcceptEvents="true" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" MarginLeft="10" MarginRight="10" Brush="Aur.UI.Btn.Text" Brush.TextHorizontalAlignment="Center" Brush.TextVerticalAlignment="Center" Text="*ButtonText"/>
+            <Widget WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Left" VerticalAlignment="Center" PositionXOffset="-44" IsVisible="*IsEnabled">
+              <Children>
+                <InputKeyVisualWidget DataSource="*InputKeyDataSource" DoNotAcceptEvents="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="40" SuggestedHeight="40" KeyID="@KeyID" IsVisible="@IsVisible"/>
+              </Children>
+            </Widget>
+          </Children>
+        </ButtonWidget>
+        <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" IsDisabled="*IsEnabled">
+          <Children>
+            <HintWidget DataSource="*DisabledHintDataSource" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint"/>
+          </Children>
+        </Widget>
+      </Children>
+    </Widget>
+  </Window>
+</Prefab>

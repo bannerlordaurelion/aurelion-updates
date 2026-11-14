@@ -1,0 +1,157 @@
+﻿<Prefab>
+<Window>
+<ClanScreenWidget Id="AurClanScreenWidget" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Command.ResetCharacter="ResetSelectedCharacter">
+  <Children>
+    <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Sprite="aur_skin2\ink" DoNotAcceptEvents="true" />
+    <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Sprite="aur_bg_clan_members\bg" IsVisible="@IsMembersSelected" DoNotAcceptEvents="true" />
+    <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Sprite="aur_bg_clan_parties\bg" IsVisible="@IsPartiesSelected" DoNotAcceptEvents="true" />
+    <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Sprite="aur_bg_clan_fiefs\bg" IsVisible="@IsFiefsSelected" DoNotAcceptEvents="true" />
+    <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Sprite="aur_bg_clan_other\bg" IsVisible="@IsIncomeSelected" DoNotAcceptEvents="true" />
+
+    <!-- tabs the design has not reached yet keep the game's own content, inside the Aurelion frame -->
+    <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" MarginTop="188" MarginBottom="75" DoNotAcceptEvents="true">
+      <Children>
+        <ClanParties DataSource="{ClanParties}" IsVisible="true" />
+        <ClanFiefs DataSource="{ClanFiefs}" IsVisible="true" />
+        <ClanIncome DataSource="{ClanIncome}" IsVisible="true" />
+      </Children>
+    </Widget>
+    <AurClanMembers DataSource="{ClanMembers}" />
+
+    <!-- top: fade, banner, leader, clan name, tabs, clan tier -->
+    <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="196" Sprite="aur_skin\header_fade" DoNotAcceptEvents="true" />
+
+    <ButtonWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="106" SuggestedHeight="163" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="29" MarginTop="0"  DoNotPassEventsToChildren="true" Brush="Aur.UI.Clear" Command.Click="ExecuteOpenBannerEditor" IsEnabled="@CanChooseBanner" UpdateChildrenStates="true">
+      <Children>
+        <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Sprite="aur_skin2\banner_box" />
+        <MaskedTextureWidget DataSource="{ClanBanner}" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="84" SuggestedHeight="101" HorizontalAlignment="Center" VerticalAlignment="Center" Brush="Clan.TornBanner" AdditionalArgs="@AdditionalArgs" ImageId="@Id" TextureProviderName="@TextureProviderName" />
+        <HintWidget DataSource="{ClanBannerHint}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" IsDisabled="true" />
+      </Children>
+    </ButtonWidget>
+
+    <ButtonWidget DataSource="{Leader}" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="150" SuggestedHeight="106" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="160" MarginTop="8"  DoNotPassEventsToChildren="true" Brush="Aur.UI.Clear" Command.Click="ExecuteLink" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint">
+      <Children>
+        <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" MarginLeft="2" MarginRight="2" MarginTop="2" MarginBottom="2" Sprite="aur_skin2\ink" Color="#15141AFF" />
+        <ImageIdentifierWidget DataSource="{ImageIdentifier}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" MarginLeft="2" MarginRight="2" MarginTop="2" MarginBottom="2" AdditionalArgs="@AdditionalArgs" ImageId="@Id" TextureProviderName="@TextureProviderName" />
+        <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="44" VerticalAlignment="Bottom" MarginLeft="2" MarginRight="2" MarginBottom="2" Sprite="aur_skin2\portrait_fade" />
+        <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Sprite="aur_skin2\portrait_9" />
+      </Children>
+    </ButtonWidget>
+    <TextWidget Id="AurLeaderLine" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="200" SuggestedHeight="24" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="135" MarginTop="120"  Brush="Aur.UI.LeaderLine" Text="" />
+
+    <ListPanel WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" VerticalAlignment="Top" MarginTop="12" StackLayout.LayoutMethod="HorizontalLeftToRight">
+      <Children>
+        <ButtonWidget DoNotPassEventsToChildren="true" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" Brush="Aur.UI.Clear" Command.Click="ExecuteChangeClanName" IsEnabled="@PlayerCanChangeClanName" UpdateChildrenStates="true">
+          <Children>
+            <TextWidget WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" MaxWidth="760" Brush="Aur.UI.ClanName" Text="@Name" />
+          </Children>
+        </ButtonWidget>
+        <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="19" SuggestedHeight="19" VerticalAlignment="Center" MarginLeft="12" Sprite="aur_skin2\edit" IsVisible="@PlayerCanChangeClanName">
+          <Children>
+            <HintWidget DataSource="{ChangeClanNameHint}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" />
+          </Children>
+        </Widget>
+      </Children>
+    </ListPanel>
+
+    <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="657" SuggestedHeight="56" HorizontalAlignment="Center" VerticalAlignment="Top" MarginTop="101" Sprite="aur_skin2\seg_9">
+      <Children>
+        <ListPanel WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" VerticalAlignment="Center" StackLayout.LayoutMethod="HorizontalLeftToRight">
+          <Children>
+          <ButtonWidget DoNotPassEventsToChildren="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="158" SuggestedHeight="46" MarginLeft="0" Brush="Aur.UI.Seg.Tab" Command.Click="SetSelectedCategory" CommandParameter.Click="0" IsSelected="@IsMembersSelected" UpdateChildrenStates="true">
+            <Children>
+              <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Brush="Aur.UI.Seg.Text" Text="@MembersText" />
+            </Children>
+          </ButtonWidget>
+          <ButtonWidget DoNotPassEventsToChildren="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="158" SuggestedHeight="46" MarginLeft="5" Brush="Aur.UI.Seg.Tab" Command.Click="SetSelectedCategory" CommandParameter.Click="1" IsSelected="@IsPartiesSelected" UpdateChildrenStates="true">
+            <Children>
+              <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Brush="Aur.UI.Seg.Text" Text="@PartiesText" />
+            </Children>
+          </ButtonWidget>
+          <ButtonWidget DoNotPassEventsToChildren="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="158" SuggestedHeight="46" MarginLeft="5" Brush="Aur.UI.Seg.Tab" Command.Click="SetSelectedCategory" CommandParameter.Click="2" IsSelected="@IsFiefsSelected" UpdateChildrenStates="true">
+            <Children>
+              <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Brush="Aur.UI.Seg.Text" Text="@FiefsText" />
+            </Children>
+          </ButtonWidget>
+          <ButtonWidget DoNotPassEventsToChildren="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="158" SuggestedHeight="46" MarginLeft="5" Brush="Aur.UI.Seg.Tab" Command.Click="SetSelectedCategory" CommandParameter.Click="3" IsSelected="@IsIncomeSelected" UpdateChildrenStates="true">
+            <Children>
+              <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Brush="Aur.UI.Seg.Text" Text="@IncomeText" />
+            </Children>
+          </ButtonWidget>
+          </Children>
+        </ListPanel>
+      </Children>
+    </Widget>
+
+    <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="312" SuggestedHeight="74" HorizontalAlignment="Right" VerticalAlignment="Top" MarginRight="41" MarginTop="48">
+      <Children>
+        <TextWidget Id="AurTierL" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="120" SuggestedHeight="20" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="0" MarginTop="0"  Brush="Aur.UI.Small" Text="@CurrentRenownText" />
+        <TextWidget Id="AurTierR" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="192" SuggestedHeight="20" HorizontalAlignment="Right" VerticalAlignment="Top" Brush="Aur.UI.Small.R" Text="" />
+        <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="312" SuggestedHeight="7" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="0" MarginTop="31"  Sprite="aur_skin2\bar_bg_9" IsHidden="@IsRenownProgressComplete">
+          <Children>
+            <FillBarWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" FillWidget="FillBarParent\FillWidget" InitialAmount="@CurrentRenownOverPreviousTier" MaxAmount="@CurrentTierRenownRange">
+              <Children>
+                <Widget Id="FillBarParent" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent">
+                  <Children>
+                    <Widget Id="FillWidget" WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="312" Sprite="aur_skin2\bar_fill_9" />
+                  </Children>
+                </Widget>
+              </Children>
+            </FillBarWidget>
+          </Children>
+        </Widget>
+        <TextWidget Id="AurRenownL" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="132" SuggestedHeight="18" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="0" MarginTop="48"  Brush="Aur.UI.Tiny" Text="" />
+        <TextWidget Id="AurRenownR" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="180" SuggestedHeight="18" HorizontalAlignment="Right" VerticalAlignment="Top" MarginTop="48" Brush="Aur.UI.Tiny.R" Text="" />
+        <HintWidget DataSource="{RenownHint}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" />
+      </Children>
+    </Widget>
+
+    <!-- finance -->
+    <Widget Id="FinancePanelWidget" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="265" SuggestedHeight="317" HorizontalAlignment="Right" VerticalAlignment="Top" MarginRight="10" MarginTop="382" Sprite="aur_skin\glass_9">
+      <Children>
+        <HintWidget DataSource="{GoldChangeTooltip}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" />
+        <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="55" DoNotAcceptEvents="true">
+  <Children>
+    <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" MarginLeft="22" MarginRight="22" Brush="Aur.UI.Title" Text="@FinanceText" />
+    
+    <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="2" VerticalAlignment="Bottom" Sprite="aur_skin2\gh_line" />
+  </Children>
+</Widget>
+        <TextWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="140" SuggestedHeight="38" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="22" MarginTop="62"  Brush="Aur.UI.Muted" Text="@TotalIncomeText" />
+        <TextWidget Id="AurFin_Income" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="110" SuggestedHeight="38" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="133" MarginTop="62"  Brush="Aur.UI.Num.R" Text="" />
+        <TextWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="140" SuggestedHeight="38" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="22" MarginTop="100"  Brush="Aur.UI.Muted" Text="@TotalExpensesText" />
+        <TextWidget Id="AurFin_Expenses" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="110" SuggestedHeight="38" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="133" MarginTop="100"  Brush="Aur.UI.Num.R" Text="" />
+        <TextWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="140" SuggestedHeight="38" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="22" MarginTop="138"  Brush="Aur.UI.Muted" Text="@DailyChangeText" />
+        <TextWidget Id="AurFin_Daily" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="110" SuggestedHeight="38" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="133" MarginTop="138"  Brush="Aur.UI.Num.R" Text="" />
+        <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="221" SuggestedHeight="1" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="22" MarginTop="182"  Sprite="aur_skin2\hline" />
+        <TextWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="140" SuggestedHeight="38" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="22" MarginTop="190"  Brush="Aur.UI.Muted" Text="@CurrentGoldText" />
+        <TextWidget Id="AurFin_Gold" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="110" SuggestedHeight="38" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="133" MarginTop="190"  Brush="Aur.UI.Amber.R" Text="" />
+        <TextWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="140" SuggestedHeight="38" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="22" MarginTop="228"  Brush="Aur.UI.Muted" Text="@ExpectedGoldText" />
+        <TextWidget Id="AurFin_Expected" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="110" SuggestedHeight="38" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="133" MarginTop="228"  Brush="Aur.UI.AmberSemi.R" Text="" />
+      </Children>
+    </Widget>
+
+    <!-- Coop: send tribute -->
+    <ButtonWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="265" SuggestedHeight="46" HorizontalAlignment="Right" VerticalAlignment="Top" MarginRight="10" MarginTop="711" Brush="Aur.UI.Btn" IsVisible="@CanSendTribute" Command.Click="ExecuteSendTribute" DoNotPassEventsToChildren="true" UpdateChildrenStates="true">
+      <Children>
+        <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Brush="Aur.UI.Btn.Text" Text="@SendTributeText" />
+      </Children>
+    </ButtonWidget>
+
+    <!-- done -->
+    <ButtonWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="252" SuggestedHeight="48" HorizontalAlignment="Center" VerticalAlignment="Top" MarginTop="1015" Brush="Aur.UI.BtnPr" Command.Click="ExecuteClose" UpdateChildrenStates="true" DoNotPassEventsToChildren="true">
+      <Children>
+        <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Brush="Aur.UI.Btn.Text" Text="@DoneLbl" />
+      </Children>
+    </ButtonWidget>
+
+    <ClanCardSelectionPopup DataSource="{CardSelectionPopup}" />
+    <ElementNotificationWidget DataSource="{TutorialNotification}" ElementID="@ElementID" TutorialFrameWidget="TutorialFrameWidget">
+      <Children>
+        <TutorialHighlightItemBrushWidget Id="TutorialFrameWidget" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Brush="TutorialHighlightBrush" IsDisabled="true" IsVisible="false" />
+      </Children>
+    </ElementNotificationWidget>
+  </Children>
+</ClanScreenWidget>
+</Window>
+</Prefab>
