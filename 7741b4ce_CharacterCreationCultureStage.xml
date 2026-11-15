@@ -1,0 +1,172 @@
+﻿<Prefab>
+  <VisualDefinitions>
+    <VisualDefinition Name="CultLift" TransitionDuration="0.28" EaseType="EaseOut" EaseFunction="Quint">
+      <VisualState State="Default" PositionYOffset="0" />
+      <VisualState State="Hovered" PositionYOffset="-8" />
+      <VisualState State="Pressed" PositionYOffset="-6" />
+      <VisualState State="Selected" PositionYOffset="-12" />
+      <VisualState State="Disabled" PositionYOffset="0" />
+    </VisualDefinition>
+    <VisualDefinition Name="CultRoll" TransitionDuration="0.55" EaseType="EaseOut" EaseFunction="Quint">
+      <VisualState State="Default" SuggestedHeight="660" />
+      <VisualState State="Hovered" SuggestedHeight="0" />
+      <VisualState State="Pressed" SuggestedHeight="0" />
+      <VisualState State="Selected" SuggestedHeight="0" />
+      <VisualState State="Disabled" SuggestedHeight="660" />
+    </VisualDefinition>
+    <VisualDefinition Name="CultZoom" TransitionDuration="0.9" EaseType="EaseOut" EaseFunction="Quint">
+      <VisualState State="Default" SuggestedWidth="302" SuggestedHeight="744" PositionYOffset="-80" />
+      <VisualState State="Hovered" SuggestedWidth="268" SuggestedHeight="660" PositionYOffset="0" />
+      <VisualState State="Pressed" SuggestedWidth="268" SuggestedHeight="660" PositionYOffset="0" />
+      <VisualState State="Selected" SuggestedWidth="268" SuggestedHeight="660" PositionYOffset="0" />
+      <VisualState State="Disabled" SuggestedWidth="302" SuggestedHeight="744" PositionYOffset="-80" />
+    </VisualDefinition>
+    <VisualDefinition Name="CultInfo" TransitionDuration="0.5" EaseType="EaseOut" EaseFunction="Quint">
+      <VisualState State="Default" PositionYOffset="460" />
+      <VisualState State="Hovered" PositionYOffset="0" />
+      <VisualState State="Pressed" PositionYOffset="0" />
+      <VisualState State="Selected" PositionYOffset="0" />
+      <VisualState State="Disabled" PositionYOffset="460" />
+    </VisualDefinition>
+  </VisualDefinitions>
+  <Window>
+    <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Sprite="BlankWhiteSquare_9" Color="#0B0A0CFF">
+      <Children>
+        <!-- background: the dim hall, the colour of the chosen culture glowing from below, drifting fog and embers -->
+        <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Sprite="aur_bg_hall_dim\bg" />
+        <CharacterCreationBackgroundGradientBrushWidget DataSource="{CurrentSelectedCulture}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Sprite="CharacterCreation\Culture\background_gradient" Brush.GlobalAlphaFactor="0.45" Brush.ColorFactor="1.6" CultureColor1="@CultureColor1" />
+        <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Sprite="BlankWhiteSquare_9" Color="#0B0A0CFF" AlphaFactor="0.35" />
+        <Standard.Background Parameter.IsFullscreenImageEnabled="false" Parameter.SmokeColorFactor="1.3" Parameter.ParticleOpacity="1.4" />
+
+        <!-- header -->
+        <ListPanel WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" VerticalAlignment="Top" MarginTop="40" StackLayout.LayoutMethod="VerticalTopToBottom">
+          <Children>
+            <TextWidget Id="AurCultStep" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="900" SuggestedHeight="22" HorizontalAlignment="Center" Brush="Aur.Cult.Step" Text=" " />
+            <TextWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="1200" SuggestedHeight="62" HorizontalAlignment="Center" MarginTop="6" Brush="Aur.Cult.Title" Text="@Title" />
+            <TextWidget Id="AurCultSub" WidthSizePolicy="Fixed" HeightSizePolicy="CoverChildren" SuggestedWidth="1100" HorizontalAlignment="Center" MarginTop="4" Brush="Aur.Cult.Sub" Text=" " />
+          </Children>
+        </ListPanel>
+
+        <!-- the banners: one card per culture the game offers (scrolls sideways if a mod adds more than fit) -->
+        <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="720" VerticalAlignment="Center" MarginTop="40">
+          <Children>
+            <ScrollablePanel Id="CultScroll" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" MarginLeft="40" MarginRight="40" AutoHideScrollBars="true" ClipRect="CultClip" InnerPanel="CultClip\Cards" HorizontalScrollbar="..\CultBar">
+              <Children>
+                <Widget Id="CultClip" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" ClipContents="true">
+                  <Children>
+                    <ListPanel Id="Cards" DataSource="{Cultures}" WidthSizePolicy="CoverChildren" HeightSizePolicy="StretchToParent" HorizontalAlignment="Center" StackLayout.LayoutMethod="HorizontalLeftToRight">
+                      <ItemTemplate>
+                        <Widget Id="AurCultCard" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="268" SuggestedHeight="700" MarginLeft="10" MarginRight="10" VerticalAlignment="Center">
+                          <Children>
+                            <!-- the card is one button: hover / chosen states drive the animations of its direct children -->
+                            <ButtonWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="268" SuggestedHeight="660" VerticalAlignment="Bottom" MarginBottom="12" VisualDefinition="CultLift" Brush="Aur.UI.Clear" ClipContents="true" DoNotPassEventsToChildren="true" UpdateChildrenStates="true" Command.Click="ExecuteSelectCulture" IsSelected="@IsSelected">
+                              <Children>
+                                <!-- the warrior behind the banner: zooms in slowly as the banner rises -->
+                                <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="302" SuggestedHeight="744" HorizontalAlignment="Center" VerticalAlignment="Center" PositionYOffset="-80" VisualDefinition="CultZoom" DoNotAcceptEvents="true">
+                                  <Children>
+                                    <CharacterCreationCultureVisualBrushWidget Id="AurCultKey" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" UseSmallVisuals="false" CurrentCultureId="@CultureID" Layer1Widget="ArtLayer" Brush="Aur.UI.Clear" DoNotAcceptEvents="true">
+                                      <Children>
+                                        <ParallaxItemBrushWidget Id="ArtLayer" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Brush="Aur.Cult.Art" OneDirectionDuration="7" OneDirectionDistance="6" InitialDirection="Left" IsEaseInOutEnabled="true" DoNotAcceptEvents="true" />
+                                      </Children>
+                                    </CharacterCreationCultureVisualBrushWidget>
+                                  </Children>
+                                </Widget>
+
+                                <!-- raised: who stands behind the banner (slides up from below) -->
+                                <ListPanel WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" VerticalAlignment="Bottom" MarginLeft="18" MarginRight="18" MarginBottom="22" StackLayout.LayoutMethod="VerticalTopToBottom" VisualDefinition="CultInfo" PositionYOffset="460" DoNotAcceptEvents="true">
+                                  <Children>
+                                    <ListPanel WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" StackLayout.LayoutMethod="HorizontalLeftToRight">
+                                      <Children>
+                                        <CharacterCreationCultureVisualBrushWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="36" SuggestedHeight="36" VerticalAlignment="Center" UseSmallVisuals="false" CurrentCultureId="@CultureID" Layer1Widget="EmbSLayer" Brush="Aur.UI.Clear" DoNotAcceptEvents="true">
+                                          <Children>
+                                            <ParallaxItemBrushWidget Id="EmbSLayer" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Brush="Aur.Cult.EmbS" OneDirectionDuration="6" OneDirectionDistance="0" DoNotAcceptEvents="true" />
+                                          </Children>
+                                        </CharacterCreationCultureVisualBrushWidget>
+                                        <TextWidget WidthSizePolicy="CoverChildren" HeightSizePolicy="Fixed" SuggestedHeight="40" MarginLeft="10" VerticalAlignment="Center" Brush="Aur.Cult.OpenName" Text="@ShortenedNameText" />
+                                      </Children>
+                                    </ListPanel>
+                                    <TextWidget Id="AurEliteOpen" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" MarginTop="4" Brush="Aur.Cult.OpenElite" Text=" " />
+                                    <TextWidget Id="AurCultDesc" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" MarginTop="10" Brush="Aur.Cult.Desc" Text=" " />
+                                    <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="1" MarginTop="12" MarginBottom="4" Sprite="aur_cult\sep" />
+                                    <ListPanel DataSource="{Feats}" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" StackLayout.LayoutMethod="VerticalTopToBottom">
+                                      <ItemTemplate>
+                                        <BoolBrushChangerBrushWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" MarginTop="6" IncludeChildren="true" BooleanCheck="@IsPositive" TargetWidget="FeatText" TrueBrush="Aur.Cult.Feat.Pos" FalseBrush="Aur.Cult.Feat.Neg">
+                                          <Children>
+                                            <TextWidget Id="FeatText" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" Brush="Aur.Cult.Feat.Pos" Text="@Description" />
+                                          </Children>
+                                        </BoolBrushChangerBrushWidget>
+                                      </ItemTemplate>
+                                    </ListPanel>
+                                  </Children>
+                                </ListPanel>
+
+                                <!-- the banner: rises into the top edge on hover and when chosen -->
+                                <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="660" VerticalAlignment="Top" ClipContents="true" VisualDefinition="CultRoll" DoNotAcceptEvents="true">
+                                  <Children>
+                                    <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="268" SuggestedHeight="660" VerticalAlignment="Bottom" DoNotAcceptEvents="true">
+                                      <Children>
+                                        <CharacterCreationCultureVisualBrushWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" UseSmallVisuals="false" CurrentCultureId="@CultureID" Layer1Widget="BanLayer" Brush="Aur.UI.Clear" DoNotAcceptEvents="true">
+                                          <Children>
+                                            <ParallaxItemBrushWidget Id="BanLayer" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Brush="Aur.Cult.Ban" OneDirectionDuration="6" OneDirectionDistance="0" DoNotAcceptEvents="true" />
+                                          </Children>
+                                        </CharacterCreationCultureVisualBrushWidget>
+                                        <ListPanel WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" VerticalAlignment="Top" MarginTop="150" StackLayout.LayoutMethod="VerticalTopToBottom" DoNotAcceptEvents="true">
+                                          <Children>
+                                            <CharacterCreationCultureVisualBrushWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="112" SuggestedHeight="112" HorizontalAlignment="Center" UseSmallVisuals="false" CurrentCultureId="@CultureID" Layer1Widget="EmbLayer" Brush="Aur.UI.Clear" DoNotAcceptEvents="true">
+                                              <Children>
+                                                <ParallaxItemBrushWidget Id="EmbLayer" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Brush="Aur.Cult.Emb" OneDirectionDuration="5" OneDirectionDistance="3" InitialDirection="Up" IsEaseInOutEnabled="true" DoNotAcceptEvents="true" />
+                                              </Children>
+                                            </CharacterCreationCultureVisualBrushWidget>
+                                            <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="40" MarginTop="26" MarginLeft="10" MarginRight="10" Brush="Aur.Cult.Name" Text="@ShortenedNameText" />
+                                            <TextWidget Id="AurElite" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" MarginTop="10" MarginLeft="14" MarginRight="14" Brush="Aur.Cult.Elite" Text=" " />
+                                            <TextWidget Id="AurHint" WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="22" MarginTop="26" Brush="Aur.Cult.Hint" Text=" " />
+                                          </Children>
+                                        </ListPanel>
+                                      </Children>
+                                    </Widget>
+                                  </Children>
+                                </Widget>
+
+                                <!-- frame: blue on hover, gold when chosen -->
+                                <BrushWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Brush="Aur.Cult.Frame" DoNotAcceptEvents="true" />
+                              </Children>
+                            </ButtonWidget>
+                          </Children>
+                        </Widget>
+                      </ItemTemplate>
+                    </ListPanel>
+                  </Children>
+                </Widget>
+              </Children>
+            </ScrollablePanel>
+            <ScrollbarWidget Id="CultBar" WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="6" VerticalAlignment="Bottom" MarginLeft="60" MarginRight="60" MarginBottom="-14" AlignmentAxis="Horizontal" Handle="CultBarHandle" MaxValue="100" MinValue="0">
+              <Children>
+                <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="4" VerticalAlignment="Center" Sprite="BlankWhiteSquare_9" Color="#F7F2E0FF" AlphaFactor="0.12" />
+                <ImageWidget Id="CultBarHandle" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="60" SuggestedHeight="6" VerticalAlignment="Center" Brush="Aur.UI.Thumb" />
+              </Children>
+            </ScrollbarWidget>
+          </Children>
+        </Widget>
+
+        <!-- footer: back · where you start is chosen later · confirm <culture> -->
+        <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="56" VerticalAlignment="Bottom" MarginLeft="60" MarginRight="60" MarginBottom="36">
+          <Children>
+            <ButtonWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="170" SuggestedHeight="52" HorizontalAlignment="Left" VerticalAlignment="Center" Brush="Aur.UI.Btn" Command.Click="OnPreviousStage" UpdateChildrenStates="true" DoNotPassEventsToChildren="true">
+              <Children>
+                <TextWidget Id="AurCultBack" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Brush="Aur.UI.Btn.Text" Text=" " />
+              </Children>
+            </ButtonWidget>
+            <TextWidget Id="AurCultFoot" WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="900" HorizontalAlignment="Center" Brush="Aur.Cult.Foot" Text=" " />
+            <ButtonWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="320" SuggestedHeight="52" HorizontalAlignment="Right" VerticalAlignment="Center" Brush="Aur.UI.BtnPr" Command.Click="OnNextStage" IsEnabled="@CanAdvance" UpdateChildrenStates="true" DoNotPassEventsToChildren="true">
+              <Children>
+                <TextWidget Id="AurCultNext" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Brush="Aur.UI.Btn.Text" Text="@NextStageText" />
+              </Children>
+            </ButtonWidget>
+          </Children>
+        </Widget>
+
+        <CharacterCreationFirstStageFadeOutWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Sprite="BlankWhiteSquare_9" Color="#000000FF" StayTime="1.0" FadeOutTime="0.8" IsDisabled="@IsActive"/>
+      </Children>
+    </Widget>
+  </Window>
+</Prefab>

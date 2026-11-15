@@ -1,0 +1,117 @@
+﻿<Prefab>
+  <Window>
+    <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Sprite="BlankWhiteSquare_9" Color="#0B0A0CFF">
+      <Children>
+        <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Sprite="aur_bg_hall_dim\bg" />
+        <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Sprite="BlankWhiteSquare_9" Color="#0B0A0CFF" AlphaFactor="0.45" />
+
+        <ListPanel WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" VerticalAlignment="Top" MarginTop="40" StackLayout.LayoutMethod="VerticalTopToBottom">
+          <Children>
+            <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="64" SuggestedHeight="64" HorizontalAlignment="Center" Sprite="aur_cult\medal" />
+            <TextWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="1200" SuggestedHeight="60" HorizontalAlignment="Center" MarginTop="10" Brush="Aur.Cult.Title" Text="@Title" />
+            <TextWidget WidthSizePolicy="Fixed" HeightSizePolicy="CoverChildren" SuggestedWidth="1100" HorizontalAlignment="Center" MarginTop="4" Brush="Aur.Cult.Sub" Text="@Sub" />
+          </Children>
+        </ListPanel>
+
+        <TextWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="900" SuggestedHeight="40" HorizontalAlignment="Center" VerticalAlignment="Center" Brush="Aur.Cult.Sub" Text="@LoadingText" IsVisible="@IsLoading" />
+
+        <ListPanel DataSource="{Cards}" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" VerticalAlignment="Center" MarginTop="80" StackLayout.LayoutMethod="HorizontalLeftToRight" IsHidden="@IsLoading">
+          <ItemTemplate>
+            <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="400" SuggestedHeight="600" MarginLeft="24" MarginRight="24">
+              <Children>
+                <!-- filled slot -->
+                <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Sprite="aur_skin2\pop_9" IsVisible="@IsFilled">
+                  <Children>
+                    <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="330" ClipContents="true">
+                      <Children>
+                        <CharacterCreationCultureVisualBrushWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="400" SuggestedHeight="985" HorizontalAlignment="Center" VerticalAlignment="Top" UseSmallVisuals="false" CurrentCultureId="@CultureId" Layer1Widget="ArtL" Brush="Aur.UI.Clear" DoNotAcceptEvents="true">
+                          <Children>
+                            <ParallaxItemBrushWidget Id="ArtL" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Brush="Aur.Cult.Art" OneDirectionDuration="6" OneDirectionDistance="0" DoNotAcceptEvents="true" />
+                          </Children>
+                        </CharacterCreationCultureVisualBrushWidget>
+                      </Children>
+                    </Widget>
+                    <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="52" SuggestedHeight="64" HorizontalAlignment="Right" MarginRight="16" Sprite="aur_skin2\banner_box">
+                      <Children>
+                        <CharacterCreationCultureVisualBrushWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="36" SuggestedHeight="36" HorizontalAlignment="Center" VerticalAlignment="Center" MarginTop="-6" UseSmallVisuals="false" CurrentCultureId="@CultureId" Layer1Widget="EmbL" Brush="Aur.UI.Clear" DoNotAcceptEvents="true">
+                          <Children>
+                            <ParallaxItemBrushWidget Id="EmbL" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Brush="Aur.Cult.EmbS" OneDirectionDuration="6" OneDirectionDistance="0" DoNotAcceptEvents="true" />
+                          </Children>
+                        </CharacterCreationCultureVisualBrushWidget>
+                      </Children>
+                    </Widget>
+                    <TextWidget WidthSizePolicy="CoverChildren" HeightSizePolicy="Fixed" SuggestedHeight="26" MarginLeft="16" MarginTop="14" Brush="Aur.Cult.Hint" Text="@Badge" />
+                    <TextWidget WidthSizePolicy="CoverChildren" HeightSizePolicy="Fixed" SuggestedHeight="24" MarginLeft="16" MarginTop="296" Brush="Aur.Cult.Hint" Text="@TierText" />
+                    <ListPanel WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" VerticalAlignment="Bottom" MarginLeft="22" MarginRight="22" MarginBottom="20" StackLayout.LayoutMethod="VerticalTopToBottom">
+                      <Children>
+                        <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="40" Brush="Aur.Cult.OpenName" Text="@Name" />
+                        <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="22" Brush="Aur.Cult.Elite" Text="@Line" />
+                        <ListPanel WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" MarginTop="14" StackLayout.LayoutMethod="HorizontalLeftToRight">
+                          <Children>
+                            <ListPanel WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" StackLayout.LayoutMethod="VerticalTopToBottom">
+                              <Children>
+                                <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="18" Brush="Aur.Cult.Hint" Text="@KingdomL" />
+                                <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="24" Brush="Aur.Cult.Desc" Brush.TextHorizontalAlignment="Center" Text="@Kingdom" />
+                                <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="18" MarginTop="8" Brush="Aur.Cult.Hint" Text="@GoldL" />
+                                <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="24" Brush="Aur.Cult.Hint" Brush.FontColor="#E8B94EFF" Brush.FontSize="16" Text="@Gold" />
+                              </Children>
+                            </ListPanel>
+                            <ListPanel WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" StackLayout.LayoutMethod="VerticalTopToBottom">
+                              <Children>
+                                <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="18" Brush="Aur.Cult.Hint" Text="@RankL" />
+                                <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="24" Brush="Aur.Cult.Desc" Brush.TextHorizontalAlignment="Center" Text="@Rank" />
+                                <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="18" MarginTop="8" Brush="Aur.Cult.Hint" Text="@SeenL" />
+                                <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="24" Brush="Aur.Cult.Desc" Brush.TextHorizontalAlignment="Center" Text="@Seen" />
+                              </Children>
+                            </ListPanel>
+                          </Children>
+                        </ListPanel>
+                        <ButtonWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="52" MarginTop="16" Brush="Aur.UI.BtnPr" Command.Click="ExecutePick" IsEnabled="@CanEnter" UpdateChildrenStates="true" DoNotPassEventsToChildren="true">
+                          <Children>
+                            <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Brush="Aur.UI.Btn.Text" Text="@ActionText" />
+                          </Children>
+                        </ButtonWidget>
+                        <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" MarginTop="8" Brush="Aur.Cult.Feat.Neg" Brush.TextHorizontalAlignment="Center" Text="@Status" />
+                      </Children>
+                    </ListPanel>
+                  </Children>
+                </Widget>
+
+                <!-- empty slot -->
+                <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Sprite="aur_skin2\pop_9" IsVisible="@IsEmpty">
+                  <Children>
+                    <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="96" SuggestedHeight="96" HorizontalAlignment="Center" MarginTop="130" Sprite="aur_cult\medal" AlphaFactor="0.35" />
+                    <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="40" MarginTop="236" Brush="Aur.Cult.Name" Brush.FontColor="#80AEE8FF" Text="+" />
+                    <ListPanel WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" VerticalAlignment="Bottom" MarginLeft="30" MarginRight="30" MarginBottom="20" StackLayout.LayoutMethod="VerticalTopToBottom">
+                      <Children>
+                        <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="40" Brush="Aur.Cult.Name" Text="@EmptyTitle" />
+                        <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" MarginTop="8" Brush="Aur.Cult.Elite" Text="@EmptySub" />
+                        <ButtonWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="52" MarginTop="26" Brush="Aur.UI.Btn" Command.Click="ExecutePick" IsEnabled="@CanEnter" UpdateChildrenStates="true" DoNotPassEventsToChildren="true">
+                          <Children>
+                            <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Brush="Aur.UI.Btn.Text" Text="@ActionText" />
+                          </Children>
+                        </ButtonWidget>
+                        <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" MarginTop="8" Brush="Aur.Cult.Feat.Neg" Brush.TextHorizontalAlignment="Center" Text="@Status" />
+                      </Children>
+                    </ListPanel>
+                  </Children>
+                </Widget>
+              </Children>
+            </Widget>
+          </ItemTemplate>
+        </ListPanel>
+
+        <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="56" VerticalAlignment="Bottom" MarginLeft="60" MarginRight="60" MarginBottom="40">
+          <Children>
+            <ButtonWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="170" SuggestedHeight="52" HorizontalAlignment="Left" VerticalAlignment="Center" Brush="Aur.UI.Btn" Command.Click="ExecuteBack" UpdateChildrenStates="true" DoNotPassEventsToChildren="true">
+              <Children>
+                <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Brush="Aur.UI.Btn.Text" Text="@BackText" />
+              </Children>
+            </ButtonWidget>
+            <TextWidget WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="900" HorizontalAlignment="Center" Brush="Aur.Cult.Foot" Text="@Foot" />
+          </Children>
+        </Widget>
+      </Children>
+    </Widget>
+  </Window>
+</Prefab>
