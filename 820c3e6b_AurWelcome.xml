@@ -1,0 +1,26 @@
+﻿<Prefab>
+  <Window>
+    <!-- Aurelion herald: a short welcome card when the player arrives on the map. Pass-through: it never takes the mouse. -->
+    <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" DoNotAcceptEvents="true" DoNotPassEventsToChildren="true">
+      <Children>
+        <Widget Id="AurWCard" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="660" SuggestedHeight="170" HorizontalAlignment="Center" VerticalAlignment="Top" MarginTop="96" PositionYOffset="@Y" AlphaFactor="@Alpha" DoNotAcceptEvents="true">
+          <Children>
+            <!-- glass card -->
+            <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="138" VerticalAlignment="Bottom" Sprite="aur_skin2\pop_9" DoNotAcceptEvents="true" />
+            <!-- hairline that opens from the centre -->
+            <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="@Line" SuggestedHeight="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" MarginBottom="38" Sprite="aur_skin2\herald_line" DoNotAcceptEvents="true" />
+            <!-- culture medallion, half outside the card -->
+            <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="64" SuggestedHeight="64" HorizontalAlignment="Center" VerticalAlignment="Top" Sprite="aur_cult\medal" DoNotAcceptEvents="true">
+              <Children>
+                <Widget Id="AurWEmb" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="40" SuggestedHeight="40" HorizontalAlignment="Center" VerticalAlignment="Center" Sprite="aur_cult\embs_default" DoNotAcceptEvents="true" />
+              </Children>
+            </Widget>
+            <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="20" VerticalAlignment="Top" MarginTop="72" MarginLeft="24" MarginRight="24" Brush="Aur.Load.Sub" Text="@Kicker" DoNotAcceptEvents="true" />
+            <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="34" VerticalAlignment="Top" MarginTop="90" MarginLeft="24" MarginRight="24" Brush="Aur.Cult.OpenName" Text="@Title" DoNotAcceptEvents="true" />
+            <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="22" VerticalAlignment="Bottom" MarginBottom="10" MarginLeft="24" MarginRight="24" Brush="Aur.Cult.Foot" Text="@Line3" DoNotAcceptEvents="true" />
+          </Children>
+        </Widget>
+      </Children>
+    </Widget>
+  </Window>
+</Prefab>
