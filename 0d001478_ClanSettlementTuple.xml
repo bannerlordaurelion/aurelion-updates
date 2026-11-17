@@ -1,0 +1,68 @@
+<Prefab>
+  <Constants>
+    <Constant Name="Kingdom.Item.Tuple.Width" BrushLayer="Default" BrushName="Kingdom.Item.Tuple" BrushValueType="Width" />
+    <Constant Name="Kingdom.Item.Tuple.Height" BrushLayer="Default" BrushName="Kingdom.Item.Tuple" BrushValueType="Height" />
+
+    <Constant Name="Banner.Width" BrushLayer="Default" BrushName="Flat.Tuple.Banner.Small" BrushValueType="Width" />
+    <Constant Name="Banner.Height" BrushLayer="Default" BrushName="Flat.Tuple.Banner.Small" BrushValueType="Height" />
+
+    <Constant Name="Banner.Width.Scaled" MultiplyResult="0.30" Value="!Banner.Width" />
+    <Constant Name="Banner.Height.Scaled" MultiplyResult="0.38" Value="!Banner.Height"/>
+  </Constants>
+  <Window>
+    <ButtonWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="!Kingdom.Item.Tuple.Width" SuggestedHeight="!Kingdom.Item.Tuple.Height" Brush="Clan.Item.Tuple" Command.Click="OnSettlementSelection" IsSelected="@IsSelected">
+      <Children>
+
+        <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" MarginLeft="10" DoNotAcceptEvents="true">
+          <Children>
+
+            <ListPanel WidthSizePolicy="CoverChildren" HeightSizePolicy="StretchToParent" HorizontalAlignment="Left" DoNotAcceptEvents="true">
+              <Children>
+
+                <!--Settlement Visual-->
+                <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="84" SuggestedHeight="84" Sprite="Clan\portrait_slot_right_panel" HorizontalAlignment="Left" VerticalAlignment="Center" DoNotAcceptEvents="true">
+                  <Children>
+                    <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" MarginLeft="5" MarginRight="5" MarginTop="5" MarginBottom="5" Sprite="@FileName" DoNotAcceptEvents="true" />
+                  </Children>
+                </Widget>
+
+                <!--Name-->
+                <TextWidget WidthSizePolicy="Fixed " HeightSizePolicy="StretchToParent" SuggestedWidth="180" MarginLeft="10" Brush="Clan.Tuple.Name.Text" Text="@Name" DoNotAcceptEvents="true"/>
+
+              </Children>
+            </ListPanel>
+
+            <!--Governor-->
+            <Widget WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" VerticalAlignment="Center" MarginLeft="140" IsVisible="@HasGovernor">
+              <Children>
+                <ButtonWidget DataSource="{Governor}" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="113" SuggestedHeight="84"  Command.Click="ExecuteLink" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" DoNotPassEventsToChildren="true" >
+                  <Children>
+                    <!--Banner-->
+                    <!-- Aurelion: portrait in our frame, the clan flag inside its corner -->
+                    <Widget DoNotAcceptEvents="true" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Sprite="aur_v5\pf_bg_9" />
+                    <ImageIdentifierWidget DataSource="{ImageIdentifier}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" MarginLeft="4" MarginRight="4" MarginTop="4" MarginBottom="4" AdditionalArgs="@AdditionalArgs" ImageId="@Id" TextureProviderName="@TextureProviderName" />
+                    <Widget DoNotAcceptEvents="true" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Sprite="aur_v5\pf_ring_9" />
+                    <Widget DoNotAcceptEvents="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="30" SuggestedHeight="36" HorizontalAlignment="Left" VerticalAlignment="Bottom" MarginLeft="3" MarginBottom="3" Sprite="aur_v5\badge_bg_9" />
+                    <MaskedTextureWidget DataSource="{ClanBanner_9}" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" Brush="Flat.Tuple.Banner.Small.Hero" AdditionalArgs="@AdditionalArgs" ImageId="@Id" TextureProviderName="@TextureProviderName" SuggestedWidth="26" SuggestedHeight="32" HorizontalAlignment="Left" VerticalAlignment="Bottom" MarginLeft="5" MarginBottom="5" />
+                  </Children>
+                </ButtonWidget>
+              </Children>
+            </Widget>
+
+            <ListPanel WidthSizePolicy="CoverChildren" HeightSizePolicy="StretchToParent" HorizontalAlignment="Right" MarginRight="10" DoNotAcceptEvents="true">
+              <Children>
+
+                <!--Income-->
+                <TextWidget DataSource="{TotalProfit}" WidthSizePolicy="CoverChildren" HeightSizePolicy="StretchToParent" HorizontalAlignment="Right" Brush="Clan.Tuple.Name.Text" Brush.TextHorizontalAlignment="Right" Text="@ValueString" DoNotAcceptEvents="true" MarginRight="5"/>
+                <ImageWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="25" SuggestedHeight="25" VerticalAlignment="Center" Sprite="General\Icons\Coin@2x" DoNotAcceptEvents="true"/>
+
+              </Children>
+            </ListPanel>
+
+          </Children>
+        </Widget>
+
+      </Children>
+    </ButtonWidget>
+  </Window>
+</Prefab>

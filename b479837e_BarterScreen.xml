@@ -1,0 +1,405 @@
+<Prefab>
+  <Constants>
+    <Constant Name="SidePanel.MarginTop" Value="10" />
+    <Constant Name="SidePanel.MarginBottom" Value="8" />
+
+    <Constant Name="SidePanel.Width" Value="493" />
+    <Constant Name="SidePanel.NegativeWidth" MultiplyResult="-1" Value="!SidePanel.Width" />
+
+    <Constant Name="Toggle.Width" BrushLayer="Default" BrushName="Inventory.Tuple.Right" BrushValueType="Width" />
+
+    <Constant Name="TopBackground.Width" BrushLayer="Default" BrushName="Inventory.TopLeft.Background" BrushValueType="Width" />
+    <Constant Name="TopBackground.Height" BrushLayer="Default" BrushName="Inventory.TopLeft.Background" BrushValueType="Height" />
+
+    <Constant Name="TransferAllButton.Width" BrushLayer="Default" BrushName="InventoryBuyAllButton" BrushValueType="Width" />
+    <Constant Name="TransferAllButton.Height" BrushLayer="Default" BrushName="InventoryBuyAllButton" BrushValueType="Height" />
+
+    <Constant Name="BarterToggle.Margin" Value="30" />
+    <Constant Name="BarterToggle.Width" BrushLayer="Default" BrushName="Barter.LeftPanel.Toggle" BrushValueType="Width" />
+    <Constant Name="BarterToggle.Height" BrushLayer="Default" BrushName="Barter.LeftPanel.Toggle" BrushValueType="Height" />
+    <Constant Name="BarterToggle.Shadow.Height" SpriteName="PartyScreen\button_collapser_shadow" SpriteValueType="Height" />
+    <Constant Name="BarterToggle.Pressed.Width" BrushLayer="PressedLayer" BrushName="Barter.LeftPanel.Toggle" BrushValueType="Width" />
+    <Constant Name="ToggleLabel.Margin" Value="260" />
+    <Constant Name="SidePanel.ScrollablePanel.Width" Additive="20" Value="!BarterToggle.Width" />
+    <Constant Name="Party.Toggle.ExpandIndicator.Width" BrushLayer="Default" BrushName="Party.Toggle.ExpandIndicator" BrushValueType="Width" />
+    <Constant Name="Party.Toggle.ExpandIndicator.Height" BrushLayer="Default" BrushName="Party.Toggle.ExpandIndicator" BrushValueType="Height" />
+
+    <Constant Name="InnerPanel.Margin.Top" Value="83" />
+
+    <Constant Name="TransferAllButton.Margin" Value="5" />
+    <Constant Name="Prisoners.MarginTop" Value="4" />
+
+    <Constant Name="BarterToggle.LabelContainer.Margin" Value="10" />
+
+    <Constant Name="Banner.Width" BrushLayer="Default" BrushName="Flat.Tuple.Banner.Small" BrushValueType="Width" />
+    <Constant Name="Banner.Height" BrushLayer="Default" BrushName="Flat.Tuple.Banner.Small" BrushValueType="Height" />
+
+    <Constant Name="Banner.Width.Scaled" MultiplyResult="0.30" Value="!Banner.Width" />
+    <Constant Name="Banner.Height.Scaled" MultiplyResult="0.38" Value="!Banner.Height" />
+
+  </Constants>
+
+  <VisualDefinitions>
+    <VisualDefinition Name="LeftMenu" TransitionDuration="0.2">
+      <VisualState PositionXOffset="0" State="Default" />
+    </VisualDefinition>
+    <VisualDefinition Name="RightMenu" TransitionDuration="0.2">
+      <VisualState PositionXOffset="0" State="Default" />
+    </VisualDefinition>
+    <VisualDefinition Name="TopMenu" TransitionDuration="0.2">
+      <VisualState PositionYOffset="0" State="Default" />
+    </VisualDefinition>
+    <VisualDefinition Name="BottomMenu" TransitionDuration="0.2">
+      <VisualState PositionYOffset="19" State="Default" />
+    </VisualDefinition>
+  </VisualDefinitions>
+
+  <Window>
+    <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Sprite="BarterScreen">
+      <Children>
+
+        <!--Left Panel-->
+        <BrushWidget Id="LeftPanel" VisualDefinition="LeftMenu" WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="!SidePanel.Width" VerticalAlignment="Center" PositionXOffset="!SidePanel.NegativeWidth" MarginTop="25" MarginBottom="14" Brush="Frame1Brush" RenderLate="true" >
+          <Children>
+
+            <ScrollablePanel WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="!BarterToggle.Width" HorizontalAlignment="Right" VerticalAlignment="Bottom" MarginRight="3" MarginTop="!InnerPanel.Margin.Top" AcceptDrop="true" AutoHideScrollBars="true" ClipRect="LeftPanelClipRect" InnerPanel="LeftPanelClipRect\LeftPanelListPanel" VerticalScrollbar="..\LeftPanelScrollbar\Scrollbar" >
+              <Children>
+
+                <!--Left Panel Elements Container-->
+                <Widget Id="LeftPanelClipRect" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" ClipContents="true">
+                  <Children>
+
+                    <NavigationScopeTargeter ScopeID="LeftItemsScope" ScopeParent="..\LeftPanelListPanel" ScopeMovements="Vertical" HasCircularMovement="true" RightNavigationScope="LeftOfferedScope" IsDefaultNavigationScope="true" />
+                    <ListPanel Id="LeftPanelListPanel" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" StackLayout.LayoutMethod="VerticalTopToBottom">
+                      <Children>
+
+                        <!--Fiefs List-->
+                        <NavigatableListPanel Id="LeftPanelGoldList" DataSource="{LeftGoldList}" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" StackLayout.LayoutMethod="VerticalTopToBottom" MarginTop="2" MinIndex="0" MaxIndex="1000">
+                          <ItemTemplate>
+                            <BarterItemTuple />
+                          </ItemTemplate>
+                        </NavigatableListPanel>
+
+                        <!--Fiefs Toggle-->
+                        <BarterToggleTuple ListPanel="..\LeftPanelFiefsList" Parameter.ToggleTitleLbl="@FiefLbl" Parameter.ToggleValueLbl="" Parameter.TransferAllAction="ExecuteTransferAllLeftFief" WidgetToClose="..\LeftPanelFiefsList" RenderLate="true" GamepadNavigationIndex="1001"/>
+
+                        <!--Fiefs List-->
+                        <NavigatableListPanel Id="LeftPanelFiefsList" DataSource="{LeftFiefList}" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" StackLayout.LayoutMethod="VerticalTopToBottom" MarginTop="2" MinIndex="1002" MaxIndex="2000">
+                          <ItemTemplate>
+                            <BarterItemTuple />
+                          </ItemTemplate>
+                        </NavigatableListPanel>
+
+                        <!--Prisoners Toggle-->
+                        <BarterToggleTuple ListPanel="..\LeftPanelPrisonersList" Parameter.ToggleTitleLbl="@PrisonerLbl" Parameter.ToggleValueLbl="" Parameter.TransferAllAction="ExecuteTransferAllLeftPrisoner" WidgetToClose="..\LeftPanelPrisonersList" RenderLate="true" GamepadNavigationIndex="2001"/>
+
+                        <!--Prisoners List-->
+                        <NavigatableListPanel Id="LeftPanelPrisonersList" DataSource="{LeftPrisonerList}" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" StackLayout.LayoutMethod="VerticalTopToBottom" MarginTop="2" MinIndex="2002" MaxIndex="3000">
+                          <ItemTemplate>
+                            <BarterItemTuple />
+                          </ItemTemplate>
+                        </NavigatableListPanel>
+
+                        <!--Items Toggle-->
+                        <BarterToggleTuple ListPanel="..\LeftPanelItemsList" Parameter.ToggleTitleLbl="@ItemLbl" Parameter.ToggleValueLbl="" Parameter.TransferAllAction="ExecuteTransferAllLeftItem" WidgetToClose="..\LeftPanelItemsList" RenderLate="true" GamepadNavigationIndex="3001"/>
+
+                        <!--Items List-->
+                        <NavigatableListPanel Id="LeftPanelItemsList" DataSource="{LeftItemList}" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" StackLayout.LayoutMethod="VerticalTopToBottom" MarginTop="2" MinIndex="3002" MaxIndex="4000">
+                          <ItemTemplate>
+                            <BarterItemTuple />
+                          </ItemTemplate>
+                        </NavigatableListPanel>
+
+                        <!--Diplomacy Toggle-->
+                        <BarterToggleTuple ListPanel="..\LeftPanelDiplomaticList" Parameter.ToggleTitleLbl="@DiplomaticLbl" Parameter.ToggleValueLbl="" Parameter.TransferAllAction="ExecuteTransferAllLeftDiplomatic" RenderLate="true" WidgetToClose="..\LeftPanelDiplomaticList" GamepadNavigationIndex="4001" />
+
+                        <!--Diplomacy List-->
+                        <NavigatableListPanel Id="LeftPanelDiplomaticList" DataSource="{LeftDiplomaticList}" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" MarginLeft="3" MarginTop="2" StackLayout.LayoutMethod="VerticalTopToBottom" MinIndex="4002" MaxIndex="5000">
+                          <ItemTemplate>
+                            <BarterItemTuple />
+                          </ItemTemplate>
+                        </NavigatableListPanel>
+
+                        <!--Other Toggle-->
+                        <BarterToggleTuple ListPanel="..\LeftPanelOthersList" Parameter.ToggleTitleLbl="@OtherLbl" Parameter.ToggleValueLbl="" Parameter.TransferAllAction="ExecuteTransferAllLeftOther" WidgetToClose="..\LeftPanelOthersList" RenderLate="true" GamepadNavigationIndex="5001"/>
+
+                        <!--Others List-->
+                        <NavigatableListPanel Id="LeftPanelOthersList" DataSource="{LeftOtherList}" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" StackLayout.LayoutMethod="VerticalTopToBottom" MarginTop="2" MinIndex="5002" MaxIndex ="5003" >
+                          <ItemTemplate>
+                            <BarterItemTuple />
+                          </ItemTemplate>
+                        </NavigatableListPanel>
+
+                      </Children>
+                    </ListPanel>
+
+                  </Children>
+                </Widget>
+
+              </Children>
+            </ScrollablePanel>
+
+            <Standard.VerticalScrollbar Id="LeftPanelScrollbar" HeightSizePolicy="StretchToParent" HorizontalAlignment="Left" VerticalAlignment="Bottom" MarginTop="!InnerPanel.Margin.Top" />
+
+            <!--Top Header-->
+            <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="496" SuggestedHeight="104" HorizontalAlignment="Right" VerticalAlignment="Top" PositionXOffset="2" PositionYOffset="-7" Sprite="Barter\header_stone" HorizontalFlip="true">
+              <Children>
+
+                <TextWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="260" SuggestedHeight="60" HorizontalAlignment="Left" VerticalAlignment="Center" PositionYOffset="-6"  MarginLeft="125" Brush="InventoryHeaderFontBrush" Brush.FontSize="30" Brush.TextHorizontalAlignment="Center" Text="@LeftNameLbl" />
+
+                <Widget Id="GoldContainer" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="110" SuggestedHeight="40" HorizontalAlignment="Right" VerticalAlignment="Top" MarginLeft="10" MarginRight="20" MarginTop="27">
+                  <Children>
+                    <Widget Id="Image" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="25" SuggestedHeight="25" HorizontalAlignment="Right" VerticalAlignment="Center" PositionYOffset="-2" Sprite="Barter\Gold" />
+                    <TextWidget Id="Text" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Right" VerticalAlignment="Center" MarginRight="25" Brush="InventoryGoldFontBrush" Brush.FontSize="20" Brush.TextHorizontalAlignment="Right" IntText="@LeftMaxGold" />
+                  </Children>
+                </Widget>
+
+                <!--Left Hero-->
+                <ButtonWidget DataSource="{LeftHero}" DoNotPassEventsToChildren="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="92" SuggestedHeight="65" PositionXOffset="20" PositionYOffset="10" Command.Click="ExecuteLink" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" HoveredCursorState="RightClickLink">
+                  <Children>
+                    <!--Sponsor Clan Banner-->
+                    <!-- Aurelion: portrait in our frame, the clan flag inside its corner -->
+                    <Widget DoNotAcceptEvents="true" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Sprite="aur_v5\pf_bg_9" />
+                    <ImageIdentifierWidget DataSource="{ImageIdentifier}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" AdditionalArgs="@AdditionalArgs" ImageId="@Id" PositionYOffset="2"  TextureProviderName="@TextureProviderName" />
+                    <Widget DoNotAcceptEvents="true" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Sprite="aur_v5\pf_ring_9" />
+                    <Widget DoNotAcceptEvents="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="30" SuggestedHeight="36" HorizontalAlignment="Left" VerticalAlignment="Bottom" MarginLeft="3" MarginBottom="3" Sprite="aur_v5\badge_bg_9" />
+                    <MaskedTextureWidget DataSource="{ClanBanner_9}" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" Brush="Flat.Tuple.Banner.Small.Hero" AdditionalArgs="@AdditionalArgs" ImageId="@Id" TextureProviderName="@TextureProviderName" IsDisabled="true" SuggestedWidth="26" SuggestedHeight="32" HorizontalAlignment="Left" VerticalAlignment="Bottom" MarginLeft="5" MarginBottom="5" />
+                  </Children>
+                </ButtonWidget>
+
+              </Children>
+            </Widget>
+
+
+
+          </Children>
+        </BrushWidget>
+
+        <!--Center Panel-->
+        <Widget Id="CenterPanel" VisualDefinition="BottomMenu" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="912" SuggestedHeight="555" HorizontalAlignment="Center" VerticalAlignment="Bottom" PositionYOffset="555" Sprite="Barter\barter_panel" AcceptDrop="true" Command.Drop="ExecuteTransferWithParameters" CommandParameter.Drop="OverCharacter">
+          <Children>
+
+            <!--Barter Progress Percentage-->
+            <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="273" SuggestedHeight="28" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="88" MarginTop="36" Sprite="Barter\slider_boxy_canvas" IsEnabled="false">
+              <Children>
+                <FillBarWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="267" SuggestedHeight="24" HorizontalAlignment="Center" VerticalAlignment="Center" DividerWidget="DividerWidget" FillWidget="FillWidget" InitialAmount="@ResultBarOtherPercentage" IsEnabled="false" MaxAmount="100">
+                  <Children>
+                    <Widget Id="FillWidget" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="262" SuggestedHeight="19" HorizontalAlignment="Left" VerticalAlignment="Center" MarginLeft="3" ClipContents="true">
+                      <Children>
+                        <BoolBrushChangerBrushWidget Id="FillVisual" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="262" SuggestedHeight="19" HorizontalAlignment="Left" VerticalAlignment="Center" PositionYOffset="-1" BooleanCheck="@IsOfferDisabled" FalseBrush="Barter.Progress.Accepted" TrueBrush="Barter.Progress.NotAccepted" />
+                      </Children>
+                    </Widget>
+                  </Children>
+                </FillBarWidget>
+              </Children>
+            </Widget>
+
+
+
+            <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="398" SuggestedHeight="370" HorizontalAlignment="Left" VerticalAlignment="Bottom" MarginLeft="38" MarginBottom="88">
+              <Children>
+
+                <ListPanel WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" StackLayout.LayoutMethod="HorizontalLeftToRight">
+                  <Children>
+
+                    <ScrollablePanel WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" AcceptDrop="true" AutoHideScrollBars="true" ClipRect="LeftOfferPanelClipRect" InnerPanel="LeftOfferPanelClipRect\LeftOfferListPanel" VerticalScrollbar="..\LeftOfferPanelScrollbar\Scrollbar">
+                      <Children>
+
+                        <!--Left Offer Elements Container-->
+                        <Widget Id="LeftOfferPanelClipRect" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" ClipContents="true">
+                          <Children>
+
+                            <NavigationScopeTargeter ScopeID="LeftOfferedScope" ScopeParent="..\LeftOfferListPanel" ScopeMovements="Vertical" HasCircularMovement="true" LeftNavigationScope="LeftItemsScope" RightNavigationScope="AutoOfferScope" />
+                            <NavigatableListPanel Id="LeftOfferListPanel" DataSource="{LeftOfferList}" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" StackLayout.LayoutMethod="VerticalTopToBottom">
+                              <ItemTemplate>
+                                <BarterOfferItemTuple />
+                              </ItemTemplate>
+                            </NavigatableListPanel>
+
+                          </Children>
+                        </Widget>
+
+                        <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="57" Sprite="General\CharacterCreation\character_creation_scroll_gradient" IsEnabled="false" VerticalAlignment="Bottom"/>
+                      </Children>
+                    </ScrollablePanel>
+
+                    <Standard.VerticalScrollbar Id="LeftOfferPanelScrollbar" HeightSizePolicy="StretchToParent" HorizontalAlignment="Right" VerticalAlignment="Bottom" IsVisible="false"/>
+
+                  </Children>
+                </ListPanel>
+
+              </Children>
+            </Widget>
+
+            <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="398" SuggestedHeight="370" HorizontalAlignment="Right" VerticalAlignment="Bottom" MarginRight="38" MarginBottom="88">
+              <Children>
+
+                <ListPanel WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" StackLayout.LayoutMethod="HorizontalLeftToRight">
+                  <Children>
+
+                    <ScrollablePanel WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" AcceptDrop="true" AutoHideScrollBars="true" ClipRect="RightOfferPanelClipRect" InnerPanel="RightOfferPanelClipRect\RightOfferListPanel" VerticalScrollbar="..\RightOfferPanelScrollbar\Scrollbar">
+                      <Children>
+
+                        <!--Right Offer Elements Container-->
+                        <Widget Id="RightOfferPanelClipRect" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" ClipContents="true">
+                          <Children>
+
+                            <NavigationScopeTargeter ScopeID="RightOfferedScope" ScopeParent="..\RightOfferListPanel" ScopeMovements="Vertical" HasCircularMovement="true" LeftNavigationScope="AutoOfferScope" RightNavigationScope="RightItemsScope" />
+                            <NavigatableListPanel Id="RightOfferListPanel" DataSource="{RightOfferList}" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" StackLayout.LayoutMethod="VerticalTopToBottom">
+                              <ItemTemplate>
+                                <BarterOfferItemTuple Parameter.IsRightSideItem="true" />
+                              </ItemTemplate>
+                            </NavigatableListPanel>
+
+                          </Children>
+                        </Widget>
+
+                        <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="25" Sprite="General\CharacterCreation\character_creation_scroll_gradient" IsEnabled="false" VerticalAlignment="Bottom"/>
+                      </Children>
+                    </ScrollablePanel>
+
+                    <Standard.VerticalScrollbar Id="RightOfferPanelScrollbar" HeightSizePolicy="StretchToParent" HorizontalAlignment="Right" VerticalAlignment="Bottom" IsVisible="false"/>
+
+                  </Children>
+                </ListPanel>
+
+              </Children>
+            </Widget>
+
+
+            <Standard.TripleDialogCloseButtons MarginBottom="30" Parameter.CancelButtonAction="ExecuteCancel" Parameter.CancelButtonText="@CancelLbl" Parameter.DoneButtonAction="ExecuteOffer" Parameter.ResetInputKeyDataSource="{ResetInputKey}" Parameter.CancelInputKeyDataSource="{CancelInputKey}" Parameter.DoneInputKeyDataSource="{DoneInputKey}" Parameter.DoneButtonDisabled="@IsOfferDisabled" Parameter.DoneButtonText="@OfferLbl" Parameter.ResetButtonAction="ExecuteReset" />
+
+            <!--Frame-->
+            <BrushWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" MarginLeft="25" MarginRight="25" MarginTop="21" MarginBottom="32" Brush="Frame1.Border" IsEnabled="false" />
+
+            <!--Offer Button-->
+            <NavigationScopeTargeter ScopeID="AutoOfferScope" ScopeParent="..\AutoOfferButton" ScopeMovements="Vertical" HasCircularMovement="true" LeftNavigationScope="LeftOfferedScope" RightNavigationScope="RightOfferedScope" />
+            <ButtonWidget Id="AutoOfferButton" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="75" SuggestedHeight="75" HorizontalAlignment="Center" VerticalAlignment="Top" PositionXOffset="1" PositionYOffset="20" Command.Click="ExecuteAutoBalance" DoNotPassEventsToChildren="true" UpdateChildrenStates="true" GamepadNavigationIndex="0">
+              <Children>
+                <BoolBrushChangerBrushWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" BooleanCheck="@IsOfferDisabled" FalseBrush="Barter.Offer.Visual.Accepted" TrueBrush="Barter.Offer.Visual.NotAccepted"/>
+                <HintWidget DataSource="{AutoBalanceHint}" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" DoNotAcceptEvents="true"/>
+              </Children>
+            </ButtonWidget>
+
+          </Children>
+        </Widget>
+
+        <!--Right Panel(Offerrer)-->
+        <BrushWidget Id="RightPanel" VisualDefinition="RightMenu" WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="!SidePanel.Width" HorizontalAlignment="Right" VerticalAlignment="Center" PositionXOffset="!SidePanel.Width" MarginTop="25" MarginBottom="14" Brush="Frame1Brush" RenderLate="true">
+          <Children>
+
+            <ScrollablePanel WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="!BarterToggle.Width" HorizontalAlignment="Left" VerticalAlignment="Bottom" MarginLeft="3" MarginTop="!InnerPanel.Margin.Top" AcceptDrop="true" AutoHideScrollBars="true" ClipRect="RightPanelClipRect" InnerPanel="RightPanelClipRect\RightPanelListPanel" VerticalScrollbar="..\RightPanelScrollbar\Scrollbar">
+              <Children>
+
+                <!--Right Panel Elements Container-->
+                <Widget Id="RightPanelClipRect" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" ClipContents="true">
+                  <Children>
+
+                    <NavigationScopeTargeter ScopeID="RightItemsScope" ScopeParent="..\RightPanelListPanel" ScopeMovements="Vertical" HasCircularMovement="true" LeftNavigationScope="RightOfferedScope" />
+                    <ListPanel Id="RightPanelListPanel" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" MarginLeft="2" StackLayout.LayoutMethod="VerticalTopToBottom">
+                      <Children>
+
+                        <!--Gold List-->
+                        <NavigatableListPanel Id="RightPanelGoldList" DataSource="{RightGoldList}" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" MarginLeft="3" MarginTop="2" StackLayout.LayoutMethod="VerticalTopToBottom" MinIndex="0" MaxIndex="1000">
+                          <ItemTemplate>
+                            <BarterItemTuple Parameter.IsRightSideItem="true" />
+                          </ItemTemplate>
+                        </NavigatableListPanel>
+
+                        <!--Fiefs Toggle-->
+                        <BarterToggleTuple ListPanel="..\RightPanelFiefsList" Parameter.IsRightSideItem="true" Parameter.ToggleTitleLbl="@FiefLbl" Parameter.ToggleValueLbl="" Parameter.TransferAllAction="ExecuteTransferAllRightFief" RenderLate="true" WidgetToClose="..\RightPanelFiefsList" GamepadNavigationIndex="1001" />
+
+                        <!--Fiefs List-->
+                        <NavigatableListPanel Id="RightPanelFiefsList" DataSource="{RightFiefList}" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" MarginLeft="3" MarginTop="2" StackLayout.LayoutMethod="VerticalTopToBottom" MinIndex="1002" MaxIndex="2000">
+                          <ItemTemplate>
+                            <BarterItemTuple Parameter.IsRightSideItem="true" />
+                          </ItemTemplate>
+                        </NavigatableListPanel>
+
+                        <!--Prisoners Toggle-->
+                        <BarterToggleTuple ListPanel="..\RightPanelPrisonersList" Parameter.IsRightSideItem="true" Parameter.ToggleTitleLbl="@PrisonerLbl" Parameter.ToggleValueLbl="" Parameter.TransferAllAction="ExecuteTransferAllRightPrisoner" RenderLate="true" WidgetToClose="..\RightPanelPrisonersList" GamepadNavigationIndex="2001" />
+
+                        <!--Prisoners List-->
+                        <NavigatableListPanel Id="RightPanelPrisonersList" DataSource="{RightPrisonerList}" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" MarginLeft="3" MarginTop="2" StackLayout.LayoutMethod="VerticalTopToBottom" MinIndex="2002" MaxIndex="3000">
+                          <ItemTemplate>
+                            <BarterItemTuple Parameter.IsRightSideItem="true" />
+                          </ItemTemplate>
+                        </NavigatableListPanel>
+
+                        <!--Items Toggle-->
+                        <BarterToggleTuple ListPanel="..\RightPanelItemsList" Parameter.IsRightSideItem="true" Parameter.ToggleTitleLbl="@ItemLbl" Parameter.ToggleValueLbl="" Parameter.TransferAllAction="ExecuteTransferAllRightItem" RenderLate="true" WidgetToClose="..\RightPanelItemsList" GamepadNavigationIndex="3001" />
+
+                        <!--Items List-->
+                        <NavigatableListPanel Id="RightPanelItemsList" DataSource="{RightItemList}" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" MarginLeft="3" MarginTop="2" StackLayout.LayoutMethod="VerticalTopToBottom" MinIndex="3002" MaxIndex="4000">
+                          <ItemTemplate>
+                            <BarterItemTuple Parameter.IsRightSideItem="true" />
+                          </ItemTemplate>
+                        </NavigatableListPanel>
+
+                        <!--Diplomacy Toggle-->
+                        <BarterToggleTuple ListPanel="..\RightPanelDiplomaticList" Parameter.IsRightSideItem="true" Parameter.ToggleTitleLbl="@DiplomaticLbl" Parameter.ToggleValueLbl="" Parameter.TransferAllAction="ExecuteTransferAllRightDiplomatic" RenderLate="true" WidgetToClose="..\RightPanelDiplomaticList" GamepadNavigationIndex="4001" />
+
+                        <!--Diplomacy List-->
+                        <NavigatableListPanel Id="RightPanelDiplomaticList" DataSource="{RightDiplomaticList}" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" MarginLeft="3" MarginTop="2" StackLayout.LayoutMethod="VerticalTopToBottom" MinIndex="4002" MaxIndex="5000">
+                          <ItemTemplate>
+                            <BarterItemTuple Parameter.IsRightSideItem="true" />
+                          </ItemTemplate>
+                        </NavigatableListPanel>
+
+                        <!--Other Toggle-->
+                        <BarterToggleTuple ListPanel="..\RightPanelOthersList" Parameter.IsRightSideItem="true" Parameter.ToggleTitleLbl="@OtherLbl" Parameter.ToggleValueLbl="" Parameter.TransferAllAction="ExecuteTransferAllRightOther" RenderLate="true" WidgetToClose="..\RightPanelOthersList" GamepadNavigationIndex="5001" />
+
+                        <!--Others List-->
+                        <NavigatableListPanel Id="RightPanelOthersList" DataSource="{RightOtherList}" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" MarginLeft="3" MarginTop="2" StackLayout.LayoutMethod="VerticalTopToBottom" MinIndex="5002" MaxIndex="6000">
+                          <ItemTemplate>
+                            <BarterItemTuple Parameter.IsRightSideItem="true" />
+                          </ItemTemplate>
+                        </NavigatableListPanel>
+
+                      </Children>
+                    </ListPanel>
+
+                  </Children>
+                </Widget>
+
+              </Children>
+            </ScrollablePanel>
+
+            <Standard.VerticalScrollbar Id="RightPanelScrollbar" HeightSizePolicy="StretchToParent" HorizontalAlignment="Right" VerticalAlignment="Bottom" MarginTop="!InnerPanel.Margin.Top" />
+
+            <!--Top Header-->
+            <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="496" SuggestedHeight="104" HorizontalAlignment="Right" VerticalAlignment="Top" PositionXOffset="1" PositionYOffset="-7" Sprite="Barter\header_stone" >
+              <Children>
+
+                <TextWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="260" SuggestedHeight="60" HorizontalAlignment="Right" VerticalAlignment="Center" PositionYOffset="-6" MarginRight="120" Brush="InventoryHeaderFontBrush" Brush.FontSize="30" Brush.TextHorizontalAlignment="Center" Text="@RightNameLbl" />
+
+                <ListPanel Id="GoldContainer" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="110" SuggestedHeight="40" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="20" MarginRight="10" MarginTop="27">
+                  <Children>
+                    <TextWidget Id="Text" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Left" VerticalAlignment="Center" Brush="InventoryGoldFontBrush" Brush.FontSize="20" Brush.TextHorizontalAlignment="Left" IntText="@RightMaxGold" />
+                    <Widget Id="Image" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="25" SuggestedHeight="25" HorizontalAlignment="Left" VerticalAlignment="Center" PositionYOffset="-2" Sprite="Barter\Gold" />
+                  </Children>
+                </ListPanel>
+
+                <ButtonWidget DataSource="{RightHero}" DoNotPassEventsToChildren="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="92" SuggestedHeight="65" HorizontalAlignment="Right" VerticalAlignment="Top" PositionXOffset="-25" PositionYOffset="10"  Command.Click="ExecuteLink" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" HoveredCursorState="RightClickLink">
+                  <Children>
+                    <!--Sponsor Clan Banner-->
+                    <!-- Aurelion: portrait in our frame, the clan flag inside its corner -->
+                    <Widget DoNotAcceptEvents="true" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Sprite="aur_v5\pf_bg_9" />
+                    <ImageIdentifierWidget DataSource="{ImageIdentifier}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" AdditionalArgs="@AdditionalArgs" ImageId="@Id" PositionYOffset="2" TextureProviderName="@TextureProviderName" />
+                    <Widget DoNotAcceptEvents="true" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Sprite="aur_v5\pf_ring_9" />
+                    <Widget DoNotAcceptEvents="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="30" SuggestedHeight="36" HorizontalAlignment="Left" VerticalAlignment="Bottom" MarginLeft="3" MarginBottom="3" Sprite="aur_v5\badge_bg_9" />
+                    <MaskedTextureWidget DataSource="{ClanBanner_9}" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" Brush="Flat.Tuple.Banner.Small.Hero" AdditionalArgs="@AdditionalArgs" ImageId="@Id" TextureProviderName="@TextureProviderName" IsDisabled="true" SuggestedWidth="26" SuggestedHeight="32" HorizontalAlignment="Left" VerticalAlignment="Bottom" MarginLeft="5" MarginBottom="5" />
+                  </Children>
+                </ButtonWidget>
+
+
+              </Children>
+            </Widget>
+
+          </Children>
+        </BrushWidget>
+
+      </Children>
+    </Widget>
+  </Window>
+</Prefab>

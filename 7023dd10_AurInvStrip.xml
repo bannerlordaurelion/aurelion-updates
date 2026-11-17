@@ -1,0 +1,22 @@
+<Prefab>
+  <Window>
+    <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" DoNotAcceptEvents="true">
+      <Children>
+        <!-- Aurelion: the party's load and the gold of both sides, over the inventory (top centre, under the character's name) -->
+        <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="660" SuggestedHeight="@H" HorizontalAlignment="Center" VerticalAlignment="Top" MarginTop="88" Sprite="aur_v5\panel_9" ClipContents="true" DoNotAcceptEvents="true">
+          <Children>
+            <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="22" VerticalAlignment="Top" MarginLeft="20" MarginRight="20" MarginTop="8" Brush="Aur.E.Lbl" Brush.TextHorizontalAlignment="Center" Text="@Load" />
+            <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="600" SuggestedHeight="8" HorizontalAlignment="Center" VerticalAlignment="Top" MarginTop="34" Sprite="aur_v5\ebar_trk_9" ClipContents="true">
+              <Children>
+                <Widget WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="@FillW" HorizontalAlignment="Left" Sprite="aur_v5\ebar_me" IsVisible="@Under" />
+                <Widget WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="@FillW" HorizontalAlignment="Left" Sprite="aur_v5\ebar_them" IsVisible="@Over" />
+              </Children>
+            </Widget>
+            <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="22" VerticalAlignment="Top" MarginLeft="20" MarginRight="20" MarginTop="46" Brush="Aur.E.Lbl" Brush.FontColor="#E8B94EFF" Brush.TextHorizontalAlignment="Center" Text="@Gold" />
+            <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="22" VerticalAlignment="Top" MarginLeft="20" MarginRight="20" MarginTop="72" Brush="Aur.E.Lbl" Brush.FontColor="#80AEE8FF" Brush.TextHorizontalAlignment="Center" Text="@Market" />
+          </Children>
+        </Widget>
+      </Children>
+    </Widget>
+  </Window>
+</Prefab>

@@ -1,0 +1,60 @@
+<Prefab>
+  <Constants>
+    <Constant Name="Banner.Width" BrushLayer="Default" BrushName="Flat.Tuple.Banner.Small" BrushValueType="Width" />
+    <Constant Name="Banner.Height" BrushLayer="Default" BrushName="Flat.Tuple.Banner.Small" BrushValueType="Height" />
+
+    <Constant Name="Banner.Width.Scaled" MultiplyResult="0.30" Value="!Banner.Width" />
+    <Constant Name="Banner.Height.Scaled" MultiplyResult="0.38" Value="!Banner.Height"/>
+  </Constants>
+  <Parameters>
+    <Parameter DefaultValue="false" Name="IsButton" />
+    <Parameter DefaultValue="false" Name="IsPartyItem" />
+  </Parameters>
+  <Window>
+    <GameMenuPartyItemButtonWidget DoNotPassEventsToChildren="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="125" SuggestedHeight="150" Command.AlternateClick="ExecuteOpenEncyclopedia" Command.Click="ExecuteSetAsContextMenuItem" Command.HoverBegin="ExecuteOpenTooltip" Command.HoverEnd="ExecuteCloseTooltip" CurrentCharacterImageWidget="RelationBackgroundWidget\CharacterImage" Description="@DescriptionText" Location="@LocationText" Power="@PowerText" Name="@NameText" Profession="@ProfessionText" Relation="@Relation" RelationBackgroundWidget="RelationBackgroundWidget" UpdateChildrenStates="true" IsPartyItem="*IsPartyItem" PartyBackgroundBrush="GameMenu.Tableau.Background.Party" CharacterBackgroundBrush="GameMenu.Tableau.Background.Character" BackgroundImageWidget="RelationBackgroundWidget\BackgroundImageWidget" HoveredCursorState="@EncyclopediaCursorEffect">
+      <Children>
+
+        <Widget Id="RelationBackgroundWidget" WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="85" HorizontalAlignment="Center" MarginLeft="4" MarginRight="4" MarginTop="4" MarginBottom="4" UpdateChildrenStates="true">
+          <Children>
+            <ImageWidget Id="BackgroundImageWidget" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" OverrideDefaultStateSwitchingDisabled="*IsButton"/>
+            <!-- Aurelion: portrait in our ring (the game's relation colour stays behind it), the clan flag inside its corner -->
+            <ImageIdentifierWidget Id="CharacterImage" DataSource="{Visual}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" AdditionalArgs="@AdditionalArgs" ImageId="@Id" TextureProviderName="@TextureProviderName" />
+            <Widget DoNotAcceptEvents="true" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Sprite="aur_v5\pf_ring_9" />
+            <Widget DoNotAcceptEvents="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="30" SuggestedHeight="36" HorizontalAlignment="Left" VerticalAlignment="Bottom" MarginLeft="3" MarginBottom="3" Sprite="aur_v5\badge_bg_9" />
+            <MaskedTextureWidget DataSource="{Banner_9}" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" Brush="Flat.Tuple.Banner.Small.Hero" AdditionalArgs="@AdditionalArgs" ImageId="@Id" TextureProviderName="@TextureProviderName" IsDisabled="true" SuggestedWidth="26" SuggestedHeight="32" HorizontalAlignment="Left" VerticalAlignment="Bottom" MarginLeft="5" MarginBottom="5" />
+
+            <!-- Quest Markers -->
+            <ListPanel DataSource="{Quests}" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" StackLayout.LayoutMethod="HorizontalLeftToRight" HorizontalAlignment="Right" VerticalAlignment="Bottom" IsEnabled="false" DoNotAcceptEvents="true">
+              <ItemTemplate>
+								<QuestMarkerBrushWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedHeight="31" QuestMarkerType="@QuestMarkerType" Brush="GameMenu.QuestMarker" />
+              </ItemTemplate>
+            </ListPanel>
+
+          </Children>
+        </Widget>
+
+        <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="38" SuggestedHeight="25" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="5" MarginTop="7" Sprite="General\Mission\dungeon" Color="#f4e1c4ff" IsVisible="@IsCharacterInPrison" DoNotAcceptEvents="true"/>
+        <TextWidget WidthSizePolicy="CoverChildren" HeightSizePolicy="Fixed" SuggestedHeight="25" HorizontalAlignment="Right" VerticalAlignment="Top" MarginLeft="8" MarginRight="8" MarginTop="7" Brush="EncounterTextBrush" Brush.FontSize="18" Brush.TextHorizontalAlignment="Right" Text="@PartySizeLbl" />
+        <ValueBasedVisibilityWidget DoNotPassEventsToChildren="true" UpdateChildrenStates="true" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Right" VerticalAlignment="Top" MarginLeft="8" MarginRight="8" MarginTop="30" WatchType="BiggerThan" IndexToWatch="@ShipCount" IndexToBeVisible="0">
+          <Children>
+            <ListPanel WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" StackLayout.LayoutMethod="HorizontalLeftToRight">
+              <Children>
+                <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="20" SuggestedHeight="15.73" VerticalAlignment="Center" Sprite="SPGeneral\Ships\ship_icon_medium" />
+                <TextWidget WidthSizePolicy="CoverChildren" HeightSizePolicy="Fixed" SuggestedHeight="25" Brush="EncounterTextBrush" Brush.FontSize="18" Brush.TextHorizontalAlignment="Right" IntText="@ShipCount" />
+              </Children>
+            </ListPanel>
+          </Children>
+        </ValueBasedVisibilityWidget>
+        
+        <TextWidget Id="NameTextWidget" WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="45" VerticalAlignment="Bottom" MarginBottom="7" Brush="EncounterTextBrush" Brush.FontSize="16" Text="@NameText" Brush.FontColor="#8CDBB5FF" IsVisible="@IsPlayer"/>
+        <TextWidget Id="NameTextWidget" WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="45" VerticalAlignment="Bottom" MarginBottom="7" Brush="EncounterTextBrush" Brush.FontSize="16" Text="@NameText" IsVisible="@IsNeutral"/>
+        <TextWidget Id="NameTextWidget" WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="45" VerticalAlignment="Bottom" MarginBottom="7" Brush="EncounterTextBrush" Brush.FontSize="16" Text="@NameText" Brush.FontColor="#DD5454FF" IsVisible="@IsEnemy"/>
+        <TextWidget Id="NameTextWidget" WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="45" VerticalAlignment="Bottom" MarginBottom="7" Brush="EncounterTextBrush" Brush.FontSize="16" Text="@NameText" Brush.FontColor="#4EE04CFF" IsVisible="@IsAlly"/>
+
+
+
+        <TutorialHighlightItemBrushWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Brush="TutorialHighlightBrush" IsEnabled="false" IsHighlightEnabled="@IsHighlightEnabled" IsVisible="false" OverrideDefaultStateSwitchingEnabled="true" />
+      </Children>
+    </GameMenuPartyItemButtonWidget>
+  </Window>
+</Prefab>

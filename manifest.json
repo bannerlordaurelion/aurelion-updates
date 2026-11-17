@@ -28,8 +28,8 @@
         {
           "path": "aurelion/build.json",
           "size": 76,
-          "sha256": "16768AB6CAB06CD27BB64AD45803D1F82B3A878E000CB87DC861674C2F2CB021",
-          "url": "16768ab6_build.json"
+          "sha256": "0B069D8DAAE3F700BD978E53B214726D030823E4912B71B741B4CD07807A9AB9",
+          "url": "0b069d8d_build.json"
         },
         {
           "path": "aurelion/prices.json",
@@ -51,9 +51,9 @@
         },
         {
           "path": "aurelion/studio-project.json",
-          "size": 720067,
-          "sha256": "91F5A70FA26D27A6F948764F7536168B7C31DE8F965B889F1AB3EBDFEE5A0EFC",
-          "url": "91f5a70f_studio-project.json"
+          "size": 738089,
+          "sha256": "953DFEA6C3BCD56CC86D5FDAD0B4E8A5EA6803045FE1008039A99D03FB5CC4A8",
+          "url": "953dfea6_studio-project.json"
         },
         {
           "path": "aurelion/update-server.ps1",
@@ -69,9 +69,9 @@
         },
         {
           "path": "bin/Win64_Shipping_Client/Aurelion.Core.dll",
-          "size": 504320,
-          "sha256": "35A4BBA1D850ED89F09898BBF1C52C0E90DBEE1579CFF959AA8F31B2AA50200A",
-          "url": "35a4bba1_Aurelion.Core.dll"
+          "size": 515584,
+          "sha256": "70019454CC8B71B4CE85980592A5F4C69C74BD64317F88C4DB3D30821916CEAD",
+          "url": "70019454_Aurelion.Core.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/Autofac.dll",
@@ -447,9 +447,9 @@
         },
         {
           "path": "GUI/AurelionScreens/AurClanLordTuple.xml",
-          "size": 734,
-          "sha256": "3785019C2E321AF1202F1573E7FAE272777C0FE4D002713B698108157C14DBAD",
-          "url": "3785019c_AurClanLordTuple.xml"
+          "size": 1693,
+          "sha256": "9FE888A28B8B965F75641939D3B16902FE7875BA339338FA4FCF22BD158503CF",
+          "url": "9fe888a2_AurClanLordTuple.xml"
         },
         {
           "path": "GUI/AurelionScreens/AurClanMembers.xml",
@@ -474,6 +474,12 @@
           "size": 20809,
           "sha256": "408ADE44720A6D6A34F0B47BCD5B8BFCD64DABC142DE60CEC39D5DD0540AEF23",
           "url": "408ade44_BannerEditor.xml"
+        },
+        {
+          "path": "GUI/AurelionScreens/BarterScreen.xml",
+          "size": 32053,
+          "sha256": "B479837E6CEB0315907595C1FA1A25E4A436C142DECF9C8041C2F45341E30326",
+          "url": "b479837e_BarterScreen.xml"
         },
         {
           "path": "GUI/AurelionScreens/CharacterCreationClanNamingStage.xml",
@@ -542,6 +548,12 @@
           "url": "9fef8319_ClanScreen.xml"
         },
         {
+          "path": "GUI/AurelionScreens/ClanSettlementTuple.xml",
+          "size": 5007,
+          "sha256": "0D0014786C36F8543E3A5C711B1D7E8D16788AD2297843E046CC77854F9A0F9A",
+          "url": "0d001478_ClanSettlementTuple.xml"
+        },
+        {
           "path": "GUI/AurelionScreens/ClansPanel.xml",
           "size": 33471,
           "sha256": "A7F25C02A2B1478E6038AFD285AAAC2D136D5D3C4957F8750092AFD99CE6A57B",
@@ -561,9 +573,9 @@
         },
         {
           "path": "GUI/AurelionScreens/DiplomacyPanel.xml",
-          "size": 58861,
-          "sha256": "9BC707AF8520AA53117A40918B681B8F0CF431F33500926213BB0A62F809695B",
-          "url": "9bc707af_DiplomacyPanel.xml"
+          "size": 58645,
+          "sha256": "8DB96DB2314B650AE91C03853D1798FCA51447E349C1876A656AF4CEB13600D1",
+          "url": "8db96db2_DiplomacyPanel.xml"
         },
         {
           "path": "GUI/AurelionScreens/EscapeMenu.xml",
@@ -588,6 +600,12 @@
           "size": 7885,
           "sha256": "C8E434689C9FB712A3A874EC20BACFE8009E3EA6C910E7F2B3CDEF403EC9D92A",
           "url": "c8e43468_FiefTuple.xml"
+        },
+        {
+          "path": "GUI/AurelionScreens/GameMenuPartyItem.xml",
+          "size": 6765,
+          "sha256": "0AB35CAF11E2546E44737FA65F145190D71941B72799FAA865F0CE6F15523EA1",
+          "url": "0ab35caf_GameMenuPartyItem.xml"
         },
         {
           "path": "GUI/AurelionScreens/GameNotificationUI.xml",
@@ -651,9 +669,15 @@
         },
         {
           "path": "GUI/AurelionScreens/PartyTroopTuple.xml",
-          "size": 37055,
-          "sha256": "8D2EACB3813A6FDA82FDE348CD8FC019BB98A580C529794F62D946468B1946AC",
-          "url": "8d2eacb3_PartyTroopTuple.xml"
+          "size": 37628,
+          "sha256": "069068E0E3C84989E2CE28A418F350A2E7C488190E295DB5FC6EF844D94F9AB4",
+          "url": "069068e0_PartyTroopTuple.xml"
+        },
+        {
+          "path": "GUI/AurelionScreens/PartyTroopTupleLeft.xml",
+          "size": 19318,
+          "sha256": "A789C8E5EC5BF58CE387075460029CFFF693670E51E74A08BED4D747B7150870",
+          "url": "a789c8e5_PartyTroopTupleLeft.xml"
         },
         {
           "path": "GUI/AurelionScreens/PropertyBasedTooltip.xml",
@@ -789,9 +813,21 @@
         },
         {
           "path": "GUI/Prefabs/AurEncounterBar.xml",
-          "size": 3025,
-          "sha256": "179929A5DBC5902290355B52CE4612B9D57B668D6B04F73FC85D00889505294E",
-          "url": "179929a5_AurEncounterBar.xml"
+          "size": 5300,
+          "sha256": "2A403EF67B185E266EF3BD40F7B8C73E5BCB90DA110B655F138A4B7C5338FDA9",
+          "url": "2a403ef6_AurEncounterBar.xml"
+        },
+        {
+          "path": "GUI/Prefabs/AurInvStrip.xml",
+          "size": 2100,
+          "sha256": "7023DD10E39265327C7B2EC4A0A6DC0063B53B5F2B13EC40F5E50B84E021F51C",
+          "url": "7023dd10_AurInvStrip.xml"
+        },
+        {
+          "path": "GUI/Prefabs/AurQuestCard.xml",
+          "size": 1773,
+          "sha256": "5E826D2CA2A0B936A534F0CA7EC203C37C0F78997A09C8E3926CDE616CA4DDD9",
+          "url": "5e826d2c_AurQuestCard.xml"
         },
         {
           "path": "GUI/Prefabs/AurSlots.xml",

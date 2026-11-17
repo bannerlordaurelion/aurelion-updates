@@ -1,0 +1,18 @@
+<Prefab>
+<Window>
+<ButtonWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="58" MarginLeft="12" MarginRight="12" MarginTop="7" Brush="Aur.UI.Row" Command.Click="OnCharacterSelect" IsSelected="@IsSelected" UpdateChildrenStates="true">
+  <Children>
+    <!-- Aurelion: the member's real portrait in our frame (right side), name next to it, where he is on the left -->
+    <Widget DoNotAcceptEvents="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="62" SuggestedHeight="46" HorizontalAlignment="Right" VerticalAlignment="Center" MarginRight="6" ClipContents="true">
+      <Children>
+        <Widget DoNotAcceptEvents="true" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Sprite="aur_v5\pf_bg_9" />
+        <ImageIdentifierWidget DataSource="{Visual}" DoNotAcceptEvents="true" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" MarginLeft="2" MarginRight="2" MarginTop="2" MarginBottom="2" AdditionalArgs="@AdditionalArgs" ImageId="@Id" TextureProviderName="@TextureProviderName" />
+        <Widget DoNotAcceptEvents="true" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Sprite="aur_v5\pf_ring_9" />
+      </Children>
+    </Widget>
+    <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" MarginLeft="110" MarginRight="80" Brush="Aur.UI.Row.Text" Text="@Name" DoNotAcceptEvents="true" />
+    <TextWidget WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="100" HorizontalAlignment="Left" MarginLeft="10" Brush="Aur.UI.Row.Sub" Text="@CurrentActionText" DoNotAcceptEvents="true" />
+  </Children>
+</ButtonWidget>
+</Window>
+</Prefab>
