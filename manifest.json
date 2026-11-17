@@ -28,8 +28,8 @@
         {
           "path": "aurelion/build.json",
           "size": 76,
-          "sha256": "0B069D8DAAE3F700BD978E53B214726D030823E4912B71B741B4CD07807A9AB9",
-          "url": "0b069d8d_build.json"
+          "sha256": "EEECBAA799D0251D9A6DF7895B8159D8D808D378C4826192084C9A7019F01440",
+          "url": "eeecbaa7_build.json"
         },
         {
           "path": "aurelion/prices.json",
@@ -51,9 +51,9 @@
         },
         {
           "path": "aurelion/studio-project.json",
-          "size": 738089,
-          "sha256": "953DFEA6C3BCD56CC86D5FDAD0B4E8A5EA6803045FE1008039A99D03FB5CC4A8",
-          "url": "953dfea6_studio-project.json"
+          "size": 738612,
+          "sha256": "2754F751854255E16D6AF96A383208EF3851E1BA53D10780D42B5FBFA5FEB6C4",
+          "url": "2754f751_studio-project.json"
         },
         {
           "path": "aurelion/update-server.ps1",
@@ -70,8 +70,8 @@
         {
           "path": "bin/Win64_Shipping_Client/Aurelion.Core.dll",
           "size": 515584,
-          "sha256": "70019454CC8B71B4CE85980592A5F4C69C74BD64317F88C4DB3D30821916CEAD",
-          "url": "70019454_Aurelion.Core.dll"
+          "sha256": "FD413DDDEA9E48A939EECECDAB161190E39C56A9BB7FC70D5BCB40361B0D117A",
+          "url": "fd413ddd_Aurelion.Core.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/Autofac.dll",
@@ -813,15 +813,15 @@
         },
         {
           "path": "GUI/Prefabs/AurEncounterBar.xml",
-          "size": 5300,
-          "sha256": "2A403EF67B185E266EF3BD40F7B8C73E5BCB90DA110B655F138A4B7C5338FDA9",
-          "url": "2a403ef6_AurEncounterBar.xml"
+          "size": 4828,
+          "sha256": "99E49705AECEE47735A78CBF188781E0F33382265715BE00CA8AE2440A32B303",
+          "url": "99e49705_AurEncounterBar.xml"
         },
         {
           "path": "GUI/Prefabs/AurInvStrip.xml",
-          "size": 2100,
-          "sha256": "7023DD10E39265327C7B2EC4A0A6DC0063B53B5F2B13EC40F5E50B84E021F51C",
-          "url": "7023dd10_AurInvStrip.xml"
+          "size": 2558,
+          "sha256": "C5E4C384AA5DB9CEE06C7BDE4B8F403B9514A15F6EE4D8A93278A2F463CBEB1D",
+          "url": "c5e4c384_AurInvStrip.xml"
         },
         {
           "path": "GUI/Prefabs/AurQuestCard.xml",
