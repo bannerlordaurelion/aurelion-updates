@@ -1,0 +1,100 @@
+<Prefab>
+  <Window>
+    <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" DoNotAcceptEvents="false" DoNotPassEventsToChildren="true" Sprite="BlankWhiteSquare_9" Color="#0B0A0CFF" IsVisible="false" DoNotUseCustomScale="true">
+      <Children>
+        <LoadingWindowWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="1920" SuggestedHeight="1080" ImageName="@LoadingImageName" IsVisible="false" HorizontalAlignment="Center" VerticalAlignment="Center" IsActive="@Enabled" ClipContents="true" DoNotUseCustomScale="true">
+          <Children>
+            <Widget Id="AurLoadBg" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="1968" SuggestedHeight="1128" HorizontalAlignment="Center" VerticalAlignment="Center" Sprite="aur_load\bg" DoNotUseCustomScale="true" />
+            <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Sprite="aur_v5\load_shade" DoNotUseCustomScale="true" />
+            <Widget Id="AurLoadEmb0" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="28.8" SuggestedHeight="28.8" MarginLeft="1114.6" MarginTop="1048.6" Sprite="aur_v5\ember_am" DoNotUseCustomScale="true" />
+            <Widget Id="AurLoadEmb1" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="19.2" SuggestedHeight="19.2" MarginLeft="1117.4" MarginTop="1052.4" Sprite="aur_v5\ember_am" DoNotUseCustomScale="true" />
+            <Widget Id="AurLoadEmb2" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="19.2" SuggestedHeight="19.2" MarginLeft="1240.4" MarginTop="1052.4" Sprite="aur_v5\ember_am" DoNotUseCustomScale="true" />
+            <Widget Id="AurLoadEmb3" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="14.4" SuggestedHeight="14.4" MarginLeft="386.3" MarginTop="1054.3" Sprite="aur_v5\ember_am" DoNotUseCustomScale="true" />
+            <Widget Id="AurLoadEmb4" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="19.2" SuggestedHeight="19.2" MarginLeft="1411.4" MarginTop="1052.4" Sprite="aur_v5\ember_am" DoNotUseCustomScale="true" />
+            <Widget Id="AurLoadEmb5" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="14.4" SuggestedHeight="14.4" MarginLeft="1470.3" MarginTop="1054.3" Sprite="aur_v5\ember_am" DoNotUseCustomScale="true" />
+            <Widget Id="AurLoadEmb6" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="14.4" SuggestedHeight="14.4" MarginLeft="267.3" MarginTop="1054.3" Sprite="aur_v5\ember_am" DoNotUseCustomScale="true" />
+            <Widget Id="AurLoadEmb7" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="19.2" SuggestedHeight="19.2" MarginLeft="1142.4" MarginTop="1052.4" Sprite="aur_v5\ember_am" DoNotUseCustomScale="true" />
+            <Widget Id="AurLoadEmb8" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="14.4" SuggestedHeight="14.4" MarginLeft="1257.3" MarginTop="1054.3" Sprite="aur_v5\ember_am" DoNotUseCustomScale="true" />
+            <Widget Id="AurLoadEmb9" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="28.8" SuggestedHeight="28.8" MarginLeft="1544.6" MarginTop="1048.6" Sprite="aur_v5\ember_am" DoNotUseCustomScale="true" />
+            <Widget Id="AurLoadEmb10" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="24.0" SuggestedHeight="24.0" MarginLeft="1318.5" MarginTop="1050.5" Sprite="aur_v5\ember_am" DoNotUseCustomScale="true" />
+            <Widget Id="AurLoadEmb11" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="14.4" SuggestedHeight="14.4" MarginLeft="839.3" MarginTop="1054.3" Sprite="aur_v5\ember_am" DoNotUseCustomScale="true" />
+            <Widget Id="AurLoadSealSh" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="180" SuggestedHeight="180" HorizontalAlignment="Center" MarginTop="779" Sprite="aur_v5\seal_sh" DoNotUseCustomScale="true" />
+            <Widget Id="AurLoadSeal" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="118" SuggestedHeight="118" HorizontalAlignment="Center" MarginTop="820" Sprite="aur_v5\seal_118" DoNotUseCustomScale="true" />
+            <Widget Id="AurLoadRing" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="144" SuggestedHeight="144" HorizontalAlignment="Center" MarginTop="807" Sprite="aur_v5\ring_f00" DoNotUseCustomScale="true" />
+            <Widget Id="AurLoadWm" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="294" SuggestedHeight="26" HorizontalAlignment="Center" MarginTop="977" PositionXOffset="-7" Sprite="aur_v5\wm_aurelion" DoNotUseCustomScale="true" />
+            <Widget Id="AurLoadSub" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="239" SuggestedHeight="10" HorizontalAlignment="Center" MarginTop="1021" PositionXOffset="-3" Sprite="aur_v5\wm_sub" DoNotUseCustomScale="true" />
+            <Widget Id="AurLoadChipBox" WidthSizePolicy="CoverChildren" HeightSizePolicy="Fixed" SuggestedHeight="38" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="30" MarginTop="30" Sprite="aur_v5\chip_pill_9" DoNotUseCustomScale="true">
+              <Children>
+                <ListPanel WidthSizePolicy="CoverChildren" HeightSizePolicy="StretchToParent" MarginLeft="15" MarginRight="11" StackLayout.LayoutMethod="HorizontalRightToLeft" DoNotUseCustomScale="true">
+                  <Children>
+                    <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="16" SuggestedHeight="16" VerticalAlignment="Center" Sprite="aur_v5\chip_dot" DoNotUseCustomScale="true" />
+                    <TextWidget Id="AurLoadChip" WidthSizePolicy="CoverChildren" HeightSizePolicy="StretchToParent" MarginRight="4" Brush="Aur.L.Chip" Text=" " DoNotUseCustomScale="true" />
+                  </Children>
+                </ListPanel>
+              </Children>
+            </Widget>
+            <Widget Id="AurLoadLeft" WidthSizePolicy="Fixed" HeightSizePolicy="CoverChildren" SuggestedWidth="440" HorizontalAlignment="Left" VerticalAlignment="Bottom" MarginLeft="40" MarginBottom="46" Sprite="aur_v5\card_9" DoNotUseCustomScale="true">
+              <Children>
+                <ListPanel WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" MarginLeft="20" MarginRight="20" MarginTop="16" MarginBottom="16" StackLayout.LayoutMethod="VerticalTopToBottom" DoNotUseCustomScale="true">
+                  <Children>
+                    <TextWidget Id="AurLoadLaw" WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="26" Brush="Aur.L.Law" Text=" " DoNotUseCustomScale="true" />
+                    <TextWidget Id="AurLoadTip" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" MarginTop="4" Brush="Aur.L.Tip" Text=" " DoNotUseCustomScale="true" />
+                  </Children>
+                </ListPanel>
+              </Children>
+            </Widget>
+            <Widget Id="AurLoadRight" WidthSizePolicy="Fixed" HeightSizePolicy="CoverChildren" SuggestedWidth="440" HorizontalAlignment="Right" VerticalAlignment="Bottom" MarginRight="40" MarginBottom="46" Sprite="aur_v5\card_9" DoNotUseCustomScale="true">
+              <Children>
+                <ListPanel WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" MarginLeft="20" MarginRight="20" MarginTop="16" MarginBottom="16" StackLayout.LayoutMethod="VerticalTopToBottom" DoNotUseCustomScale="true">
+                  <Children>
+                    <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="30" DoNotUseCustomScale="true">
+                      <Children>
+                        <TextWidget Id="AurLoadTitle" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" MarginLeft="70" Brush="Aur.L.Title" Text="@TitleText" DoNotUseCustomScale="true" />
+                        <TextWidget Id="AurLoadPct" WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="70" HorizontalAlignment="Left" Brush="Aur.L.Pct" Text=" " DoNotUseCustomScale="true" />
+                      </Children>
+                    </Widget>
+                    <Widget Id="AurLoadBar" WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="4" MarginTop="10" Sprite="aur_v5\bar_trk_9" ClipContents="true" DoNotUseCustomScale="true">
+                      <Children>
+                        <Widget Id="AurLoadFill" WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="32" HorizontalAlignment="Right" Sprite="aur_v5\bar_fill" DoNotUseCustomScale="true" />
+                      </Children>
+                    </Widget>
+                    <ListPanel WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Right" MarginTop="10" StackLayout.LayoutMethod="HorizontalRightToLeft" DoNotUseCustomScale="true">
+                      <Children>
+                        <ListPanel WidthSizePolicy="CoverChildren" HeightSizePolicy="Fixed" SuggestedHeight="24" StackLayout.LayoutMethod="HorizontalRightToLeft" DoNotUseCustomScale="true">
+                          <Children>
+                            <Widget Id="AurStI0" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="16" SuggestedHeight="16" VerticalAlignment="Center" Sprite="aur_v5\st_ok" DoNotUseCustomScale="true" />
+                            <TextWidget Id="AurStT0" WidthSizePolicy="CoverChildren" HeightSizePolicy="StretchToParent" MarginRight="6" Brush="Aur.L.StDim" Text=" " DoNotUseCustomScale="true" />
+                          </Children>
+                        </ListPanel>
+                        <ListPanel WidthSizePolicy="CoverChildren" HeightSizePolicy="Fixed" SuggestedHeight="24" MarginRight="14" StackLayout.LayoutMethod="HorizontalRightToLeft" DoNotUseCustomScale="true">
+                          <Children>
+                            <Widget Id="AurStI1" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="16" SuggestedHeight="16" VerticalAlignment="Center" Sprite="aur_v5\st_ok" DoNotUseCustomScale="true" />
+                            <TextWidget Id="AurStT1" WidthSizePolicy="CoverChildren" HeightSizePolicy="StretchToParent" MarginRight="6" Brush="Aur.L.StDim" Text=" " DoNotUseCustomScale="true" />
+                          </Children>
+                        </ListPanel>
+                        <ListPanel WidthSizePolicy="CoverChildren" HeightSizePolicy="Fixed" SuggestedHeight="24" MarginRight="14" StackLayout.LayoutMethod="HorizontalRightToLeft" DoNotUseCustomScale="true">
+                          <Children>
+                            <Widget Id="AurStI2" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="16" SuggestedHeight="16" VerticalAlignment="Center" Sprite="aur_v5\st_ok" DoNotUseCustomScale="true" />
+                            <TextWidget Id="AurStT2" WidthSizePolicy="CoverChildren" HeightSizePolicy="StretchToParent" MarginRight="6" Brush="Aur.L.StDim" Text=" " DoNotUseCustomScale="true" />
+                          </Children>
+                        </ListPanel>
+                        <ListPanel WidthSizePolicy="CoverChildren" HeightSizePolicy="Fixed" SuggestedHeight="24" MarginRight="14" StackLayout.LayoutMethod="HorizontalRightToLeft" DoNotUseCustomScale="true">
+                          <Children>
+                            <Widget Id="AurStI3" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="16" SuggestedHeight="16" VerticalAlignment="Center" Sprite="aur_v5\st_ok" DoNotUseCustomScale="true" />
+                            <TextWidget Id="AurStT3" WidthSizePolicy="CoverChildren" HeightSizePolicy="StretchToParent" MarginRight="6" Brush="Aur.L.StDim" Text=" " DoNotUseCustomScale="true" />
+                          </Children>
+                        </ListPanel>
+                      </Children>
+                    </ListPanel>
+                    <TextWidget Id="AurLoadDesc" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" MarginTop="6" Brush="Aur.L.Status" Text="@DescriptionText" DoNotUseCustomScale="true" />
+                  </Children>
+                </ListPanel>
+              </Children>
+            </Widget>
+            <AurMotionWidget Mode="load" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="0" SuggestedHeight="0" DoNotAcceptEvents="true" />
+          </Children>
+        </LoadingWindowWidget>
+      </Children>
+    </Widget>
+  </Window>
+</Prefab>

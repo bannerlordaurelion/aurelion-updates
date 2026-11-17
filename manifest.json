@@ -28,8 +28,8 @@
         {
           "path": "aurelion/build.json",
           "size": 76,
-          "sha256": "90E1CE7637D4B084AC97078488F7A80DFDF045A1DB810177BBD85EED921DCE42",
-          "url": "90e1ce76_build.json"
+          "sha256": "88F5B4B64ADBBAEDD5FC84643882FB810D9E81105AA819B2FEA24D7FEFCDCAB7",
+          "url": "88f5b4b6_build.json"
         },
         {
           "path": "aurelion/prices.json",
@@ -51,9 +51,9 @@
         },
         {
           "path": "aurelion/studio-project.json",
-          "size": 700964,
-          "sha256": "89BCEC33E7CFBDFD007AB8579B45BD44831E2A3A7144DFC39E6A6DDF3F74FB0C",
-          "url": "89bcec33_studio-project.json"
+          "size": 706276,
+          "sha256": "B8C6136B2BBAD4A2E17316D2B05110F331917834262469590F580A7636C59A6D",
+          "url": "b8c6136b_studio-project.json"
         },
         {
           "path": "aurelion/update-server.ps1",
@@ -69,9 +69,9 @@
         },
         {
           "path": "bin/Win64_Shipping_Client/Aurelion.Core.dll",
-          "size": 492544,
-          "sha256": "277C62DDF8C29C948E58260C42830F5009D5358F61EDA8581F65FC04E6A362FD",
-          "url": "277c62dd_Aurelion.Core.dll"
+          "size": 495104,
+          "sha256": "6E618FBBC3CC520173F2793E711578055AC556DA93A8952D980D42FCA5A611F2",
+          "url": "6e618fbb_Aurelion.Core.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/Autofac.dll",
@@ -422,6 +422,18 @@
           "url": "163c4a9a_AttributeInspectPopup.xml"
         },
         {
+          "path": "GUI/AurelionScreens/AurChooserWait.xml",
+          "size": 6202,
+          "sha256": "3077EEC58C99B101E705474D0405069A3DAD1BA0450B4DB8D718AD76CAB3A7A5",
+          "url": "3077eec5_AurChooserWait.xml"
+        },
+        {
+          "path": "GUI/AurelionScreens/AurChooserWaitLite.xml",
+          "size": 6045,
+          "sha256": "5627EC2B0BAFEF4037E47B473957DB474D22365928FFEFA06D69241C74BA3412",
+          "url": "5627ec2b_AurChooserWaitLite.xml"
+        },
+        {
           "path": "GUI/AurelionScreens/AurClanLordTuple.xml",
           "size": 734,
           "sha256": "3785019C2E321AF1202F1573E7FAE272777C0FE4D002713B698108157C14DBAD",
@@ -435,9 +447,15 @@
         },
         {
           "path": "GUI/AurelionScreens/AurLoadingWindow.xml",
-          "size": 12554,
-          "sha256": "48B3E2E0E522B1D97463EABF7834FEB32DB8DB9032ED3035B9FA4D87E4164C01",
-          "url": "48b3e2e0_AurLoadingWindow.xml"
+          "size": 12407,
+          "sha256": "55BCBB6B829B0D8E35107775F4551D1CFFF3255FEE95E5F7C05A61E06AAABD73",
+          "url": "55bcbb6b_AurLoadingWindow.xml"
+        },
+        {
+          "path": "GUI/AurelionScreens/AurLoadingWindowLite.xml",
+          "size": 12250,
+          "sha256": "8F5AED162B517C074959F7ACD5BDAF111A47F415EC263DAAD3BE6C58DB45F286",
+          "url": "8f5aed16_AurLoadingWindowLite.xml"
         },
         {
           "path": "GUI/AurelionScreens/BannerEditor.xml",
@@ -699,9 +717,15 @@
         },
         {
           "path": "GUI/Prefabs/AurSlots.xml",
-          "size": 37800,
-          "sha256": "A51040F6930DC70B8D851A80756F5FB17D0AE048E2DB9D1E86909731F379BEDA",
-          "url": "a51040f6_AurSlots.xml"
+          "size": 37925,
+          "sha256": "F9849715746605902E1D41B04250A4FF21D072F6703F5B148ADA28FC88C0D1F4",
+          "url": "f9849715_AurSlots.xml"
+        },
+        {
+          "path": "GUI/Prefabs/AurSlotsLite.xml",
+          "size": 37778,
+          "sha256": "98268E6FF836F3D4B87E5A11C38F25420923F517234FDC3FBAC9C5DF3AA2E5CF",
+          "url": "98268e6f_AurSlotsLite.xml"
         },
         {
           "path": "GUI/Prefabs/AurWelcome.xml",
