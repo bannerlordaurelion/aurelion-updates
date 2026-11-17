@@ -1,0 +1,32 @@
+<Prefab>
+  <Window>
+    <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" DoNotAcceptEvents="true" DoNotUseCustomScale="true">
+      <Children>
+        <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="800" SuggestedHeight="96" HorizontalAlignment="Center" VerticalAlignment="Top" MarginTop="18" Sprite="aur_v5\panel_9" DoNotAcceptEvents="true" DoNotUseCustomScale="true">
+          <Children>
+            <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="2" VerticalAlignment="Top" MarginLeft="18" MarginRight="18" Sprite="aur_v5\topline" DoNotUseCustomScale="true" />
+            <ListPanel WidthSizePolicy="Fixed" HeightSizePolicy="CoverChildren" SuggestedWidth="96" HorizontalAlignment="Left" VerticalAlignment="Center" MarginLeft="10" StackLayout.LayoutMethod="VerticalTopToBottom" DoNotUseCustomScale="true">
+              <Children>
+                <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="30" Brush="Aur.E.Num" Text="@Mine" DoNotUseCustomScale="true" />
+                <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="20" Brush="Aur.E.Lbl" Text="@MineL" DoNotUseCustomScale="true" />
+              </Children>
+            </ListPanel>
+            <ListPanel WidthSizePolicy="Fixed" HeightSizePolicy="CoverChildren" SuggestedWidth="96" HorizontalAlignment="Right" VerticalAlignment="Center" MarginRight="10" StackLayout.LayoutMethod="VerticalTopToBottom" DoNotUseCustomScale="true">
+              <Children>
+                <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="30" Brush="Aur.E.NumBad" Text="@Theirs" DoNotUseCustomScale="true" />
+                <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="20" Brush="Aur.E.Lbl" Text="@TheirsL" DoNotUseCustomScale="true" />
+              </Children>
+            </ListPanel>
+            <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="660" SuggestedHeight="12" HorizontalAlignment="Center" VerticalAlignment="Top" MarginTop="30" Sprite="aur_v5\ebar_trk_9" ClipContents="true" DoNotUseCustomScale="true">
+              <Children>
+                <Widget WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="@MeW" HorizontalAlignment="Left" Sprite="aur_v5\ebar_me" DoNotUseCustomScale="true" />
+                <Widget WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="@ThemW" HorizontalAlignment="Right" Sprite="aur_v5\ebar_them" DoNotUseCustomScale="true" />
+              </Children>
+            </Widget>
+            <TextWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="600" SuggestedHeight="24" HorizontalAlignment="Center" VerticalAlignment="Top" MarginTop="50" Brush="Aur.E.Lbl" Text="@Line" DoNotUseCustomScale="true" />
+          </Children>
+        </Widget>
+      </Children>
+    </Widget>
+  </Window>
+</Prefab>

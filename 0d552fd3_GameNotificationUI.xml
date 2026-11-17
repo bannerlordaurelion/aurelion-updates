@@ -1,0 +1,26 @@
+<Prefab>
+  <Constants>
+    <Constant Name="AurToast.Width" Value="600"/>
+  </Constants>
+  <Window>
+    <!-- fixed height: a stretched background inside a "cover children" box grows to the whole screen (seen in the clan screen)
+         Aurelion: the game's centre notices ("x men fled", "your castle is besieged") as a small toast under the top edge,
+         same timing and same texts as the game, nothing to click, never covers the middle of the screen -->
+    <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" IsDisabled="true">
+      <Children>
+        <GameNotificationWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedHeight="84" SuggestedWidth="!AurToast.Width" ClipContents="true" HorizontalAlignment="Center" VerticalAlignment="Top" MarginTop="84" Brush="Aur.UI.Clear" AlphaFactor="1" IsVisible="@GotNotification" NotificationId="@NotificationId" TextWidget="LayoutListPanel\TextWidget" AnnouncerImageIdentifier="LayoutListPanel\AnnouncerImageIdentifier" IsPaused="@IsPaused" NotificationDurationInSeconds="@CurrentNotificationDurationInSeconds" RampUpInSeconds="0.25" RampDownInSeconds="0.35" MustFadeOutCurrentNotification="@MustFadeOutCurrentNotification" NotificationFadeOutDelayInSeconds="@CurrentNotificationFadeOutDelayInSeconds" Command.NotificationFinished="SkipCurrentNotification">
+          <Children>
+            <Widget DoNotAcceptEvents="true" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Sprite="aur_skin2\pop_9" />
+            <Widget DoNotAcceptEvents="true" WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="2" MarginLeft="18" MarginRight="18" VerticalAlignment="Top" Sprite="aur_skin2\gh_line" />
+            <Widget Id="LayoutListPanel" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent">
+              <Children>
+                <ImageIdentifierWidget Id="AnnouncerImageIdentifier" HideWhenNull="true" DataSource="{CurrentNotification\Announcer}" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="52" SuggestedHeight="39" HorizontalAlignment="Left" VerticalAlignment="Center" MarginLeft="10" AdditionalArgs="@AdditionalArgs" ImageId="@Id" TextureProviderName="@TextureProviderName" IsDisabled="true" />
+                <RichTextWidget Id="TextWidget" DataSource="{CurrentNotification}" WidthSizePolicy="Fixed" HeightSizePolicy="CoverChildren" SuggestedWidth="470" HorizontalAlignment="Center" VerticalAlignment="Center" Brush="GameNotification.Text" Brush.FontColor="#F7F2E0FF" Brush.FontSize="17" Brush.TextHorizontalAlignment="Center" Text="@GameNotificationText"/>
+              </Children>
+            </Widget>
+          </Children>
+        </GameNotificationWidget>
+      </Children>
+    </Widget>
+  </Window>
+</Prefab>

@@ -1,0 +1,98 @@
+<Prefab>
+  <Constants>
+
+    <Constant Name="Kingdom.Item.Tuple.Width" BrushLayer="Default" BrushName="Kingdom.Item.Tuple" BrushValueType="Width" />
+    <Constant Name="Kingdom.Item.Tuple.Height" BrushLayer="Default" BrushName="Kingdom.Item.Tuple" BrushValueType="Height" />
+
+    <Constant Name="Kingdom.Clans.Sort.1.Width" BrushLayer="Default" BrushName="Kingdom.Clans.Sort.1" BrushValueType="Width" />
+
+    <Constant Name="Kingdom.Clans.Sort.2.Width" BrushLayer="Default" BrushName="Kingdom.Clans.Sort.2" BrushValueType="Width" />
+
+    <Constant Name="Kingdom.Clans.Sort.3.Width" BrushLayer="Default" BrushName="Kingdom.Clans.Sort.3" BrushValueType="Width" />
+
+    <Constant Name="Kingdom.Clans.Sort.4.Width" BrushLayer="Default" BrushName="Kingdom.Clans.Sort.4" BrushValueType="Width" />
+
+    <Constant Name="Kingdom.Clans.Sort.5.Width" BrushLayer="Default" BrushName="Kingdom.Clans.Sort.5" BrushValueType="Width" />
+
+    <Constant Name="Kingdom.Clans.Sort.6.Width" BrushLayer="Default" BrushName="Kingdom.Clans.Sort.6" BrushValueType="Width" />
+
+    <Constant Name="Kingdom.Clans.Sort.1.Width.WithMarginRight" Additive="-32" Value="!Kingdom.Clans.Sort.1.Width" />
+    
+    <Constant Name="Banner.Width" BrushLayer="Default" BrushName="Flat.Tuple.Banner.Small" BrushValueType="Width" />
+    <Constant Name="Banner.Height" BrushLayer="Default" BrushName="Flat.Tuple.Banner.Small" BrushValueType="Height" />
+
+    <Constant Name="Banner.Width.Scaled" MultiplyResult="0.43" Value="!Banner.Width" />
+    <Constant Name="Banner.Height.Scaled" MultiplyResult="0.43" Value="!Banner.Height"/>
+
+  </Constants>
+  <Window>
+    <ButtonWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="!Kingdom.Item.Tuple.Width" SuggestedHeight="!Kingdom.Item.Tuple.Height" Brush="Kingdom.Item.Tuple" Command.Click="OnSelect" IsSelected="@IsSelected">
+      <Children>
+
+        <ListPanel DoNotAcceptEvents="true" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent">
+          <Children>
+
+            <!--Clan Banner-->
+            <Widget WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="!Kingdom.Clans.Sort.1.Width" VerticalAlignment="Center" IsEnabled="false">
+              <Children>
+
+                <!-- Aurelion: the banner on a plate, inside its box -->
+                <Widget DataSource="{Banner_9}" DoNotAcceptEvents="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="58" SuggestedHeight="68" VerticalAlignment="Center" HorizontalAlignment="Center" Sprite="aur_v5\pf_bg_9" ClipContents="true">
+                  <Children>
+                    <MaskedTextureWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" Brush="Flat.Tuple.Banner.Small" AdditionalArgs="@AdditionalArgs" ImageId="@Id" TextureProviderName="@TextureProviderName" IsDisabled="true" SuggestedWidth="44" SuggestedHeight="56" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    <Widget DoNotAcceptEvents="true" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Sprite="aur_v5\pf_ring_9" />
+                  </Children>
+                </Widget>
+
+              </Children>
+            </Widget>
+
+            <!--Clan Type-->
+            <Widget WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="!Kingdom.Clans.Sort.2.Width" VerticalAlignment="Center" IsEnabled="false">
+              <Children>
+                <KingdomClanTypeVisualBrushWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="66" SuggestedHeight="37" Brush="Kingdom.Clan.Type" VerticalAlignment="Center" HorizontalAlignment="Center" Type="@ClanType"/>
+              </Children>
+            </Widget>
+
+            <!--Clan Name-->
+            <Widget WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="!Kingdom.Clans.Sort.3.Width" MarginTop="3" MarginBottom="3" VerticalAlignment="Center" IsEnabled="false" >
+              <Children>
+                <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Brush="ArmyManagement.Army.Tuple.Name" Text="@Name" />
+              </Children>
+            </Widget>
+
+            <!--Clan Influence-->
+            <Widget WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="!Kingdom.Clans.Sort.4.Width" VerticalAlignment="Center" PositionYOffset="2" ClipContents="true" IsEnabled="false">
+              <Children>
+
+                <ListPanel WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" VerticalAlignment="Center">
+                  <Children>
+                    <TextWidget WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" Brush="ArmyManagement.Army.Tuple.Name" IntText="@Influence" />
+                    <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="17" SuggestedHeight="27" VeriticalAlignment="Center" Sprite="SPKingdom\influence_icon_small" />
+                  </Children>
+                </ListPanel>
+
+              </Children>
+            </Widget>
+
+            <!--Clan Members-->
+            <Widget WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="!Kingdom.Clans.Sort.5.Width" VerticalAlignment="Center" ClipContents="true" IsEnabled="false">
+              <Children>
+                <TextWidget WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" Brush="ArmyManagement.Army.Tuple.Name" IntText="@NumOfMembers" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+              </Children>
+            </Widget>
+
+            <!--Clan Fiefs-->
+            <Widget WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="!Kingdom.Clans.Sort.6.Width" VerticalAlignment="Center" ClipContents="true" IsEnabled="false">
+              <Children>
+                <TextWidget WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" Brush="ArmyManagement.Army.Tuple.Name" IntText="@NumOfFiefs" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+              </Children>
+            </Widget>
+
+          </Children>
+        </ListPanel>
+
+      </Children>
+    </ButtonWidget>
+  </Window>
+</Prefab>
