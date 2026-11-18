@@ -28,8 +28,8 @@
         {
           "path": "aurelion/build.json",
           "size": 76,
-          "sha256": "EEECBAA799D0251D9A6DF7895B8159D8D808D378C4826192084C9A7019F01440",
-          "url": "eeecbaa7_build.json"
+          "sha256": "7C8DED0E2E7D3E714449DD71D70470A0BDB0B6EEA930B3BB3536AFC64B36AFFF",
+          "url": "7c8ded0e_build.json"
         },
         {
           "path": "aurelion/prices.json",
@@ -51,9 +51,9 @@
         },
         {
           "path": "aurelion/studio-project.json",
-          "size": 738612,
-          "sha256": "2754F751854255E16D6AF96A383208EF3851E1BA53D10780D42B5FBFA5FEB6C4",
-          "url": "2754f751_studio-project.json"
+          "size": 777652,
+          "sha256": "E4F1EC08DCF7C50696025E47E676192880A69552CF763FEEE0A395C358E9AB9A",
+          "url": "e4f1ec08_studio-project.json"
         },
         {
           "path": "aurelion/update-server.ps1",
@@ -69,9 +69,9 @@
         },
         {
           "path": "bin/Win64_Shipping_Client/Aurelion.Core.dll",
-          "size": 515584,
-          "sha256": "FD413DDDEA9E48A939EECECDAB161190E39C56A9BB7FC70D5BCB40361B0D117A",
-          "url": "fd413ddd_Aurelion.Core.dll"
+          "size": 539648,
+          "sha256": "80B2BAADD683FC002705C13D3A561F8E29C43A0C8166188BB66F0D247FD08DD6",
+          "url": "80b2baad_Aurelion.Core.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/Autofac.dll",
@@ -471,9 +471,9 @@
         },
         {
           "path": "GUI/AurelionScreens/BannerEditor.xml",
-          "size": 20809,
-          "sha256": "408ADE44720A6D6A34F0B47BCD5B8BFCD64DABC142DE60CEC39D5DD0540AEF23",
-          "url": "408ade44_BannerEditor.xml"
+          "size": 35961,
+          "sha256": "B848740923E3C4B83AF2DF981DA361B7B06A9F92A60C128AECB8A62FA5B14002",
+          "url": "b8487409_BannerEditor.xml"
         },
         {
           "path": "GUI/AurelionScreens/BarterScreen.xml",
@@ -699,9 +699,9 @@
         },
         {
           "path": "GUI/AurelionScreens/SPConversation.xml",
-          "size": 16741,
-          "sha256": "53DE59A6AF514F4A2DCDBFCD126A1529D644367EFDBB95D2FACB2D2ADAFCDB4C",
-          "url": "53de59a6_SPConversation.xml"
+          "size": 16694,
+          "sha256": "4A1F5D2A2DA5B3E3D3C6FC9F7705B40F1D8667369E52D9A49D72EC5989FE541A",
+          "url": "4a1f5d2a_SPConversation.xml"
         },
         {
           "path": "GUI/AurelionScreens/Standard.BottomBigCloseButton.xml",
@@ -783,9 +783,9 @@
         },
         {
           "path": "GUI/Brushes/AurelionV5.xml",
-          "size": 34688,
-          "sha256": "5C9083E4E1358F6D21DDF448B27C651DFE7C16A574B3D3D3A36382F5D45F7498",
-          "url": "5c9083e4_AurelionV5.xml"
+          "size": 35077,
+          "sha256": "CA2D5ADB9A2EAB6262BFAA3C8A3A2F04CA03B763EFF0836468D55C51B398B9E7",
+          "url": "ca2d5adb_AurelionV5.xml"
         },
         {
           "path": "GUI/Brushes/CoopButtons.xml",
@@ -814,8 +814,8 @@
         {
           "path": "GUI/Prefabs/AurEncounterBar.xml",
           "size": 4828,
-          "sha256": "99E49705AECEE47735A78CBF188781E0F33382265715BE00CA8AE2440A32B303",
-          "url": "99e49705_AurEncounterBar.xml"
+          "sha256": "FA76CD6A23D404DE6B5D5E52FB60E2D3A418A77902F4310656E99DD849D9AEC1",
+          "url": "fa76cd6a_AurEncounterBar.xml"
         },
         {
           "path": "GUI/Prefabs/AurInvStrip.xml",

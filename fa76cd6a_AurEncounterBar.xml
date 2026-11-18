@@ -1,0 +1,31 @@
+<Prefab>
+  <Window>
+    <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" DoNotAcceptEvents="true" DoNotUseCustomScale="true">
+      <Children>
+        <!-- Aurelion: one panel on the right of the map (the game's own encounter cards stay free at the top) -->
+        <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="560" SuggestedHeight="150" HorizontalAlignment="Right" VerticalAlignment="Top" MarginRight="24" MarginTop="200" Sprite="aur_v5\panel_9" ClipContents="true" DoNotAcceptEvents="true" DoNotUseCustomScale="true">
+          <Children>
+            <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="2" VerticalAlignment="Top" MarginLeft="18" MarginRight="18" Sprite="aur_v5\topline" DoNotUseCustomScale="true" />
+            <TextWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="60" SuggestedHeight="30" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="14" MarginTop="12" Brush="Aur.E.Num" Text="@Mine" DoNotUseCustomScale="true" />
+            <TextWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="60" SuggestedHeight="30" HorizontalAlignment="Right" VerticalAlignment="Top" MarginRight="14" MarginTop="12" Brush="Aur.E.NumBad" Text="@Theirs" DoNotUseCustomScale="true" />
+            <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="420" SuggestedHeight="10" HorizontalAlignment="Center" VerticalAlignment="Top" MarginTop="22" Sprite="aur_v5\ebar_trk_9" ClipContents="true" DoNotUseCustomScale="true">
+              <Children>
+                <Widget WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="@MeW" HorizontalAlignment="Left" Sprite="aur_v5\ebar_me" DoNotUseCustomScale="true" />
+                <Widget WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="@ThemW" HorizontalAlignment="Right" Sprite="aur_v5\ebar_them" DoNotUseCustomScale="true" />
+              </Children>
+            </Widget>
+            <TextWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="230" SuggestedHeight="22" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="18" MarginTop="42" Brush="Aur.E.Lbl" Brush.TextHorizontalAlignment="Left" Text="@MineL" DoNotUseCustomScale="true" />
+            <TextWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="230" SuggestedHeight="22" HorizontalAlignment="Right" VerticalAlignment="Top" MarginRight="18" MarginTop="42" Brush="Aur.E.Lbl" Brush.TextHorizontalAlignment="Right" Text="@TheirsL" DoNotUseCustomScale="true" />
+            <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="1" VerticalAlignment="Top" MarginLeft="18" MarginRight="18" MarginTop="72" Sprite="BlankWhiteSquare_9" Color="#F7F2E01F" DoNotUseCustomScale="true" />
+            <TextWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="210" SuggestedHeight="22" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="18" MarginTop="84" Brush="Aur.E.Lbl" Brush.FontColor="#80AEE8FF" Brush.TextHorizontalAlignment="Left" Text="@MeA" DoNotUseCustomScale="true" />
+            <TextWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="210" SuggestedHeight="22" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="18" MarginTop="112" Brush="Aur.E.Lbl" Brush.TextHorizontalAlignment="Left" Text="@MeB" DoNotUseCustomScale="true" />
+            <TextWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="210" SuggestedHeight="22" HorizontalAlignment="Right" VerticalAlignment="Top" MarginRight="18" MarginTop="84" Brush="Aur.E.Lbl" Brush.FontColor="#E56B6FFF" Brush.TextHorizontalAlignment="Right" Text="@ThemA" DoNotUseCustomScale="true" />
+            <TextWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="210" SuggestedHeight="22" HorizontalAlignment="Right" VerticalAlignment="Top" MarginRight="18" MarginTop="112" Brush="Aur.E.Lbl" Brush.TextHorizontalAlignment="Right" Text="@ThemB" DoNotUseCustomScale="true" />
+            <TextWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="100" SuggestedHeight="32" HorizontalAlignment="Center" VerticalAlignment="Top" MarginTop="80" Brush="Aur.E.Num" Brush.FontSize="28" Brush.FontColor="#E8B94EFF" Brush.TextHorizontalAlignment="Center" Text="@Win" DoNotUseCustomScale="true" />
+            <TextWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="100" SuggestedHeight="22" HorizontalAlignment="Center" VerticalAlignment="Top" MarginTop="114" Brush="Aur.E.Lbl" Brush.TextHorizontalAlignment="Center" Text="@WinL" DoNotUseCustomScale="true" />
+          </Children>
+        </Widget>
+      </Children>
+    </Widget>
+  </Window>
+</Prefab>
