@@ -1,0 +1,27 @@
+<Prefab>
+  <Window>
+    <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" DoNotAcceptEvents="true">
+      <Children>
+        <!-- Aurelion: the party's load, low in the middle (under the character, above Cancel / Done) -->
+        <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="560" SuggestedHeight="46" HorizontalAlignment="Center" VerticalAlignment="Bottom" MarginBottom="80" Sprite="aur_v5\panel_9" ClipContents="true" DoNotAcceptEvents="true">
+          <Children>
+            <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="22" VerticalAlignment="Top" MarginLeft="16" MarginRight="16" MarginTop="5" Brush="Aur.E.Lbl" Brush.TextHorizontalAlignment="Center" Text="@Load" />
+            <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="520" SuggestedHeight="6" HorizontalAlignment="Center" VerticalAlignment="Top" MarginTop="31" Sprite="aur_v5\ebar_trk_9" ClipContents="true">
+              <Children>
+                <Widget WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="@FillW" HorizontalAlignment="Left" Sprite="aur_v5\ebar_me" IsVisible="@Under" />
+                <Widget WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="@FillW" HorizontalAlignment="Left" Sprite="aur_v5\ebar_them" IsVisible="@Over" />
+              </Children>
+            </Widget>
+          </Children>
+        </Widget>
+        <!-- Aurelion: when trading, the gold of both sides and the market against the nearest towns (top, between the name and the outfit buttons) -->
+        <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="556" SuggestedHeight="66" HorizontalAlignment="Left" VerticalAlignment="Bottom" MarginLeft="14" MarginBottom="138" Sprite="aur_v5\panel_9" ClipContents="true" DoNotAcceptEvents="true" IsVisible="@Trading">
+          <Children>
+            <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="22" VerticalAlignment="Top" MarginLeft="16" MarginRight="16" MarginTop="5" Brush="Aur.E.Lbl" Brush.FontColor="#E8B94EFF" Brush.TextHorizontalAlignment="Center" Text="@Gold" />
+            <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="22" VerticalAlignment="Top" MarginLeft="16" MarginRight="16" MarginTop="27" Brush="Aur.E.Lbl" Brush.FontColor="#80AEE8FF" Brush.TextHorizontalAlignment="Center" Text="@Market" />
+          </Children>
+        </Widget>
+      </Children>
+    </Widget>
+  </Window>
+</Prefab>

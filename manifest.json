@@ -28,8 +28,8 @@
         {
           "path": "aurelion/build.json",
           "size": 76,
-          "sha256": "851FEA264966669271D23A048D58BC1B639A70845E77723C0770DBDCB2C1430A",
-          "url": "851fea26_build.json"
+          "sha256": "4AB7B6C795324CDA23EE2AE526F4A0E57A9EBFF31A3D7E0D85050DFE6918A442",
+          "url": "4ab7b6c7_build.json"
         },
         {
           "path": "aurelion/prices.json",
@@ -51,9 +51,9 @@
         },
         {
           "path": "aurelion/studio-project.json",
-          "size": 807209,
-          "sha256": "F7AD734626DE55BB5CC5A9B01458C251DD84B9BE24C4C3658E08412B553712F8",
-          "url": "f7ad7346_studio-project.json"
+          "size": 807427,
+          "sha256": "EF15BBBE03F9C80B9B9DE864CF8A0638087751C782B2E750C27C550194E791D8",
+          "url": "ef15bbbe_studio-project.json"
         },
         {
           "path": "aurelion/update-server.ps1",
@@ -69,9 +69,9 @@
         },
         {
           "path": "bin/Win64_Shipping_Client/Aurelion.Core.dll",
-          "size": 563712,
-          "sha256": "2F102FF897EE75F12191D860DAEFD81505EA49083FF22849090D90514BB50098",
-          "url": "2f102ff8_Aurelion.Core.dll"
+          "size": 564224,
+          "sha256": "642EEF1582309BAAF62C17968119DBC637C24EE9FB7A5280CDDBA515BD4E5114",
+          "url": "642eef15_Aurelion.Core.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/Autofac.dll",
@@ -573,9 +573,9 @@
         },
         {
           "path": "GUI/AurelionScreens/Crafting.xml",
-          "size": 52953,
-          "sha256": "7EC46DB53160D686B0B436AEF62AF37805DD440310954E50A87F50D0345132FD",
-          "url": "7ec46db5_Crafting.xml"
+          "size": 52922,
+          "sha256": "8279F9FE9D2DAA04C0990A2D4BC757185ABDD6D24F1CF68A1DDDF7BFBE2B0A77",
+          "url": "8279f9fe_Crafting.xml"
         },
         {
           "path": "GUI/AurelionScreens/DiplomacyPanel.xml",
@@ -586,8 +586,8 @@
         {
           "path": "GUI/AurelionScreens/EncounterOverlay.xml",
           "size": 26454,
-          "sha256": "08533C75D17BE5271DA9990C6E845DCA8299C91717C34CD2A43671525B9CB467",
-          "url": "08533c75_EncounterOverlay.xml"
+          "sha256": "E7AAA023DDD6BE1D54697AA7797103BEECE232DC07C4B2306F5DB9C3BB55546F",
+          "url": "e7aaa023_EncounterOverlay.xml"
         },
         {
           "path": "GUI/AurelionScreens/EscapeMenu.xml",
@@ -650,6 +650,12 @@
           "url": "9dd18997_HintTooltip.xml"
         },
         {
+          "path": "GUI/AurelionScreens/Inventory.xml",
+          "size": 64594,
+          "sha256": "EB521B20AD718A2B3CE9244234EA4FD76724045EE48F337EE70E2D05DD9312BC",
+          "url": "eb521b20_Inventory.xml"
+        },
+        {
           "path": "GUI/AurelionScreens/InventoryItemTuple.xml",
           "size": 32807,
           "sha256": "FA7935F454761772D585B1A6C727FDFC7E296A11C266C2488BD92209BF9C1833",
@@ -669,9 +675,9 @@
         },
         {
           "path": "GUI/AurelionScreens/MapBar.xml",
-          "size": 22044,
-          "sha256": "E5E5F2713E73EFBB8D53DDDCE0A7C4CAD83C174CB5B97258723D8FA3B233E826",
-          "url": "e5e5f271_MapBar.xml"
+          "size": 19540,
+          "sha256": "426824CEEFE8C7A68BA93EB2320D0A992BCB5981C40CC88B8BE2E58A357098E5",
+          "url": "426824ce_MapBar.xml"
         },
         {
           "path": "GUI/AurelionScreens/MapNotificationItem.xml",
@@ -718,8 +724,8 @@
         {
           "path": "GUI/AurelionScreens/SettlementOverlay.xml",
           "size": 35076,
-          "sha256": "F7CFD8EABF17CD311E8AB20E5E7DE5AD698389526771625B2AD13F561C516D06",
-          "url": "f7cfd8ea_SettlementOverlay.xml"
+          "sha256": "510EC7A5749E171EB4576344EE3C710D2C539FEC2AC56447EC29F74E9236477C",
+          "url": "510ec7a5_SettlementOverlay.xml"
         },
         {
           "path": "GUI/AurelionScreens/SingleQueryPopup.xml",
@@ -729,9 +735,9 @@
         },
         {
           "path": "GUI/AurelionScreens/SPConversation.xml",
-          "size": 16781,
-          "sha256": "4A918572248B3BB7496FA003FD8275F0266ED1D053FAD61737B16AE5A71E9013",
-          "url": "4a918572_SPConversation.xml"
+          "size": 16816,
+          "sha256": "CFAE5A4FB43D682A420509A30DBA4399CA731220F2AD5C763DC032A8BF9D9C51",
+          "url": "cfae5a4f_SPConversation.xml"
         },
         {
           "path": "GUI/AurelionScreens/Standard.BottomBigCloseButton.xml",
@@ -774,6 +780,12 @@
           "size": 6398,
           "sha256": "A19E563297201FA21339532E79C057F97E2B02BFFA0DA3921D4A88FBA1A21162",
           "url": "a19e5632_TextQueryPopup.xml"
+        },
+        {
+          "path": "GUI/AurelionScreens/TownManagement.xml",
+          "size": 40846,
+          "sha256": "9CF6A38A6E6AD13A2BA4E68C7B97C86E0E7997B42A8F5E60B71F25D2EE8ECB76",
+          "url": "9cf6a38a_TownManagement.xml"
         },
         {
           "path": "GUI/AurelionScreens/TruceTuple.xml",
@@ -843,15 +855,15 @@
         },
         {
           "path": "GUI/Prefabs/AurEncounterBar.xml",
-          "size": 17715,
-          "sha256": "C6A518FA5D3D63E5222AD6B32F8EA2144CA130709BB2E2CFFD160F3AAE562AE0",
-          "url": "c6a518fa_AurEncounterBar.xml"
+          "size": 13304,
+          "sha256": "F06BF30CADCE32BFDABDEC4D1D130490C04E0B36F26F0FCFCEE219B737B16A38",
+          "url": "f06bf30c_AurEncounterBar.xml"
         },
         {
           "path": "GUI/Prefabs/AurInvStrip.xml",
-          "size": 2558,
-          "sha256": "C5E4C384AA5DB9CEE06C7BDE4B8F403B9514A15F6EE4D8A93278A2F463CBEB1D",
-          "url": "c5e4c384_AurInvStrip.xml"
+          "size": 2579,
+          "sha256": "68C0ABA761F59DDB6B6E09BE56FFB913EA4420EB5744B422CDA7BCD68D2A8F51",
+          "url": "68c0aba7_AurInvStrip.xml"
         },
         {
           "path": "GUI/Prefabs/AurQuestCard.xml",
