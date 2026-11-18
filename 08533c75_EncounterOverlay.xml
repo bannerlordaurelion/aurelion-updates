@@ -1,0 +1,280 @@
+<Window>
+  <!-- Aurelion: encounter top strip in our identity -->
+  <Widget DoNotAcceptEvents="true" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" VerticalAlignment="Top">
+    <Children>
+
+      <ListPanel WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" VerticalAlignment="Top" StackLayout.LayoutMethod="VerticalTopToBottom">
+        <Children>
+
+          <ListPanel WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" StackLayout.LayoutMethod="HorizontalLeftToRight">
+            <Children>
+
+              <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="190">
+                <Children>
+
+                  <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" MarginRight="-25" Sprite="aur_v5\panel_9" HorizontalFlip="true" />
+
+                  <!--Attacker Siege Morale-->
+                  <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="70" SuggestedHeight="65" HorizontalAlignment="Right" VerticalAlignment="Top" MarginRight="135" IsVisible="@IsSiege" DoNotPassEventsToChildren="true">
+                    <Children>
+                      <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="40" SuggestedHeight="40" HorizontalAlignment="Center" VerticalAlignment="Top" Sprite="General\Icons\Morale@2x" />
+                      <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="40" HorizontalAlignment="Center" VerticalAlignment="Bottom" Brush="EncounterTextBrush" Brush.FontSize="14" Text="@AttackerPartyMorale" />
+                      <HintWidget DataSource="{AttackerMoraleHint}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" IsEnabled="false" />
+                    </Children>
+                  </Widget>
+
+                  <!--Attacker Siege Food-->
+                  <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="70" SuggestedHeight="65" HorizontalAlignment="Right" VerticalAlignment="Top" MarginRight="135" MarginTop="50" IsVisible="@IsSiege" DoNotPassEventsToChildren="true">
+                    <Children>
+                      <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="40" SuggestedHeight="40" HorizontalAlignment="Center" VerticalAlignment="Top" Sprite="General\Icons\Food" />
+                      <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="40" HorizontalAlignment="Center" VerticalAlignment="Bottom" Brush="EncounterTextBrush" Brush.FontSize="14" Text="@AttackerPartyFood" />
+                      <HintWidget DataSource="{AttackerFoodHint}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" IsEnabled="false" />
+                    </Children>
+                  </Widget>
+
+                  <!--Attacker Army Troop Tableaus-->
+                  <NavigationScopeTargeter ScopeID="AttackerSideScope" ScopeParent="..\AttackerSide" ScopeMovements="Horizontal" />
+                  <ContainerPageControlWidget Id="AttackerSide" WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="150" HorizontalAlignment="Right" MarginRight="135" MarginTop="12" Container="AttackerPartyList" ItemPerPage="5" LoopNavigation="true" NextPageButton="PageControlContainer\NextButton" PageText="PageControlContainer\PageText" DoNotAcceptEvents="true">
+                    <Children>
+                      <ListPanel WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" HorizontalAlignment="Right" MarginRight="45" StackLayout.LayoutMethod="HorizontalRightToLeft">
+                        <Children>
+                          <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="125" SuggestedHeight="92" MarginRight="15" Sprite="aur_v5\pf_bg_9" HorizontalFlip="true" GamepadNavigationIndex="4" />
+                          <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="125" SuggestedHeight="92" MarginRight="15" Sprite="aur_v5\pf_bg_9" HorizontalFlip="true" GamepadNavigationIndex="3" />
+                          <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="125" SuggestedHeight="92" MarginRight="15" Sprite="aur_v5\pf_bg_9" HorizontalFlip="true" GamepadNavigationIndex="2" />
+                          <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="125" SuggestedHeight="92" MarginRight="15" Sprite="aur_v5\pf_bg_9" HorizontalFlip="true" GamepadNavigationIndex="1" />
+                          <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="125" SuggestedHeight="92" MarginRight="15" Sprite="aur_v5\pf_bg_9" HorizontalFlip="true" GamepadNavigationIndex="0" />
+                        </Children>
+                      </ListPanel>
+                      <ListPanel Id="AttackerPartyList" DataSource="{AttackerPartyList}" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Right" MarginRight="45" StackLayout.LayoutMethod="HorizontalRightToLeft" MinIndex="1">
+                        <ItemTemplate>
+                          <GameMenuPartyItem SuggestedWidth="125" SuggestedHeight="150" MarginRight="15" Command.Click="ExecuteOpenEncyclopedia" Parameter.IsPartyItem="true"/>
+                        </ItemTemplate>
+                      </ListPanel>
+
+                      <Widget Id="PageControlContainer" WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="80" DoNotAcceptEvents="true">
+                        <Children>
+                          <ButtonWidget Id="NextButton" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="39" SuggestedHeight="49" HorizontalAlignment="Center" VerticalAlignment="Top" MarginTop="20" Brush="EncounterAttackerPageButton" GamepadNavigationIndex="0" />
+                          <TextWidget Id="PageText" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" SuggestedWidth="50" SuggestedHeight="50" HorizontalAlignment="Center" VerticalAlignment="Top" MarginTop="75" Brush="EncounterTextBrush" Brush.FontSize="24" Text="1/6" />
+                        </Children>
+                      </Widget>
+
+                    </Children>
+                  </ContainerPageControlWidget>
+
+                </Children>
+              </Widget>
+
+              <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="190">
+                <Children>
+                  <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" MarginLeft="-25" Sprite="aur_v5\panel_9" />
+
+                  <!--Defender Morale-->
+                  <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="70" SuggestedHeight="65" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="135" IsVisible="@IsSiege" DoNotPassEventsToChildren="true">
+                    <Children>
+                      <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="40" SuggestedHeight="40" HorizontalAlignment="Center" VerticalAlignment="Top" Sprite="General\Icons\Morale@2x" />
+                      <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="40" HorizontalAlignment="Center" VerticalAlignment="Bottom" Brush="EncounterTextBrush" Brush.FontSize="14" Text="@DefenderPartyMorale" />
+                      <HintWidget DataSource="{DefenderMoraleHint}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" IsEnabled="false" />
+                    </Children>
+                  </Widget>
+
+                  <!--Defender Food-->
+                  <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="70" SuggestedHeight="65" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="135" MarginTop="50" IsVisible="@IsSiege" DoNotPassEventsToChildren="true">
+                    <Children>
+                      <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="40" SuggestedHeight="40" HorizontalAlignment="Center" VerticalAlignment="Top" Sprite="General\Icons\Food" />
+                      <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="40" HorizontalAlignment="Center" VerticalAlignment="Bottom" Brush="EncounterTextBrush" Brush.FontSize="14" Text="@DefenderPartyFood" />
+                      <HintWidget DataSource="{DefenderFoodHint}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" IsEnabled="false" />
+                    </Children>
+                  </Widget>
+
+                  <!--Defender Wall Hit Points-->
+                  <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="70" SuggestedHeight="65" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="135" MarginTop="100" IsVisible="@IsSiege" DoNotPassEventsToChildren="true">
+                    <Children>
+                      <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="40" SuggestedHeight="40" HorizontalAlignment="Center" VerticalAlignment="Top" Sprite="General\Icons\Walls" IsEnabled="false"/>
+                      <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="40" HorizontalAlignment="Center" VerticalAlignment="Bottom" Brush="EncounterTextBrush" Brush.FontSize="14" Text="@DefenderWallHitPoints" IsEnabled="false"/>
+                      <HintWidget DataSource="{DefenderWallHint}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" IsEnabled="false" />
+                    </Children>
+                  </Widget>
+
+                  <!--Defender Army Troop Tableaus-->
+                  <NavigationScopeTargeter ScopeID="DefenderSideScope" ScopeParent="..\DefenderSide" ScopeMovements="Horizontal" />
+                  <ContainerPageControlWidget Id="DefenderSide" WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="150" MarginLeft="135" MarginTop="12" Container="DefenderArmyList" ItemPerPage="5" LoopNavigation="true" NextPageButton="PageControlContainer\NextButton" PageText="PageControlContainer\PageText" DoNotAcceptEvents="true">
+                    <Children>
+                      <ListPanel WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" MarginLeft="45">
+                        <Children>
+                          <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="125" SuggestedHeight="92" MarginLeft="15" Sprite="aur_v5\pf_bg_9" GamepadNavigationIndex="0" />
+                          <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="125" SuggestedHeight="92" MarginLeft="15" Sprite="aur_v5\pf_bg_9" GamepadNavigationIndex="1" />
+                          <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="125" SuggestedHeight="92" MarginLeft="15" Sprite="aur_v5\pf_bg_9" GamepadNavigationIndex="2" />
+                          <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="125" SuggestedHeight="92" MarginLeft="15" Sprite="aur_v5\pf_bg_9" GamepadNavigationIndex="3" />
+                          <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="125" SuggestedHeight="92" MarginLeft="15" Sprite="aur_v5\pf_bg_9" GamepadNavigationIndex="4" />
+                        </Children>
+                      </ListPanel>
+                      <ListPanel Id="DefenderArmyList" DataSource="{DefenderPartyList}" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Left" MarginLeft="45" StackLayout.LayoutMethod="HorizontalLeftToRight" MaxIndex="1000">
+                        <ItemTemplate>
+                          <GameMenuPartyItem SuggestedWidth="125" SuggestedHeight="150" MarginLeft="15" Command.Click="ExecuteOpenEncyclopedia"/>
+                        </ItemTemplate>
+                      </ListPanel>
+
+                      <Widget Id="PageControlContainer" WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" HorizontalAlignment="Right" SuggestedWidth="80" DoNotAcceptEvents="true">
+                        <Children>
+                          <ButtonWidget Id="NextButton" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="39" SuggestedHeight="49" HorizontalAlignment="Center" VerticalAlignment="Top" MarginTop="20" Brush="EncounterDefenderPageButton" GamepadNavigationIndex="1001" />
+                          <TextWidget Id="PageText" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" SuggestedWidth="50" SuggestedHeight="50" HorizontalAlignment="Center" VerticalAlignment="Top" MarginTop="75" Brush="EncounterTextBrush" Brush.FontSize="24" Text="1/2" />
+                        </Children>
+                      </Widget>
+                    </Children>
+                  </ContainerPageControlWidget>
+
+                </Children>
+              </Widget>
+
+            </Children>
+          </ListPanel>
+        </Children>
+      </ListPanel>
+
+      <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="329" SuggestedHeight="201" HorizontalAlignment="Center" Sprite="aur_v5\panel_9">
+        <Children>
+          <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="50" HorizontalAlignment="Center" MarginTop="15" Brush="GameMenu.Text" Brush.FontSize="45" Text="@TitleText" />
+          <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="46" SuggestedHeight="60" HorizontalAlignment="Center" MarginTop="83" Sprite="SPGeneral\MapOverlay\Encounter\WarIcon" />
+
+          <!-- Attacker Side -->
+          <Widget WidthSizePolicy="CoverChildren" HeightSizePolicy="Fixed" SuggestedHeight="55" HorizontalAlignment="Center" PositionXOffset="-65" MarginTop="85" >
+            <Children>
+
+              <ListPanel WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" VerticalAlignment="Center" HorizontalAlignment="Center" StackLayout.LayoutMethod="VerticalTopToBottom">
+                <Children>
+                  
+                  <!--Attacker Num of Troops-->
+                  <TextWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="100" SuggestedHeight="30" HorizontalAlignment="Center" Brush="GameMenu.Text" Brush.FontSize="34" Text="@AttackerPartyCountLbl" >
+                    <Children>
+                      <HintWidget DataSource="{AttackerTroopNumHint}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" IsDisabled="true" />
+                    </Children>
+                  </TextWidget>
+
+                  <!--Attacker Num of Ships-->
+                  <Widget DoNotAcceptEvents="true" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" IsVisible="@IsNaval">
+                    <Children>
+                      <ValueBasedVisibilityWidget DoNotPassEventsToChildren="true" UpdateChildrenStates="true" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" WatchType="BiggerThan" IndexToWatch="@AttackerShipCount" IndexToBeVisible="0" >
+                        <Children>
+                          <ListPanel UpdateChildrenStates="true" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" StackLayout.LayoutMethod="HorizontalLeftToRight" >
+                            <Children>
+                              <TextWidget WidthSizePolicy="CoverChildren" HeightSizePolicy="Fixed" MaxWidth="100" SuggestedHeight="30" VerticalAlignment="Center" Brush="GameMenu.Text" Brush.FontSize="28" IntText="@AttackerShipCount" />
+                              <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="20.33" SuggestedHeight="16" VerticalAlignment="Center" MarginLeft="5" Sprite="SPGeneral\Ships\ship_icon_medium" />
+                            </Children>
+                          </ListPanel>
+                          <HintWidget DataSource="{AttackerShipNumHint}" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" IsDisabled="true" />
+                        </Children>
+                      </ValueBasedVisibilityWidget>
+                    </Children>
+                  </Widget>
+
+                </Children>
+              </ListPanel>
+
+            </Children>
+          </Widget>
+          
+          <!-- Defender Side -->
+          <Widget WidthSizePolicy="CoverChildren" HeightSizePolicy="Fixed" SuggestedHeight="55" HorizontalAlignment="Center" PositionXOffset="65" MarginTop="85" >
+            <Children>
+
+              <ListPanel WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" VerticalAlignment="Center" HorizontalAlignment="Center" StackLayout.LayoutMethod="VerticalTopToBottom">
+                <Children>
+                  
+                  <!--Defender Num of Troops-->
+                  <TextWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="100" SuggestedHeight="30" Brush="GameMenu.Text" Brush.FontSize="34" HorizontalAlignment="Center" Text="@DefenderPartyCountLbl" >
+                    <Children>
+                      <HintWidget DataSource="{DefenderTroopNumHint}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" IsDisabled="true" />
+                    </Children>
+                  </TextWidget>
+
+                  <!--Defender Num of Ships-->
+                  <Widget DoNotAcceptEvents="true" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" IsVisible="@IsNaval">
+                    <Children>
+                      <ValueBasedVisibilityWidget DoNotPassEventsToChildren="true" UpdateChildrenStates="true" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" WatchType="BiggerThan" IndexToWatch="@DefenderShipCount" IndexToBeVisible="0">
+                        <Children>
+                          <ListPanel UpdateChildrenStates="true" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" StackLayout.LayoutMethod="HorizontalLeftToRight" >
+                            <Children>
+                              <TextWidget WidthSizePolicy="CoverChildren" HeightSizePolicy="Fixed" MaxWidth="100" SuggestedHeight="30" VerticalAlignment="Center" Brush="GameMenu.Text" Brush.FontSize="28" IntText="@DefenderShipCount" />
+                              <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="20.33" SuggestedHeight="16" VerticalAlignment="Center" MarginLeft="5" Sprite="SPGeneral\Ships\ship_icon_medium" />
+                            </Children>
+                          </ListPanel>
+                          <HintWidget DataSource="{DefenderShipNumHint}" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" IsDisabled="true" />
+                        </Children>
+                      </ValueBasedVisibilityWidget>
+                    </Children>
+                  </Widget>
+
+                </Children>
+              </ListPanel>
+              
+            </Children>
+          </Widget>
+
+          <!--Attacker Banner-->
+          <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="66" SuggestedHeight="107" HorizontalAlignment="Left" PositionXOffset="8" >
+            <Children>
+              <MaskedTextureWidget Id="AttackerPartyBanner" DataSource="{AttackerPartyBanner}" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="73" SuggestedHeight="114" HorizontalAlignment="Center" Brush="Shield" Sprite="SPGeneral\MapOverlay\war_header_shield_left" Brush.ValueFactor="-15" AdditionalArgs="@AdditionalArgs" Brush.HorizontalFlip="true" ImageId="@Id" TextureProviderName="@TextureProviderName" />
+              <HintWidget DataSource="{AttackerBannerHint}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" IsDisabled="true" />
+            </Children>
+          </Widget>
+
+          <!--Defender Banner-->
+          <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="66" SuggestedHeight="107" HorizontalAlignment="Right" PositionXOffset="-8" >
+            <Children>
+              <MaskedTextureWidget Id="DefenderPartyBanner" DataSource="{DefenderPartyBanner}" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="73" SuggestedHeight="114" HorizontalAlignment="Center" Brush="Shield" Sprite="SPGeneral\MapOverlay\war_header_shield_left" Brush.ValueFactor="-15" AdditionalArgs="@AdditionalArgs" ImageId="@Id" TextureProviderName="@TextureProviderName" />
+              <HintWidget DataSource="{DefenderBannerHint}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" IsDisabled="true" />
+            </Children>
+          </Widget>
+          
+          <!-- Aurelion: flat power bar, blue = left side, red = right side (Encounter board) -->
+          <PowerLevelComparerWidget DataSource="{PowerComparer}" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="260" SuggestedHeight="8" HorizontalAlignment="Center" VerticalAlignment="Bottom" MarginBottom="35" AttackerPower="@AttackerBattlePowerValue" AttackerPowerListPanel="PowerListPanel\AttackerSideInitialPowerLevel\AttackerPowerListPanel" AttackerPowerWidget="PowerListPanel\AttackerSideInitialPowerLevel" CenterSeperatorWidget="CenterSeperatorWidget" DefenderPower="@DefenderBattlePowerValue" DefenderPowerListPanel="PowerListPanel\DefenderSideInitialPowerLevel\DefenderPowerListPanel" DefenderPowerWidget="PowerListPanel\DefenderSideInitialPowerLevel" InitialAttackerBattlePower="@InitialAttackerBattlePowerValue" InitialDefenderBattlePower="@InitialDefenderBattlePowerValue" IsCenterSeperatorEnabled="false" PowerListPanel="PowerListPanel" >
+                <Children>
+          
+                  <ListPanel Id="PowerListPanel" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" StackLayout.LayoutMethod="HorizontalLeftToRight">
+                    <Children>
+          
+                      <BrushWidget Id="AttackerSideInitialPowerLevel" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Brush="Aur.V5.PowerL" Brush.Color="#FFFFFF1F">
+                        <Children>
+                          <ListPanel Id="AttackerPowerListPanel" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" StackLayout.LayoutMethod="HorizontalLeftToRight">
+                            <Children>
+                              <BrushWidget Id="AttackerSideEmptyPowerLevel" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" />
+                              <BrushWidget Id="AttackerSidePowerLevel" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Brush="Aur.V5.PowerL" Brush.Color="#80AEE8FF" ClipContents="true">
+                                <Children>
+                                  <BrushWidget Id="AttackerSidePowerLevelHighlight" WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="23" HorizontalAlignment="Left" Brush="" Brush.Color="#80AEE8FF" />
+                                </Children>
+                              </BrushWidget>
+                            </Children>
+                          </ListPanel>
+                        </Children>
+                      </BrushWidget>
+          
+                      <Widget WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="4" />
+          
+                      <BrushWidget Id="DefenderSideInitialPowerLevel" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Brush="Aur.V5.PowerR" Brush.Color="#FFFFFF1F">
+                        <Children>
+                          <ListPanel Id="DefenderPowerListPanel" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" StackLayout.LayoutMethod="HorizontalLeftToRight">
+                            <Children>
+                              <BrushWidget Id="DefenderSidePowerLevel" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Brush="Aur.V5.PowerR" Brush.Color="#E56B6FFF" ClipContents="true">
+                                <Children>
+                                  <BrushWidget Id="DefenderSidePowerLevelHighlight" WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="23" HorizontalAlignment="Right" Brush="" Brush.Color="#E56B6FFF" />
+                                </Children>
+                              </BrushWidget>
+                              <BrushWidget Id="DefenderSideEmptyPowerLevel" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" />
+                            </Children>
+                          </ListPanel>
+                        </Children>
+                      </BrushWidget>
+                    </Children>
+                  </ListPanel>
+          
+                  <Widget Id="CenterSeperatorWidget" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="10" SuggestedHeight="21" PositionYOffset="-5" Sprite="General\Mission\power_bar_divider" IsVisible="false" />
+                  <HintWidget DataSource="{Hint}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" />
+                
+                </Children>
+              </PowerLevelComparerWidget>
+        </Children>
+      </Widget>
+
+    </Children>
+  </Widget>
+</Window>

@@ -1,0 +1,328 @@
+<Prefab>
+  <!-- Aurelion: settlement top strip on our dark glass (info header, parties header, portrait slots) -->
+  <Constants>
+
+    <Constant Name="RightPanel.Width" BrushLayer="Default" BrushName="Settlement.RightPanel" BrushValueType="Width" />
+    <Constant Name="RightPanel.Height" BrushLayer="Default" BrushName="Settlement.RightPanel" BrushValueType="Height" />
+
+    <Constant Name="RightPanel.Width.Negative" MultiplyResult="-1" Value="!RightPanel.Width" />
+    <Constant Name="RightPanel.Width.Negative.WithPadding" Additive="25" Value="!RightPanel.Width.Negative" />
+
+    <Constant Name="LeftPanel.Width" BrushLayer="Default" BrushName="Settlement.LeftPanel" BrushValueType="Width" />
+    <Constant Name="LeftPanel.Height" BrushLayer="Default" BrushName="Settlement.LeftPanel" BrushValueType="Height" />
+
+    <Constant Name="CharacterParties.List.Item.Height" Value="30" />
+    <Constant Name="CharacterParties.List.Item.Width" Value="45" />
+
+    <Constant Name="CharacterParties.List.Item.HorizontalMargin" Value="3" />
+
+    <Constant Name="CharacterPanels.Margin" Value="12" />
+	  <Constant Name="InfoIconSizeSmall.Height" Value="30" />
+	  <Constant Name="InfoIconSizeSmall.Width" Value="30" />
+    <Constant Name="InfoIconSize.Height" Value="40" />
+    <Constant Name="InfoIconSize.Width" Value="40" />
+    <Constant Name="InfoTextVerticalOffset" Value="-7" />
+    <Constant Name="Settlement.Info.VerticalSpacing" Value="4" />
+
+  </Constants>
+  <VisualDefinitions>
+    <VisualDefinition Name="TopPanel" EaseType="EaseOut" EaseFunction="Quint" TransitionDuration="0.45">
+      <VisualState PositionYOffset="-6" State="Default" />
+      <VisualState PositionYOffset="-400" State="Disabled" />
+    </VisualDefinition>
+
+    <VisualDefinition Name="CharacterPartyExtension" EaseType="EaseOut" EaseFunction="Quint" TransitionDuration="0.9">
+      <VisualState PositionYOffset="92" State="Default" />
+      <VisualState PositionYOffset="-400" State="Disabled" />
+    </VisualDefinition>
+  </VisualDefinitions>
+  <Window>
+    <SettlementOverlayWidget Id="SettlementOverlayWidget" DoNotAcceptEvents="true" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" PopupWidget="PopupParent\Popup">
+      <Children>
+
+        <NavigationScopeTargeter ScopeID="SettlementOverlayToggleScope" ScopeParent="..\ToggleButton" ScopeMovements="Horizontal" UpNavigationScope="SettlementOverlayTooltipsScope" />
+        <!--Character & Party Lists Toggle-->
+        <Widget Id="ToggleButton" VisualDefinition="CharacterPartyExtension" DoNotAcceptEvents="true" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Right" PositionXOffset="!RightPanel.Width.Negative.WithPadding" PositionYOffset="-400">
+          <Children>
+
+            <SettlementMenuPartyCharacterListsButtonWidget DoNotPassEventsToChildren="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="348" SuggestedHeight="55" Sprite="aur_v5\panel_9" CharacterListButtonBrush="SettlementOverlay.CharacterList.Button" CharactersList="..\..\TopListPanel\RightPanel\CharacterList" ChildCharactersList="ChildCharactersList" ChildPartiesList="ChildPartiesList" MaxNumOfVisuals="7" PartiesList="..\..\TopListPanel\RightPanel\PartyList" PartyListButtonBrush="SettlementOverlay.PartyList.Button" VisualsList="VisualsList" GamepadNavigationIndex="7">
+              <Children>
+
+                <ListPanel Id="ChildPartiesList" DataSource="{PartyList}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" MarginLeft="15" ClipContents="true">
+                  <ItemTemplate>
+                    <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="!CharacterParties.List.Item.Width" SuggestedHeight="!CharacterParties.List.Item.Height" VerticalAlignment="Bottom" MarginLeft="!CharacterParties.List.Item.HorizontalMargin" MarginRight="!CharacterParties.List.Item.HorizontalMargin" MarginTop="4" MarginBottom="15">
+                      <Children>
+                        <ImageIdentifierWidget DataSource="{Visual}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" AdditionalArgs="@AdditionalArgs" ImageId="@Id" TextureProviderName="@TextureProviderName" />
+
+                        <!-- Quest Markers -->
+                        <ListPanel DataSource="{Quests}" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" StackLayout.LayoutMethod="HorizontalLeftToRight" HorizontalAlignment="Right" VerticalAlignment="Top" IsEnabled="false" DoNotAcceptEvents="true">
+                          <ItemTemplate>
+                            <QuestMarkerBrushWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedHeight="20" QuestMarkerType="@QuestMarkerType" Brush="GameMenu.QuestMarker" />
+                          </ItemTemplate>
+                        </ListPanel>
+
+                      </Children>
+                    </Widget>
+                  </ItemTemplate>
+                </ListPanel>
+
+                <ListPanel Id="ChildCharactersList" DataSource="{CharacterList}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" MarginLeft="15" ClipContents="true">
+                  <ItemTemplate>
+                    <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="!CharacterParties.List.Item.Width" SuggestedHeight="!CharacterParties.List.Item.Height" VerticalAlignment="Bottom" MarginLeft="!CharacterParties.List.Item.HorizontalMargin" MarginRight="!CharacterParties.List.Item.HorizontalMargin" MarginTop="4" MarginBottom="15">
+                      <Children>
+                        <ImageIdentifierWidget DataSource="{Visual}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" AdditionalArgs="@AdditionalArgs" ImageId="@Id" TextureProviderName="@TextureProviderName" />
+
+                        <!-- Quest Markers -->
+                        <ListPanel DataSource="{Quests}" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" StackLayout.LayoutMethod="HorizontalLeftToRight" HorizontalAlignment="Right" VerticalAlignment="Top" IsEnabled="false" DoNotAcceptEvents="true">
+                          <ItemTemplate>
+                            <QuestMarkerBrushWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedHeight="20" QuestMarkerType="@QuestMarkerType" Brush="GameMenu.QuestMarker" />
+                          </ItemTemplate>
+                        </ListPanel>
+                      </Children>
+                    </Widget>
+                  </ItemTemplate>
+                </ListPanel>
+
+                <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="375" SuggestedHeight="81" HorizontalAlignment="Right" Sprite="SPGeneral\MapOverlay\Settlement\parties_characters_group_frame" IsVisible="false" />
+              </Children>
+            </SettlementMenuPartyCharacterListsButtonWidget>
+          </Children>
+        </Widget>
+
+        <ListPanel Id="TopListPanel" VisualDefinition="TopPanel" DoNotAcceptEvents="true" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" PositionYOffset="-400">
+          <Children>
+
+            <!--Left Panel-->
+            <Widget DoNotAcceptEvents="true" WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="!LeftPanel.Height" HorizontalAlignment="Left" VerticalAlignment="Top">
+              <Children>
+                <NavigationScopeTargeter ScopeID="SettlementOverlayTooltipsScope" ScopeParent="..\SettlementOverlayTooltips" ScopeMovements="Horizontal" RightNavigationScope="SettlementOverlayToggleScope" ExtendDiscoveryAreaRight="-350"/>
+                <Widget Id="SettlementOverlayTooltips" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" MarginBottom="16" IsVisible="false">
+                  <Children>
+
+                    <ListPanel Id="OverlayTooltipsList" WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="960" HorizontalAlignment="Left" MarginBottom="20" VerticalAlignment="Center">
+                      <Children>
+
+                        <MaskedTextureWidget DataSource="{SettlementOwnerBanner}" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="78" SuggestedHeight="110" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="20" MarginRight="10" Brush="Kingdom.TornBanner" AdditionalArgs="@AdditionalArgs" ImageId="@Id" TextureProviderName="@TextureProviderName" />
+
+                        <TextWidget WidthSizePolicy="CoverChildren" HeightSizePolicy="StretchToParent" MaxWidth="255" HorizontalAlignment="Left" VerticalAlignment="Center" PositionYOffset="3" MarginRight="20" Brush="MapTextBrushGal" Brush.FontSize="36" Brush.TextHorizontalAlignment="Left" Text="@SettlementNameLbl"/>
+
+                        <!--Walls Label-->
+                        <ListPanel Id="WallsLevel" DoNotPassEventsToChildren="true" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" IsVisible="@IsFortification" HorizontalAlignment="Center" MarginTop="5" StackLayout.LayoutMethod="VerticalTopToBottom" >
+                          <Children>
+                            <SettlementOverlayWallIconBrushWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="28" SuggestedHeight="36" HorizontalAlignment="Center" MarginTop="5" Brush="SettlementWallsIconBrush" WallsLevel="@WallsLevel" GamepadNavigationIndex="0"/>
+                            <TextWidget WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" VerticalAlignment="Center" Brush="SettlementValuesTextBrush" IntText="@WallsLevel" MinWidth="50" />
+                            <HintWidget DataSource="{WallsHint}" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" IsDisabled="true" />
+                          </Children>
+                        </ListPanel>
+
+                        <!--Shipyard-->
+                        <ListPanel Id="ShipyardLevel" DoNotPassEventsToChildren="true" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" IsVisible="@IsShipyardEnabled" HorizontalAlignment="Center" MarginTop="5" MarginLeft="20" StackLayout.LayoutMethod="VerticalTopToBottom" >
+                          <Children>
+                            <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="!InfoIconSize.Width" SuggestedHeight="!InfoIconSize.Height" HorizontalAlignment="Center" Sprite="Map\anchor_stroked" ExtendLeft="-5" ExtendRight="-5" ExtendTop="-8" ExtendBottom="-2" GamepadNavigationIndex="1"/>
+                            <TextWidget WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" VerticalAlignment="Center" Brush="SettlementValuesTextBrush" Text="@ShipyardLbl" MinWidth="50" />
+                            <HintWidget DataSource="{ShipyardHint}" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" IsDisabled="true" />
+                          </Children>
+                        </ListPanel>
+
+                        <!--Garrison Label-->
+                        <ListPanel DataSource="{GarrisonHint}" DoNotPassEventsToChildren="true" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" StackLayout.LayoutMethod="VerticalTopToBottom" MarginLeft="20" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" MarginTop="5">
+                          <Children>
+                            <Widget DataSource="{..}" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="!InfoIconSize.Width" SuggestedHeight="!InfoIconSize.Height" HorizontalAlignment="Center" Sprite="General\Icons\Garrison" ExtendLeft="-5" ExtendRight="-5" ExtendTop="-4" IsVisible="@IsFortification"  GamepadNavigationIndex="2"/>
+                            <ListPanel WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" StackLayout.LayoutMethod="VerticalTopToBottom">
+                              <Children>
+                                <!--<TextWidget DataSource="{..}" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" VerticalAlignment="Center" Brush="SettlementValuesTextBrush" IsVisible="@IsFortification" Text="@GarrisonLbl" />-->
+                                <SettlementStatTextWidget DataSource="{..}" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" VerticalAlignment="Center" Brush="SettlementValuesTextBrush" IsWarning="@IsNoGarrisonWarning" Text="@GarrisonLbl" IsVisible="@IsFortification" MinWidth="50" />
+                                <ChangeAmountTextWidget DataSource="{..}" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" Brush="Settlement.Property.PositiveChange.Text" Amount="@GarrisonChangeAmount"  NegativeBrushName="Settlement.Property.NegativeChange.Text" PositiveBrushName="Settlement.Property.PositiveChange.Text" Brush.TextHorizontalAlignment="Center" ShouldBeVisible="@IsFortification" UseParentheses="true" />
+                              </Children>
+                            </ListPanel>
+                          </Children>
+                        </ListPanel>
+
+                        <!--Militia Label-->
+                        <ListPanel DataSource="{MilitasHint}" DoNotPassEventsToChildren="true" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" MarginLeft="20" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" StackLayout.LayoutMethod="VerticalTopToBottom" MarginTop="5" >
+                          <Children>
+                            <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="!InfoIconSize.Width" SuggestedHeight="!InfoIconSize.Height" HorizontalAlignment="Center" Sprite="General\Icons\Militia" ExtendLeft="-5" ExtendRight="-5" ExtendTop="-6" GamepadNavigationIndex="3" />
+
+                            <ListPanel WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" VerticalAlignment="Top" StackLayout.LayoutMethod="VerticalTopToBottom">
+                              <Children>
+                                <TextWidget DataSource="{..}" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" VerticalAlignment="Center" Brush="SettlementValuesTextBrush" Brush.TextHorizontalAlignment="Center" Text="@MilitasLbl"
+																			MinWidth="50" />
+                                <ChangeAmountTextWidget DataSource="{..}" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" Brush="Settlement.Property.PositiveChange.Text" Amount="@MilitiaChangeAmount"  NegativeBrushName="Settlement.Property.NegativeChange.Text" PositiveBrushName="Settlement.Property.PositiveChange.Text"  Brush.TextHorizontalAlignment="Center" UseParentheses="true" />
+                              </Children>
+                            </ListPanel>
+                          </Children>
+                        </ListPanel>
+
+                        <!--Food Label-->
+                        <ListPanel DataSource="{RemainingFoodHint}" DoNotPassEventsToChildren="true" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" StackLayout.LayoutMethod="VerticalTopToBottom" MarginLeft="20" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" MarginTop="5">
+                          <Children>
+                            <Widget DataSource="{..}" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="!InfoIconSize.Width" SuggestedHeight="!InfoIconSize.Height" HorizontalAlignment="Center" Sprite="General\Icons\Food" ExtendLeft="-4" ExtendRight="-4" ExtendTop="-8" ExtendBottom="-2" IsVisible="@IsFortification" GamepadNavigationIndex="4" />
+                            <ListPanel WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" StackLayout.LayoutMethod="VerticalTopToBottom">
+                              <Children>
+                                <TextWidget DataSource="{..}" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" VerticalAlignment="Center" Brush="SettlementValuesTextBrush" IsVisible="@IsFortification" Text="@RemainingFoodText" MinWidth="50" />
+                                <ChangeAmountTextWidget DataSource="{..}" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" Brush="Settlement.Property.PositiveChange.Text" Amount="@FoodChangeAmount"  NegativeBrushName="Settlement.Property.NegativeChange.Text" PositiveBrushName="Settlement.Property.PositiveChange.Text"  Brush.TextHorizontalAlignment="Center" ShouldBeVisible="@IsFortification" UseParentheses="true"/>
+                              </Children>
+                            </ListPanel>
+                          </Children>
+                        </ListPanel>
+                        
+                        <!--Prosperity Label-->
+                        <ListPanel DataSource="{ProsperityHint}" DoNotPassEventsToChildren="true" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" StackLayout.LayoutMethod="VerticalTopToBottom" MarginLeft="20" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" MarginTop="5" >
+                          <Children>
+                            <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="!InfoIconSize.Height" SuggestedHeight="!InfoIconSize.Width" HorizontalAlignment="Center" Sprite="General\Icons\Prosperity" ExtendLeft="-4" ExtendRight="-4" ExtendTop="-6" GamepadNavigationIndex="5"/>
+
+                            <ListPanel WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" StackLayout.LayoutMethod="VerticalTopToBottom">
+                              <Children>
+                                <TextWidget DataSource="{..}" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" VerticalAlignment="Center" Brush="SettlementValuesTextBrush" Brush.TextHorizontalAlignment="Center" Text="@ProsperityLbl"
+                                            MinWidth="50" />
+                                <ChangeAmountTextWidget DataSource="{..}" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" Brush="Settlement.Property.PositiveChange.Text" Amount="@ProsperityChangeAmount"  NegativeBrushName="Settlement.Property.NegativeChange.Text" PositiveBrushName="Settlement.Property.PositiveChange.Text" Brush.TextHorizontalAlignment="Center" UseParentheses="true"/>
+                              </Children>
+                            </ListPanel>
+
+                          </Children>
+                        </ListPanel>
+
+                        <!--Loyalty Label-->
+                        <ListPanel DataSource="{LoyaltyHint}" DoNotPassEventsToChildren="true" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" StackLayout.LayoutMethod="VerticalTopToBottom" MarginLeft="20" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" MarginTop="5" >
+                          <Children>
+                            <Widget DataSource="{..}" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="!InfoIconSize.Width" SuggestedHeight="!InfoIconSize.Height" HorizontalAlignment="Center" Sprite="General\Icons\Morale" ExtendLeft="-4" ExtendRight="-4" ExtendTop="-4" IsVisible="@IsFortification" GamepadNavigationIndex="6" />
+                            <ListPanel WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" StackLayout.LayoutMethod="VerticalTopToBottom" >
+                              <Children>
+                                <SettlementStatTextWidget DataSource="{..}" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" SuggestedWidth="20" HorizontalAlignment="Center" VerticalAlignment="Center" Brush="SettlementValuesTextBrush" IsVisible="@IsFortification" IsWarning="@IsLoyaltyRebellionWarning" Text="@LoyaltyLbl" MinWidth="50" />
+                                <ChangeAmountTextWidget DataSource="{..}" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" Brush="Settlement.Property.PositiveChange.Text" Amount="@LoyaltyChangeAmount" NegativeBrushName="Settlement.Property.NegativeChange.Text" PositiveBrushName="Settlement.Property.PositiveChange.Text" Brush.TextHorizontalAlignment="Center" ShouldBeVisible="@IsFortification" UseParentheses="true" />
+                              </Children>
+                            </ListPanel>
+                          </Children>
+                        </ListPanel>
+
+                        <!--Security Label-->
+                        <ListPanel DataSource="{SecurityHint}" DoNotPassEventsToChildren="true" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" StackLayout.LayoutMethod="VerticalTopToBottom" MarginLeft="20" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" MarginTop="5">
+                          <Children>
+                            <Widget DataSource="{..}" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="!InfoIconSize.Width" SuggestedHeight="!InfoIconSize.Height" HorizontalAlignment="Center" Sprite="SPGeneral\MapOverlay\Settlement\icon_security" ExtendBottom="4" IsVisible="@IsFortification" GamepadNavigationIndex="7" />
+                            <ListPanel WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" StackLayout.LayoutMethod="VerticalTopToBottom">
+                              <Children>
+                                <TextWidget DataSource="{..}" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" VerticalAlignment="Center" Brush="SettlementValuesTextBrush" IsVisible="@IsFortification" Text="@SecurityLbl" MinWidth="50" />
+                                <ChangeAmountTextWidget DataSource="{..}" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" Brush="Settlement.Property.PositiveChange.Text" Amount="@SecurityChangeAmount"  NegativeBrushName="Settlement.Property.NegativeChange.Text" PositiveBrushName="Settlement.Property.PositiveChange.Text" Brush.TextHorizontalAlignment="Center" ShouldBeVisible="@IsFortification" UseParentheses="true"/>
+                              </Children>
+                            </ListPanel>
+                          </Children>
+                        </ListPanel>
+
+                        <!--Crime Label-->
+                        <Widget Id="CrimeLabel" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" IsVisible="@IsCrimeEnabled" MarginTop="5" >
+                          <Children>
+                            <ListPanel DataSource="{CrimeHint}" DoNotPassEventsToChildren="true" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" StackLayout.LayoutMethod="VerticalTopToBottom" MarginLeft="10" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" >
+                              <Children>
+                                <Widget DataSource="{..}" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="!InfoIconSize.Width" SuggestedHeight="!InfoIconSize.Height" HorizontalAlignment="Center" Sprite="SPGeneral\MapOverlay\Settlement\icon_crime" GamepadNavigationIndex="8"/>
+                                <ListPanel DataSource="{..}" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" StackLayout.LayoutMethod="VerticalTopToBottom" >
+                                  <Children>
+                                    <TextWidget WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" VerticalAlignment="Center" Brush="SettlementValuesTextBrush" Text="@CrimeLbl" MinWidth="50" />
+                                    <ChangeAmountTextWidget WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" Brush="Settlement.Property.PositiveChange.Text" Amount="@CrimeChangeAmount" NegativeBrushName="Settlement.Property.NegativeChange.Text" PositiveBrushName="Settlement.Property.PositiveChange.Text" Brush.TextHorizontalAlignment="Center" UseParentheses="true"/>
+                                  </Children>
+                                </ListPanel>
+                              </Children>
+                            </ListPanel>
+                            <TutorialHighlightItemBrushWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" Brush="TutorialHighlightBrush" IsEnabled="false" IsHighlightEnabled="@IsCrimeLabelHighlightEnabled" IsVisible="false"/>
+                          </Children>
+                        </Widget>
+
+                      </Children>
+                    </ListPanel>
+                  </Children>
+                </Widget>
+
+              </Children>
+            </Widget>
+
+			  
+            <!--Right Panel-->
+            <NavigationScopeTargeter ScopeID="SettlementOverlayPartiesScope" ScopeParent="..\RightPanel" ScopeMovements="Horizontal" IsDefaultNavigationScope="true" NavigateFromScopeEdges="true" LeftNavigationScope="SettlementOverlayToggleScope"/>
+            <Widget Id="RightPanel" DoNotAcceptEvents="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="!RightPanel.Width" SuggestedHeight="!RightPanel.Height" HorizontalAlignment="Right" VerticalAlignment="Top" Sprite="aur_v5\panel_9" ExtendLeft="11" ExtendBottom="11">
+              <Children>
+
+                <ContainerPageControlWidget Id="CharacterList" WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="150" MarginLeft="60" MarginTop="10" Container="CharacterList" ItemPerPage="6" LoopNavigation="true" NextPageButton="NextButton" PageText="PageText">
+                  <Children>
+                    <ListPanel WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren">
+                      <Children>
+                        <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="125" SuggestedHeight="92" Sprite="aur_v5\pf_bg_9" GamepadNavigationIndex="1" />
+                        <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="125" SuggestedHeight="92" MarginLeft="!CharacterPanels.Margin" Sprite="aur_v5\pf_bg_9" GamepadNavigationIndex="2"/>
+                        <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="125" SuggestedHeight="92" MarginLeft="!CharacterPanels.Margin" Sprite="aur_v5\pf_bg_9" GamepadNavigationIndex="3"/>
+                        <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="125" SuggestedHeight="92" MarginLeft="!CharacterPanels.Margin" Sprite="aur_v5\pf_bg_9" GamepadNavigationIndex="4"/>
+                        <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="125" SuggestedHeight="92" MarginLeft="!CharacterPanels.Margin" Sprite="aur_v5\pf_bg_9" GamepadNavigationIndex="5"/>
+                        <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="125" SuggestedHeight="92" MarginLeft="!CharacterPanels.Margin" Sprite="aur_v5\pf_bg_9" GamepadNavigationIndex="6"/>
+                      </Children>
+                    </ListPanel>
+                    <ListPanel Id="CharacterList" DataSource="{CharacterList}" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Left" StackLayout.LayoutMethod="HorizontalLeftToRight">
+                      <ItemTemplate>
+                        <GameMenuPartyItem SuggestedWidth="125" SuggestedHeight="145" MarginRight="!CharacterPanels.Margin" Parameter.IsButton="true" Parameter.IsPartyItem="false" />
+                      </ItemTemplate>
+                    </ListPanel>
+                    <ButtonWidget Id="NextButton" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="39" SuggestedHeight="49" HorizontalAlignment="Right" VerticalAlignment="Center" MarginRight="20" MarginBottom="9" Brush="EncounterDefenderPageButton" />
+                    <TextWidget Id="PageText" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="50" SuggestedHeight="50" HorizontalAlignment="Right" VerticalAlignment="Bottom" MarginRight="16" MarginBottom="11" Brush="EncounterTextBrush" Brush.FontSize="26" IsDisabled="true" Text="" />
+                    <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="52" SuggestedHeight="56" HorizontalAlignment="Right" MarginRight="15" MarginTop="-5"> 
+                      <Children>
+                        <ButtonWidget DoNotPassEventsToChildren="true" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Brush="SettlementAddCompanionButton" Command.Click="ExecuteAddCompanion" IsEnabled="@CanAssignMembers" GamepadNavigationIndex="7">
+                          <Children>
+                            <HintWidget DataSource="{AssignMembersHint}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint"/>
+                          </Children>
+                        </ButtonWidget>
+                        <HintWidget DataSource="{AssignMembersHint}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" IsDisabled="true"/>
+                      </Children>
+                    </Widget>
+
+
+                  </Children>
+                </ContainerPageControlWidget>
+
+                <ContainerPageControlWidget Id="PartyList" WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="150" MarginLeft="60" MarginTop="10" Container="PartyList" IsVisible="false" ItemPerPage="6" LoopNavigation="true" NextPageButton="NextButton" PageText="PageText">
+                  <Children>
+                    <ListPanel WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren">
+                      <Children>
+                        <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="125" SuggestedHeight="92" Sprite="aur_v5\pf_bg_9" GamepadNavigationIndex="1" />
+                        <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="125" SuggestedHeight="92" MarginLeft="!CharacterPanels.Margin" Sprite="aur_v5\pf_bg_9" GamepadNavigationIndex="2" />
+                        <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="125" SuggestedHeight="92" MarginLeft="!CharacterPanels.Margin" Sprite="aur_v5\pf_bg_9" GamepadNavigationIndex="3" />
+                        <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="125" SuggestedHeight="92" MarginLeft="!CharacterPanels.Margin" Sprite="aur_v5\pf_bg_9" GamepadNavigationIndex="4" />
+                        <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="125" SuggestedHeight="92" MarginLeft="!CharacterPanels.Margin" Sprite="aur_v5\pf_bg_9" GamepadNavigationIndex="5" />
+                        <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="125" SuggestedHeight="92" MarginLeft="!CharacterPanels.Margin" Sprite="aur_v5\pf_bg_9" GamepadNavigationIndex="6" />
+                      </Children>
+                    </ListPanel>
+                    <ListPanel Id="PartyList" DataSource="{PartyList}" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Left" StackLayout.LayoutMethod="HorizontalLeftToRight">
+                      <ItemTemplate>
+                        <GameMenuPartyItem SuggestedWidth="125" SuggestedHeight="145" MarginRight="!CharacterPanels.Margin" Parameter.IsButton="true" Parameter.IsPartyItem="true" />
+                      </ItemTemplate>
+                    </ListPanel>
+                    <ButtonWidget Id="NextButton" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="39" SuggestedHeight="49" HorizontalAlignment="Right" VerticalAlignment="Center" MarginRight="20" MarginBottom="9" Brush="EncounterDefenderPageButton" />
+                    <TextWidget Id="PageText" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="50" SuggestedHeight="50" HorizontalAlignment="Right" VerticalAlignment="Bottom" MarginRight="16" MarginBottom="11" Brush="EncounterTextBrush" Brush.FontSize="26" IsDisabled="true" Text="" />
+                  </Children>
+                </ContainerPageControlWidget>
+
+                <!--Settlement Army and Notables Tab Control-->
+                <DoubleTabControlListPanel WidthSizePolicy="Fixed" HeightSizePolicy="CoverChildren" SuggestedWidth="40" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="12" MarginTop="20" FirstList="..\CharacterList" FirstListButton="CharacterListButton" IsVisible="false" StackLayout.LayoutMethod="VerticalTopToBottom" SecondList="..\PartyList" SecondListButton="PartyListButton">
+                  <Children>
+                    <ButtonWidget Id="CharacterListButton" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="40" SuggestedHeight="40" VerticalAlignment="Bottom" Brush="CharacterListButtonToggleBrush" ButtonType="Radio" IsSelected="true">
+                      <Children>
+                        <HintWidget DataSource="{CharacterFilterHint}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" IsDisabled="true" />
+                      </Children>
+                    </ButtonWidget>
+                    <ButtonWidget Id="PartyListButton" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="40" SuggestedHeight="40" MarginTop="8" Brush="PartyListButtonToggleBrush" ButtonType="Radio">
+                      <Children>
+                        <HintWidget DataSource="{PartyFilterHint}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" IsDisabled="true" />
+                      </Children>
+                    </ButtonWidget>
+                  </Children>
+                </DoubleTabControlListPanel>
+
+              </Children>
+            </Widget>
+
+          </Children>
+        </ListPanel>
+		 <ClanCardSelectionPopup DataSource="{CardSelectionPopup}" />
+
+        <!--Popup Context Menu-->
+        <OverlayPopup Id="PopupParent" />
+
+      </Children>
+    </SettlementOverlayWidget>
+  </Window>
+</Prefab>
