@@ -28,8 +28,8 @@
         {
           "path": "aurelion/build.json",
           "size": 76,
-          "sha256": "FDE470935278C2AAB4E6D3044D6E184820BCB2EF1CEFB800FAFA9C28C3E6E6A9",
-          "url": "fde47093_build.json"
+          "sha256": "E7D03AED97A0FFFC0EEDB04D43E948B605D52CA4BBDC99797D60AF7F59B39FAB",
+          "url": "e7d03aed_build.json"
         },
         {
           "path": "aurelion/prices.json",
@@ -51,9 +51,9 @@
         },
         {
           "path": "aurelion/studio-project.json",
-          "size": 813856,
-          "sha256": "FCC494161FE02B31978F39EF984C09D952AD334EF7D68860FCFBC9DE2619BF11",
-          "url": "fcc49416_studio-project.json"
+          "size": 823431,
+          "sha256": "3E815E9A7EBEEBB6E9B648966DFB87A43DA8BA83D148A0E39F6EEB6B2BA6C9BE",
+          "url": "3e815e9a_studio-project.json"
         },
         {
           "path": "aurelion/update-server.ps1",
@@ -69,9 +69,9 @@
         },
         {
           "path": "bin/Win64_Shipping_Client/Aurelion.Core.dll",
-          "size": 568320,
-          "sha256": "184FB036D4E8E0B604795C6ECECEBE9F898DC0EDEA12B54DECC4F898EE37FA6E",
-          "url": "184fb036_Aurelion.Core.dll"
+          "size": 574464,
+          "sha256": "DC224CEFF70D418A780D8F93BEDD97D8660D0ED3915960C96BFAC0CA0871E8C3",
+          "url": "dc224cef_Aurelion.Core.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/Autofac.dll",
@@ -471,9 +471,9 @@
         },
         {
           "path": "GUI/AurelionScreens/BannerEditor.xml",
-          "size": 35961,
-          "sha256": "A3A4CF03AB62DEEDAF49F36CCE063B3A8EC06C0F9AA70EE1765502078484A566",
-          "url": "a3a4cf03_BannerEditor.xml"
+          "size": 35888,
+          "sha256": "051439A7353F65F8BE77662611AB820D79BA3EF20DE19819EC57C6A81EF522D5",
+          "url": "051439a7_BannerEditor.xml"
         },
         {
           "path": "GUI/AurelionScreens/BarterScreen.xml",
@@ -483,39 +483,39 @@
         },
         {
           "path": "GUI/AurelionScreens/CharacterCreationClanNamingStage.xml",
-          "size": 12090,
-          "sha256": "0C007FDB2FAE7C323C73013F4FBFA8D9C0F36965CA56526616EA89C9E0DD1A53",
-          "url": "0c007fdb_CharacterCreationClanNamingStage.xml"
+          "size": 26716,
+          "sha256": "B0576E7D682ACB9D2D9B02A2304247FF134BAB30CF802E86F7B025E5A491524B",
+          "url": "b0576e7d_CharacterCreationClanNamingStage.xml"
         },
         {
           "path": "GUI/AurelionScreens/CharacterCreationCultureStage.xml",
-          "size": 26091,
-          "sha256": "BD8FCAF1E7AE0E4191E37FEDC16A3AB1DEE338638879DC6090721CC6203A91B4",
-          "url": "bd8fcaf1_CharacterCreationCultureStage.xml"
+          "size": 38304,
+          "sha256": "7041FE4D2E739BF10F27D8742BDB8464815A4056C5A38A0728E220DD2064DE1E",
+          "url": "7041fe4d_CharacterCreationCultureStage.xml"
         },
         {
           "path": "GUI/AurelionScreens/CharacterCreationGainedProperties.xml",
-          "size": 7930,
-          "sha256": "2C70DD25B7F207BFED023769AA2037D81B7FF8879A3E683859BB64CCACF8B4A4",
-          "url": "2c70dd25_CharacterCreationGainedProperties.xml"
+          "size": 7236,
+          "sha256": "31D2FECFAE8AADC988CFB5CCDDB4F7CC8D6FAF97E3510744772A951DE4B13392",
+          "url": "31d2fecf_CharacterCreationGainedProperties.xml"
         },
         {
           "path": "GUI/AurelionScreens/CharacterCreationNarrativeStage.xml",
-          "size": 17705,
-          "sha256": "F6808C613ED41F7C2F6E0BCED7FE61603AB595DFBB9A9276D72605949FB1129A",
-          "url": "f6808c61_CharacterCreationNarrativeStage.xml"
+          "size": 28785,
+          "sha256": "04F57FCF84A3969890833154EB15D9A138B20DE1DAEE94405088021897946233",
+          "url": "04f57fcf_CharacterCreationNarrativeStage.xml"
         },
         {
           "path": "GUI/AurelionScreens/CharacterCreationOptionsStage.xml",
-          "size": 19813,
-          "sha256": "A355236E5F33117442E193E42953820FFEEA59F2A55C83E6D122BA25ABC55AA8",
-          "url": "a355236e_CharacterCreationOptionsStage.xml"
+          "size": 19821,
+          "sha256": "2706038AED95B59EA5B38A5A2FBA99D0957879982232A7BA3BC99A0E319E4C7B",
+          "url": "2706038a_CharacterCreationOptionsStage.xml"
         },
         {
           "path": "GUI/AurelionScreens/CharacterCreationReviewStage.xml",
-          "size": 18826,
-          "sha256": "CF33A660960959A1B6A93624C26B0CAD5A65516D6687E0DF6453BBD517D240DD",
-          "url": "cf33a660_CharacterCreationReviewStage.xml"
+          "size": 30399,
+          "sha256": "A78B8CBF845F66208E21DDB0C029500722ADDDAA3BBD533A1B15E467670EED6A",
+          "url": "a78b8cbf_CharacterCreationReviewStage.xml"
         },
         {
           "path": "GUI/AurelionScreens/CharacterDeveloper.xml",
@@ -572,6 +572,12 @@
           "url": "409e3ef7_ConversationItem.xml"
         },
         {
+          "path": "GUI/AurelionScreens/CoopJoinCancelOverlay.xml",
+          "size": 1073,
+          "sha256": "E36A5FA5C29ECCD1B97CB4F3ACCEB1B0956979726D5F984D01A2D11CB6B96614",
+          "url": "e36a5fa5_CoopJoinCancelOverlay.xml"
+        },
+        {
           "path": "GUI/AurelionScreens/Crafting.xml",
           "size": 52922,
           "sha256": "8279F9FE9D2DAA04C0990A2D4BC757185ABDD6D24F1CF68A1DDDF7BFBE2B0A77",
@@ -597,9 +603,9 @@
         },
         {
           "path": "GUI/AurelionScreens/FaceGen.xml",
-          "size": 22513,
-          "sha256": "018D233F570DDB3F6A096E93BAB4D63A9FAE5BBA043AF0EC272E1A6377007680",
-          "url": "018d233f_FaceGen.xml"
+          "size": 22530,
+          "sha256": "8C97164588B4561404B1FE6D61C49E42BCCC6BFE37C45F45E60864764BE974D4",
+          "url": "8c971645_FaceGen.xml"
         },
         {
           "path": "GUI/AurelionScreens/FiefsPanel.xml",
@@ -826,14 +832,14 @@
         {
           "path": "GUI/Brushes/AurelionV5.xml",
           "size": 35077,
-          "sha256": "65038F07CFF01B827B12604A25C870DB760E30997344B0D02422A9CE072D32F3",
-          "url": "65038f07_AurelionV5.xml"
+          "sha256": "8D99121C29D8B9CE6B4FD9485EA38F54B619EF57D0EBAE0F3E9F02218B856D71",
+          "url": "8d99121c_AurelionV5.xml"
         },
         {
           "path": "GUI/Brushes/AurelionV6.xml",
-          "size": 12772,
-          "sha256": "5A07956F8BE532022B1D29D4624B3EFD8ED8FDA67662D4E362F6C4CFE7595527",
-          "url": "5a07956f_AurelionV6.xml"
+          "size": 15714,
+          "sha256": "3C2D65D1CBFA41CF8DBCC542ACE14AF6EF6EC5A12A258887F5B9C676AB8A0B38",
+          "url": "3c2d65d1_AurelionV6.xml"
         },
         {
           "path": "GUI/Brushes/CoopButtons.xml",
@@ -879,15 +885,15 @@
         },
         {
           "path": "GUI/Prefabs/AurSlots.xml",
-          "size": 29513,
-          "sha256": "580206C607F4C5A169AD59496BDDEF040B10367E33E868DD59F3BA1D9ACBB830",
-          "url": "580206c6_AurSlots.xml"
+          "size": 45077,
+          "sha256": "AB9AD57BDEB8187780A70983EAA6C276627CB50173DE8EE239828011A07B3D52",
+          "url": "ab9ad57b_AurSlots.xml"
         },
         {
           "path": "GUI/Prefabs/AurSlotsLite.xml",
-          "size": 29366,
-          "sha256": "03F8776CD819A1BEA450BBE0630E5D70B622D7C376F403426E1E1B08AB191CEC",
-          "url": "03f8776c_AurSlotsLite.xml"
+          "size": 44930,
+          "sha256": "81D410AD31EE47AE09E227D06FC4D42B80DE742F67CF81840D9CE7F77236EFD6",
+          "url": "81d410ad_AurSlotsLite.xml"
         },
         {
           "path": "GUI/Prefabs/AurTownCard.xml",
@@ -1100,6 +1106,12 @@
           "url": "2d10b079_aur_v5_1.png"
         },
         {
+          "path": "GUI/SpriteSheets/aur_v6b_1.png",
+          "size": 3382,
+          "sha256": "086ED8AD4C78B29F57F397BD227D7F0BFACE7B0A751AF3226F78474C9273B737",
+          "url": "086ed8ad_aur_v6b_1.png"
+        },
+        {
           "path": "GUI/SpriteSheets/aur_v6_1.png",
           "size": 31962,
           "sha256": "CBDD1A314F5BD36B83F635B8E3D38ADD9225FC3A829743A6C40D5FB292B70AF2",
@@ -1107,9 +1119,9 @@
         },
         {
           "path": "GUI/Sprites/AurelionSpriteData.xml",
-          "size": 203646,
-          "sha256": "5B1EBEAE1DCE9076051D5A895BE014532336F0F1039743439751BCA4DC45D234",
-          "url": "5b1ebeae_AurelionSpriteData.xml"
+          "size": 206989,
+          "sha256": "176B76DB696F6DCAD0761A9D41F36E66DADF84FA7B1DBF1113B6EB64D93A9528",
+          "url": "176b76db_AurelionSpriteData.xml"
         },
         {
           "path": "mod-config.default.json",

@@ -1,0 +1,17 @@
+<Prefab>
+  <Window>
+    <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" DoNotAcceptEvents="true">
+      <Children>
+        <!-- Coop's "cancel the join" button, in the Aurelion look (21/11). Same Id, same command, same text binding as Coop's own file.
+             It sits at the top left, under the players chip, so it never covers the loading screen's progress card or its tip. -->
+        <ButtonWidget Id="JoinCancelButton" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="180" SuggestedHeight="48"
+                      HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="56" MarginTop="92"
+                      Brush="Aur.V6.Btn2" Command.Click="ActionCancel" UpdateChildrenStates="true" DoNotPassEventsToChildren="true">
+          <Children>
+            <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Brush="Aur.V6.Btn2T" Text="@CancelButtonText" DoNotAcceptEvents="true" />
+          </Children>
+        </ButtonWidget>
+      </Children>
+    </Widget>
+  </Window>
+</Prefab>
