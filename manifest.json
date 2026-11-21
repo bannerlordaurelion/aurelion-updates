@@ -5,7 +5,7 @@
     "host": "185.132.133.85",
     "port": 4200
   },
-  "gameVersion": "v1.4.8",
+  "gameVersion": "v1.5.7",
   "baseUrl": "",
   "statusUrl": "http://185.132.133.85:4201/status",
   "links": {
@@ -23,7 +23,7 @@
       "id": "Coop",
       "folder": "Coop",
       "name": "Bannerlord Co-op",
-      "version": "v0.1.7",
+      "version": "v0.1.8",
       "files": [
         {
           "path": "aurelion/build.json",
@@ -64,8 +64,8 @@
         {
           "path": "bin/Win64_Shipping_Client/0Harmony.dll",
           "size": 2477344,
-          "sha256": "7ECD8372D5F881D4FD938AB07C2ABA22944E0E7D16EC4E1BEA87A452B2CA3BD1",
-          "url": "0Harmony.dll"
+          "sha256": "D8C0F8979941FC9F60109459B57B7CEA25C3577AA503D7E82E79EFBD1DA4A795",
+          "url": "d8c0f897_0Harmony.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/Aurelion.Core.dll",
@@ -76,320 +76,332 @@
         {
           "path": "bin/Win64_Shipping_Client/Autofac.dll",
           "size": 390432,
-          "sha256": "61FA884D1CAF9BD251A5431B132CACFF627FA429D6DF309B5752F164673A1139",
-          "url": "Autofac.dll"
+          "sha256": "867C2F1724C49C78207441F469C5588488358016D3A3E0A224E02DA6235BB686",
+          "url": "867c2f17_Autofac.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/Common.dll",
-          "size": 174368,
-          "sha256": "CD53FDC4AFDBBEC475F5F0A1C7D1A3E8806C590AF62CA2B9E0CCA98D5F2379C2",
-          "url": "Common.dll"
+          "size": 206112,
+          "sha256": "3DBDFCE8BBB916A82D9DD97C6360B041DCD47FBA57816AA4CDDF2BB6BDBD1F09",
+          "url": "3dbdfce8_Common.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/Concentus.dll",
           "size": 340768,
-          "sha256": "F03852844310ECEA6CC1D090D4117EE702FB5FCAF0E5E37E2A4CB93E68AD0866",
-          "url": "Concentus.dll"
+          "sha256": "3493A152E0C6289B9D62FF81DAEF8607CF63235D238EDE5BF74CD3C3D24F5596",
+          "url": "3493a152_Concentus.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/Coop.Core.dll",
-          "size": 673568,
-          "sha256": "E9AD612C6FE2BAD674341FF5084C66CA02C04D2DA7174ED3DC9EDA31E638228C",
-          "url": "Coop.Core.dll"
+          "size": 676640,
+          "sha256": "ADC8595500EC90E3723EDB8E3DA5C1F28BBDB7C1E3CE57F66910DAA9548D2EB4",
+          "url": "adc85955_Coop.Core.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/Coop.CrashReporter.exe",
-          "size": 41760,
-          "sha256": "EC8D9A47C34179996C2DCB4B143BFFB5D18253F598A155B09953BF9FB5E33428",
-          "url": "Coop.CrashReporter.exe"
+          "size": 42272,
+          "sha256": "C9D17D07FA3DC730EAFBEB21AABA36AEE04ADE9F7AE0B7D278FB71BCA6C92F99",
+          "url": "c9d17d07_Coop.CrashReporter.exe"
         },
         {
           "path": "bin/Win64_Shipping_Client/Coop.dll",
-          "size": 58144,
-          "sha256": "BF1D73DAA4BF0B22002E6DB1F06EBD13B94235F184FBFA739EF7CDD996F37128",
-          "url": "Coop.dll"
+          "size": 58656,
+          "sha256": "A097B2C263BE7ECB6DAB778DE98D6812ADCA7A15B2F87A16C5AC218C9A56BF05",
+          "url": "a097b2c2_Coop.dll"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/Coop.Naval.dll",
+          "size": 130336,
+          "sha256": "EF4E1A9B8658CC1008139214A6DA19AD4123600E336A530ED021D7942FEFE249",
+          "url": "ef4e1a9b_Coop.Naval.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/Coop.Steam.dll",
-          "size": 87328,
-          "sha256": "D96471781B7547A3378C2158A20CA9FC710FBFFC92C32B5505380325A5F249CE",
-          "url": "Coop.Steam.dll"
+          "size": 89888,
+          "sha256": "64D3543AF283EB77B555939636D7451091B4DA1DDE40795081F157AD3712CE84",
+          "url": "64d3543a_Coop.Steam.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/DiscordRPC.dll",
           "size": 108320,
-          "sha256": "8AC18D7AA20A46A294BFA3EA8F5BB7FBAC10868B8B762CCCFDC4D26A7A85F496",
-          "url": "DiscordRPC.dll"
+          "sha256": "6C15DA24F99D8DF2E232C6EC674F492870762B1F540597A37AFA9297FFF59F49",
+          "url": "6c15da24_DiscordRPC.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/Fmod5Sharp.dll",
           "size": 915744,
-          "sha256": "727FF05A819913406D2EEFC661ABF3C6E5B078C27C8A340E950C3274C668D8E9",
-          "url": "Fmod5Sharp.dll"
+          "sha256": "B3BBA06868DA1F4589AFBA029271740CE8DE437E20475BBC7AF70F3AFC4B0A64",
+          "url": "b3bba068_Fmod5Sharp.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/GameInterface.dll",
-          "size": 5668640,
-          "sha256": "BEE3E589BAFD255757DF56E1237D948472FE591DDDC4FDC6A35447B1BA9373E9",
-          "url": "GameInterface.dll"
+          "size": 6388512,
+          "sha256": "84D8F0D369851F01B374AC44AB6BEE6914FFCBB93A6F5D083D3584F7B9BED19B",
+          "url": "84d8f0d3_GameInterface.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/K4os.Compression.LZ4.dll",
           "size": 91936,
-          "sha256": "F750B4F1CEB55654E185519B80581D741A055AC19AF8E43B830C7348F16EA9F3",
-          "url": "K4os.Compression.LZ4.dll"
+          "sha256": "1BA6FF8702613A397137CAEBCE32FF772047E72120859BCC40F99288960356B7",
+          "url": "1ba6ff87_K4os.Compression.LZ4.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/LiteNetLib.dll",
           "size": 126240,
-          "sha256": "181C247378A84BC37425A7A8C558062A56A44D8B40716DEE675FF00244D2D68F",
-          "url": "LiteNetLib.dll"
+          "sha256": "2D392E75F8C89E05A87BD68689144FC14A63E0761F6DF44943022FA599E2F908",
+          "url": "2d392e75_LiteNetLib.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/Microsoft.Bcl.AsyncInterfaces.dll",
           "size": 31520,
-          "sha256": "C337E4EBFAB31DCCB1518E14F50C4655EFA58F296306B74858460369F3F68809",
-          "url": "Microsoft.Bcl.AsyncInterfaces.dll"
+          "sha256": "D0A13AB112F3B5303E0361BEE771618E774734FF00B411254E357C4161AEB625",
+          "url": "d0a13ab1_Microsoft.Bcl.AsyncInterfaces.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/Microsoft.CodeAnalysis.CSharp.dll",
           "size": 7079200,
-          "sha256": "E21BB813F276C585A51CE62234FB87F0D51B309195811BA061C06A4E2B9713FB",
-          "url": "Microsoft.CodeAnalysis.CSharp.dll"
+          "sha256": "A4E01972396D012FC8F75A23AED756D0DDA9F9678B7AFC88DEB21EA93E8EDF2A",
+          "url": "a4e01972_Microsoft.CodeAnalysis.CSharp.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/Microsoft.CodeAnalysis.dll",
           "size": 5055776,
-          "sha256": "8C77EE065B22D943C59078D0B631B21304AFFE1144B38C25217BDC92AF483D84",
-          "url": "Microsoft.CodeAnalysis.dll"
+          "sha256": "471B02CF071793791A941634BF888BCCAB7B365889523CB40496332C8557EA9F",
+          "url": "471b02cf_Microsoft.CodeAnalysis.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/Microsoft.Win32.Registry.dll",
           "size": 35616,
-          "sha256": "B439DC7F39BD4C3D7612BDB118CF8AEF7FB164A05C4D025C2BCA3C4006C1F6FC",
-          "url": "Microsoft.Win32.Registry.dll"
+          "sha256": "6D86F6FDDB972BCFBC79C3891C6BC36BEB543F3259DA30B1DD441709A9D95D53",
+          "url": "6d86f6fd_Microsoft.Win32.Registry.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/Missions.dll",
-          "size": 1147680,
-          "sha256": "F1FD8A25A0E6FFC05A335EBE0A65371937CC650C0785B83AF9BB215533921469",
-          "url": "Missions.dll"
+          "size": 1480480,
+          "sha256": "5996B5BCE74359958D41439BF4EB6ECB2D81E40DB1187D9B5A755284E263BBD8",
+          "url": "5996b5bc_Missions.dll"
+        },
+        {
+          "path": "bin/Win64_Shipping_Client/Missions.Naval.dll",
+          "size": 252704,
+          "sha256": "0A9AE29E20659A86F083110B57D21D78167316035494103924AA5103DF82E295",
+          "url": "0a9ae29e_Missions.Naval.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/Mono.Cecil.dll",
           "size": 378656,
-          "sha256": "E51B95D6831EA364F51DE8E53D8E8656746E7B16EF96C1D6AFD832B68A3CB106",
-          "url": "Mono.Cecil.dll"
+          "sha256": "1B179719C11DC46732CC5F1DD27C36A95997C16194C6E068AD86EE83A8CD6670",
+          "url": "1b179719_Mono.Cecil.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/Mono.Cecil.Mdb.dll",
           "size": 59168,
-          "sha256": "811A45916E05C57D78F6A90F8B7F8CC7508480FED7969D009FFC48236C0DED8F",
-          "url": "Mono.Cecil.Mdb.dll"
+          "sha256": "8E9D41620A193E6B6F192FA609FF190D735BB127AF4844E1957AB2FF1F99A229",
+          "url": "8e9d4162_Mono.Cecil.Mdb.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/Mono.Cecil.Pdb.dll",
           "size": 105760,
-          "sha256": "C75FCCB5DF80906CA1A284F4EB60FA410121204215EAA38FFA6BA6E0BE41CBC0",
-          "url": "Mono.Cecil.Pdb.dll"
+          "sha256": "5140546929790258DA2786656FA1E4F2C3939560D61A42D0CB81E6A7D0D0A98C",
+          "url": "51405469_Mono.Cecil.Pdb.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/Mono.Cecil.Rocks.dll",
           "size": 45344,
-          "sha256": "E2834BA8C881D64679CF588AB151565EDC21F08EBB426FD626D94DB06FE7546E",
-          "url": "Mono.Cecil.Rocks.dll"
+          "sha256": "23358DA9BED5E4488C0B693E1EB464FD04F434F5D2159490C35D6534AB783F9C",
+          "url": "23358da9_Mono.Cecil.Rocks.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/MonoMod.Backports.dll",
           "size": 133408,
-          "sha256": "70765B524E51BF978AF716019E9BD899489C4F5D31047C418CF4FDB5D909809C",
-          "url": "MonoMod.Backports.dll"
+          "sha256": "6786F951C54C3F3A0EADAC3CF97A4F0B7CBC535987D1774AF714EFB9D72ABF67",
+          "url": "6786f951_MonoMod.Backports.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/MonoMod.Core.dll",
           "size": 248096,
-          "sha256": "9D66A734E8D7911210F96DEAF4853A9F4E22FD60583B6AEEDA2572E61BA6B0D7",
-          "url": "MonoMod.Core.dll"
+          "sha256": "046DE5F80B2F6D381F34D87504FC41D1EF2787EE223D2F64AEC716F8F5177E75",
+          "url": "046de5f8_MonoMod.Core.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/MonoMod.Iced.dll",
           "size": 663840,
-          "sha256": "BC08733D820C458F8DB7886BAA50230CB8B12A007726EF57A02C8BD2B9488BAA",
-          "url": "MonoMod.Iced.dll"
+          "sha256": "02F4CB69264308E992F86D95078F8F4CF5865ECDE781245A3A565E3FEC2F19FB",
+          "url": "02f4cb69_MonoMod.Iced.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/MonoMod.ILHelpers.dll",
           "size": 22304,
-          "sha256": "59C7D9A47F807BDE46F5E0A9C4446AB592039982624C33F8FD5C8D3DB67EA2F6",
-          "url": "MonoMod.ILHelpers.dll"
+          "sha256": "6DD8A4DF13D58BB730DD1725BA291A1B7F39BD0612D59F89127C571C2C905F61",
+          "url": "6dd8a4df_MonoMod.ILHelpers.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/MonoMod.RuntimeDetour.dll",
           "size": 90400,
-          "sha256": "AACC9448DA6F12E465317746E136878924DBB175A16CBE606C4D77DE615826CF",
-          "url": "MonoMod.RuntimeDetour.dll"
+          "sha256": "E7130E085E98D83A5764C528DFBC2F6658EAA835F18BCE9C1A5C2EF1BDD08D22",
+          "url": "e7130e08_MonoMod.RuntimeDetour.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/MonoMod.Utils.dll",
           "size": 357152,
-          "sha256": "D578018DF50668F81AC69244C517AB53493B37FFB95BC5994A3B3D102C674280",
-          "url": "MonoMod.Utils.dll"
+          "sha256": "62EF080CEA6653D83F37C17132ED0F06838DD10BA4A4B402519C3447AD6438E7",
+          "url": "62ef080c_MonoMod.Utils.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/NAudio.Core.dll",
           "size": 203552,
-          "sha256": "39360F5F157F7D829C51A9C1390144A2F486CD0CBFB113FC72FE6059278B1BAB",
-          "url": "NAudio.Core.dll"
+          "sha256": "A3B7C29C5D8A2F4145ADE97789F2C9DA34FB40D1B49BBF77D415A084C6032911",
+          "url": "a3b7c29c_NAudio.Core.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/NAudio.WinMM.dll",
           "size": 72992,
-          "sha256": "D142AFDB97FAAE64602989EC469167AAAA653B530814109523F07037D6C98F4E",
-          "url": "NAudio.WinMM.dll"
+          "sha256": "DE436FC1AC55B146C16D439511AAB742BC4B68609CD48FE0DA2D9337A7D4A7C2",
+          "url": "de436fc1_NAudio.WinMM.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/Newtonsoft.Json.dll",
           "size": 708896,
-          "sha256": "5D276A2B316B027331E6384A85807D723D90396ECEA18DED7355112C89E8907A",
-          "url": "Newtonsoft.Json.dll"
+          "sha256": "D76055E156CEF5E60B50F9AF917E76F8A20E6CB6C63642C12DFE5EC4FCDF7637",
+          "url": "d76055e1_Newtonsoft.Json.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/OggVorbisEncoder.dll",
           "size": 911136,
-          "sha256": "E104ED78C4C0410E0FB161799E0DD09CDCD8BEB6FAB9682B3DF52AC403F1A73E",
-          "url": "OggVorbisEncoder.dll"
+          "sha256": "9AD7DBD7948BC2242750A7FFD6537614074A638BFA46ECC72AA5235296254D44",
+          "url": "9ad7dbd7_OggVorbisEncoder.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/protobuf-net.Core.dll",
           "size": 308512,
-          "sha256": "A85BF18682C02B9BADBD4608872B7BBF8D7EB1B1A8F5A09571B0C23B6921A76B",
-          "url": "protobuf-net.Core.dll"
+          "sha256": "ABC75C4399F72BFF870935AC388C3D80661FF0F868842CDDB0D4301EB8144A12",
+          "url": "abc75c43_protobuf-net.Core.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/protobuf-net.dll",
           "size": 296224,
-          "sha256": "26A93F555A9097AEF22084EB0C370AF0A5D9F3217379019A8EAEC6EBB5460BBB",
-          "url": "protobuf-net.dll"
+          "sha256": "C82E9AFBE0C274CBC00852A83715EADE65EF24F676A6E258AEB6FB5DD3A0F0FA",
+          "url": "c82e9afb_protobuf-net.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/Scriban.dll",
           "size": 579360,
-          "sha256": "6F8524C4FBED805A8AA13F885F790C55563C64140500203F91667AC9FB8BF41F",
-          "url": "Scriban.dll"
+          "sha256": "DB18A88B6E404FE53ACD52F15629D585E531BB656E3883D7471FD72A0307F2AF",
+          "url": "db18a88b_Scriban.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/Serilog.dll",
           "size": 178976,
-          "sha256": "9CCD0A7F06A61B0FB8A9CF3A535A5C296E58CE8D3DA570541F93DED953EAE1A7",
-          "url": "Serilog.dll"
+          "sha256": "67367E6C53D89F492A5A7E9ACB2629A862507DF19DBEE9548B5C807E26D526F8",
+          "url": "67367e6c_Serilog.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/Serilog.Enrichers.Process.dll",
           "size": 22816,
-          "sha256": "AEAB48F31B994313C2FEF0756EDE3DF584589C5F5D7275E64CE1E886E9650999",
-          "url": "Serilog.Enrichers.Process.dll"
+          "sha256": "72231AC07E34062B63B37FCCBEE58C780C48EB180A5770EE9DE0652127B4AA5B",
+          "url": "72231ac0_Serilog.Enrichers.Process.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/Serilog.Sinks.Debug.dll",
           "size": 22816,
-          "sha256": "5EDF8DA936372D40B3E30920E10376BDCD74D983024CDCA92609694298F90AD9",
-          "url": "Serilog.Sinks.Debug.dll"
+          "sha256": "5351FA1B799195A582799684A5FA9F4454144F567F26CC124CEE40B262D0B933",
+          "url": "5351fa1b_Serilog.Sinks.Debug.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/Serilog.Sinks.File.dll",
           "size": 48416,
-          "sha256": "2CE1A04D86C5CAB1E64F85FB3681012EA069E8E6787F084F64E497BBC620D154",
-          "url": "Serilog.Sinks.File.dll"
+          "sha256": "7E0BEF8E25B1565A146E4D72A5D7BEBD65724E185C0474D60A7595CA24C23672",
+          "url": "7e0bef8e_Serilog.Sinks.File.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/Serilog.Sinks.Seq.dll",
           "size": 66848,
-          "sha256": "96102CFE84BEEFF6DB0FC571BD98DD1FD7279A0600829A4D6894F9260A0C434D",
-          "url": "Serilog.Sinks.Seq.dll"
+          "sha256": "FD6EE8EA684E06919F8F15A0F752E84A3EE32244D41503D8CF893675206221AD",
+          "url": "fd6ee8ea_Serilog.Sinks.Seq.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/System.Buffers.dll",
           "size": 28960,
-          "sha256": "58BF3F38E9B1A88C8253BDB47D687C5B23A8FED90AA0359D02A223AA9B65880B",
-          "url": "System.Buffers.dll"
+          "sha256": "9534AC9C329CF25164E5D5A03B81F2C637D593A0BC2445E3A221E9A0D797D143",
+          "url": "9534ac9c_System.Buffers.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/System.Collections.Immutable.dll",
           "size": 264480,
-          "sha256": "6D7BB09FB850C23C0E1DFCF8E8C4D188872876C1E8680B16485DD771C7A578A5",
-          "url": "System.Collections.Immutable.dll"
+          "sha256": "7B43C0B63A9DE7EC44515E91D671EF36A445DBD6F2D22F7583AF6686C443C0B4",
+          "url": "7b43c0b6_System.Collections.Immutable.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/System.Diagnostics.DiagnosticSource.dll",
           "size": 205088,
-          "sha256": "36423E704E0327653B93CAF3E39F0BB2A923F090A897A14C55A1E43F53AAC603",
-          "url": "System.Diagnostics.DiagnosticSource.dll"
+          "sha256": "33A83CECAAC495D35E79AF9CEC4103A23BA68DC2DBD94C5E97C77D2E2C3C243D",
+          "url": "33a83cec_System.Diagnostics.DiagnosticSource.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/System.IO.Pipelines.dll",
           "size": 89888,
-          "sha256": "13D1A717FA426047661BD79B41B58E66747EF1705BFB315EDE7C9AC9AC5A77F6",
-          "url": "System.IO.Pipelines.dll"
+          "sha256": "D106DB364111B425AF2048AE0952CC2DF4A7F6A1EA6CE3B7F60AFBAEBC83D2C8",
+          "url": "d106db36_System.IO.Pipelines.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/System.Memory.dll",
           "size": 150304,
-          "sha256": "1BD977EB8B27387B383C989546D8C6C14F0E93BB8F777F3BBCB741FCA3314277",
-          "url": "System.Memory.dll"
+          "sha256": "6C562D7A1A71AC2CD9B60D86A8DC2AE7A8CC367481B0259CD8F8050B4ED44344",
+          "url": "6c562d7a_System.Memory.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/System.Numerics.Vectors.dll",
           "size": 115488,
-          "sha256": "4FC6741D94CCAE5775317BD1D409B841B099B6CC9123D8B2455CB2EA2848DF68",
-          "url": "System.Numerics.Vectors.dll"
+          "sha256": "7C2D9CA87B65B04239705F963448BE66764AF903D35A376468827A07F494E7AC",
+          "url": "7c2d9ca8_System.Numerics.Vectors.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/System.Reflection.Metadata.dll",
           "size": 492832,
-          "sha256": "B60E87B75935EEB4F3892DC66759C899B8007E40CF71ECE88C4B16641D899D56",
-          "url": "System.Reflection.Metadata.dll"
+          "sha256": "85D42B3C148028A099931102C49A58593DD3BFED36DBD045AFC20E214DB0902E",
+          "url": "85d42b3c_System.Reflection.Metadata.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/System.Runtime.CompilerServices.Unsafe.dll",
           "size": 24352,
-          "sha256": "5DD3F31FF27D8144B5B95386DE97DC61FF8AB796D68C29A43E5B1A5B2586F358",
-          "url": "System.Runtime.CompilerServices.Unsafe.dll"
+          "sha256": "8A55F70B77162D6908045407684B9B44A7958AC34F7291E1AA98D7DF66C7002A",
+          "url": "8a55f70b_System.Runtime.CompilerServices.Unsafe.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/System.Text.Encoding.CodePages.dll",
           "size": 766240,
-          "sha256": "E735BC681533607C6E3F01290D735C8854B8E3AB42DE2220C52EC705B47FC3DD",
-          "url": "System.Text.Encoding.CodePages.dll"
+          "sha256": "6B4F75F6F548120A7ED6A9D55390EE9DB78699656368BD537847861272F43C8A",
+          "url": "6b4f75f6_System.Text.Encoding.CodePages.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/System.Text.Encodings.Web.dll",
           "size": 84768,
-          "sha256": "4C2D0303F45504C50FDC7099B61058C85C6BAED92A4337DEC44FC168EEF14ADA",
-          "url": "System.Text.Encodings.Web.dll"
+          "sha256": "F1298212C9C96D848642C06B809E58F011FDAC70669C37F1A9CE827F8030688D",
+          "url": "f1298212_System.Text.Encodings.Web.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/System.Text.Json.dll",
           "size": 731424,
-          "sha256": "7F1936478CD144AE6836DAD68AFF73A1D244C6292023561086E8750B0F114DC2",
-          "url": "System.Text.Json.dll"
+          "sha256": "053CB80C59821D962C77DC8E9E5C6FD5450FB7DEA9E5BFD706027FAEA9CC9CFB",
+          "url": "053cb80c_System.Text.Json.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/System.Threading.Channels.dll",
           "size": 83744,
-          "sha256": "88FDF50506788C4CB814C749200892720ABCF7856071748C13B496DBA4DAC5A1",
-          "url": "System.Threading.Channels.dll"
+          "sha256": "A88870478C139B933146CA49B28D7DBE11F56C6F81A4207AA8EE81DA6ACB9F4C",
+          "url": "a8887047_System.Threading.Channels.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/System.Threading.Tasks.Extensions.dll",
           "size": 33056,
-          "sha256": "F568515ADEF8AD6595EE4283353A56BB8FD78B2FE61D3266D3A11A1FE8536675",
-          "url": "System.Threading.Tasks.Extensions.dll"
+          "sha256": "F43407DE668E522A5E2CB8AB4825E9A83FFE2E81D327E85C6D297DF89AFE5658",
+          "url": "f43407de_System.Threading.Tasks.Extensions.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/System.ValueTuple.dll",
           "size": 24864,
-          "sha256": "D416662CCEEC41D6B074486A17C3284A7B965655DCF87ED1AB0714C838A18E79",
-          "url": "System.ValueTuple.dll"
+          "sha256": "20C87686F9CA9B62A4A866F701255BA850ACE38D3CA24A5854BF9EA3BE504AB5",
+          "url": "20c87686_System.ValueTuple.dll"
         },
         {
           "path": "GUI/AurelionFont/Aurelion-Bold.fnt",
@@ -981,9 +993,9 @@
         },
         {
           "path": "GUI/Prefabs/CoopConnectionUIMovie.xml",
-          "size": 28312,
-          "sha256": "C12ECA79FDAB4E5749560F1C63BE9F3C55A678883BB29649757CFFA6E3F47C1A",
-          "url": "CoopConnectionUIMovie.xml"
+          "size": 28806,
+          "sha256": "DA9E1494F5AB7E2DA1EF3FD54C4E2D7CBB95A211AB9DA57AED24223A186EEE02",
+          "url": "da9e1494_CoopConnectionUIMovie.xml"
         },
         {
           "path": "GUI/Prefabs/CoopJoinCancelOverlay.xml",
@@ -1185,15 +1197,15 @@
         },
         {
           "path": "mod-config.default.json",
-          "size": 11942,
-          "sha256": "3DA4619BC58B1D79B7723BAF6C3DF749CBD3D0512A9DF9EA76F0E082A8C31E6C",
-          "url": "mod-config.default.json"
+          "size": 16693,
+          "sha256": "8D5CC7BCB6F062B996BEC8A5C99D56449595A7D396F23A46F4C82738FC51599E",
+          "url": "8d5cc7bc_mod-config.default.json"
         },
         {
           "path": "ModuleData/coop_fixed_town_npcs.xml",
-          "size": 30658,
-          "sha256": "58FF0162AB06D008FAC2559F9E2A2E88E8592714290A4E4EBC6F3B0C79683034",
-          "url": "coop_fixed_town_npcs.xml"
+          "size": 49070,
+          "sha256": "EDD806219618AC80E32575011B9F80C93B477CD4BB78C1F949B04E370438F45B",
+          "url": "edd80621_coop_fixed_town_npcs.xml"
         },
         {
           "path": "ModuleData/coop_minor_factions.xml",
@@ -1209,9 +1221,9 @@
         },
         {
           "path": "ModuleData/coop_wanderers.xml",
-          "size": 17587,
-          "sha256": "8B6064F2729F380BE6DB571BCD1E9AE50DF9C83669DF5DAC8B64E12E5BCFA5AB",
-          "url": "coop_wanderers.xml"
+          "size": 17588,
+          "sha256": "ED37F75CB8E0AD3384A7193CBFBF0BE9EF1F913CED5AFABDD8B480B4F2D90932",
+          "url": "ed37f75c_coop_wanderers.xml"
         },
         {
           "path": "ModuleData/coop_wanderer_strings.xml",
@@ -1221,9 +1233,9 @@
         },
         {
           "path": "ModuleData/global_strings.xml",
-          "size": 16239,
-          "sha256": "B19B39B44DD797CFB38653FAED3825B672B9E503B888437EF6B3B54024DA5768",
-          "url": "global_strings.xml"
+          "size": 21701,
+          "sha256": "EAC1DC4F36670EEB2EC5AC181C5A11C20A08076211972922D450F94C6483F878",
+          "url": "eac1dc4f_global_strings.xml"
         },
         {
           "path": "ModuleData/tournament_spectator_throwables.xml",
@@ -1239,9 +1251,9 @@
         },
         {
           "path": "SubModule.xml",
-          "size": 3245,
-          "sha256": "D93804BDD4832286501FAE30A083B2462AA1B1F3F19EA7F23188BB64B53CEF5E",
-          "url": "d93804bd_SubModule.xml"
+          "size": 3326,
+          "sha256": "A753E1DE33D4BA91FF24CBC819A699AF1F109CD9942BF9A81CC7F058C7508138",
+          "url": "a753e1de_SubModule.xml"
         },
         {
           "path": "ThirdPartyNotices/Concentus-LICENSE.txt",
@@ -1277,103 +1289,6 @@
       "sources": [
         {
           "type": "github"
-        }
-      ]
-    },
-    {
-      "id": "MoreNationsRemastered",
-      "folder": "MoreNationsRemastered",
-      "name": "More Nations Remastered",
-      "version": "v1.0.3",
-      "files": [
-        {
-          "path": "bin/Win64_Shipping_Client/MoreNationsRemastered.dll",
-          "size": 8192,
-          "sha256": "226B1077773E8BCCD4C32FE4940B7DFD61850BB1598DDB1163BA2F1122629E12"
-        },
-        {
-          "path": "ModuleData/DistanceCaches/settlements_distance_cache_Default.bin",
-          "size": 3728332,
-          "sha256": "C7CD299347B820EE58239EAC93CA59B220764BE6AC4D0AF5415B409D36DBE6C8"
-        },
-        {
-          "path": "ModuleData/heroes.xml",
-          "size": 18883,
-          "sha256": "F29047ABEBD8AF0CA56BBA9D50FA0EF1E1D860CCAE7C72A75C4BACF966E51759"
-        },
-        {
-          "path": "ModuleData/lords.xml",
-          "size": 239163,
-          "sha256": "CB1E75902EBD2E58D8C2576B2F7A82F219492FC83C3641FBF2FF88FE51958338"
-        },
-        {
-          "path": "ModuleData/settlements.xml",
-          "size": 849598,
-          "sha256": "939F0D3D80A0AECE0812BA78820121A47F57E1F45319BD901F69CFB7B24AB89E",
-          "url": "939f0d3d_settlements.xml"
-        },
-        {
-          "path": "ModuleData/spclans.xml",
-          "size": 34461,
-          "sha256": "EDD40F4865955B17F6BE494EE5ED01FE45158E7630BEF7AF0D729B61A42D4EC9"
-        },
-        {
-          "path": "ModuleData/spkingdoms.xml",
-          "size": 10244,
-          "sha256": "94C9C29F7A787F510C1C1A52C7A23C61114378C30603BAFA2A1595E5F43147DC"
-        },
-        {
-          "path": "SceneObj/Main_map/atmosphere.xml",
-          "size": 4962,
-          "sha256": "7848867D9E0E72A5FBEC4DB20C9F022A7B3D77410DA52EAB7435F2A0D90D623D"
-        },
-        {
-          "path": "SceneObj/Main_map/flora.bin",
-          "size": 548861,
-          "sha256": "6D264D52EFFC66280AAF82047F893BFDC601EE5204D669B6019256CA75EBC4A4"
-        },
-        {
-          "path": "SceneObj/Main_map/flowmap.dds",
-          "size": 1048704,
-          "sha256": "1570EA217766F381FFB362B2170D141780BCFE2051DB0B1F98564DB28F73529F"
-        },
-        {
-          "path": "SceneObj/Main_map/navmesh.bin",
-          "size": 1164267,
-          "sha256": "A06E9875C2694B51632DD1F1F4FEAEAC85510A81FE9E6D83AC4B3B7F667803D8",
-          "url": "a06e9875_navmesh.bin"
-        },
-        {
-          "path": "SceneObj/Main_map/references.txt",
-          "size": 12856,
-          "sha256": "FB729CD7B23FFD45150E8B19B0B1FD39861371026C3902209D8990CBF1EE2638"
-        },
-        {
-          "path": "SceneObj/Main_map/scene.xscene",
-          "size": 30311208,
-          "sha256": "A6E9912A00C395EABE1DA877837EE795EEAFF0D6F352FC2FEC634CBF430BC4B1"
-        },
-        {
-          "path": "SceneObj/Main_map/ShaderCache/D3D11/terrain_shaders_header_data.bin",
-          "size": 37384,
-          "sha256": "1CF939025052EF02362EE0AAB917895CCCEB685C595FC81BE9C8350115CC8772"
-        },
-        {
-          "path": "SceneObj/Main_map/terrain.bin",
-          "size": 65294484,
-          "sha256": "90FB6F80D23EB52C181387D6FFC1F331B131DDFAC1075FAC7FDA1D3693882C22"
-        },
-        {
-          "path": "SubModule.xml",
-          "size": 1848,
-          "sha256": "13439C8DD3FD46BAE6AE0C551623C117BF5506D1493A5E64D906A5D6DB0960AA"
-        }
-      ],
-      "sources": [
-        {
-          "type": "nexus",
-          "url": "https://www.nexusmods.com/mountandblade2bannerlord/mods/12271",
-          "fileName": "MoreNationsRemastered"
         }
       ]
     }
