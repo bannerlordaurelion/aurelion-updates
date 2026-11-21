@@ -28,8 +28,8 @@
         {
           "path": "aurelion/build.json",
           "size": 76,
-          "sha256": "68D448E761838E32496CC164A4BF3A96359F7CF38BD80EEA336EF073FF53BAE8",
-          "url": "68d448e7_build.json"
+          "sha256": "FDE470935278C2AAB4E6D3044D6E184820BCB2EF1CEFB800FAFA9C28C3E6E6A9",
+          "url": "fde47093_build.json"
         },
         {
           "path": "aurelion/prices.json",
@@ -51,9 +51,9 @@
         },
         {
           "path": "aurelion/studio-project.json",
-          "size": 810045,
-          "sha256": "915DA023A333BA3ABFD27F98077D4BFE90173C026437532D1A6C9E0338324389",
-          "url": "915da023_studio-project.json"
+          "size": 813856,
+          "sha256": "FCC494161FE02B31978F39EF984C09D952AD334EF7D68860FCFBC9DE2619BF11",
+          "url": "fcc49416_studio-project.json"
         },
         {
           "path": "aurelion/update-server.ps1",
@@ -69,9 +69,9 @@
         },
         {
           "path": "bin/Win64_Shipping_Client/Aurelion.Core.dll",
-          "size": 565760,
-          "sha256": "99BEEF03496085336C14C017F6008F520B0F01177A804F251F134F088E710A7D",
-          "url": "99beef03_Aurelion.Core.dll"
+          "size": 568320,
+          "sha256": "184FB036D4E8E0B604795C6ECECEBE9F898DC0EDEA12B54DECC4F898EE37FA6E",
+          "url": "184fb036_Aurelion.Core.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/Autofac.dll",
@@ -831,9 +831,9 @@
         },
         {
           "path": "GUI/Brushes/AurelionV6.xml",
-          "size": 10959,
-          "sha256": "ED483BAB5B7A32104409E6313C28E334978FE27B286739E4F52AE4E2F577D9A1",
-          "url": "ed483bab_AurelionV6.xml"
+          "size": 12772,
+          "sha256": "5A07956F8BE532022B1D29D4624B3EFD8ED8FDA67662D4E362F6C4CFE7595527",
+          "url": "5a07956f_AurelionV6.xml"
         },
         {
           "path": "GUI/Brushes/CoopButtons.xml",
@@ -879,15 +879,15 @@
         },
         {
           "path": "GUI/Prefabs/AurSlots.xml",
-          "size": 37925,
-          "sha256": "F9849715746605902E1D41B04250A4FF21D072F6703F5B148ADA28FC88C0D1F4",
-          "url": "f9849715_AurSlots.xml"
+          "size": 29513,
+          "sha256": "580206C607F4C5A169AD59496BDDEF040B10367E33E868DD59F3BA1D9ACBB830",
+          "url": "580206c6_AurSlots.xml"
         },
         {
           "path": "GUI/Prefabs/AurSlotsLite.xml",
-          "size": 37778,
-          "sha256": "98268E6FF836F3D4B87E5A11C38F25420923F517234FDC3FBAC9C5DF3AA2E5CF",
-          "url": "98268e6f_AurSlotsLite.xml"
+          "size": 29366,
+          "sha256": "03F8776CD819A1BEA450BBE0630E5D70B622D7C376F403426E1E1B08AB191CEC",
+          "url": "03f8776c_AurSlotsLite.xml"
         },
         {
           "path": "GUI/Prefabs/AurTownCard.xml",

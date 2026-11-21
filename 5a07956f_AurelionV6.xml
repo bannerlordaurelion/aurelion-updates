@@ -1,0 +1,296 @@
+<Brushes>
+  <Brush Name="Aur.V6.Hero" Font="Aurelion-Bold" FontSize="52" FontColor="#F7F2E0FF" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="52" FontColor="#F7F2E0FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V6.H1" Font="Aurelion-Bold" FontSize="44" FontColor="#F7F2E0FF" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="44" FontColor="#F7F2E0FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V6.H1C" Font="Aurelion-Bold" FontSize="44" FontColor="#F7F2E0FF" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="44" FontColor="#F7F2E0FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V6.H2" Font="Aurelion-Bold" FontSize="28" FontColor="#F7F2E0FF" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="28" FontColor="#F7F2E0FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V6.H3" Font="Aurelion-Bold" FontSize="20" FontColor="#F7F2E0FF" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="20" FontColor="#F7F2E0FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V6.Body" Font="Aurelion-Regular" FontSize="18" FontColor="#F7F2E0D9" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Regular" FontSize="18" FontColor="#F7F2E0D9" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V6.BodyC" Font="Aurelion-Regular" FontSize="18" FontColor="#F7F2E09E" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Regular" FontSize="18" FontColor="#F7F2E09E" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V6.Text" Font="Aurelion-Regular" FontSize="17" FontColor="#F7F2E0FF" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Regular" FontSize="17" FontColor="#F7F2E0FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V6.Cap" Font="Aurelion-Regular" FontSize="14" FontColor="#F7F2E09E" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Regular" FontSize="14" FontColor="#F7F2E09E" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V6.CapC" Font="Aurelion-Regular" FontSize="14" FontColor="#F7F2E09E" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Regular" FontSize="14" FontColor="#F7F2E09E" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V6.Kick" Font="Aurelion-Bold" FontSize="15" FontColor="#80AEE8FF" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="15" FontColor="#80AEE8FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V6.Status" Font="Aurelion-SemiBold" FontSize="17" FontColor="#F7F2E0FF" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-SemiBold" FontSize="17" FontColor="#F7F2E0FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V6.StatusC" Font="Aurelion-SemiBold" FontSize="20" FontColor="#F7F2E0D9" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-SemiBold" FontSize="20" FontColor="#F7F2E0D9" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V6.Pct" Font="Aurelion-Bold" FontSize="30" FontColor="#F7F2E0FF" TextHorizontalAlignment="Left" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="30" FontColor="#F7F2E0FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V6.Big" Font="Aurelion-Bold" FontSize="40" FontColor="#F7F2E0FF" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="40" FontColor="#F7F2E0FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V6.Chip" Font="Aurelion-Bold" FontSize="14" FontColor="#F7F2E0FF" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="14" FontColor="#F7F2E0FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V6.ChipB" Font="Aurelion-Bold" FontSize="14" FontColor="#80AEE8FF" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="14" FontColor="#80AEE8FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V6.Good" Font="Aurelion-Bold" FontSize="14" FontColor="#7FC79AFF" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="14" FontColor="#7FC79AFF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V6.Bad" Font="Aurelion-Bold" FontSize="14" FontColor="#E57A82FF" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="14" FontColor="#E57A82FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V6.Key" Font="Aurelion-Bold" FontSize="13" FontColor="#F7F2E0D9" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="13" FontColor="#F7F2E0D9" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V6.BtnT" Font="Aurelion-Bold" FontSize="20" FontColor="#F7F2E0FF" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="20" FontColor="#F7F2E0FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V6.Btn2T" Font="Aurelion-SemiBold" FontSize="18" FontColor="#F7F2E0FF" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-SemiBold" FontSize="18" FontColor="#F7F2E0FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V6.RowT" Font="Aurelion-SemiBold" FontSize="18" FontColor="#F7F2E0FF" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-SemiBold" FontSize="18" FontColor="#F7F2E0FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V6.Step" Font="Aurelion-SemiBold" FontSize="14" FontColor="#F7F2E09E" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-SemiBold" FontSize="14" FontColor="#F7F2E09E" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V6.H2C" Font="Aurelion-Bold" FontSize="30" FontColor="#F7F2E0FF" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="30" FontColor="#F7F2E0FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V6.Val" Font="Aurelion-Bold" FontSize="24" FontColor="#F7F2E0FF" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="24" FontColor="#F7F2E0FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V6.NumL" Font="Aurelion-Bold" FontSize="22" FontColor="#F7F2E0FF" TextHorizontalAlignment="Left" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="22" FontColor="#F7F2E0FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V6.Plus" Font="Aurelion-Bold" FontSize="34" FontColor="#80AEE8FF" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="34" FontColor="#80AEE8FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V6.BtnPr">
+    <Layers>
+      <BrushLayer Name="Default" Sprite="aur_v6\btn_pr_9" />
+    </Layers>
+    <Styles>
+      <Style Name="Default">
+        <BrushLayer Name="Default" Sprite="aur_v6\btn_pr_9" />
+      </Style>
+      <Style Name="Hovered">
+        <BrushLayer Name="Default" Sprite="aur_v6\btn_pr_h_9" />
+      </Style>
+      <Style Name="Pressed">
+        <BrushLayer Name="Default" Sprite="aur_v6\btn_pr_h_9" />
+      </Style>
+      <Style Name="Selected">
+        <BrushLayer Name="Default" Sprite="aur_v6\btn_pr_h_9" />
+      </Style>
+      <Style Name="Disabled">
+        <BrushLayer Name="Default" Sprite="aur_v6\btn_pr_9" AlphaFactor="0.45" />
+      </Style>
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V6.Btn2">
+    <Layers>
+      <BrushLayer Name="Default" Sprite="aur_v6\btn2_9" />
+    </Layers>
+    <Styles>
+      <Style Name="Default">
+        <BrushLayer Name="Default" Sprite="aur_v6\btn2_9" />
+      </Style>
+      <Style Name="Hovered">
+        <BrushLayer Name="Default" Sprite="aur_v6\btn2_h_9" />
+      </Style>
+      <Style Name="Pressed">
+        <BrushLayer Name="Default" Sprite="aur_v6\btn2_h_9" />
+      </Style>
+      <Style Name="Selected">
+        <BrushLayer Name="Default" Sprite="aur_v6\btn2_h_9" />
+      </Style>
+      <Style Name="Disabled">
+        <BrushLayer Name="Default" Sprite="aur_v6\btn2_9" AlphaFactor="0.45" />
+      </Style>
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V6.Btn3">
+    <Layers>
+      <BrushLayer Name="Default" Sprite="aur_v6\btn3_9" />
+    </Layers>
+    <Styles>
+      <Style Name="Default">
+        <BrushLayer Name="Default" Sprite="aur_v6\btn3_9" />
+      </Style>
+      <Style Name="Hovered">
+        <BrushLayer Name="Default" Sprite="aur_v6\btn3_h_9" />
+      </Style>
+      <Style Name="Pressed">
+        <BrushLayer Name="Default" Sprite="aur_v6\btn3_h_9" />
+      </Style>
+      <Style Name="Selected">
+        <BrushLayer Name="Default" Sprite="aur_v6\btn3_h_9" />
+      </Style>
+      <Style Name="Disabled">
+        <BrushLayer Name="Default" Sprite="aur_v6\btn3_9" AlphaFactor="0.45" />
+      </Style>
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V6.Row">
+    <Layers>
+      <BrushLayer Name="Default" Sprite="aur_v6\row_9" />
+    </Layers>
+    <Styles>
+      <Style Name="Default">
+        <BrushLayer Name="Default" Sprite="aur_v6\row_9" />
+      </Style>
+      <Style Name="Hovered">
+        <BrushLayer Name="Default" Sprite="aur_v6\row_h_9" />
+      </Style>
+      <Style Name="Pressed">
+        <BrushLayer Name="Default" Sprite="aur_v6\row_on_9" />
+      </Style>
+      <Style Name="Selected">
+        <BrushLayer Name="Default" Sprite="aur_v6\row_on_9" />
+      </Style>
+      <Style Name="Disabled">
+        <BrushLayer Name="Default" Sprite="aur_v6\row_9" AlphaFactor="0.45" />
+      </Style>
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V6.Tab">
+    <Layers>
+      <BrushLayer Name="Default" Sprite="aur_v6\white" AlphaFactor="0" />
+    </Layers>
+    <Styles>
+      <Style Name="Default">
+        <BrushLayer Name="Default" Sprite="aur_v6\white" AlphaFactor="0" />
+      </Style>
+      <Style Name="Hovered">
+        <BrushLayer Name="Default" Sprite="aur_v6\tab_h_9" />
+      </Style>
+      <Style Name="Pressed">
+        <BrushLayer Name="Default" Sprite="aur_v6\tab_on_9" />
+      </Style>
+      <Style Name="Selected">
+        <BrushLayer Name="Default" Sprite="aur_v6\tab_on_9" />
+      </Style>
+      <Style Name="Disabled">
+        <BrushLayer Name="Default" Sprite="aur_v6\white" AlphaFactor="0" />
+      </Style>
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V6.Slot">
+    <Layers>
+      <BrushLayer Name="Default" Sprite="aur_v6\glass_9" />
+    </Layers>
+    <Styles>
+      <Style Name="Default">
+        <BrushLayer Name="Default" Sprite="aur_v6\glass_9" />
+      </Style>
+      <Style Name="Hovered">
+        <BrushLayer Name="Default" Sprite="aur_v6\tile_on_9" />
+      </Style>
+      <Style Name="Pressed">
+        <BrushLayer Name="Default" Sprite="aur_v6\glass_hi_9" />
+      </Style>
+      <Style Name="Selected">
+        <BrushLayer Name="Default" Sprite="aur_v6\glass_hi_9" />
+      </Style>
+      <Style Name="Disabled">
+        <BrushLayer Name="Default" Sprite="aur_v6\glass_9" AlphaFactor="0.45" />
+      </Style>
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V6.Tile">
+    <Layers>
+      <BrushLayer Name="Default" Sprite="aur_v6\tile_9" />
+    </Layers>
+    <Styles>
+      <Style Name="Default">
+        <BrushLayer Name="Default" Sprite="aur_v6\tile_9" />
+      </Style>
+      <Style Name="Hovered">
+        <BrushLayer Name="Default" Sprite="aur_v6\tile_on_9" />
+      </Style>
+      <Style Name="Pressed">
+        <BrushLayer Name="Default" Sprite="aur_v6\tile_on_9" />
+      </Style>
+      <Style Name="Selected">
+        <BrushLayer Name="Default" Sprite="aur_v6\tile_on_9" />
+      </Style>
+      <Style Name="Disabled">
+        <BrushLayer Name="Default" Sprite="aur_v6\tile_9" AlphaFactor="0.45" />
+      </Style>
+    </Styles>
+  </Brush>
+</Brushes>
