@@ -1,4 +1,4 @@
 {
-  "studio": { "version": "1.1.9815.41572", "url": "AurelionStudio-1.1.9815.41572.exe", "sha256": "280A8FD63B7E10333E5E9400A5D23EF26BC1A882393BDC14F5F9742932C9ECF0" },
-  "publisher": { "version": "1.1.9807.29449", "url": "AurelionPublisher-1.1.9807.29449.exe", "sha256": "30935DE489F6A3D9C41DE268EE9C6287405D97ED94A5D004FECF5292217C6C33" }
+  "studio": { "version": "1.1.9822.1411", "url": "https://github.com/bannerlordaurelion/aurelion-updates/releases/download/aurelion-tools/AurelionStudio-1.1.9822.1411.exe", "sha256": "EBF6433DDC6CD47B6E72B4F679EA4FD0870DAFB31CB2B41E60CBBA1790F2ACB4" },
+  "publisher": { "version": "1.1.9822.1410", "url": "AurelionPublisher-1.1.9822.1410.exe", "sha256": "7A45812F5F707CCDB450144A0102BA2A098A943165194DE1DC683E27BFD28A0F" }
 }
