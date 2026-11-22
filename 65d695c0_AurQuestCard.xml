@@ -1,0 +1,18 @@
+<Prefab>
+  <Window>
+    <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" DoNotAcceptEvents="true">
+      <Children>
+        <!-- Aurelion: the current quest on the map (top left) -->
+        <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="400" SuggestedHeight="108" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="24" MarginTop="24" Sprite="aur_v5\tile_9" ClipContents="true" DoNotAcceptEvents="true">
+          <Children>
+            <Widget WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="3" HorizontalAlignment="Right" MarginTop="14" MarginBottom="14" Sprite="BlankWhiteSquare_9" Color="#80AEE8FF" />
+            <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="18" MarginLeft="16" MarginRight="16" MarginTop="10" Brush="Aur.V5.TLbl" Brush.FontSize="13" Brush.FontColor="#80AEE8FF" Text="@Kicker" />
+            <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="24" MarginLeft="16" MarginRight="16" MarginTop="28" Brush="Aur.V5.SecTitle" Brush.FontSize="17" Text="@Title" />
+            <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="40" MarginLeft="16" MarginRight="16" MarginTop="54" Brush="Aur.V5.Rank" Brush.FontSize="13" Brush.FontColor="#F7F2E0B3" Text="@Line" />
+            <TextWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="140" SuggestedHeight="18" HorizontalAlignment="Left" MarginLeft="16" MarginTop="10" Brush="Aur.V5.TLbl" Brush.FontSize="13" Brush.FontColor="#F7F2E0FF" Brush.TextHorizontalAlignment="Left" Text="@Due" />
+          </Children>
+        </Widget>
+      </Children>
+    </Widget>
+  </Window>
+</Prefab>

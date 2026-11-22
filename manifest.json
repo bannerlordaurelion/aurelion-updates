@@ -28,8 +28,8 @@
         {
           "path": "aurelion/build.json",
           "size": 76,
-          "sha256": "F9D0F66505506ED3AD4288EA1D18B85FBFC49865FCC3A5A9EC6794E358988C53",
-          "url": "f9d0f665_build.json"
+          "sha256": "DB685F5E6A31BE343211965D10C0A6CAF73077EA43AEBC41CBA42B7BE94B3807",
+          "url": "db685f5e_build.json"
         },
         {
           "path": "aurelion/prices.json",
@@ -51,9 +51,9 @@
         },
         {
           "path": "aurelion/studio-project.json",
-          "size": 828685,
-          "sha256": "E25E7D706CD53FC0E8AB23520D47FCA084AFC196493139279DE741E19CAF729E",
-          "url": "e25e7d70_studio-project.json"
+          "size": 845958,
+          "sha256": "EB74E204A5CEA051B380C5D85FEE43296A0D30519C2C853C7343ED1646F9EC88",
+          "url": "eb74e204_studio-project.json"
         },
         {
           "path": "aurelion/update-server.ps1",
@@ -69,9 +69,9 @@
         },
         {
           "path": "bin/Win64_Shipping_Client/Aurelion.Core.dll",
-          "size": 577024,
-          "sha256": "755EB794F0C98E02195485543D3A6CD2F95909DEF02606C74FF458963251738B",
-          "url": "755eb794_Aurelion.Core.dll"
+          "size": 585728,
+          "sha256": "9567CF95EA8419B1898C4E68C23E30368E39D7F7BAE9C84E40D7B4756E83B08A",
+          "url": "9567cf95_Aurelion.Core.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/Autofac.dll",
@@ -495,9 +495,9 @@
         },
         {
           "path": "GUI/AurelionScreens/CharacterCreationClanNamingStage.xml",
-          "size": 26702,
-          "sha256": "E8F17D456CCE334C842FB9A87BDD0A3FF9F09713993EBFF6519C0076E42B6AC4",
-          "url": "e8f17d45_CharacterCreationClanNamingStage.xml"
+          "size": 26701,
+          "sha256": "99675495C7CD42C167ED0DE00E2E7E5BD8EA765C199A14151053476CAE77D82F",
+          "url": "99675495_CharacterCreationClanNamingStage.xml"
         },
         {
           "path": "GUI/AurelionScreens/CharacterCreationCultureStage.xml",
@@ -543,9 +543,9 @@
         },
         {
           "path": "GUI/AurelionScreens/ClanPartiesRightPanel.xml",
-          "size": 43966,
-          "sha256": "B0798F7DE3E845B61509AE2BD08A09402ED0E53BE2CC397E516DDBE41DB5EF23",
-          "url": "b0798f7d_ClanPartiesRightPanel.xml"
+          "size": 49805,
+          "sha256": "1F40AF62135584BE02D973A1E84D38001BAE6380F82AAA68940AC59A36C768D0",
+          "url": "1f40af62_ClanPartiesRightPanel.xml"
         },
         {
           "path": "GUI/AurelionScreens/ClanPartyTuple.xml",
@@ -568,8 +568,8 @@
         {
           "path": "GUI/AurelionScreens/ClansPanel.xml",
           "size": 33471,
-          "sha256": "A7F25C02A2B1478E6038AFD285AAAC2D136D5D3C4957F8750092AFD99CE6A57B",
-          "url": "a7f25c02_ClansPanel.xml"
+          "sha256": "2EA7E825A8F5A5F30966217A2374778B4248EFDEA1A4040FA0BF72CBF16886DC",
+          "url": "2ea7e825_ClansPanel.xml"
         },
         {
           "path": "GUI/AurelionScreens/ClanTuple.xml",
@@ -579,9 +579,9 @@
         },
         {
           "path": "GUI/AurelionScreens/ConversationItem.xml",
-          "size": 9629,
-          "sha256": "409E3EF7939257B91D5F02E1477FCC59AC5990D19781DF6C62DC04B1F4B6F541",
-          "url": "409e3ef7_ConversationItem.xml"
+          "size": 9618,
+          "sha256": "A7E48224A9061ADB1AE6AEAA9A4758D78618147DCD89F978EBBB2EBD0613D1DE",
+          "url": "a7e48224_ConversationItem.xml"
         },
         {
           "path": "GUI/AurelionScreens/CoopJoinCancelOverlay.xml",
@@ -598,8 +598,8 @@
         {
           "path": "GUI/AurelionScreens/DiplomacyPanel.xml",
           "size": 58645,
-          "sha256": "8DB96DB2314B650AE91C03853D1798FCA51447E349C1876A656AF4CEB13600D1",
-          "url": "8db96db2_DiplomacyPanel.xml"
+          "sha256": "5B54AFC522E6C5ABD676C9B11C42FA84DB576F1448BB6905B295BC9C83749B31",
+          "url": "5b54afc5_DiplomacyPanel.xml"
         },
         {
           "path": "GUI/AurelionScreens/EncounterOverlay.xml",
@@ -705,9 +705,9 @@
         },
         {
           "path": "GUI/AurelionScreens/GameMenuPartyItem.xml",
-          "size": 6514,
-          "sha256": "9388DA1A82FF336C3DF5343E6867464C97EAF6F89D7D4A8EBB1CC8771BB7853A",
-          "url": "9388da1a_GameMenuPartyItem.xml"
+          "size": 7271,
+          "sha256": "EEB5AF6F749ED95AA5466D0C92A44651FFA03638BBD7861C1987917A7D9B18EB",
+          "url": "eeb5af6f_GameMenuPartyItem.xml"
         },
         {
           "path": "GUI/AurelionScreens/GameNotificationUI.xml",
@@ -789,9 +789,9 @@
         },
         {
           "path": "GUI/AurelionScreens/PropertyBasedTooltip.xml",
-          "size": 5321,
-          "sha256": "EEBD29BE0456AD5BC178EAA48AD17D6FA1331A6FAFB496C487C76D793BD0B366",
-          "url": "eebd29be_PropertyBasedTooltip.xml"
+          "size": 8370,
+          "sha256": "8153F3C793CD41EE80779762E8001BE23ED391428AD231DF66B709EAAC4C4967",
+          "url": "8153f3c7_PropertyBasedTooltip.xml"
         },
         {
           "path": "GUI/AurelionScreens/RundownTooltip.xml",
@@ -813,9 +813,9 @@
         },
         {
           "path": "GUI/AurelionScreens/SPConversation.xml",
-          "size": 16816,
-          "sha256": "CFAE5A4FB43D682A420509A30DBA4399CA731220F2AD5C763DC032A8BF9D9C51",
-          "url": "cfae5a4f_SPConversation.xml"
+          "size": 16992,
+          "sha256": "DFDF92A2FC1FA9D868B4F5BA725DB7B7A5EA973B2D8CE328D22D8092171C4DAC",
+          "url": "dfdf92a2_SPConversation.xml"
         },
         {
           "path": "GUI/AurelionScreens/Standard.BottomBigCloseButton.xml",
@@ -861,9 +861,9 @@
         },
         {
           "path": "GUI/AurelionScreens/TownManagement.xml",
-          "size": 40846,
-          "sha256": "9CF6A38A6E6AD13A2BA4E68C7B97C86E0E7997B42A8F5E60B71F25D2EE8ECB76",
-          "url": "9cf6a38a_TownManagement.xml"
+          "size": 42170,
+          "sha256": "E5CE1A21F1321FA959EA9B99EF7650B0FDFF64C6FECB717213B0DA1EBBAB25A5",
+          "url": "e5ce1a21_TownManagement.xml"
         },
         {
           "path": "GUI/AurelionScreens/TruceTuple.xml",
@@ -880,8 +880,8 @@
         {
           "path": "GUI/Brushes/AurelionAdmin.xml",
           "size": 30824,
-          "sha256": "64C86415DEC8FCE7B7D6ACAC01C9EEA7868FE0B9012E2E3A57EA031F8AA2D324",
-          "url": "64c86415_AurelionAdmin.xml"
+          "sha256": "F490AA9B756D0E7A27E57F0540F4D9D1E2FF5EABBB224B8958C451EDB31D2ADA",
+          "url": "f490aa9b_AurelionAdmin.xml"
         },
         {
           "path": "GUI/Brushes/AurelionCulture.xml",
@@ -892,14 +892,14 @@
         {
           "path": "GUI/Brushes/AurelionSlots.xml",
           "size": 6673,
-          "sha256": "438028145136A3A799142239B9767E293CADD2149626D26A0586021C2085DBA8",
-          "url": "43802814_AurelionSlots.xml"
+          "sha256": "67C5A036F007A330864D5832D5297E2CF320D93E70633850EAFB9E0FCD52DC09",
+          "url": "67c5a036_AurelionSlots.xml"
         },
         {
           "path": "GUI/Brushes/AurelionUi.xml",
           "size": 11366,
-          "sha256": "D2E5B57A1461138C5CB4EA0A01DFC4D682AD6BC732B447DC760B858B4FA38626",
-          "url": "d2e5b57a_AurelionUi.xml"
+          "sha256": "33EBBC3C590BBB8C2709A5EF4E17A6DFC142019772AF90BEACBDCAD22E2C6B84",
+          "url": "33ebbc3c_AurelionUi.xml"
         },
         {
           "path": "GUI/Brushes/AurelionV5.xml",
@@ -945,39 +945,39 @@
         },
         {
           "path": "GUI/Prefabs/AurInvStrip.xml",
-          "size": 2579,
-          "sha256": "68C0ABA761F59DDB6B6E09BE56FFB913EA4420EB5744B422CDA7BCD68D2A8F51",
-          "url": "68c0aba7_AurInvStrip.xml"
+          "size": 2857,
+          "sha256": "BA719B2DFE5B9D2E12832B55B25CA5A18890CBB7ED892734A66FD165F6E0E0AB",
+          "url": "ba719b2d_AurInvStrip.xml"
         },
         {
           "path": "GUI/Prefabs/AurQuestCard.xml",
           "size": 1773,
-          "sha256": "5E826D2CA2A0B936A534F0CA7EC203C37C0F78997A09C8E3926CDE616CA4DDD9",
-          "url": "5e826d2c_AurQuestCard.xml"
+          "sha256": "65D695C09E15D2C95470C03780192E8AE2591474377878546746A4974E2E1C4F",
+          "url": "65d695c0_AurQuestCard.xml"
         },
         {
           "path": "GUI/Prefabs/AurSlots.xml",
-          "size": 45607,
-          "sha256": "142738D885270984DE6E896F2138100EE46C6CD7BB7495D4955B52E870B403EC",
-          "url": "142738d8_AurSlots.xml"
+          "size": 45378,
+          "sha256": "0491BC3A0FEF95A193C9637A0B830192E60BF8589C43A1FF2F853280ABF8BC44",
+          "url": "0491bc3a_AurSlots.xml"
         },
         {
           "path": "GUI/Prefabs/AurSlotsLite.xml",
-          "size": 45460,
-          "sha256": "89DB858FB271FB07DEA839BD75BCEE7619B6ACE6F5FD7A1EFB58A7B955B9AE56",
-          "url": "89db858f_AurSlotsLite.xml"
+          "size": 45231,
+          "sha256": "3A28773C6FEE93256C35F231A79E76BE3F09F2965125B2EC34C5BB163E77351A",
+          "url": "3a28773c_AurSlotsLite.xml"
         },
         {
           "path": "GUI/Prefabs/AurTownCard.xml",
           "size": 7907,
-          "sha256": "B21DF825BD0640A57E4DB91ACEFE1821F5E5C74EB30C71574AE68955478CBE0E",
-          "url": "b21df825_AurTownCard.xml"
+          "sha256": "8313696A5BF1093F20D72E3546D3FF53B2C3F9A87B359DB77DE5FE702460D09D",
+          "url": "8313696a_AurTownCard.xml"
         },
         {
           "path": "GUI/Prefabs/AurWelcome.xml",
-          "size": 2515,
-          "sha256": "820C3E6B303739FFD1CB686173C48EE3A147030F834BDC1C2D71499C8EDCA965",
-          "url": "820c3e6b_AurWelcome.xml"
+          "size": 2524,
+          "sha256": "C9376696AAE60FC5F214F0D9D475F97E52E362EA9A6D7E79C7931E6B8C831016",
+          "url": "c9376696_AurWelcome.xml"
         },
         {
           "path": "GUI/Prefabs/CoopBugReportUIMovie.xml",
@@ -1251,9 +1251,9 @@
         },
         {
           "path": "SubModule.xml",
-          "size": 3326,
-          "sha256": "A753E1DE33D4BA91FF24CBC819A699AF1F109CD9942BF9A81CC7F058C7508138",
-          "url": "a753e1de_SubModule.xml"
+          "size": 3245,
+          "sha256": "0603C06D92175584FE6F85598EDBD13D907614A3F2E1D4090EC4CA6B18691DC3",
+          "url": "0603c06d_SubModule.xml"
         },
         {
           "path": "ThirdPartyNotices/Concentus-LICENSE.txt",
