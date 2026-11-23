@@ -1,0 +1,490 @@
+<Prefab>
+	<Constants>
+		<Constant Name="Encyclopedia.Frame.Width" BrushLayer="Default" BrushName="Encyclopedia.Frame" BrushValueType="Width" />
+		<Constant Name="Encyclopedia.Frame.Height" BrushLayer="Default" BrushName="Encyclopedia.Frame" BrushValueType="Height" />
+
+		<Constant Name="Top.Height" Value="220" />
+		<Constant Name="Top.VerticalDivider.Height" Value="!Top.Height" />
+		<Constant Name="Top.VerticalDivider.Width" Value="15" />
+		<Constant Name="Top.VerticalDivider.Thin.Width" Value="7" />
+
+		<Constant Name="Reference.AlphaFactor" Value="0" />
+	</Constants>
+	<Window>
+		<Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Sprite="BlankWhiteSquare_9" Color="#000000CC">
+			<Children>
+
+				<!--<NavigationForcedScopeCollectionTargeter CollectionID="TownManagementCollection" CollectionParent="..\." />-->
+				<Standard.PopupCloseButton HorizontalAlignment="Center" VerticalAlignment="Center" MarginTop="1004" Parameter.ButtonAction="ExecuteDone" Parameter.ButtonText="@DoneText" Parameter.InputKeyDataSource="{DoneInputKey}"/>
+
+				<!--Popup-->
+				<BrushWidget Id="TownManagementPopup" PositionYOffset="-26" DoNotAcceptEvents="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="!Encyclopedia.Frame.Width" SuggestedHeight="!Encyclopedia.Frame.Height" HorizontalAlignment="Center" VerticalAlignment="Center" MarginBottom="35" Brush="Encyclopedia.Frame" ReserveManagementPopup="ReservePopup">
+					<Children>
+
+						<!--Title Text Widget-->
+						<Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="590" SuggestedHeight="155" HorizontalAlignment="Center" VerticalAlignment="Top" PositionXOffset="6" PositionYOffset="-18" Sprite="StdAssets\tabbar_popup" IsDisabled="true">
+							<Children>
+								<TextWidget WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" VerticalAlignment="Center" PositionYOffset="-25" Brush="Recruitment.Popup.Title.Text" Brush.FontSize="46" IsDisabled="true" Text="@ManageText" />
+							</Children>
+						</Widget>
+
+						<!--Shops List-->
+						<ListPanel WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" MarginLeft="35" MarginTop="50" StackLayout.LayoutMethod="VerticalTopToBottom">
+							<Children>
+
+								<TextWidget WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Left" MarginTop="6" ClipContents="false" Text="@ShopsInSettlementText" IsVisible="@IsTown"/>
+
+								<NavigationScopeTargeter ScopeID="TownManagementShopsScope" ScopeParent="..\ShopList" ScopeMovements="Horizontal" RightNavigationScope="TownManagementConsumptionsScope" />
+								<NavigatableListPanel Id="ShopList" DataSource="{Shops}" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" MarginRight="10" MarginTop="10" MarginBottom="10">
+									<ItemTemplate>
+										<BrushWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="70" SuggestedHeight="50" MarginLeft="5" MarginRight="5" MarginTop="5" MarginBottom="5" Brush="Encyclopedia.SubPage.Element">
+											<Children>
+												<!--<TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Brush.FontSize="17" Text="@ShopName" />-->
+												<ShopVisualIconBrushWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="35" SuggestedHeight="26" VerticalAlignment="Center" HorizontalAlignment="Center" Brush="TownManamgement.Shop.Icon.Brush" ShopId="@ShopId"/>
+												<HintWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" />
+											</Children>
+										</BrushWidget>
+									</ItemTemplate>
+								</NavigatableListPanel>
+
+							</Children>
+						</ListPanel>
+
+						<!--Bound Villages List-->
+						<ListPanel WidthSizePolicy="CoverChildren" HorizontalAlignment="Right" MarginRight="35" MarginTop="40" HeightSizePolicy="CoverChildren" StackLayout.LayoutMethod="VerticalTopToBottom" >
+							<Children>
+								<TextWidget WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Right" MarginTop="6" ClipContents="false" Text="@VillagesText" />
+
+								<NavigationScopeTargeter ScopeID="TownManagementVillagesScope" ScopeParent="..\VillageList" ScopeMovements="Horizontal" LeftNavigationScope="TownManagementConsumptionsScope" />
+								<NavigatableListPanel Id="VillageList" DataSource="{Villages}" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" MarginLeft="10" MarginTop="5" MarginBottom="10">
+									<ItemTemplate>
+										<BrushWidget DoNotPassEventsToChildren="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="65" SuggestedHeight="65" MarginLeft="5" MarginRight="5" MarginTop="5" MarginBottom="5" Brush="Encyclopedia.SubPage.Element" Command.HoverBegin="ExecuteShowTooltip" Command.HoverEnd="ExecuteHideTooltip">
+											<Children>
+												<Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" MarginLeft="3" MarginRight="3" MarginTop="3" MarginBottom="3" Sprite="@Background" />
+												<!--<VillageTypeVisualIconBrushWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="34" SuggestedHeight="26" VerticalAlignment="Center" HorizontalAlignment="Center" Brush="TownManamgement.Village.Icon.Brush" VillageType="@VillageType"/>-->
+											</Children>
+										</BrushWidget>
+									</ItemTemplate>
+								</NavigatableListPanel>
+
+							</Children>
+						</ListPanel>
+
+						<NavigationScopeTargeter ScopeID="TownManagementConsumptionsScope" ScopeParent="..\Consumptions" LeftNavigationScope="TownManagementShopsScope" RightNavigationScope="TownManagementVillagesScope" />
+						<Widget Id="Consumptions" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="58.5" SuggestedHeight="68.5" HorizontalAlignment="Center" MarginTop="90" Sprite="SPGeneral\TownManagement\Consumption_Icon" DoNotPassEventsToChildren="true" GamepadNavigationIndex="0" IsVisible="@IsTown">
+							<Children>
+								<HintWidget DataSource="{ConsumptionTooltip}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" />
+							</Children>
+						</Widget>
+
+						<!--Inner Panel-->
+						<Widget Id="InnerPanel" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" MarginLeft="20" MarginRight="18" MarginTop="172" MarginBottom="25">
+							<Children>
+
+								<ListPanel Id="ManagementPlacementList" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" StackLayout.LayoutMethod="VerticalTopToBottom">
+									<Children>
+
+										<!--Top Half-->
+										<Widget Id="TopHalf" WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="!Top.Height">
+											<Children>
+
+												<ListPanel Id="TopHalfListPanel" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent">
+													<Children>
+
+														<!--Governor Panel-->
+														<Widget Id="GovernorPanel" WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="422" MarginTop="5">
+															<Children>
+<Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" MarginLeft="5" MarginRight="5" MarginTop="2" MarginBottom="12" Sprite="aur_v6\glass_9" DoNotAcceptEvents="true" />
+
+																<ListPanel Id="GovernorListPanel" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" VerticalAlignment="Top" StackLayout.LayoutMethod="VerticalTopToBottom">
+																	<Children>
+																		<TextWidget WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" Brush="TownManagement.Item.Title.Text" Text="@GovernorText" Brush.FontColor="#f4e1c4ff"/>
+																		<Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="341" SuggestedHeight="7" Sprite="aur_v6\white" Color="#F7F2E01F" />
+
+																		<!--Governor Button-->
+																		<NavigationScopeTargeter ScopeID="GovernorPanelScope" ScopeParent="..\GovernorSelectionButtonParent" IsDefaultNavigationScope="true" RightNavigationScope="ReserveScope" />
+																		<Widget Id="GovernorSelectionButtonParent" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="160" SuggestedHeight="120" HorizontalAlignment="Center" MarginTop="10" >
+																			<Children>
+
+																				<HintWidget DataSource="{GovernorSelectionDisabledHint}" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" />
+
+																				<!--Governor Button-->
+																				<ToggleButtonWidget Id="GovernorSelectionButton" DoNotPassEventsToChildren="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="160" SuggestedHeight="120" HorizontalAlignment="Left" Brush="TownManagement.Governor" WidgetToClose="..\..\..\..\..\..\..\..\..\GovernorSelectionPopup" UpdateChildrenStates="true" GamepadNavigationIndex="0" IsEnabled="@IsGovernorSelectionEnabled">
+																					<Children>
+
+																						<!--Element Image-->
+																						<ImageIdentifierWidget Id="ElementImage" DataSource="{CurrentGovernor\ImageIdentifier}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" HorizontalAlignment="Center" MarginLeft="3" MarginRight="3" MarginTop="3" MarginBottom="3" AdditionalArgs="@AdditionalArgs" ImageId="@Id" TextureProviderName="@TextureProviderName" />
+
+																						<ImageWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="69" SuggestedHeight="69" HorizontalAlignment="Center" VerticalAlignment="Center" Brush="TownManagement.Governor.PlusButton" IsHidden="@HasGovernor" />
+
+																						<!--Element Name-->
+																						<TextWidget DataSource="{CurrentGovernor}" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="350" SuggestedHeight="30" HorizontalAlignment="Center" VerticalAlignment="Bottom" PositionYOffset="40" Brush="Encyclopedia.SubPage.Element.Name.Text" Brush.FontSize="25" Text="@NameText" />
+
+																						<!--Element Hint-->
+																						<HintWidget DataSource="{CurrentGovernorTooltip}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" />
+
+																						<!-- Disabled Shadow -->
+																						<Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Sprite="BlankWhiteSquare" Color="#00000099" IsHidden="@IsGovernorSelectionEnabled"/>
+
+																					</Children>
+																				</ToggleButtonWidget>
+
+																			</Children>
+																		</Widget>
+
+																	</Children>
+																</ListPanel>
+
+																<Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="!Top.VerticalDivider.Width" SuggestedHeight="!Top.VerticalDivider.Height" HorizontalAlignment="Right" VerticalAlignment="Center" Sprite="aur_v6\white" Color="#F7F2E000" AlphaFactor="0.5" />
+															</Children>
+														</Widget>
+
+														<Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent">
+															<Children>
+
+																<!--Middle Panel Container-->
+																<ListPanel WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" HorizontalAlignment="Center" VerticalAlignment="Top">
+																	<Children>
+
+																		<!--Middle Left Panel-->
+																		<Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent">
+																			<Children>
+<Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" MarginLeft="5" MarginRight="5" MarginTop="2" MarginBottom="12" Sprite="aur_v6\glass_9" DoNotAcceptEvents="true" />
+<TextWidget Id="AurTmIncome" WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="26" VerticalAlignment="Top" MarginTop="12" MarginLeft="20" MarginRight="20" Brush="TownManagement.Item.Title.Text" Brush.FontColor="#F7F2E0FF" Text=" " DoNotAcceptEvents="true" />
+																				<ListPanel DataSource="{MiddleFirstTextList}" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" VerticalAlignment="Center" MarginTop="34" MarginLeft="20" StackLayout.LayoutMethod="VerticalTopToBottom">
+																					<ItemTemplate>
+                                            <ListPanel DoNotPassEventsToChildren="true" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" StackLayout.LayoutMethod="HorizontalLeftToRight" MinHeight="38">
+                                              <Children>
+                                                <TextWidget WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" VerticalAlignment="Center" Brush="TownManagement.Description.Title.Text" Text="@Title" />
+                                                <SettlementStatTextWidget WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" VerticalAlignment="Center" MarginLeft="5" Brush="TownManagement.Description.Value.Text" IsWarning="@IsWarning" IntText="@Value" />
+                                                <ChangeAmountTextWidget WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" MaxWidth="80" HorizontalAlignment="Center" VerticalAlignment="Center" Brush="Settlement.Property.PositiveChange.Text" Amount="@ValueChange" NegativeBrushName="TownManagement.Property.NegativeChange.Text" PositiveBrushName="TownManagement.Property.PositiveChange.Text" UseParentheses="true" />
+                                                <DescriptionItemVisualBrushWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="30" SuggestedHeight="30" VerticalAlignment="Center" Brush="TownManamgement.Description.Type.Brush" Type="@Type" />
+                                                <HintWidget DataSource="{Hint}" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" IsEnabled="false"/>
+                                              </Children>
+                                            </ListPanel>
+																					</ItemTemplate>
+																				</ListPanel>
+																			</Children>
+																		</Widget>
+
+																		<!--Vertical Seperator-->
+																		<Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="!Top.VerticalDivider.Thin.Width" SuggestedHeight="!Top.VerticalDivider.Height" VerticalAlignment="Bottom" Sprite="aur_v6\white" Color="#F7F2E000" AlphaFactor="0.44" />
+
+																		<!--Middle Right Panel-->
+																		<Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent">
+																			<Children>
+<Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" MarginLeft="5" MarginRight="5" MarginTop="2" MarginBottom="12" Sprite="aur_v6\glass_9" DoNotAcceptEvents="true" />
+<TextWidget Id="AurTmSecurity" WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="26" VerticalAlignment="Top" MarginTop="12" MarginLeft="20" MarginRight="20" Brush="TownManagement.Item.Title.Text" Brush.FontColor="#F7F2E0FF" Text=" " DoNotAcceptEvents="true" />
+																				<ListPanel DataSource="{MiddleSecondTextList}" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" VerticalAlignment="Center" MarginTop="34" MarginLeft="20" StackLayout.LayoutMethod="VerticalTopToBottom">
+																					<ItemTemplate>
+                                            <ListPanel DoNotPassEventsToChildren="true" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Left" MarginLeft="8" StackLayout.LayoutMethod="HorizontalLeftToRight" MinHeight="38">
+                                              <Children>
+                                                <TextWidget WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" VerticalAlignment="Center" Brush="TownManagement.Description.Title.Text" Text="@Title" />
+                                                <SettlementStatTextWidget WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" VerticalAlignment="Center" MarginLeft="5" Brush="TownManagement.Description.Value.Text" IsWarning="@IsWarning" IntText="@Value" />
+                                                <ChangeAmountTextWidget WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" MaxWidth="80" HorizontalAlignment="Center" VerticalAlignment="Center" Brush="Settlement.Property.PositiveChange.Text" Amount="@ValueChange" NegativeBrushName="TownManagement.Property.NegativeChange.Text" PositiveBrushName="TownManagement.Property.PositiveChange.Text" UseParentheses="true" />
+                                                <DescriptionItemVisualBrushWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="30" SuggestedHeight="30" VerticalAlignment="Center" Brush="TownManamgement.Description.Type.Brush" Type="@Type" />
+                                                <HintWidget DataSource="{Hint}" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" IsEnabled="false"/>
+                                              </Children>
+                                            </ListPanel>
+																					</ItemTemplate>
+																				</ListPanel>
+																			</Children>
+																		</Widget>
+
+																	</Children>
+																</ListPanel>
+
+															</Children>
+														</Widget>
+
+														<!--Reserve Panel-->
+														<NavigationScopeTargeter ScopeID="ReserveScope" ScopeParent="..\ReservePanel" ScopeMovements="Horizontal" HasCircularMovement="false" LeftNavigationScope="GovernorPanelScope" DownNavigationScope="QueueItemsScope" />
+														<Widget Id="ReservePanel" WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="413" DataSource="{ReserveControl}" MarginTop="5">
+															<Children>
+<Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" MarginLeft="5" MarginRight="5" MarginTop="2" MarginBottom="12" Sprite="aur_v6\glass_9" DoNotAcceptEvents="true" />
+
+																<Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="!Top.VerticalDivider.Width" SuggestedHeight="!Top.VerticalDivider.Height" HorizontalAlignment="Left" VerticalAlignment="Bottom" Sprite="aur_v6\white" Color="#F7F2E000" AlphaFactor="0.5" />
+
+																<ListPanel Id="ReserveListPanel" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" VerticalAlignment="Top" StackLayout.LayoutMethod="VerticalTopToBottom">
+																	<Children>
+
+																		<TextWidget WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" Brush="TownManagement.Item.Title.Text" Text="@ReserveText" Brush.FontColor="#f4e1c4ff" />
+																		<Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="341" SuggestedHeight="7" HorizontalAlignment="Center" Sprite="aur_v6\white" Color="#F7F2E01F" />
+
+																		<ListPanel WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" MarginTop="0">
+																			<Children>
+																				<TextWidget WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" VerticalAlignment="Center" Brush="TownManagement.ReserveAmount.Text" IntText="@CurrentReserveAmount" />
+																				<Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="40" SuggestedHeight="40" HorizontalAlignment="Center" VerticalAlignment="Center" Sprite="General\Icons\Coin@2x" />
+																			</Children>
+																		</ListPanel>
+
+																		<TextWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="350" SuggestedHeight="50" HorizontalAlignment="Center" Brush="TownManagement.Income.Item.Text" Brush.FontSize="20" MarginBottom="0" MarginTop="0" Text="@ReserveBonusText"/>
+																		<ToggleButtonWidget Id="ReserveManagementButton" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="69" SuggestedHeight="69" HorizontalAlignment="Center" MarginBottom="15" Brush="TownManagement.Reserve.PlusButton" WidgetToClose="..\..\..\..\..\..\..\..\ReservePopup" GamepadNavigationIndex="0">
+																			<Children>
+																				<HintWidget DataSource="{AddGoldToReserveHint}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" IsEnabled="false" />
+																			</Children>
+																		</ToggleButtonWidget>
+
+																	</Children>
+																</ListPanel>
+
+															</Children>
+														</Widget>
+
+													</Children>
+												</ListPanel>
+
+
+												<Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="14" VerticalAlignment="Bottom" PositionYOffset="7" Sprite="aur_v6\white" Color="#F7F2E000" />
+											</Children>
+										</Widget>
+
+										<!--Bottom Half-->
+										<Widget DataSource="{ProjectSelection}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent">
+											<Children>
+
+												<ListPanel WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent">
+													<Children>
+
+														<ListPanel WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" VerticalAlignment="Top" MarginTop="5" StackLayout.LayoutMethod="VerticalTopToBottom">
+															<Children>
+
+																<!--Projects Title-->
+																<TextWidget WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" Brush="TownManagement.BottomPart.Title.Text" Text="@ProjectsText" />
+
+																<Widget WidthSizePolicy="CoverChildren" HeightSizePolicy="Fixed" SuggestedHeight="290" HorizontalAlignment="Center">
+																	<Children>
+
+																		<ScrollablePanel WidthSizePolicy="CoverChildren" HeightSizePolicy="StretchToParent" AutoHideScrollBars="true" ClipRect="ScrollingRect" InnerPanel="ScrollingRect\AvailableProjects" VerticalScrollbar="..\VerticalScrollbar">
+																			<Children>
+																				<Widget Id="ScrollingRect" WidthSizePolicy="Fixed" SuggestedWidth="950" HeightSizePolicy="StretchToParent" ClipContents="true">
+																					<Children>
+																						<NavigationScopeTargeter ScopeID="AvailableProjectsScope" ScopeParent="..\AvailableProjects" ScopeMovements="Horizontal" AlternateScopeMovements="Vertical" AlternateMovementStepSize="6" DoNotAutoCollectChildScopes="true" ExtendDiscoveryAreaRight="250"/>
+																						<NavigatableGridWidget Id="AvailableProjects" DataSource="{AvailableProjects}" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" MarginTop="10" HorizontalAlignment="Center" DefaultCellWidth="160" DefaultCellHeight="140" ColumnCount="6" LayoutImp.VerticalLayoutMethod="TopToBottom" StepSize="10" AutoScrollBottomOffset="35">
+																							<ItemTemplate>
+																								<ButtonWidget DoNotPassEventsToChildren="true" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" Command.HoverBegin="ExecuteSetAsCurrent" Command.HoverEnd="ExecuteResetCurrent" UpdateChildrenStates="true">
+																									<Children>
+																										<NavigationTargetSwitcher FromTarget="..\." ToTarget="..\DevelopmentItem" />
+																										<DevelopmentItem Id="DevelopmentItem" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="110" SuggestedHeight="110" HorizontalAlignment="Center" VerticalAlignment="Top" Parameter.IsProgressIndicatorEnabled="true" Parameter.UseSmallVisual="true" />
+																									</Children>
+																								</ButtonWidget>
+																							</ItemTemplate>
+																						</NavigatableGridWidget>
+																					</Children>
+																				</Widget>
+																			</Children>
+																		</ScrollablePanel>
+
+																		<ScrollbarWidget Id="VerticalScrollbar" WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="8" HorizontalAlignment="Right" VerticalAlignment="Center" MarginTop="15" MarginBottom="15" AlignmentAxis="Vertical" Handle="VerticalScrollbarHandle" IsVisible="false" MaxValue="100" MinValue="0">
+																			<Children>
+																				<Widget WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="4" HorizontalAlignment="Center" Sprite="BlankWhiteSquare_9" AlphaFactor="0.2" Color="#5a4033FF" />
+																				<ImageWidget Id="VerticalScrollbarHandle" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="8" SuggestedHeight="10" HorizontalAlignment="Center" Brush="FaceGen.Scrollbar.Handle" IsVisible="false" />
+																			</Children>
+																		</ScrollbarWidget>
+																	</Children>
+																</Widget>
+
+																<!--Daily Defaults Title-->
+																<TextWidget WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" PositionYOffset="0" MarginBottom="5" Brush="TownManagement.BottomPart.Title.Text" Text="@DailyDefaultsText" />
+
+																<Widget WidthSizePolicy="CoverChildren" HeightSizePolicy="Fixed" SuggestedHeight="145" MarginTop="5" HorizontalAlignment="Center">
+																	<Children>
+																		<ScrollablePanel WidthSizePolicy="CoverChildren" HeightSizePolicy="StretchToParent" AutoHideScrollBars="true" ClipContents="true" ClipRect="ScrollingRect" InnerPanel="ScrollingRect\DailyDefaults" VerticalScrollbar="..\VerticalScrollbar">
+																			<Children>
+																				<Widget Id="ScrollingRect" WidthSizePolicy="CoverChildren" HeightSizePolicy="StretchToParent">
+																					<Children>
+																						<NavigationScopeTargeter ScopeID="DailyDefaultsScope" ScopeParent="..\DailyDefaults" ScopeMovements="Horizontal" AlternateScopeMovements="Vertical" AlternateMovementStepSize="6" HasCircularMovement="false" DoNotAutoCollectChildScopes="true" />
+																						<NavigatableGridWidget Id="DailyDefaults" DataSource="{DailyDefaultList}" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" DefaultCellWidth="160" DefaultCellHeight="145" ColumnCount="6" LayoutImp.VerticalLayoutMethod="TopToBottom" AutoScrollBottomOffset="35">
+																							<ItemTemplate>
+																								<ButtonWidget DoNotPassEventsToChildren="true" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" Command.Click="ExecuteSetAsActiveDevelopment" Command.HoverBegin="ExecuteSetAsCurrent" Command.HoverEnd="ExecuteResetCurrent" IsSelected="@IsDefault" UpdateChildrenStates="true">
+																									<Children>
+																										<DailyDefaultItem WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="110" SuggestedHeight="110" HorizontalAlignment="Center" VerticalAlignment="Top" Parameter.UseSmallVisual="true" />
+																									</Children>
+																								</ButtonWidget>
+																							</ItemTemplate>
+																						</NavigatableGridWidget>
+																					</Children>
+																				</Widget>
+																			</Children>
+																		</ScrollablePanel>
+																		<ScrollbarWidget Id="VerticalScrollbar" WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="8" HorizontalAlignment="Right" VerticalAlignment="Center" MarginTop="15" MarginBottom="15" AlignmentAxis="Vertical" Handle="VerticalScrollbarHandle" IsVisible="false" MaxValue="100" MinValue="0">
+																			<Children>
+																				<Widget WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="4" HorizontalAlignment="Center" Sprite="BlankWhiteSquare_9" AlphaFactor="0.2" Color="#5a4033FF" />
+																				<ImageWidget Id="VerticalScrollbarHandle" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="8" SuggestedHeight="10" HorizontalAlignment="Center" Brush="FaceGen.Scrollbar.Handle" IsVisible="false" />
+																			</Children>
+																		</ScrollbarWidget>
+																	</Children>
+																</Widget>
+
+
+																<!--Daily Defaults Explanation-->
+																<TextWidget WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" PositionYOffset="0" MarginBottom="10" Brush="TownManagement.BottomPart.Title.Text" Brush.FontSize="16" Brush.TextAlphaFactor="0.6" Text="@DailyDefaultsExplanationText"/>
+
+															</Children>
+														</ListPanel>
+
+														<!--Vertical Seperator-->
+														<Widget WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="!Top.VerticalDivider.Thin.Width" HorizontalAlignment="Right" VerticalAlignment="Top" PositionYOffset="-7" Sprite="aur_v6\white" Color="#F7F2E000" AlphaFactor="0.7" VerticalFlip="true" />
+
+														<ListPanel DataSource="{CurrentSelectedProject}" WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="390" HorizontalAlignment="Right" StackLayout.LayoutMethod="VerticalTopToBottom">
+															<Children>
+
+																<TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" MarginTop="15" Brush="TownManagement.ProjectPopup.Name.Text" Text="@Name" />
+
+																<!--Current Project Panel-->
+																<Widget Id="CurrentProjectPanel" DoNotPassEventsToChildren="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="193" SuggestedHeight="193" HorizontalAlignment="Center" VerticalAlignment="Top" MarginTop="18" UpdateChildrenStates="true">
+																	<Children>
+																		<BrushWidget SuggestedWidth="193" SuggestedHeight="193" HorizontalAlignment="Center" VerticalAlignment="Center" Brush="TownManagement.CurrentProject.DefaultBackground" />
+																		<DevelopmentItemVisualButtonWidget Id="CurrentProjectVisualWidget" DoNotAcceptEvents="true" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" HorizontalAlignment="Center" VerticalAlignment="Center" IsDaily="false" SpriteCode="@VisualCode" />
+																		<!-- Aurelion (TownManage board): progress ring round the project picture and its percent; the hidden bar only carries the game's progress to the code -->
+																		<FillBarWidget Id="AurTmProg" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="1" SuggestedHeight="1" IsVisible="false" MaxAmountAsFloat="1" InitialAmountAsFloat="@Progress" />
+																		<Widget Id="AurTmRingBox" DoNotAcceptEvents="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="211" SuggestedHeight="211" HorizontalAlignment="Center" VerticalAlignment="Center" IsHidden="@IsDaily">
+																			<Children>
+																				<Widget Id="AurTmRing" DoNotAcceptEvents="true" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" />
+																				<Widget DoNotAcceptEvents="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="74" SuggestedHeight="30" HorizontalAlignment="Center" VerticalAlignment="Bottom" PositionYOffset="10" Sprite="aur_v6\chip_dk_9">
+																					<Children>
+																						<TextWidget Id="AurTmPct" DoNotAcceptEvents="true" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Brush="Aur.V6.Text" Brush.FontSize="17" Brush.TextHorizontalAlignment="Center" Brush.TextVerticalAlignment="Center" Text=" " />
+																					</Children>
+																				</Widget>
+																			</Children>
+																		</Widget>
+																	</Children>
+																</Widget>
+
+																<TextWidget WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" MarginTop="10" Brush="TownManagement.ProductionQueueAndEnd.Text" Text="@ProductionText" />
+
+																<CircularAutoScrollablePanelWidget DoNotPassEventsToChildren="true" WidthSizePolicy="CoverChildren" HeightSizePolicy="Fixed" SuggestedHeight="236" HorizontalAlignment="Center" ClipRect="ClipRect" InnerPanel="ClipRect\InnerPanel" ScrollType="ByPixels" ScrollPixelsPerSecond="30" IdleTime="2" AutoScroll="true">
+																	<Children>
+																		<Widget Id="ClipRect" WidthSizePolicy="CoverChildren" HeightSizePolicy="StretchToParent" ClipContents="true">
+																			<Children>
+																				<ListPanel Id="InnerPanel" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" StackLayout.LayoutMethod="VerticalTopToBottom">
+																					<Children>
+																						<TextWidget WidthSizePolicy="Fixed" HeightSizePolicy="CoverChildren" SuggestedWidth="350" HorizontalAlignment="Center" MarginTop="10" Brush="TownManagement.ProjectPopup.Explanation.Text" Text="@Explanation" />
+																						<AutoHideRichTextWidget WidthSizePolicy="Fixed" HeightSizePolicy="CoverChildren" SuggestedWidth="350" HorizontalAlignment="Center" Brush="TownManagement.CurrentProject.PositiveEffect.Text" Text="@CurrentPositiveEffectText" />
+																						<Widget WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" IsHidden="@IsDaily">
+																							<Children>
+																								<AutoHideRichTextWidget WidthSizePolicy="Fixed" HeightSizePolicy="CoverChildren" SuggestedWidth="350" Brush="TownManagement.CurrentProject.PositiveEffect.Text" Text="@NextPositiveEffectText"/>
+																							</Children>
+																						</Widget>
+
+																						<AutoHideTextWidget WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" Brush="TownManagement.ProductionCost.Text" ClipContents="false" Text="@ProductionCostText">
+																							<Children>
+																								<Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="35" SuggestedHeight="28" HorizontalAlignment="Right" VerticalAlignment="Center" PositionXOffset="35" Sprite="SPGeneral\TownManagement\production_icon" />
+																							</Children>
+																						</AutoHideTextWidget>
+																					</Children>
+																				</ListPanel>
+																			</Children>
+																		</Widget>
+																	</Children>
+																</CircularAutoScrollablePanelWidget>
+
+															</Children>
+														</ListPanel>
+
+														<!--Vertical Seperator-->
+														<Widget WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="!Top.VerticalDivider.Thin.Width" HorizontalAlignment="Right" VerticalAlignment="Top" PositionYOffset="-7" Sprite="aur_v6\white" Color="#F7F2E000" AlphaFactor="0.7" VerticalFlip="true" />
+
+														<!--Queue Vertical List-->
+														<Widget WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="95" HorizontalAlignment="Right" MarginRight="5">
+															<Children>
+
+																<TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" MarginTop="10" Brush="TownManagement.Description.Title.Text" Brush.FontSize="20" Text="@QueueText" />
+
+																<ScrollablePanel Id="ScrollablePanel" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" MarginTop="40" AutoHideScrollBars="true" ClipRect="ClipRect" InnerPanel="ClipRect\QueueList" VerticalScrollbar="..\VerticalScrollbar">
+																	<Children>
+
+																		<Widget Id="ClipRect" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" ClipContents="true">
+																			<Children>
+																				<NavigationScopeTargeter ScopeID="QueueItemsScope" ScopeMovements="Vertical" ScopeParent="..\QueueList" />
+																				<NavigatableListPanel Id="QueueList" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" MarginTop="5"  MarginBottom="15"  StackLayout.LayoutMethod="VerticalTopToBottom">
+																					<Children>
+
+																						<NavigationScopeTargeter ScopeID="QueueDevelopmentItemsScope" ScopeMovements="Vertical" ScopeParent="..\QueueDevelopmentItems" UpNavigationScope="ReserveScope" />
+																						<NavigatableListPanel Id="QueueDevelopmentItems" DataSource="{CurrentDevelopmentQueue}" WidthSizePolicy="Fixed" HeightSizePolicy="CoverChildren" SuggestedWidth="65" HorizontalAlignment="Center" AcceptDrop="true" Command.Drop="..\ExecuteChangeQueueOrder" CommandParameter.Drop="CurrentDevelopmentQueue" StackLayout.LayoutMethod="VerticalTopToBottom" UseSelfIndexForMinimum="true">
+																							<ItemTemplate>
+																								<Widget  WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="75" SuggestedHeight="65" >
+																									<Children>
+																										<DevelopmentItemVisualButtonWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="56" SuggestedHeight="56" MarginBottom="6" AcceptDrag="true" IsDaily="false" SpriteCode="@VisualCode" UseSmallVariant="true" Command.HoverBegin="ExecuteSetAsCurrent" Command.HoverEnd="ExecuteResetCurrent" Command.DragBegin="ExecuteSetAsCurrent" Command.Click="ExecuteToggleSelected">
+																											<Children>
+
+																												<HintWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Command.HoverBegin="ExecuteShowTooltip" Command.HoverEnd="ExecuteHideTooltip" IsDisabled="true" />
+
+																												<!--Hammer-->
+																												<DevelopmentQueueVisualIconWidget Id="HammerIconWidget" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="20" SuggestedHeight="20" HorizontalAlignment="Left" VerticalAlignment="Top" InProgressIconWidget="InProgressIconWidget" IsEnabled="false" QueueIconWidget="QueueIconWidget" QueueIndex="@DevelopmentQueueIndex" UseSmallVisual="*UseSmallVisual">
+																													<Children>
+
+																														<!--Queue Hammer-->
+																														<Widget Id="QueueIconWidget" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="20" SuggestedHeight="20" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+																															<Children>
+																																<TextWidget WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Right" VerticalAlignment="Top" PositionXOffset="-15" PositionYOffset="-2" Brush="TownManagement.Queue.Index.Text" IntText="@DevelopmentQueueIndex" />
+																															</Children>
+																														</Widget>
+
+																														<!--In Progress Hammer-->
+																														<BrushWidget Id="InProgressIconWidget" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="24" SuggestedHeight="24" HorizontalAlignment="Right" VerticalAlignment="Bottom" PositionXOffset="-4" PositionYOffset="-2" Sprite="SPGeneral\TownManagement\project_popup_hammer_icon" />
+																													</Children>
+																												</DevelopmentQueueVisualIconWidget>
+
+																											</Children>
+																										</DevelopmentItemVisualButtonWidget>
+
+																										<ButtonWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="18" SuggestedHeight="18" HorizontalAlignment="Right" VerticalAlignment="Top" PositionXOffset="-12" PositionYOffset="-2" Command.HoverBegin="ExecuteSetAsCurrent" Command.HoverEnd="ExecuteResetCurrent" Command.Click="ExecuteAddRemoveToQueue" Brush="TownManagement.Development.RemoveFromVerticalQueue.Button" />
+																									</Children>
+																								</Widget>
+
+																							</ItemTemplate>
+																						</NavigatableListPanel>
+
+																						<DevelopmentItemVisualButtonWidget DataSource="{CurrentDailyDefault}" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="55" SuggestedHeight="55" MarginBottom="5" SpriteCode="@VisualCode" UseSmallVariant="true" Command.HoverBegin="ExecuteSetAsCurrent" Command.HoverEnd="ExecuteResetCurrent">
+																							<Children>
+																								<HintWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Command.HoverBegin="ExecuteShowTooltip" Command.HoverEnd="ExecuteHideTooltip" IsDisabled="true" />
+																								<Widget SuggestedWidth="25" SuggestedHeight="16" PositionXOffset="-10" PositionYOffset="-2" Sprite="SPGeneral\TownManagement\project_popup_hammer_icon_fallback" IsDisabled="true" />
+																							</Children>
+																						</DevelopmentItemVisualButtonWidget>
+
+																					</Children>
+																				</NavigatableListPanel>
+
+																			</Children>
+																		</Widget>
+
+																		<!--Scroll Gradient-->
+																		<Widget DoNotAcceptEvents="true" WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="57" HorizontalAlignment="Right" VerticalAlignment="Bottom" Sprite="General\CharacterCreation\character_creation_scroll_gradient" />
+
+																	</Children>
+																</ScrollablePanel>
+
+																<ScrollbarWidget Id="VerticalScrollbar" WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="8" HorizontalAlignment="Right" VerticalAlignment="Center" MarginTop="15" MarginBottom="15" AlignmentAxis="Vertical" Handle="VerticalScrollbarHandle" IsVisible="false" MaxValue="100" MinValue="0">
+																	<Children>
+																		<Widget WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="4" HorizontalAlignment="Center" Sprite="BlankWhiteSquare_9" AlphaFactor="0.2" Color="#5a4033FF" />
+																		<ImageWidget Id="VerticalScrollbarHandle" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="8" SuggestedHeight="10" HorizontalAlignment="Center" Brush="FaceGen.Scrollbar.Handle" IsVisible="false" />
+																	</Children>
+																</ScrollbarWidget>
+
+															</Children>
+														</Widget>
+
+													</Children>
+												</ListPanel>
+
+											</Children>
+										</Widget>
+
+									</Children>
+								</ListPanel>
+
+							</Children>
+						</Widget>
+
+					</Children>
+				</BrushWidget>
+
+				<ReservePopup Id="ReservePopup" DataSource="{ReserveControl}" DoNotAcceptEvents="true" IsVisible="@IsEnabled" />
+				<GovernorSelectionPopup Id="GovernorSelectionPopup" Parameter.PopupDataSource="{GovernorSelection}" DoNotAcceptEvents="true" IsVisible="@IsSelectingGovernor" PopupParentWidget="..\TownManagementPopup\InnerPanel\ManagementPlacementList\TopHalf\TopHalfListPanel\GovernorPanel\GovernorListPanel\GovernorSelectionButtonParent\GovernorSelectionButton"/>
+
+				<Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Sprite="SPGeneral\TownManagement\sp_town_management8" AlphaFactor="!Reference.AlphaFactor" IsEnabled="false" />
+			</Children>
+		</Widget>
+	</Window>
+</Prefab>

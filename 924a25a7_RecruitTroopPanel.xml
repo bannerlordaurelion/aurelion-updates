@@ -1,0 +1,38 @@
+<Prefab>
+  <!-- Aurelion: the troop slot is our tile (the game drew a mustard square), everything else as the game has it (1.5.7) -->
+  <Constants>
+    <Constant Name="Recruitment.Troop.Panel.Width" BrushName="Recruitment.Troop.Brush" BrushLayer="Available" BrushValueType="Width"/>
+    <Constant Name="Recruitment.Troop.Panel.Height" BrushName="Recruitment.Troop.Brush" BrushLayer="Available" BrushValueType="Height"/>
+
+    <Constant Name="Recruitment.Troop.Panel.Padding" Value="5"/>
+    <Constant Name="IconAlpha" Value="0.7"/>
+  </Constants>
+  <Window>
+
+    <RecruitTroopPanelButtonWidget DoNotPassEventsToChildren="true" WidthSizePolicy = "Fixed" HeightSizePolicy = "Fixed" SuggestedWidth="!Recruitment.Troop.Panel.Width" SuggestedHeight="!Recruitment.Troop.Panel.Height" Brush="Recruitment.Troop.Brush" CanBeRecruited="@CanBeRecruited" RemoveFromCartButton="RemoveFromCartButton" IsInCart="@IsInCart" IsTroopEmpty="@IsTroopEmpty"  CharacterImageWidget="TroopImage" Command.Click="ExecuteRecruit" Command.AlternateClick="ExecuteOpenEncyclopedia" Command.HoverBegin="ExecuteFocus" Command.HoverEnd="ExecuteUnfocus" PlayerHasEnoughRelation="@PlayerHasEnoughRelation">
+      <Children>
+
+        <ButtonWidget Id="RemoveFromCartButton" WidthSizePolicy = "StretchToParent" HeightSizePolicy = "StretchToParent" MarginTop="4" MarginLeft="4" MarginRight="4" MarginBottom="4" HorizontalAlignment="Center" Brush="Aur.V6.Tile"/>
+        <ImageIdentifierWidget Id="TroopImage" DataSource="{ImageIdentifier}" ImageId="@Id" AdditionalArgs="@AdditionalArgs" TextureProviderName="@TextureProviderName" WidthSizePolicy = "StretchToParent" HeightSizePolicy = "StretchToParent" IsDisabled="true" MarginBottom="!Recruitment.Troop.Panel.Padding" MarginTop="!Recruitment.Troop.Panel.Padding" MarginLeft="!Recruitment.Troop.Panel.Padding" MarginRight="!Recruitment.Troop.Panel.Padding">
+          <Children>
+
+            <Widget DataSource="{..\TierIconData}" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="20" SuggestedHeight="20" HorizontalAlignment="Right" VerticalAlignment="Top" PositionXOffset="0" PositionYOffset="3" Sprite="@Text"/>
+            <Widget DataSource="{..\TypeIconData}" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="20" SuggestedHeight="20" HorizontalAlignment="Left" VerticalAlignment="Top" PositionXOffset="6" PositionYOffset="3" Sprite="@Text"/>
+            
+          </Children>
+        </ImageIdentifierWidget>
+        <HintWidget WidthSizePolicy="StretchToParent" HeightSizePolicy = "StretchToParent" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint"/>
+        <TutorialHighlightItemBrushWidget WidthSizePolicy = "StretchToParent" HeightSizePolicy = "StretchToParent" Brush="TutorialHighlightBrush" IsHighlightEnabled="@IsHiglightEnabled" IsVisible="false" IsEnabled="false"/>
+
+        <ListPanel IsHidden="@IsTroopEmpty" WidthSizePolicy="CoverChildren" HeightSizePolicy="Fixed" SuggestedHeight="20" HorizontalAlignment="Center" VerticalAlignment="Bottom" PositionYOffset="21">
+          <Children>
+            <TextWidget IntText="@Cost" WidthSizePolicy="CoverChildren" HeightSizePolicy="Fixed" SuggestedHeight="28" Brush="Recruitment.Troop.Cart.CostText" HorizontalAlignment="Center" VerticalAlignment="Center" Brush.FontSize="15" PositionYOffset="2" MarginLeft="5" IsDisabled="true"/>
+            <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="22" SuggestedHeight="22" VerticalAlignment="Center" Sprite="SPGeneral\InventoryPartyExtension\Extension\gold_icon" />
+          </Children>
+        </ListPanel>
+
+      </Children>
+    </RecruitTroopPanelButtonWidget>
+
+  </Window>
+</Prefab>
