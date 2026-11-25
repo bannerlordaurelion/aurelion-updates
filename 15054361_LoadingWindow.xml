@@ -1,0 +1,55 @@
+﻿<Prefab>
+  <Window>
+    <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" DoNotAcceptEvents="false" DoNotPassEventsToChildren="true" Sprite="BlankWhiteSquare_9" Color="#151B28FF" IsVisible="false" DoNotUseCustomScale="true">
+      <Children>
+        <LoadingWindowWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="1920" SuggestedHeight="1080" ImageName="@LoadingImageName" IsVisible="false" HorizontalAlignment="Center" VerticalAlignment="Center" IsActive="@Enabled" AnimWidget="AurLoadRight\AurLoadBar\AurLoadRun" DoNotUseCustomScale="true">
+          <Children>
+            <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Sprite="aur_load\bg" DoNotUseCustomScale="true" />
+
+            <!-- top left: the realm -->
+            <Widget WidthSizePolicy="CoverChildren" HeightSizePolicy="Fixed" SuggestedHeight="38" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="40" MarginTop="36" Sprite="aur_skin2\hud_bar_9" DoNotUseCustomScale="true">
+              <Children>
+                <ListPanel WidthSizePolicy="CoverChildren" HeightSizePolicy="StretchToParent" MarginLeft="16" MarginRight="18" StackLayout.LayoutMethod="HorizontalLeftToRight">
+                  <Children>
+                    <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="8" SuggestedHeight="8" VerticalAlignment="Center" Sprite="BlankWhiteSquare_9" Color="#6FD08CFF" />
+                    <TextWidget Id="AurLoadChip" WidthSizePolicy="CoverChildren" HeightSizePolicy="StretchToParent" MarginLeft="10" Brush="Aur.Load.Chip" Text="Aurelion" />
+                  </Children>
+                </ListPanel>
+              </Children>
+            </Widget>
+
+            <!-- bottom left: law of the realm -->
+            <ListPanel WidthSizePolicy="Fixed" HeightSizePolicy="CoverChildren" SuggestedWidth="560" HorizontalAlignment="Left" VerticalAlignment="Bottom" MarginLeft="56" MarginBottom="64" StackLayout.LayoutMethod="VerticalTopToBottom" DoNotUseCustomScale="true">
+              <Children>
+                <TextWidget Id="AurLoadLaw" WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="22" Brush="Aur.Load.Law" Text=" " />
+                <TextWidget Id="AurLoadTip" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" MarginTop="8" Brush="Aur.Load.Tip" Text=" " />
+              </Children>
+            </ListPanel>
+
+            <!-- centre: the medallion and the name -->
+            <ListPanel WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" VerticalAlignment="Bottom" MarginBottom="52" StackLayout.LayoutMethod="VerticalTopToBottom" DoNotUseCustomScale="true">
+              <Children>
+                <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="72" SuggestedHeight="72" HorizontalAlignment="Center" Sprite="aur_cult\medal" />
+                <TextWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="520" SuggestedHeight="58" HorizontalAlignment="Center" MarginTop="10" Brush="Aur.Load.Logo" Text="A U R E L I O N" />
+                <TextWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="520" SuggestedHeight="20" HorizontalAlignment="Center" Brush="Aur.Load.Sub" Text="B A N N E R L O R D   O N L I N E" />
+              </Children>
+            </ListPanel>
+
+            <!-- bottom right: what Coop is doing now + a running bar -->
+            <ListPanel Id="AurLoadRight" WidthSizePolicy="Fixed" HeightSizePolicy="CoverChildren" SuggestedWidth="460" HorizontalAlignment="Right" VerticalAlignment="Bottom" MarginRight="56" MarginBottom="64" StackLayout.LayoutMethod="VerticalTopToBottom" DoNotUseCustomScale="true">
+              <Children>
+                <TextWidget Id="AurLoadTitle" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" Brush="Aur.Load.Title" Text="@TitleText" />
+                <Widget Id="AurLoadBar" WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="6" MarginTop="12" Sprite="aur_skin2\bar_bg_9" ClipContents="true">
+                  <Children>
+                    <Widget Id="AurLoadRun" WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="140" HorizontalAlignment="Center" Sprite="aur_skin2\bar_fill_9" />
+                  </Children>
+                </Widget>
+                <TextWidget Id="AurLoadDesc" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" MarginTop="10" Brush="Aur.Load.Desc" Text="@DescriptionText" />
+              </Children>
+            </ListPanel>
+          </Children>
+        </LoadingWindowWidget>
+      </Children>
+    </Widget>
+  </Window>
+</Prefab>

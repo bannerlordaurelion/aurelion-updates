@@ -1,0 +1,205 @@
+<Prefab>
+  <Variables>
+  </Variables>
+  <Constants>
+
+    <Constant Name="MapBar.GatherArmy.Icon.Width" BrushLayer="Default" BrushName="MapBar.GatherArmy.Icon" BrushValueType="Width" />
+    <Constant Name="MapBar.GatherArmy.Icon.Height" BrushLayer="Default" BrushName="MapBar.GatherArmy.Icon" BrushValueType="Height" />
+
+    <Constant Name="MapBar.GatherArmy.Background.Width" BrushLayer="Default" BrushName="MapBar.GatherArmy.Background" BrushValueType="Width" />
+    <Constant Name="MapBar.GatherArmy.Background.Height" BrushLayer="Default" BrushName="MapBar.GatherArmy.Background" BrushValueType="Height" />
+
+    <Constant Name="MapBar.GatherArmy.Button.Width" BrushLayer="Default" BrushName="MapBar.GatherArmy.Button" BrushValueType="Width" />
+    <Constant Name="MapBar.GatherArmy.Button.Height" BrushLayer="Default" BrushName="MapBar.GatherArmy.Button" BrushValueType="Height" />
+
+    <Constant Name="NormalMapBarTextColor" Value="#F7F2E0FF" />
+    <Constant Name="WarningMapBarTextColor" Value="#E57A82FF" />
+    <Constant Name="MapBar.Notification.Size" Value="20" />
+
+    <Constant Name="MapBar.Buttons.HorizonalSpacing" Value="2" />
+
+    <Constant Name="MapBar.ButtonIcon.XOffset" Value="0" />
+    <Constant Name="MapBar.ButtonIcon.YOffset" Value="1" />
+
+  </Constants>
+  <VisualDefinitions>
+    <!-- Aurelion (MapHud board): the right island no longer slides; its second row shows / hides in code (UiHud) and the island grows -->
+    <VisualDefinition Name="InfoBar" TransitionDuration="0.3" EaseType="EaseOut" EaseFunction="Quint">
+      <VisualState PositionYOffset="0" State="Default" />
+      <VisualState PositionYOffset="0" State="Extended" />
+    </VisualDefinition>
+    <VisualDefinition Name="CenterPanel" TransitionDuration="0.45" EaseType="EaseOut" EaseFunction="Quint">
+      <VisualState PositionYOffset="0" State="Default" />
+      <VisualState PositionYOffset="140" State="Disabled" />
+    </VisualDefinition>
+    <VisualDefinition Name="GatherArmyButton" TransitionDuration="0.2">
+      <VisualState PositionYOffset="-118" PositionXOffset="0" State="Default" />
+      <VisualState PositionYOffset="-118" PositionXOffset="220" State="Disabled" />
+      <VisualState PositionYOffset="-184" PositionXOffset="0" State="Extended" />
+    </VisualDefinition>
+  </VisualDefinitions>
+  <Window>
+    <Widget DoNotAcceptEvents="true" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" IsVisible="@IsEnabled">
+      <Children>
+        <!-- Aurelion: everything of the bar sits in one wrapper; UiHud hides it while a panel the game lays over the map is open (town management, recruits, smithing, Esc...) -->
+        <Widget Id="AurHudAll" DoNotAcceptEvents="true" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent">
+          <Children>
+
+        <NavigationScopeTargeter DataSource="{MapTimeControl}" ScopeID="MapBarScreenCenterScope" ScopeParent="..\MapBarScreenCenterScopeTarget" IsScopeEnabled="@IsCenterPanelEnabled" ExtendDiscoveryAreaLeft="350" ExtendDiscoveryAreaRight="550" ExtendDiscoveryAreaTop="200" ExtendDiscoveryAreaBottom="200"/>
+        <Widget DoNotAcceptEvents="true" Id="MapBarScreenCenterScopeTarget" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="36" SuggestedHeight="36" HorizontalAlignment="Center" VerticalAlignment="Center" GamepadNavigationIndex="0" />
+
+        <ElementNotificationWidget DataSource="{TutorialNotification}" ElementID="@ElementID" TutorialFrameWidget="TutorialFrameWidget">
+          <Children>
+            <TutorialHighlightItemBrushWidget Id="TutorialFrameWidget" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Brush="TutorialHighlightBrush" IsDisabled="true" IsVisible="false" />
+          </Children>
+        </ElementNotificationWidget>
+
+        <TextWidget DoNotAcceptEvents="true" DataSource="{MapTimeControl}" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" VerticalAlignment="Bottom" MarginBottom="130" Brush="Map.Paused.Text" Text="@PausedText" AutoHideIfEmpty="true" />
+
+        <!--_____Left island (MapHud board, the game's order Esc C I P Q L K): square glass tiles, a white line icon in each, the key under the tile, a red round badge on its corner -->
+        <NavigationScopeTargeter ScopeID="MapNavigationScope" ScopeParent="..\MapBar" ScopeMovements="Horizontal" ForceGainNavigationOnClosestChild="true" RightNavigationScope="MapBarCenterPanelScope" />
+        <ListPanel Id="MapBar" DataSource="{MapNavigation\NavigationItems}" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Left" VerticalAlignment="Bottom" MarginLeft="24" MarginBottom="20" StackLayout.LayoutMethod="HorizontalLeftToRight" Sprite="aur_v6\glass_9">
+          <ItemTemplate>
+            <Widget Id="@ItemId" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="74" SuggestedHeight="104" VerticalAlignment="Bottom" UpdateChildrenStates="true">
+              <Children>
+                <ButtonWidget Id="NavigationButton" DoNotPassEventsToChildren="true" UpdateChildrenStates="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="64" SuggestedHeight="64" HorizontalAlignment="Center" VerticalAlignment="Top" MarginTop="13" Brush="Aur.V6.Nav" Command.Click="ExecuteOpen" Command.AlternateClick="ExecuteGoToLink" IsEnabled="@IsEnabled" IsSelected="@IsActive" GamepadNavigationIndex="0">
+                  <Children>
+                    <IconBrushWidget Id="Icon" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="45" SuggestedHeight="30" HorizontalAlignment="Center" VerticalAlignment="Center" Brush="MapBar.Left.Generic.Icon" IconBrush="MapBar.Left.Icons" IconID="@ItemId" UseStylesFromSourceIcon="true" />
+                    <Widget Id="AurNavIco" DoNotAcceptEvents="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="34" SuggestedHeight="34" HorizontalAlignment="Center" VerticalAlignment="Center" IsVisible="false" />
+                    <HintWidget DataSource="{Tooltip}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" IsDisabled="true" />
+                  </Children>
+                </ButtonWidget>
+                <TextWidget Id="AurNavKey" DoNotAcceptEvents="true" WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="18" VerticalAlignment="Bottom" MarginBottom="6" Brush="Aur.V6.Cap" Brush.FontSize="13" Brush.TextHorizontalAlignment="Center" Text=" " />
+                <Widget Id="AurNavBadge" DoNotPassEventsToChildren="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="24" SuggestedHeight="24" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="0" MarginTop="2" Sprite="aur_v5\white" Color="#B3243AFF" IsVisible="@HasAlert">
+                  <Children>
+                    <TextWidget DoNotAcceptEvents="true" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Brush="Aur.V5.Badge" Brush.FontSize="13" Brush.FontColor="#FFFFFFFF" Brush.TextHorizontalAlignment="Center" Text="@AlertText" />
+                    <HintWidget DataSource="{AlertTooltip}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" />
+                  </Children>
+                </Widget>
+              </Children>
+            </Widget>
+          </ItemTemplate>
+        </ListPanel>
+
+        <!--_____Centre capsule (MapHud board): in the game's order: boxed pause / play / fast on the left, the globe in the middle, the date and the part of the day on the right -->
+        <MapCurrentTimeVisualWidget DataSource="{MapTimeControl}" Id="CenterPanel" VisualDefinition="CenterPanel" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="480" SuggestedHeight="92" HorizontalAlignment="Center" VerticalAlignment="Bottom" MarginBottom="20" Sprite="aur_v6\glass_9" CurrentTimeState="@TimeFlowState" FastForwardButton="FastForwardButton" IsEnabled="@IsCenterPanelEnabled" PauseButton="PauseButton" PlayButton="PlayButton">
+          <Children>
+            <NavigationScopeTargeter ScopeID="MapBarCenterPanelScope" ScopeParent="..\." ScopeMovements="Horizontal" NavigateFromScopeEdges="true" LeftNavigationScope="MapNavigationScope" RightNavigationScope="MapBarRightPanelTopInfoBarScope" IsScopeEnabled="@IsCenterPanelEnabled" />
+
+            <TextWidget DoNotAcceptEvents="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="150" SuggestedHeight="28" HorizontalAlignment="Right" MarginRight="18" VerticalAlignment="Center" PositionYOffset="-11" Brush="Aur.V6.H3" Brush.FontSize="20" Brush.TextHorizontalAlignment="Right" Text="@Date" />
+            <TextWidget Id="AurTimeSub" DoNotAcceptEvents="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="150" SuggestedHeight="20" HorizontalAlignment="Right" MarginRight="18" VerticalAlignment="Center" PositionYOffset="14" Brush="Aur.V6.Cap" Brush.FontSize="13" Brush.TextHorizontalAlignment="Right" Text=" " />
+
+            <ButtonWidget Id="AurGlobeBtn" DoNotPassEventsToChildren="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="68" SuggestedHeight="68" HorizontalAlignment="Center" VerticalAlignment="Center" Command.Click="ExecuteResetCamera" UpdateChildrenStates="true">
+              <Children>
+                <!-- Aurelion (MapHud board): our globe, coloured by the hour in UiHud; the game's sky picture and ring show only if our sheet did not load -->
+                <Widget Id="AurGlobe" DoNotAcceptEvents="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="60" SuggestedHeight="60" HorizontalAlignment="Center" VerticalAlignment="Center" IsVisible="false" />
+                <MapTimeImageBrushWidget Id="AurVan" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="68" SuggestedHeight="44" HorizontalAlignment="Center" VerticalAlignment="Center" Brush="MapTimeImage" CircularClipEnabled="true" CircularClipRadius="29" DayTime="@Time" />
+                <BrushWidget Id="AurVan" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="66" SuggestedHeight="66" HorizontalAlignment="Center" VerticalAlignment="Center" Brush="MapBar.Center.Button" GamepadNavigationIndex="0" />
+                <HintWidget DataSource="{TimeOfDayHint}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" />
+              </Children>
+            </ButtonWidget>
+
+            <ButtonWidget Id="FastForwardButton" DoNotPassEventsToChildren="true" UpdateChildrenStates="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="48" SuggestedHeight="44" HorizontalAlignment="Left" VerticalAlignment="Center" MarginLeft="130" Brush="Aur.V6.Nav" Command.Click="ExecuteTimeControlChange" CommandParameter.Click="2" GamepadNavigationIndex="3">
+              <Children>
+                <BrushWidget Id="AurVan" DoNotAcceptEvents="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="27" SuggestedHeight="24" HorizontalAlignment="Center" VerticalAlignment="Center" Brush="MapBarFastForwardButton" />
+                <Widget Id="AurIcoFf" DoNotAcceptEvents="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="30" SuggestedHeight="30" HorizontalAlignment="Center" VerticalAlignment="Center" IsVisible="false" />
+                <HintWidget DataSource="{FastForwardHint}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" IsDisabled="true" />
+              </Children>
+            </ButtonWidget>
+
+            <ButtonWidget Id="PlayButton" DoNotPassEventsToChildren="true" UpdateChildrenStates="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="48" SuggestedHeight="44" HorizontalAlignment="Left" VerticalAlignment="Center" MarginLeft="74" Brush="Aur.V6.Nav" Command.Click="ExecuteTimeControlChange" CommandParameter.Click="1" GamepadNavigationIndex="2">
+              <Children>
+                <BrushWidget Id="AurVan" DoNotAcceptEvents="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="20" SuggestedHeight="24" HorizontalAlignment="Center" VerticalAlignment="Center" Brush="MapBarPlayButton" />
+                <Widget Id="AurIcoPlay" DoNotAcceptEvents="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="30" SuggestedHeight="30" HorizontalAlignment="Center" VerticalAlignment="Center" IsVisible="false" />
+                <HintWidget DataSource="{PlayHint}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" IsDisabled="true" />
+              </Children>
+            </ButtonWidget>
+
+            <ButtonWidget Id="PauseButton" DoNotPassEventsToChildren="true" UpdateChildrenStates="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="48" SuggestedHeight="44" HorizontalAlignment="Left" VerticalAlignment="Center" MarginLeft="18" Brush="Aur.V6.Nav" Command.Click="ExecuteTimeControlChange" CommandParameter.Click="0" GamepadNavigationIndex="1">
+              <Children>
+                <BrushWidget Id="AurVan" DoNotAcceptEvents="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="18" SuggestedHeight="23" HorizontalAlignment="Center" VerticalAlignment="Center" Brush="MapBarPauseButton" />
+                <Widget Id="AurIcoPause" DoNotAcceptEvents="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="30" SuggestedHeight="30" HorizontalAlignment="Center" VerticalAlignment="Center" IsVisible="false" />
+                <HintWidget DataSource="{PauseHint}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" IsDisabled="true" />
+              </Children>
+            </ButtonWidget>
+
+          </Children>
+        </MapCurrentTimeVisualWidget>
+
+        <NavigationScopeTargeter ScopeID="MapBarArmyButtonScope" ScopeParent="..\MapGatherArmyButton" ScopeMovements="Horizontal" LeftNavigationScope="MapBarRightPanelTopInfoBarScope" DownNavigationScope="MapBarExtendButtonScope" ExtendDiscoveryAreaLeft="410" IsScopeEnabled="@IsGatherArmyVisible"/>
+        <!-- Aurelion (MapHud board): "gather an army" as one of our tiles (two flags), above the right end of the right island -->
+        <MapBarGatherArmyBrushWidget Id="MapGatherArmyButton" InfoBarWidget="..\InfoBarWidget" VisualDefinition="GatherArmyButton" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="56" SuggestedHeight="56" Brush="Aur.V6.None" HorizontalAlignment="Right" VerticalAlignment="Bottom" MarginRight="24" IsGatherArmyEnabled="@CanGatherArmy" IsGatherArmyVisible="@IsGatherArmyVisible">
+          <Children>
+            <ButtonWidget Id="AurArmyBtn" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="52" SuggestedHeight="52" Brush="Aur.V6.Nav" Command.Click="ExecuteArmyManagement" DoNotPassEventsToChildren="true" HorizontalAlignment="Center" VerticalAlignment="Center" UpdateChildrenStates="true" IsEnabled="@CanGatherArmy" GamepadNavigationIndex="1">
+              <Children>
+                <BrushWidget Id="AurVan" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="30" SuggestedHeight="27" HorizontalAlignment="Center" VerticalAlignment="Center" Brush="MapBar.GatherArmy.Icon" />
+                <Widget Id="AurIcoArmy" DoNotAcceptEvents="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="32" SuggestedHeight="32" HorizontalAlignment="Center" VerticalAlignment="Center" IsVisible="false" />
+                <HintWidget DataSource="{GatherArmyHint}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" IsDisabled="true" />
+              </Children>
+            </ButtonWidget>
+          </Children>
+        </MapBarGatherArmyBrushWidget>
+
+        <!--_____Right island (MapHud board): the game's order (dinars first on the left), name under each value, the boxed arrow on the right opens the second row -->
+        <MapInfoBarWidget VisualDefinition="InfoBar" DataSource="{MapInfo}" Id="InfoBarWidget" DoNotAcceptEvents="false" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Right" VerticalAlignment="Bottom" MarginRight="24" MarginBottom="20" Sprite="aur_v6\glass_9" ExtendButtonWidget="ExtendButtonWidget" IsInfoBarExtended="@IsInfoBarExtended" IsVisible="@IsInfoBarEnabled">
+          <Children>
+            <ListPanel WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Left" MarginLeft="14" MarginRight="78" MarginTop="16" MarginBottom="16" StackLayout.LayoutMethod="VerticalTopToBottom">
+              <Children>
+                <NavigationScopeTargeter ScopeID="MapBarRightPanelTopInfoBarScope" ScopeParent="..\TopInfoBar" ScopeMovements="Horizontal" LeftNavigationScope="MapBarCenterPanelScope" NavigateFromScopeEdges="true" UseDiscoveryAreaAsScopeEdges="true" />
+                <ListPanel DataSource="{PrimaryInfoItems}" Id="TopInfoBar" DoNotAcceptEvents="true" WidthSizePolicy="CoverChildren" HeightSizePolicy="Fixed" SuggestedHeight="58" HorizontalAlignment="Left" VerticalAlignment="Top" StackLayout.LayoutMethod="HorizontalLeftToRight">
+                  <ItemTemplate>
+                    <Widget DoNotPassEventsToChildren="true" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" VerticalAlignment="Center" MarginLeft="9" MarginRight="9" GamepadNavigationIndex="0">
+                      <Children>
+                        <ListPanel WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" IsEnabled="false" StackLayout.LayoutMethod="VerticalTopToBottom">
+                          <Children>
+                            <IconBrushWidget Id="AurInfoIcon" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="1" SuggestedHeight="1" IsVisible="false" IconBrush="MapBar.Right.Icons" IconID="@VisualId" UseStylesFromSourceIcon="true" />
+                            <MapBarCustomValueTextWidget Id="AurInfoVal" WidthSizePolicy="CoverChildren" HeightSizePolicy="Fixed" MinWidth="58" MaxWidth="110" SuggestedHeight="28" HorizontalAlignment="Center" Brush="MapTextBrushWithAnim" Brush.FontSize="20" Brush.TextHorizontalAlignment="Center" IsWarning="@HasWarning" NormalColor="!NormalMapBarTextColor" Text="@Value" ValueAsInt="@IntValue" WarningColor="!WarningMapBarTextColor"/>
+                            <TextWidget Id="AurInfoName" WidthSizePolicy="CoverChildren" HeightSizePolicy="Fixed" MinWidth="58" SuggestedHeight="18" HorizontalAlignment="Center" Brush="Aur.V6.Cap" Brush.FontSize="12" Brush.TextHorizontalAlignment="Center" Text=" " />
+                          </Children>
+                        </ListPanel>
+                        <!-- the game's details on hover (the value's own tooltip), over the whole value -->
+                        <HintWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" />
+                      </Children>
+                    </Widget>
+                  </ItemTemplate>
+                </ListPanel>
+
+                <NavigationScopeTargeter ScopeID="MapBarRightPanelBottomInfoBarScope" ScopeParent="..\BottomInfoBar" ScopeMovements="Horizontal" IsScopeEnabled="@IsInfoBarExtended" />
+                <ListPanel DataSource="{SecondaryInfoItems}" Id="BottomInfoBar" DoNotAcceptEvents="true" WidthSizePolicy="CoverChildren" HeightSizePolicy="Fixed" SuggestedHeight="58" HorizontalAlignment="Left" MarginTop="8" IsVisible="false" StackLayout.LayoutMethod="HorizontalLeftToRight">
+                  <ItemTemplate>
+                    <Widget DoNotPassEventsToChildren="true" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" VerticalAlignment="Center" MarginLeft="9" MarginRight="9" GamepadNavigationIndex="0">
+                      <Children>
+                        <ListPanel WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" IsEnabled="false" StackLayout.LayoutMethod="VerticalTopToBottom">
+                          <Children>
+                            <IconBrushWidget Id="AurInfoIcon" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="1" SuggestedHeight="1" IsVisible="false" IconBrush="MapBar.Right.Icons" IconID="@VisualId" UseStylesFromSourceIcon="true" />
+                            <MapBarCustomValueTextWidget Id="AurInfoVal" WidthSizePolicy="CoverChildren" HeightSizePolicy="Fixed" MinWidth="58" MaxWidth="110" SuggestedHeight="28" HorizontalAlignment="Center" Brush="MapTextBrushWithAnim" Brush.FontSize="20" Brush.TextHorizontalAlignment="Center" IsWarning="@HasWarning" NormalColor="!NormalMapBarTextColor" Text="@Value" ValueAsInt="@IntValue" WarningColor="!WarningMapBarTextColor"/>
+                            <TextWidget Id="AurInfoName" WidthSizePolicy="CoverChildren" HeightSizePolicy="Fixed" MinWidth="58" SuggestedHeight="18" HorizontalAlignment="Center" Brush="Aur.V6.Cap" Brush.FontSize="12" Brush.TextHorizontalAlignment="Center" Text=" " />
+                          </Children>
+                        </ListPanel>
+                        <!-- the game's details on hover (the value's own tooltip), over the whole value -->
+                        <HintWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" />
+                      </Children>
+                    </Widget>
+                  </ItemTemplate>
+                </ListPanel>
+
+              </Children>
+            </ListPanel>
+
+            <NavigationScopeTargeter ScopeID="MapBarExtendButtonScope" ScopeParent="..\ExtendButtonWidget" ScopeMovements="Horizontal" FollowMobileTargets="true" LeftNavigationScope="MapBarRightPanelTopInfoBarScope" />
+            <ButtonWidget Id="ExtendButtonWidget" DoNotPassEventsToChildren="true" UpdateChildrenStates="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="50" SuggestedHeight="52" HorizontalAlignment="Right" VerticalAlignment="Bottom" MarginRight="16" MarginBottom="19" Brush="Aur.V6.Nav" GamepadNavigationIndex="0">
+              <Children>
+                <BrushWidget Id="AurVan" DoNotAcceptEvents="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="20" SuggestedHeight="14" HorizontalAlignment="Center" VerticalAlignment="Center" Sprite="aur_v5\white" Color="#F7F2E080" />
+                <Widget Id="AurIcoExt" DoNotAcceptEvents="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="30" SuggestedHeight="30" HorizontalAlignment="Center" VerticalAlignment="Center" IsVisible="false" />
+                <HintWidget DataSource="{ExtendHint}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" IsDisabled="true" />
+              </Children>
+            </ButtonWidget>
+          </Children>
+        </MapInfoBarWidget>
+
+          </Children>
+        </Widget>
+      </Children>
+    </Widget>
+  </Window>
+</Prefab>

@@ -1,0 +1,7 @@
+aur_ui_1.png <- C:\ProgramData\Aurelion\Studio\SystemOverrides\GUI\SpriteSheets\aur_ui_1.png : 18940 px
+aur_skin_1.png <- C:\ProgramData\Aurelion\Studio\SystemOverrides\GUI\SpriteSheets\aur_skin_1.png : 10538 px
+aur_skin2_1.png <- C:\ProgramData\Aurelion\Studio\SystemOverrides\GUI\SpriteSheets\aur_skin2_1.png : 443705 px
+aur_slot_1.png <- C:\ProgramData\Aurelion\Studio\SystemOverrides\GUI\SpriteSheets\aur_slot_1.png : 491062 px
+aur_v5_1.png <- C:\ProgramData\Aurelion\Studio\SystemOverrides\GUI\SpriteSheets\aur_v5_1.png : 845408 px
+aur_v6_1.png <- C:\ProgramData\Aurelion\Studio\SystemOverrides\GUI\SpriteSheets\aur_v6_1.png : 18025 px
+aur_v6b_1.png <- C:\ProgramData\Aurelion\Studio\SystemOverrides\GUI\SpriteSheets\aur_v6b_1.png : 4 px
