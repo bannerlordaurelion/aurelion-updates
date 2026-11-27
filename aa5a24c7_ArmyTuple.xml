@@ -1,0 +1,95 @@
+<Prefab>
+  <Constants>
+    <Constant Name="Kingdom.Item.Tuple.Width" BrushLayer="Default" BrushName="Kingdom.Item.Tuple" BrushValueType="Width" />
+    <Constant Name="Kingdom.Item.Tuple.Height" BrushLayer="Default" BrushName="Kingdom.Item.Tuple" BrushValueType="Height" />
+
+    <Constant Name="Kingdom.Armies.Sort.1.Width" BrushLayer="Default" BrushName="Kingdom.Armies.Sort.1" BrushValueType="Width" />
+
+    <Constant Name="Kingdom.Armies.Sort.2.Width" BrushLayer="Default" BrushName="Kingdom.Armies.Sort.2" BrushValueType="Width" />
+
+    <Constant Name="Kingdom.Armies.Sort.3.Width" BrushLayer="Default" BrushName="Kingdom.Armies.Sort.3" BrushValueType="Width" />
+
+    <Constant Name="Kingdom.Armies.Sort.4.Width" BrushLayer="Default" BrushName="Kingdom.Armies.Sort.4" BrushValueType="Width" />
+
+    <Constant Name="Kingdom.Armies.Sort.5.Width" BrushLayer="Default" BrushName="Kingdom.Armies.Sort.5" BrushValueType="Width" />
+
+    <Constant Name="Banner.Width" BrushLayer="Default" BrushName="Flat.Tuple.Banner.Small" BrushValueType="Width" />
+    <Constant Name="Banner.Height" BrushLayer="Default" BrushName="Flat.Tuple.Banner.Small" BrushValueType="Height" />
+
+    <Constant Name="Banner.Width.Scaled" MultiplyResult="0.30" Value="!Banner.Width" />
+    <Constant Name="Banner.Height.Scaled" MultiplyResult="0.38" Value="!Banner.Height"/>
+
+  </Constants>
+  <Window>
+    <ButtonWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="!Kingdom.Item.Tuple.Width" SuggestedHeight="!Kingdom.Item.Tuple.Height" Command.Click="OnSelect" Brush="Kingdom.Item.Tuple" IsSelected="@IsSelected">
+      <Children>
+
+        <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedHeight="29" SuggestedWidth="29" Sprite="Quest\text_ball_ring" Color="#80AEE8FF" AlphaFactor="0.8" PositionXOffset="15" VerticalAlignment="Center" IsEnabled="false" IsVisible="@IsNew"/>
+
+        <ListPanel HeightSizePolicy ="StretchToParent" WidthSizePolicy="StretchToParent" DoNotAcceptEvents="true">
+          <Children>
+
+            <!--Army Name-->
+            <Widget WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="!Kingdom.Armies.Sort.1.Width" VerticalAlignment="Center" IsEnabled="false">
+              <Children>
+                <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Brush="ArmyManagement.Army.Tuple.Name" Text="@ArmyName" />
+              </Children>
+            </Widget>
+
+            <!--Leader Visual-->
+            <ButtonWidget DataSource="{Leader}" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="112" SuggestedHeight="81" VerticalAlignment="Center" Command.Click="ExecuteLink" IsEnabled="false">
+              <Children>
+
+                <!--Army Leader Clan Banner-->
+                <!-- Aurelion: portrait in our frame, the clan flag inside its corner -->
+                <Widget DoNotAcceptEvents="true" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Sprite="aur_v5\pf_bg_9" />
+                <ImageIdentifierWidget DataSource="{ImageIdentifier}" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="100" SuggestedHeight="74" HorizontalAlignment="Center" VerticalAlignment="Center" AdditionalArgs="@AdditionalArgs" ImageId="@Id" TextureProviderName="@TextureProviderName" IsEnabled="false"/>
+                <Widget DoNotAcceptEvents="true" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Sprite="aur_v5\pf_ring_9" />
+                <Widget DoNotAcceptEvents="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="30" SuggestedHeight="36" HorizontalAlignment="Left" VerticalAlignment="Bottom" MarginLeft="3" MarginBottom="3" Sprite="aur_v5\badge_bg_9" />
+                <MaskedTextureWidget DataSource="{ClanBanner_9}" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" Brush="Flat.Tuple.Banner.Small.Hero" AdditionalArgs="@AdditionalArgs" ImageId="@Id" TextureProviderName="@TextureProviderName" IsDisabled="true" SuggestedWidth="26" SuggestedHeight="32" HorizontalAlignment="Left" VerticalAlignment="Bottom" MarginLeft="5" MarginBottom="5" />
+                <HintWidget Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" WidthSizePolicy = "StretchToParent" HeightSizePolicy = "StretchToParent" IsEnabled="false"/>
+              </Children>
+            </ButtonWidget>
+
+            <!--Army Strength-->
+            <Widget WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="!Kingdom.Armies.Sort.3.Width" VerticalAlignment="Center" IsEnabled="false">
+              <Children>
+                <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Brush="Kingdom.GeneralTupleValues.Text" IntText="@Strength" />
+              </Children>
+            </Widget>
+
+            <!--Army Parties-->
+            <Widget WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="!Kingdom.Armies.Sort.4.Width" VerticalAlignment="Center" ClipContents="true" IsEnabled="false">
+              <Children>
+
+                <!--<KingdomCardItemContainerWidget DataSource="{Parties}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" >
+                  <ItemTemplate>
+                    <ButtonWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="65" SuggestedHeight="65" VerticalAlignment="Center" Brush.ValueFactor="-20" Sprite="StdAssets\rectangle_card" ClipContents="true" Command.Click="ExecuteLink">
+                      <Children>
+                        <ImageIdentifierWidget DataSource="{Visual}" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="60" SuggestedHeight="40" HorizontalAlignment="Center" VerticalAlignment="Center" AdditionalArgs="@AdditionalArgs" ImageId="@Id" TextureProviderName="@TextureProviderName" IsEnabled="false"/>
+                        <HintWidget Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" WidthSizePolicy = "StretchToParent" HeightSizePolicy = "StretchToParent" IsEnabled="false"/>
+                      </Children>
+                    </ButtonWidget>
+                  </ItemTemplate>
+                </KingdomCardItemContainerWidget>-->
+
+                <TextWidget WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" Brush="Kingdom.GeneralTupleValues.Text" IntText="@LordCount" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                
+              </Children>
+            </Widget>
+
+            <!--Army Location-->
+            <Widget WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="!Kingdom.Armies.Sort.5.Width" VerticalAlignment="Center" IsEnabled="false" >
+              <Children>
+                <RichTextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Brush="Kingdom.GeneralTupleValues.Text" Brush.FontSize="22" MarginTop="2" MarginBottom="2" MarginRight="6" Text="@Location" Command.LinkClick="ExecuteLink" />
+              </Children>
+            </Widget>
+
+          </Children>
+        </ListPanel>
+
+      </Children>
+    </ButtonWidget>
+  </Window>
+
+</Prefab>

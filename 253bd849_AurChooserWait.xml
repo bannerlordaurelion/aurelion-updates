@@ -1,0 +1,39 @@
+<Prefab>
+  <Window>
+    <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" DoNotAcceptEvents="false" DoNotPassEventsToChildren="true" Sprite="BlankWhiteSquare_9" Color="#1A181CFF" IsVisible="false" DoNotUseCustomScale="true">
+      <Children>
+        <LoadingWindowWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="1920" SuggestedHeight="1080" ImageName="@LoadingImageName" IsVisible="false" HorizontalAlignment="Center" VerticalAlignment="Center" IsActive="@Enabled" ClipContents="true" DoNotUseCustomScale="true">
+          <Children>
+            <Widget Id="AurWaitBg" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="2038.4" SuggestedHeight="1164.8" HorizontalAlignment="Center" VerticalAlignment="Center" Sprite="aur_bg_hall_dim\bg" DoNotUseCustomScale="true" />
+            <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Sprite="aur_v5\hall_shade" DoNotUseCustomScale="true" />
+            <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Sprite="aur_v6\white" Color="#1A181C8C" DoNotUseCustomScale="true" />
+            <ListPanel WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" VerticalAlignment="Center" MarginBottom="40" StackLayout.LayoutMethod="VerticalTopToBottom" DoNotUseCustomScale="true">
+              <Children>
+                <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="220" SuggestedHeight="220" HorizontalAlignment="Center" DoNotUseCustomScale="true">
+                  <Children>
+                    <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="168" SuggestedHeight="168" HorizontalAlignment="Center" VerticalAlignment="Center" Sprite="aur_v5\seal_256" DoNotUseCustomScale="true" />
+                    <Widget Id="AurWaitRing" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="220" SuggestedHeight="220" HorizontalAlignment="Center" VerticalAlignment="Center" Sprite="aur_v5\ring_f00" DoNotUseCustomScale="true" />
+                  </Children>
+                </Widget>
+                <TextWidget Id="AurWaitTitle" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="1300" SuggestedHeight="60" HorizontalAlignment="Center" MarginTop="28" Brush="Aur.V6.H1C" Text=" " DoNotUseCustomScale="true" />
+                <TextWidget Id="AurWaitSub" WidthSizePolicy="Fixed" HeightSizePolicy="CoverChildren" SuggestedWidth="760" HorizontalAlignment="Center" MarginTop="8" Brush="Aur.V6.BodyC" Text=" " DoNotUseCustomScale="true" />
+                <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="760" SuggestedHeight="64" HorizontalAlignment="Center" MarginTop="30" Sprite="aur_v6\glass_9" DoNotUseCustomScale="true">
+                  <Children>
+                    <TextWidget Id="AurWaitText" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Brush="Aur.V6.StatusC" Text=" " DoNotUseCustomScale="true" />
+                  </Children>
+                </Widget>
+              </Children>
+            </ListPanel>
+            <ListPanel WidthSizePolicy="CoverChildren" HeightSizePolicy="Fixed" SuggestedHeight="40" HorizontalAlignment="Right" VerticalAlignment="Bottom" MarginRight="56" MarginBottom="36" StackLayout.LayoutMethod="HorizontalRightToLeft" DoNotUseCustomScale="true">
+              <Children>
+                <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="38" SuggestedHeight="38" VerticalAlignment="Center" Sprite="aur_v5\seal_70" DoNotUseCustomScale="true" />
+                <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="196" SuggestedHeight="17" VerticalAlignment="Center" MarginRight="12" Sprite="aur_v5\wm_aurelion" AlphaFactor="0.85" DoNotUseCustomScale="true" />
+              </Children>
+            </ListPanel>
+            <AurMotionWidget Mode="wait" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="0" SuggestedHeight="0" DoNotAcceptEvents="true" />
+          </Children>
+        </LoadingWindowWidget>
+      </Children>
+    </Widget>
+  </Window>
+</Prefab>

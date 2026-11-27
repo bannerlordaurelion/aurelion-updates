@@ -1,0 +1,41 @@
+<Window>
+  <!-- Aurelion: game menu rows as our option tiles (TownMenu board) -->
+  <GameMenuItemWidget Id="ParentGameMenuItemWidget" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" IsWaitActive="@IsWaitActive" ItemType="@ItemType" LeaveType="@OptionLeaveType" ParentButton="ParentButton" LeaveTypeIcon="ParentButton\LeaveTypeIcon" ProgressBar="ParentButton\ProgressBar" ProgressTextWidget="ParentButton\ProgressTextWidget" WaitStateWidget="ParentButton\WaitStateWidget" ItemRichTextWidget="ParentButton\ItemRichTextWidget" DefaultTextBrush="Aur.GM.Text.Default" HoveredTextBrush="Aur.GM.Text.Hovered" PressedTextBrush="Aur.GM.Text.Pressed" DisabledTextBrush="Aur.GM.Text.Disabled" GameMenuStringId="@GameMenuStringId" BattleSize="@BattleSize" IsNavalBattle="@IsNavalBattle">
+    <Children>
+
+      <ButtonWidget Id="ParentButton" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" VerticalAlignment="Center" Brush="Aur.V6.Row" MinHeight="56" MarginTop="4" MarginBottom="4" MarginLeft="10" MarginRight="10" Command.Click="ExecuteAction" IsEnabled="@IsEnabled" UpdateChildrenStates="true">
+        <Children>
+          <ImageWidget Id="LeaveTypeIcon" DoNotAcceptEvents="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="40" SuggestedHeight="30" HorizontalAlignment="Right" VerticalAlignment="Center" MarginRight="12" Brush="GameMenu.LeaveType" OverrideDefaultStateSwitchingEnabled="true"/>
+
+          <ListPanel DataSource="{Quests}" DoNotAcceptEvents="true" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" MarginLeft="10" StackLayout.LayoutMethod="HorizontalLeftToRight" HorizontalAlignment="Left" VerticalAlignment="Center" >
+            <ItemTemplate>
+
+              <QuestMarkerBrushWidget DoNotAcceptEvents="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedHeight="42" QuestMarkerType="@QuestMarkerType" HorizontalAlignment="Right" VerticalAlignment="Center" Brush="GameMenu.QuestMarker">
+                <Children>
+                  <HintWidget DataSource="{QuestHint}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" IsDisabled="true" />
+                </Children>
+              </QuestMarkerBrushWidget>
+
+            </ItemTemplate>
+          </ListPanel>
+
+          <TutorialHighlightItemBrushWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedWidth="0" SuggestedHeight="0" Brush="TutorialHighlightBrush" IsEnabled="false" IsHighlightEnabled="@IsHighlightEnabled" IsVisible="false" CustomSizeSyncTarget="..\ItemRichTextWidget" DoNotOverrideWidth="true" />
+          <RichTextWidget DoNotAcceptEvents="true" Id="ItemRichTextWidget" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" VerticalAlignment="Center" Brush="Aur.GM.Text.Default" MarginLeft="70" MarginRight="64" IsEnabled="@IsEnabled" Text="@Item">
+            <Children>
+              <Widget DoNotAcceptEvents="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="40" SuggestedHeight="40" HorizontalAlignment="Left" VerticalAlignment="Center" PositionXOffset="-60" IsVisible="@IsEnabled">
+                <Children>
+                  <InputKeyVisualWidget DataSource="{ShortcutKey}" DoNotAcceptEvents="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="48" SuggestedHeight="48" HorizontalAlignment="Center" VerticalAlignment="Center" KeyID="@KeyID" IsVisible="@IsVisible"/>
+                </Children>
+              </Widget>
+            </Children>
+          </RichTextWidget>
+          <HintWidget DataSource="{ItemHint}" WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="40" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" IsEnabled="false"/>
+          <Widget WidthSizePolicy = "StretchToParent" HeightSizePolicy = "Fixed" SuggestedHeight="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" Sprite="GradientDivider_9" AlphaFactor="0" MarginLeft="10" MarginRight="10"/>
+        </Children>
+      </ButtonWidget>
+
+      <HintWidget DataSource="{ItemHint}" WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="40" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" IsEnabled="false"/>
+
+    </Children>
+  </GameMenuItemWidget>
+</Window>

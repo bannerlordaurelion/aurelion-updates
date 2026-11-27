@@ -1,0 +1,136 @@
+﻿<Brushes>
+  <Brush Name="Aur.Slot.Card">
+    <Layers>
+      <BrushLayer Name="Default" Sprite="aur_slot\card_9" />
+    </Layers>
+    <Styles>
+      <Style Name="Default">
+        <BrushLayer Name="Default" Sprite="aur_slot\card_9" />
+      </Style>
+      <Style Name="Hovered">
+        <BrushLayer Name="Default" Sprite="aur_slot\card_h_9" />
+      </Style>
+      <Style Name="Pressed">
+        <BrushLayer Name="Default" Sprite="aur_slot\card_h_9" />
+      </Style>
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.Slot.Glow">
+    <Layers>
+      <BrushLayer Name="Default" Sprite="aur_slot\clear" />
+    </Layers>
+    <Styles>
+      <Style Name="Default">
+        <BrushLayer Name="Default" Sprite="aur_slot\clear" />
+      </Style>
+      <Style Name="Hovered">
+        <BrushLayer Name="Default" Sprite="aur_slot\glow_9" />
+      </Style>
+      <Style Name="Pressed">
+        <BrushLayer Name="Default" Sprite="aur_slot\glow_9" />
+      </Style>
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.Slot.Hit">
+    <Layers>
+      <BrushLayer Name="Default" Sprite="aur_slot\clear" />
+    </Layers>
+    <Styles>
+      <Style Name="Default">
+        <BrushLayer Name="Default" Sprite="aur_slot\clear" />
+      </Style>
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.Slot.Kicker" Font="Aurelion-SemiBold" FontSize="14" FontColor="#80AEE8E6" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-SemiBold" FontSize="14" FontColor="#80AEE8E6" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.Slot.Title" Font="Aurelion-Bold" FontSize="48" FontColor="#F7F2E0FF" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="48" FontColor="#F7F2E0FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.Slot.Sub" Font="Aurelion-SemiBold" FontSize="18" FontColor="#F7F2E0B3" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-SemiBold" FontSize="18" FontColor="#F7F2E0B3" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.Slot.Badge" Font="Aurelion-Bold" FontSize="13" FontColor="#80AEE8FF" TextHorizontalAlignment="Left" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="13" FontColor="#80AEE8FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.Slot.BadgeR" Font="Aurelion-Bold" FontSize="13" FontColor="#E55B62FF" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="13" FontColor="#E55B62FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.Slot.Name" Font="Aurelion-Bold" FontSize="36" FontColor="#F7F2E0FF" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="36" FontColor="#F7F2E0FF" />
+      <Style Name="Hovered" Font="Aurelion-Bold" FontSize="36" FontColor="#F7F2E0FF" />
+      <Style Name="Pressed" Font="Aurelion-Bold" FontSize="36" FontColor="#F7F2E0FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.Slot.Line" Font="Aurelion-SemiBold" FontSize="16" FontColor="#F7F2E0A6" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-SemiBold" FontSize="16" FontColor="#F7F2E0A6" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.Slot.StatV" Font="Aurelion-Bold" FontSize="18" FontColor="#F7F2E0F2" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="18" FontColor="#F7F2E0F2" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.Slot.StatG" Font="Aurelion-Bold" FontSize="18" FontColor="#F7F2E0FF" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="18" FontColor="#F7F2E0FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.Slot.StatL" Font="Aurelion-SemiBold" FontSize="12" FontColor="#F7F2E080" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-SemiBold" FontSize="12" FontColor="#F7F2E080" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.Slot.EmptyTitle" Font="Aurelion-Bold" FontSize="32" FontColor="#F7F2E0FF" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="32" FontColor="#F7F2E0FF" />
+      <Style Name="Hovered" Font="Aurelion-Bold" FontSize="32" FontColor="#F7F2E0FF" />
+      <Style Name="Pressed" Font="Aurelion-Bold" FontSize="32" FontColor="#F7F2E0FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.Slot.EmptySub" Font="Aurelion-SemiBold" FontSize="15" FontColor="#F7F2E0B3" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-SemiBold" FontSize="15" FontColor="#F7F2E0B3" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.Slot.Cta" Font="Aurelion-Bold" FontSize="18" FontColor="#F7F2E0FF" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="18" FontColor="#F7F2E0FF" />
+      <Style Name="Hovered" Font="Aurelion-Bold" FontSize="18" FontColor="#F7F2E0FF" />
+      <Style Name="Pressed" Font="Aurelion-Bold" FontSize="18" FontColor="#F7F2E0FF" />
+      <Style Name="Disabled" Font="Aurelion-Bold" FontSize="18" FontColor="#F7F2E066" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.Slot.Warn" Font="Aurelion-SemiBold" FontSize="14" FontColor="#E8868BFF" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-SemiBold" FontSize="14" FontColor="#E8868BFF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.Slot.Foot" Font="Aurelion-SemiBold" FontSize="14" FontColor="#F7F2E073" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-SemiBold" FontSize="14" FontColor="#F7F2E073" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.Slot.Live" Font="Aurelion-SemiBold" FontSize="15" FontColor="#F7F2E0CC" TextHorizontalAlignment="Left" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-SemiBold" FontSize="15" FontColor="#F7F2E0CC" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.Slot.Loading" Font="Aurelion-SemiBold" FontSize="18" FontColor="#F7F2E0B3" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-SemiBold" FontSize="18" FontColor="#F7F2E0B3" />
+    </Styles>
+  </Brush>
+</Brushes>

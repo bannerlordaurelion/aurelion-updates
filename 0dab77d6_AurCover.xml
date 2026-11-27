@@ -1,0 +1,41 @@
+<Prefab>
+  <Window>
+    <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Sprite="BlankWhiteSquare_9" Color="#1A181CFF" DoNotUseCustomScale="true">
+      <Children>
+        <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="1920" SuggestedHeight="1080" HorizontalAlignment="Center" VerticalAlignment="Center" ClipContents="true" DoNotUseCustomScale="true">
+          <Children>
+            <Widget Id="AurCoverBg" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="1968" SuggestedHeight="1128" HorizontalAlignment="Center" VerticalAlignment="Center" Sprite="aur_load\bg" DoNotUseCustomScale="true" />
+            <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Sprite="aur_v5\load_shade" DoNotUseCustomScale="true" />
+            <Widget Id="AurCoverEmb0" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="28.8" SuggestedHeight="28.8" MarginLeft="1114.6" MarginTop="1048.6" Sprite="aur_v5\ember_am" AlphaFactor="0" DoNotUseCustomScale="true" />
+            <Widget Id="AurCoverEmb1" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="19.2" SuggestedHeight="19.2" MarginLeft="1117.4" MarginTop="1052.4" Sprite="aur_v5\ember_am" AlphaFactor="0" DoNotUseCustomScale="true" />
+            <Widget Id="AurCoverEmb2" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="19.2" SuggestedHeight="19.2" MarginLeft="1240.4" MarginTop="1052.4" Sprite="aur_v5\ember_am" AlphaFactor="0" DoNotUseCustomScale="true" />
+            <Widget Id="AurCoverEmb3" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="14.4" SuggestedHeight="14.4" MarginLeft="386.3" MarginTop="1054.3" Sprite="aur_v5\ember_am" AlphaFactor="0" DoNotUseCustomScale="true" />
+            <Widget Id="AurCoverEmb4" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="19.2" SuggestedHeight="19.2" MarginLeft="1411.4" MarginTop="1052.4" Sprite="aur_v5\ember_am" AlphaFactor="0" DoNotUseCustomScale="true" />
+            <Widget Id="AurCoverEmb5" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="14.4" SuggestedHeight="14.4" MarginLeft="1470.3" MarginTop="1054.3" Sprite="aur_v5\ember_am" AlphaFactor="0" DoNotUseCustomScale="true" />
+            <Widget Id="AurCoverEmb6" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="14.4" SuggestedHeight="14.4" MarginLeft="267.3" MarginTop="1054.3" Sprite="aur_v5\ember_am" AlphaFactor="0" DoNotUseCustomScale="true" />
+            <Widget Id="AurCoverEmb7" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="19.2" SuggestedHeight="19.2" MarginLeft="1142.4" MarginTop="1052.4" Sprite="aur_v5\ember_am" AlphaFactor="0" DoNotUseCustomScale="true" />
+            <Widget Id="AurCoverEmb8" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="14.4" SuggestedHeight="14.4" MarginLeft="1257.3" MarginTop="1054.3" Sprite="aur_v5\ember_am" AlphaFactor="0" DoNotUseCustomScale="true" />
+            <Widget Id="AurCoverEmb9" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="28.8" SuggestedHeight="28.8" MarginLeft="1544.6" MarginTop="1048.6" Sprite="aur_v5\ember_am" AlphaFactor="0" DoNotUseCustomScale="true" />
+            <Widget Id="AurCoverEmb10" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="24.0" SuggestedHeight="24.0" MarginLeft="1318.5" MarginTop="1050.5" Sprite="aur_v5\ember_am" AlphaFactor="0" DoNotUseCustomScale="true" />
+            <Widget Id="AurCoverEmb11" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="14.4" SuggestedHeight="14.4" MarginLeft="839.3" MarginTop="1054.3" Sprite="aur_v5\ember_am" AlphaFactor="0" DoNotUseCustomScale="true" />
+            <Widget Id="AurCoverSealSh" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="180" SuggestedHeight="180" HorizontalAlignment="Center" MarginTop="779" Sprite="aur_v5\seal_sh" AlphaFactor="0" DoNotUseCustomScale="true" />
+            <Widget Id="AurCoverSeal" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="118" SuggestedHeight="118" HorizontalAlignment="Center" MarginTop="820" Sprite="aur_v5\seal_118" AlphaFactor="0" DoNotUseCustomScale="true" />
+            <Widget Id="AurCoverRing" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="144" SuggestedHeight="144" HorizontalAlignment="Center" MarginTop="807" Sprite="aur_v5\ring_f00" DoNotUseCustomScale="true" />
+            <Widget Id="AurCoverWm" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="294" SuggestedHeight="26" HorizontalAlignment="Center" MarginTop="977" PositionXOffset="-7" Sprite="aur_v5\wm_aurelion" AlphaFactor="0" DoNotUseCustomScale="true" />
+            <Widget Id="AurCoverSub" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="239" SuggestedHeight="10" HorizontalAlignment="Center" MarginTop="1021" PositionXOffset="-3" Sprite="aur_v5\wm_sub" AlphaFactor="0" DoNotUseCustomScale="true" />
+            <Widget Id="AurCoverChipBox" WidthSizePolicy="CoverChildren" HeightSizePolicy="Fixed" SuggestedHeight="38" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="30" MarginTop="30" Sprite="aur_v5\chip_pill_9" AlphaFactor="0" DoNotUseCustomScale="true">
+              <Children>
+                <ListPanel WidthSizePolicy="CoverChildren" HeightSizePolicy="StretchToParent" MarginLeft="15" MarginRight="11" StackLayout.LayoutMethod="HorizontalRightToLeft" DoNotUseCustomScale="true">
+                  <Children>
+                    <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="16" SuggestedHeight="16" VerticalAlignment="Center" Sprite="aur_v5\chip_dot" DoNotUseCustomScale="true" />
+                    <TextWidget Id="AurCoverChip" WidthSizePolicy="CoverChildren" HeightSizePolicy="StretchToParent" MarginRight="4" Brush="Aur.L.Chip" Text=" " DoNotUseCustomScale="true" />
+                  </Children>
+                </ListPanel>
+              </Children>
+            </Widget>
+          </Children>
+        </Widget>
+      </Children>
+    </Widget>
+  </Window>
+</Prefab>

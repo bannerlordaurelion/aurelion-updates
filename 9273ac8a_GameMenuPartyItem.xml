@@ -1,0 +1,63 @@
+<Prefab>
+  <Constants>
+    <Constant Name="Banner.Width" BrushLayer="Default" BrushName="Flat.Tuple.Banner.Small" BrushValueType="Width" />
+    <Constant Name="Banner.Height" BrushLayer="Default" BrushName="Flat.Tuple.Banner.Small" BrushValueType="Height" />
+
+    <Constant Name="Banner.Width.Scaled" MultiplyResult="0.30" Value="!Banner.Width" />
+    <Constant Name="Banner.Height.Scaled" MultiplyResult="0.38" Value="!Banner.Height"/>
+  </Constants>
+  <Parameters>
+    <Parameter DefaultValue="false" Name="IsButton" />
+    <Parameter DefaultValue="false" Name="IsPartyItem" />
+  </Parameters>
+  <Window>
+    <!-- Aurelion (Town board): one person / party as a card row: portrait on the right, name and work beside it, men count on the left,
+         relation as a thin blue bar along the foot. Names in identity colours: you blue, foes red, the rest ivory. -->
+    <GameMenuPartyItemButtonWidget DoNotPassEventsToChildren="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="468" SuggestedHeight="84" Command.AlternateClick="ExecuteOpenEncyclopedia" Command.Click="ExecuteSetAsContextMenuItem" Command.HoverBegin="ExecuteOpenTooltip" Command.HoverEnd="ExecuteCloseTooltip" CurrentCharacterImageWidget="RelationBackgroundWidget\CharacterImage" Description="@DescriptionText" Location="@LocationText" Power="@PowerText" Name="@NameText" Profession="@ProfessionText" Relation="@Relation" RelationBackgroundWidget="RelationBackgroundWidget" UpdateChildrenStates="true" IsPartyItem="*IsPartyItem" PartyBackgroundBrush="GameMenu.Tableau.Background.Party" CharacterBackgroundBrush="GameMenu.Tableau.Background.Character" BackgroundImageWidget="RelationBackgroundWidget\BackgroundImageWidget" HoveredCursorState="@EncyclopediaCursorEffect">
+      <Children>
+        <BrushWidget DoNotAcceptEvents="true" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Brush="Aur.V6.Row" />
+
+        <Widget Id="RelationBackgroundWidget" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="66" SuggestedHeight="66" HorizontalAlignment="Right" VerticalAlignment="Center" MarginRight="9" UpdateChildrenStates="true">
+          <Children>
+            <ImageWidget Id="BackgroundImageWidget" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" OverrideDefaultStateSwitchingDisabled="*IsButton"/>
+            <ImageIdentifierWidget Id="CharacterImage" DataSource="{Visual}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" AdditionalArgs="@AdditionalArgs" ImageId="@Id" TextureProviderName="@TextureProviderName" />
+            <Widget DoNotAcceptEvents="true" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Sprite="aur_v5\pf_ring_9" />
+            <MaskedTextureWidget DataSource="{Banner_9}" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" Brush="Flat.Tuple.Banner.Small.Hero" AdditionalArgs="@AdditionalArgs" ImageId="@Id" TextureProviderName="@TextureProviderName" IsDisabled="true" SuggestedWidth="18" SuggestedHeight="22" HorizontalAlignment="Left" VerticalAlignment="Bottom" MarginLeft="2" MarginBottom="2" />
+            <ListPanel DataSource="{Quests}" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" StackLayout.LayoutMethod="HorizontalLeftToRight" HorizontalAlignment="Right" VerticalAlignment="Top" PositionYOffset="-6" IsEnabled="false" DoNotAcceptEvents="true">
+              <ItemTemplate>
+                <QuestMarkerBrushWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedHeight="24" QuestMarkerType="@QuestMarkerType" Brush="GameMenu.QuestMarker" />
+              </ItemTemplate>
+            </ListPanel>
+          </Children>
+        </Widget>
+
+        <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="26" VerticalAlignment="Top" MarginTop="12" MarginRight="88" MarginLeft="110" Brush="Aur.V6.H3" Brush.FontSize="18" Brush.FontColor="#80AEE8FF" Brush.TextHorizontalAlignment="Right" Text="@NameText" IsVisible="@IsPlayer"/>
+        <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="26" VerticalAlignment="Top" MarginTop="12" MarginRight="88" MarginLeft="110" Brush="Aur.V6.H3" Brush.FontSize="18" Brush.TextHorizontalAlignment="Right" Text="@NameText" IsVisible="@IsNeutral"/>
+        <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="26" VerticalAlignment="Top" MarginTop="12" MarginRight="88" MarginLeft="110" Brush="Aur.V6.H3" Brush.FontSize="18" Brush.FontColor="#E56B6FFF" Brush.TextHorizontalAlignment="Right" Text="@NameText" IsVisible="@IsEnemy"/>
+        <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="26" VerticalAlignment="Top" MarginTop="12" MarginRight="88" MarginLeft="110" Brush="Aur.V6.H3" Brush.FontSize="18" Brush.TextHorizontalAlignment="Right" Text="@NameText" IsVisible="@IsAlly"/>
+        <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="22" VerticalAlignment="Top" MarginTop="40" MarginRight="88" MarginLeft="110" Brush="Aur.V6.Cap" Brush.FontSize="14" Brush.TextHorizontalAlignment="Right" Text="@ProfessionText" />
+
+        <TextWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="96" SuggestedHeight="24" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="14" MarginTop="12" Brush="Aur.V6.Text" Brush.FontSize="16" Brush.TextHorizontalAlignment="Left" Text="@PartySizeLbl" />
+        <ValueBasedVisibilityWidget DoNotPassEventsToChildren="true" UpdateChildrenStates="true" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Left" VerticalAlignment="Top" MarginLeft="14" MarginTop="38" WatchType="BiggerThan" IndexToWatch="@ShipCount" IndexToBeVisible="0">
+          <Children>
+            <ListPanel WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" StackLayout.LayoutMethod="HorizontalLeftToRight">
+              <Children>
+                <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="20" SuggestedHeight="15.73" VerticalAlignment="Center" Sprite="SPGeneral\Ships\ship_icon_medium" />
+                <TextWidget WidthSizePolicy="CoverChildren" HeightSizePolicy="Fixed" SuggestedHeight="22" MarginLeft="4" Brush="Aur.V6.Cap" Brush.FontSize="14" IntText="@ShipCount" />
+              </Children>
+            </ListPanel>
+          </Children>
+        </ValueBasedVisibilityWidget>
+        <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="30" SuggestedHeight="20" HorizontalAlignment="Left" VerticalAlignment="Bottom" MarginLeft="14" MarginBottom="16" Sprite="General\Mission\dungeon" Color="#F7F2E0CC" IsVisible="@IsCharacterInPrison" DoNotAcceptEvents="true"/>
+
+        <FillBarWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="4" VerticalAlignment="Bottom" MarginBottom="10" MarginLeft="110" MarginRight="88" Sprite="aur_v6\white" Color="#F7F2E01F" FillWidget="AurRelFill" InitialAmount="@Relation" MaxAmount="100" DoNotAcceptEvents="true" IsEnabled="false">
+          <Children>
+            <Widget Id="AurRelFill" WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" HorizontalAlignment="Right" Sprite="aur_v6\white" Color="#80AEE8FF" DoNotAcceptEvents="true" />
+          </Children>
+        </FillBarWidget>
+
+        <TutorialHighlightItemBrushWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Brush="TutorialHighlightBrush" IsEnabled="false" IsHighlightEnabled="@IsHighlightEnabled" IsVisible="false" OverrideDefaultStateSwitchingEnabled="true" />
+      </Children>
+    </GameMenuPartyItemButtonWidget>
+  </Window>
+</Prefab>

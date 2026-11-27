@@ -1,0 +1,765 @@
+<Brushes>
+  <Brush Name="Aur.V5.Title" Font="Aurelion-Bold" FontSize="44" FontColor="#F7F2E0FF" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="44" FontColor="#F7F2E0FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V5.Sub" Font="Aurelion-SemiBold" FontSize="18" FontColor="#F7F2E0A6" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-SemiBold" FontSize="18" FontColor="#F7F2E0A6" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V5.Kicker" Font="Aurelion-Bold" FontSize="13" FontColor="#80AEE8FF" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="13" FontColor="#80AEE8FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V5.Badge" Font="Aurelion-Bold" FontSize="14" FontColor="#80AEE8FF" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="14" FontColor="#80AEE8FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V5.Name" Font="Aurelion-Bold" FontSize="46" FontColor="#F7F2E0FF" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="46" FontColor="#F7F2E0FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V5.Line" Font="Aurelion-SemiBold" FontSize="16" FontColor="#F7F2E0A0" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-SemiBold" FontSize="16" FontColor="#F7F2E0A0" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V5.Lbl" Font="Aurelion-Bold" FontSize="13" FontColor="#F7F2E080" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="13" FontColor="#F7F2E080" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V5.Rank" Font="Aurelion-Bold" FontSize="14" FontColor="#F7F2E0D0" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="14" FontColor="#F7F2E0D0" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V5.Val" Font="Aurelion-Bold" FontSize="19" FontColor="#F7F2E0FF" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="19" FontColor="#F7F2E0FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V5.ValAm" Font="Aurelion-Bold" FontSize="19" FontColor="#80AEE8FF" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="19" FontColor="#80AEE8FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V5.TLbl" Font="Aurelion-Bold" FontSize="12" FontColor="#F7F2E080" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="12" FontColor="#F7F2E080" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V5.SkName" Font="Aurelion-SemiBold" FontSize="13" FontColor="#F7F2E0E0" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-SemiBold" FontSize="13" FontColor="#F7F2E0E0" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V5.SkVal" Font="Aurelion-Bold" FontSize="22" FontColor="#80AEE8FF" TextHorizontalAlignment="Left" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="22" FontColor="#80AEE8FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V5.Chip" Font="Aurelion-Bold" FontSize="13" FontColor="#F7F2E0E6" TextHorizontalAlignment="Left" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="13" FontColor="#F7F2E0E6" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V5.Cta" Font="Aurelion-Bold" FontSize="21" FontColor="#F7F2E0FF" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="21" FontColor="#F7F2E0FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V5.BtnText" Font="Aurelion-Bold" FontSize="17" FontColor="#F7F2E0FF" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="17" FontColor="#F7F2E0FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V5.Body" Font="Aurelion-SemiBold" FontSize="15" FontColor="#F7F2E0A6" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-SemiBold" FontSize="15" FontColor="#F7F2E0A6" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V5.Empty" Font="Aurelion-Bold" FontSize="30" FontColor="#F7F2E0FF" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="30" FontColor="#F7F2E0FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V5.Warn" Font="Aurelion-Bold" FontSize="14" FontColor="#E56B6FFF" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="14" FontColor="#E56B6FFF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V5.Live" Font="Aurelion-Bold" FontSize="15" FontColor="#F7F2E0E6" TextHorizontalAlignment="Left" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="15" FontColor="#F7F2E0E6" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V5.Foot" Font="Aurelion-SemiBold" FontSize="14" FontColor="#F7F2E080" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-SemiBold" FontSize="14" FontColor="#F7F2E080" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V5.Load" Font="Aurelion-Bold" FontSize="20" FontColor="#F7F2E0D9" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="20" FontColor="#F7F2E0D9" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V5.Wordmark" Font="Aurelion-Bold" FontSize="30" FontColor="#F7F2E0FF" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="30" FontColor="#F7F2E0FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V5.Small" Font="Aurelion-SemiBold" FontSize="13" FontColor="#F7F2E099" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-SemiBold" FontSize="13" FontColor="#F7F2E099" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V5.Huge" Font="Aurelion-Bold" FontSize="84" FontColor="#F7F2E0FF" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="84" FontColor="#F7F2E0FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V5.H2" Font="Aurelion-Bold" FontSize="34" FontColor="#F7F2E0FF" TextHorizontalAlignment="Left" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="34" FontColor="#F7F2E0FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V5.MeterL" Font="Aurelion-Bold" FontSize="16" FontColor="#F7F2E0D9" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="16" FontColor="#F7F2E0D9" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V5.FeatPos" Font="Aurelion-SemiBold" FontSize="16" FontColor="#80AEE8FF" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-SemiBold" FontSize="16" FontColor="#80AEE8FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V5.FeatNeg" Font="Aurelion-SemiBold" FontSize="16" FontColor="#E56B6FFF" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-SemiBold" FontSize="16" FontColor="#E56B6FFF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V5.AttName" Font="Aurelion-Bold" FontSize="14" FontColor="#F7F2E0F0" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="14" FontColor="#F7F2E0F0" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V5.SecTitle" Font="Aurelion-Bold" FontSize="22" FontColor="#F7F2E0FF" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="22" FontColor="#F7F2E0FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V5.Ttl" Font="Aurelion-Bold" FontSize="40" FontColor="#F7F2E0FF" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="40" FontColor="#F7F2E0FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V5.Body2" Font="Aurelion-SemiBold" FontSize="15" FontColor="#F7F2E0D9" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-SemiBold" FontSize="15" FontColor="#F7F2E0D9" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V5.OptText" Font="Aurelion-Bold" FontSize="17" FontColor="#F7F2E0F0" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="17" FontColor="#F7F2E0F0" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V5.Opt">
+    <Layers>
+      <BrushLayer Name="Default" Sprite="aur_v5\tile_9" />
+    </Layers>
+    <Styles>
+      <Style Name="Default">
+        <BrushLayer Name="Default" Sprite="aur_v5\tile_9" />
+      </Style>
+      <Style Name="Hovered">
+        <BrushLayer Name="Default" Sprite="aur_v5\tile_h_9" />
+      </Style>
+      <Style Name="Pressed">
+        <BrushLayer Name="Default" Sprite="aur_v5\tile_on_9" />
+      </Style>
+      <Style Name="Selected">
+        <BrushLayer Name="Default" Sprite="aur_v5\tile_on_9" />
+      </Style>
+      <Style Name="Disabled">
+        <BrushLayer Name="Default" Sprite="aur_v5\tile_9" AlphaFactor="0.45" />
+      </Style>
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V5.Thumb">
+    <Layers>
+      <BrushLayer Name="Default" Sprite="aur_v5\pip_on" />
+    </Layers>
+    <Styles>
+      <Style Name="Default">
+        <BrushLayer Name="Default" Sprite="aur_v5\pip_on" />
+      </Style>
+      <Style Name="Hovered">
+        <BrushLayer Name="Default" Sprite="aur_v5\pip_on" />
+      </Style>
+      <Style Name="Pressed">
+        <BrushLayer Name="Default" Sprite="aur_v5\pip_on" />
+      </Style>
+      <Style Name="Selected">
+        <BrushLayer Name="Default" Sprite="aur_v5\pip_on" />
+      </Style>
+      <Style Name="Disabled">
+        <BrushLayer Name="Default" Sprite="aur_v5\pip_on" AlphaFactor="0.45" />
+      </Style>
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V5.ConvLine" Font="Aurelion-SemiBold" FontSize="20" FontColor="#F7F2E0F2" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-SemiBold" FontSize="20" FontColor="#F7F2E0F2" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V5.Speaker" Font="Aurelion-Bold" FontSize="24" FontColor="#80AEE8FF" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="24" FontColor="#80AEE8FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V5.Answer">
+    <Layers>
+      <BrushLayer Name="Default" Sprite="aur_v5\tile_9" />
+    </Layers>
+    <Styles>
+      <Style Name="Default">
+        <BrushLayer Name="Default" Sprite="aur_v5\tile_9" />
+      </Style>
+      <Style Name="Hovered">
+        <BrushLayer Name="Default" Sprite="aur_v5\tile_h_9" />
+      </Style>
+      <Style Name="Pressed">
+        <BrushLayer Name="Default" Sprite="aur_v5\tile_on_9" />
+      </Style>
+      <Style Name="Selected">
+        <BrushLayer Name="Default" Sprite="aur_v5\tile_on_9" />
+      </Style>
+      <Style Name="Disabled">
+        <BrushLayer Name="Default" Sprite="aur_v5\tile_9" AlphaFactor="0.45" />
+      </Style>
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V5.AnswerSp">
+    <Layers>
+      <BrushLayer Name="Default" Sprite="aur_v5\skc_up_9" />
+    </Layers>
+    <Styles>
+      <Style Name="Default">
+        <BrushLayer Name="Default" Sprite="aur_v5\skc_up_9" />
+      </Style>
+      <Style Name="Hovered">
+        <BrushLayer Name="Default" Sprite="aur_v5\tile_h_9" />
+      </Style>
+      <Style Name="Pressed">
+        <BrushLayer Name="Default" Sprite="aur_v5\tile_on_9" />
+      </Style>
+      <Style Name="Selected">
+        <BrushLayer Name="Default" Sprite="aur_v5\tile_on_9" />
+      </Style>
+      <Style Name="Disabled">
+        <BrushLayer Name="Default" Sprite="aur_v5\skc_up_9" AlphaFactor="0.45" />
+      </Style>
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V5.BtnPr">
+    <Layers>
+      <BrushLayer Name="Default" Sprite="aur_v5\btn_pr_9" />
+    </Layers>
+    <Styles>
+      <Style Name="Default">
+        <BrushLayer Name="Default" Sprite="aur_v5\btn_pr_9" />
+      </Style>
+      <Style Name="Hovered">
+        <BrushLayer Name="Default" Sprite="aur_v5\btn_pr_h_9" />
+      </Style>
+      <Style Name="Pressed">
+        <BrushLayer Name="Default" Sprite="aur_v5\btn_pr_h_9" />
+      </Style>
+      <Style Name="Selected">
+        <BrushLayer Name="Default" Sprite="aur_v5\btn_pr_h_9" />
+      </Style>
+      <Style Name="Disabled">
+        <BrushLayer Name="Default" Sprite="aur_v5\btn_pr_9" AlphaFactor="0.45" />
+      </Style>
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V5.Btn">
+    <Layers>
+      <BrushLayer Name="Default" Sprite="aur_v5\btn_9" />
+    </Layers>
+    <Styles>
+      <Style Name="Default">
+        <BrushLayer Name="Default" Sprite="aur_v5\btn_9" />
+      </Style>
+      <Style Name="Hovered">
+        <BrushLayer Name="Default" Sprite="aur_v5\btn_h_9" />
+      </Style>
+      <Style Name="Pressed">
+        <BrushLayer Name="Default" Sprite="aur_v5\btn_h_9" />
+      </Style>
+      <Style Name="Selected">
+        <BrushLayer Name="Default" Sprite="aur_v5\btn_h_9" />
+      </Style>
+      <Style Name="Disabled">
+        <BrushLayer Name="Default" Sprite="aur_v5\btn_9" AlphaFactor="0.45" />
+      </Style>
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.V5.CardFrame">
+    <Layers>
+      <BrushLayer Name="Default" Sprite="aur_v5\frame_9" />
+    </Layers>
+    <Styles>
+      <Style Name="Default">
+        <BrushLayer Name="Default" Sprite="aur_v5\frame_9" />
+      </Style>
+      <Style Name="Hovered">
+        <BrushLayer Name="Default" Sprite="aur_v5\frame_h_9" />
+      </Style>
+      <Style Name="Pressed">
+        <BrushLayer Name="Default" Sprite="aur_v5\frame_h_9" />
+      </Style>
+      <Style Name="Selected">
+        <BrushLayer Name="Default" Sprite="aur_v5\frame_h_9" />
+      </Style>
+      <Style Name="Disabled">
+        <BrushLayer Name="Default" Sprite="aur_v5\frame_9" AlphaFactor="0.45" />
+      </Style>
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.L.Chip" Font="Aurelion-SemiBold" FontSize="14" FontColor="#F7F2E0FF" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-SemiBold" FontSize="14" FontColor="#F7F2E0FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.L.Law" Font="Aurelion-Bold" FontSize="14" FontColor="#80AEE8FF" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="14" FontColor="#80AEE8FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.L.Tip" Font="Aurelion-SemiBold" FontSize="18" FontColor="#F7F2E0FF" TextHorizontalAlignment="Right" TextVerticalAlignment="Top">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-SemiBold" FontSize="18" FontColor="#F7F2E0FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.L.Title" Font="Aurelion-Bold" FontSize="16" FontColor="#F7F2E0FF" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="16" FontColor="#F7F2E0FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.L.Pct" Font="Aurelion-Bold" FontSize="16" FontColor="#80AEE8FF" TextHorizontalAlignment="Left" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="16" FontColor="#80AEE8FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.L.StOk" Font="Aurelion-Bold" FontSize="14" FontColor="#F7F2E0FF" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="14" FontColor="#F7F2E0FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.L.StOn" Font="Aurelion-Bold" FontSize="14" FontColor="#80AEE8FF" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="14" FontColor="#80AEE8FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.L.StDim" Font="Aurelion-Bold" FontSize="14" FontColor="#F7F2E09E" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="14" FontColor="#F7F2E09E" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.L.Status" Font="Aurelion-SemiBold" FontSize="13" FontColor="#F7F2E09E" TextHorizontalAlignment="Right" TextVerticalAlignment="Top">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-SemiBold" FontSize="13" FontColor="#F7F2E09E" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.C.Title" Font="Aurelion-Bold" FontSize="40" FontColor="#F7F2E0FF" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="40" FontColor="#F7F2E0FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.C.Sub" Font="Aurelion-SemiBold" FontSize="16" FontColor="#F7F2E09E" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-SemiBold" FontSize="16" FontColor="#F7F2E09E" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.C.Tag" Font="Aurelion-Bold" FontSize="13" FontColor="#F7F2E0FF" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="13" FontColor="#F7F2E0FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.C.Lbl" Font="Aurelion-Bold" FontSize="13" FontColor="#F7F2E080" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="13" FontColor="#F7F2E080" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.C.Name" Font="Aurelion-Bold" FontSize="50" FontColor="#F7F2E0FF" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="50" FontColor="#F7F2E0FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.C.Line" Font="Aurelion-SemiBold" FontSize="15" FontColor="#F7F2E09E" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-SemiBold" FontSize="15" FontColor="#F7F2E09E" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.C.B" Font="Aurelion-Bold" FontSize="16" FontColor="#F7F2E0FF" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="16" FontColor="#F7F2E0FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.C.BAcc" Font="Aurelion-Bold" FontSize="16" FontColor="#80AEE8FF" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="16" FontColor="#80AEE8FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.C.StV" Font="Aurelion-Bold" FontSize="18" FontColor="#F7F2E0FF" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="18" FontColor="#F7F2E0FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.C.StVAm" Font="Aurelion-Bold" FontSize="18" FontColor="#80AEE8FF" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="18" FontColor="#80AEE8FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.C.StL" Font="Aurelion-Bold" FontSize="12" FontColor="#F7F2E08C" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="12" FontColor="#F7F2E08C" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.C.SkN" Font="Aurelion-Bold" FontSize="13" FontColor="#F7F2E0E0" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="13" FontColor="#F7F2E0E0" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.C.SkV" Font="Aurelion-Bold" FontSize="20" FontColor="#80AEE8FF" TextHorizontalAlignment="Left" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="20" FontColor="#80AEE8FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.C.Away" Font="Aurelion-SemiBold" FontSize="14" FontColor="#F7F2E0FF" TextHorizontalAlignment="Right" TextVerticalAlignment="Top">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-SemiBold" FontSize="14" FontColor="#F7F2E0FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.C.Cta" Font="Aurelion-Bold" FontSize="22" FontColor="#F7F2E0FF" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="22" FontColor="#F7F2E0FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.C.Btn" Font="Aurelion-Bold" FontSize="20" FontColor="#F7F2E0FF" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="20" FontColor="#F7F2E0FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.C.Back" Font="Aurelion-Bold" FontSize="17" FontColor="#F7F2E0FF" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="17" FontColor="#F7F2E0FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.C.NewT" Font="Aurelion-Bold" FontSize="30" FontColor="#F7F2E0FF" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="30" FontColor="#F7F2E0FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.C.NewS" Font="Aurelion-SemiBold" FontSize="15" FontColor="#F7F2E09E" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-SemiBold" FontSize="15" FontColor="#F7F2E09E" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.C.Foot" Font="Aurelion-SemiBold" FontSize="14" FontColor="#F7F2E09E" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-SemiBold" FontSize="14" FontColor="#F7F2E09E" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.C.Kbd" Font="Aurelion-Bold" FontSize="11" FontColor="#F7F2E0B3" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="11" FontColor="#F7F2E0B3" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.C.Busy" Font="Aurelion-Bold" FontSize="14" FontColor="#E56B6FFF" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="14" FontColor="#E56B6FFF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.C.Ib">
+    <Layers>
+      <BrushLayer Name="Default" Sprite="aur_v5\ib_9" />
+    </Layers>
+    <Styles>
+      <Style Name="Default">
+        <BrushLayer Name="Default" Sprite="aur_v5\ib_9" />
+      </Style>
+      <Style Name="Hovered">
+        <BrushLayer Name="Default" Sprite="aur_v5\ib_h_9" />
+      </Style>
+      <Style Name="Pressed">
+        <BrushLayer Name="Default" Sprite="aur_v5\ib_h_9" />
+      </Style>
+      <Style Name="Selected">
+        <BrushLayer Name="Default" Sprite="aur_v5\ib_h_9" />
+      </Style>
+      <Style Name="Disabled">
+        <BrushLayer Name="Default" Sprite="aur_v5\ib_9" AlphaFactor="0.45" />
+      </Style>
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.C.Card">
+    <Layers>
+      <BrushLayer Name="Default" Sprite="aur_v5\card16_9" />
+    </Layers>
+    <Styles>
+      <Style Name="Default">
+        <BrushLayer Name="Default" Sprite="aur_v5\card16_9" />
+      </Style>
+      <Style Name="Hovered">
+        <BrushLayer Name="Default" Sprite="aur_v5\card16_h_9" />
+      </Style>
+      <Style Name="Pressed">
+        <BrushLayer Name="Default" Sprite="aur_v5\card16_h_9" />
+      </Style>
+      <Style Name="Selected">
+        <BrushLayer Name="Default" Sprite="aur_v5\card16_h_9" />
+      </Style>
+      <Style Name="Disabled">
+        <BrushLayer Name="Default" Sprite="aur_v5\card16_9" AlphaFactor="0.45" />
+      </Style>
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.CU.Step" Font="Aurelion-Bold" FontSize="13" FontColor="#F7F2E061" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="13" FontColor="#F7F2E061" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.CU.StepOn" Font="Aurelion-Bold" FontSize="13" FontColor="#0B0A0CFF" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="13" FontColor="#0B0A0CFF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.CU.Name" Font="Aurelion-Bold" FontSize="72" FontColor="#F7F2E0FF" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="72" FontColor="#F7F2E0FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.CU.Short" Font="Aurelion-SemiBold" FontSize="19" FontColor="#F7F2E09E" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-SemiBold" FontSize="19" FontColor="#F7F2E09E" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.CU.FactL" Font="Aurelion-Bold" FontSize="12" FontColor="#F7F2E08C" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="12" FontColor="#F7F2E08C" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.CU.FactV" Font="Aurelion-Bold" FontSize="18" FontColor="#F7F2E0FF" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="18" FontColor="#F7F2E0FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.CU.FactVAcc" Font="Aurelion-Bold" FontSize="18" FontColor="#80AEE8FF" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="18" FontColor="#80AEE8FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.CU.FactVs" Font="Aurelion-Bold" FontSize="15" FontColor="#F7F2E0FF" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="15" FontColor="#F7F2E0FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.CU.ML" Font="Aurelion-Bold" FontSize="15" FontColor="#F7F2E0FF" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="15" FontColor="#F7F2E0FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.CU.MV" Font="Aurelion-Bold" FontSize="15" FontColor="#80AEE8FF" TextHorizontalAlignment="Left" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="15" FontColor="#80AEE8FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.CU.Ft" Font="Aurelion-Bold" FontSize="16" FontColor="#F7F2E0FF" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="16" FontColor="#F7F2E0FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.CU.Plus" Font="Aurelion-Bold" FontSize="20" FontColor="#80AEE8FF" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="20" FontColor="#80AEE8FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.CU.Minus" Font="Aurelion-Bold" FontSize="20" FontColor="#E56B6FFF" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="20" FontColor="#E56B6FFF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.CU.CapN" Font="Aurelion-Bold" FontSize="28" FontColor="#F7F2E0FF" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="28" FontColor="#F7F2E0FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.CU.CapE" Font="Aurelion-Bold" FontSize="14" FontColor="#F7F2E09E" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="14" FontColor="#F7F2E09E" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.CU.HT" Font="Aurelion-Bold" FontSize="30" FontColor="#F7F2E0FF" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="30" FontColor="#F7F2E0FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.CU.HS" Font="Aurelion-SemiBold" FontSize="14" FontColor="#F7F2E09E" TextHorizontalAlignment="Right" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-SemiBold" FontSize="14" FontColor="#F7F2E09E" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.CU.SealN" Font="Aurelion-Bold" FontSize="14" FontColor="#F7F2E08C" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="14" FontColor="#F7F2E08C" />
+      <Style Name="Hovered" Font="Aurelion-Bold" FontSize="14" FontColor="#F7F2E0D0" />
+      <Style Name="Selected" Font="Aurelion-Bold" FontSize="14" FontColor="#F7F2E0FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.E.Num" Font="Aurelion-Bold" FontSize="24" FontColor="#80AEE8FF" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="24" FontColor="#80AEE8FF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.E.NumBad" Font="Aurelion-Bold" FontSize="24" FontColor="#E56B6FFF" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="24" FontColor="#E56B6FFF" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.E.Lbl" Font="Aurelion-Bold" FontSize="13" FontColor="#F7F2E080" TextHorizontalAlignment="Center" TextVerticalAlignment="Center">
+    <Styles>
+      <Style Name="Default" Font="Aurelion-Bold" FontSize="13" FontColor="#F7F2E080" />
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.Cult5.Art">
+    <Layers>
+      <BrushLayer Name="Default" Sprite="aur_v5\stage_9" />
+    </Layers>
+    <Styles>
+      <Style Name="Default">
+        <BrushLayer Name="Default" Sprite="aur_v5\stage_9" />
+      </Style>
+      <Style Name="empire">
+        <BrushLayer Name="Default" Sprite="aur_cult5\art_empire" />
+      </Style>
+      <Style Name="vlandia">
+        <BrushLayer Name="Default" Sprite="aur_cult5\art_vlandia" />
+      </Style>
+      <Style Name="sturgia">
+        <BrushLayer Name="Default" Sprite="aur_cult5\art_sturgia" />
+      </Style>
+      <Style Name="battania">
+        <BrushLayer Name="Default" Sprite="aur_cult5\art_battania" />
+      </Style>
+      <Style Name="khuzait">
+        <BrushLayer Name="Default" Sprite="aur_cult5\art_khuzait" />
+      </Style>
+      <Style Name="aserai">
+        <BrushLayer Name="Default" Sprite="aur_cult5\art_aserai" />
+      </Style>
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.Cult5.Med">
+    <Layers>
+      <BrushLayer Name="Default" Sprite="aur_cult5\med_default" />
+    </Layers>
+    <Styles>
+      <Style Name="Default">
+        <BrushLayer Name="Default" Sprite="aur_cult5\med_default" />
+      </Style>
+      <Style Name="empire">
+        <BrushLayer Name="Default" Sprite="aur_cult5\med_empire" />
+      </Style>
+      <Style Name="vlandia">
+        <BrushLayer Name="Default" Sprite="aur_cult5\med_vlandia" />
+      </Style>
+      <Style Name="sturgia">
+        <BrushLayer Name="Default" Sprite="aur_cult5\med_sturgia" />
+      </Style>
+      <Style Name="battania">
+        <BrushLayer Name="Default" Sprite="aur_cult5\med_battania" />
+      </Style>
+      <Style Name="khuzait">
+        <BrushLayer Name="Default" Sprite="aur_cult5\med_khuzait" />
+      </Style>
+      <Style Name="aserai">
+        <BrushLayer Name="Default" Sprite="aur_cult5\med_aserai" />
+      </Style>
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.CU.Amb">
+    <Layers>
+      <BrushLayer Name="Default" Sprite="aur_v5\stage_9" />
+    </Layers>
+    <Styles>
+      <Style Name="Default">
+        <BrushLayer Name="Default" Sprite="aur_v5\stage_9" />
+      </Style>
+      <Style Name="empire">
+        <BrushLayer Name="Default" Sprite="aur_v5\amb_empire" />
+      </Style>
+      <Style Name="vlandia">
+        <BrushLayer Name="Default" Sprite="aur_v5\amb_vlandia" />
+      </Style>
+      <Style Name="sturgia">
+        <BrushLayer Name="Default" Sprite="aur_v5\amb_sturgia" />
+      </Style>
+      <Style Name="battania">
+        <BrushLayer Name="Default" Sprite="aur_v5\amb_battania" />
+      </Style>
+      <Style Name="khuzait">
+        <BrushLayer Name="Default" Sprite="aur_v5\amb_khuzait" />
+      </Style>
+      <Style Name="aserai">
+        <BrushLayer Name="Default" Sprite="aur_v5\amb_aserai" />
+      </Style>
+    </Styles>
+  </Brush>
+  <Brush Name="Aur.CU.MFill">
+    <Layers>
+      <BrushLayer Name="Default" Sprite="aur_v5\pip_on" />
+    </Layers>
+    <Styles>
+      <Style Name="Default">
+        <BrushLayer Name="Default" Sprite="aur_v5\pip_on" />
+      </Style>
+      <Style Name="empire">
+        <BrushLayer Name="Default" Sprite="aur_v5\mfill_empire" />
+      </Style>
+      <Style Name="vlandia">
+        <BrushLayer Name="Default" Sprite="aur_v5\mfill_vlandia" />
+      </Style>
+      <Style Name="sturgia">
+        <BrushLayer Name="Default" Sprite="aur_v5\mfill_sturgia" />
+      </Style>
+      <Style Name="battania">
+        <BrushLayer Name="Default" Sprite="aur_v5\mfill_battania" />
+      </Style>
+      <Style Name="khuzait">
+        <BrushLayer Name="Default" Sprite="aur_v5\mfill_khuzait" />
+      </Style>
+      <Style Name="aserai">
+        <BrushLayer Name="Default" Sprite="aur_v5\mfill_aserai" />
+      </Style>
+    </Styles>
+  </Brush>
+  <!-- the balance of power in conversations: a flat bar, so each side shows its own kingdom colour (the game's bar is gold stone) -->
+  <Brush Name="Aur.V5.PowerL">
+    <Layers>
+      <BrushLayer Name="Default" Sprite="aur_v5\white" />
+    </Layers>
+  </Brush>
+  <Brush Name="Aur.V5.PowerR">
+    <Layers>
+      <BrushLayer Name="Default" Sprite="aur_v5\white" />
+    </Layers>
+  </Brush>
+</Brushes>
