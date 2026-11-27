@@ -1,0 +1,24 @@
+<Window>
+  <EncyclopediaListItemButtonWidget DoNotPassEventsToChildren="true" Command.Click="Execute" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" SuggestedHeight="37" Brush="Encyclopedia.ListButton" IsHidden="@IsFiltered" Command.HoverBegin="ExecuteBeginTooltip" Command.HoverEnd="ExecuteEndTooltip" ListItemId="@Id" IsInfoAvailable="@PlayerCanSeeValues" InfoAvailableItemNameBrush="EncyclopediaList.Filter.Name.Text" InfoUnvailableItemNameBrush="EncyclopediaList.Item.InfoUnavailable.Name.Text" ListItemNameTextWidget="ItemParentListPanel\ListItemNameTextWidget" ListComparedValueTextWidget="ItemParentListPanel\ListComparedValueTextWidget">
+    <Children>
+      
+      <ListPanel Id="ItemParentListPanel" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" StackLayout.LayoutMethod="HorizontalLeftToRight">
+        <Children>
+          <!--Star if bookmarked-->
+          <Widget IsVisible="@IsBookmarked" IsSelected="true" DoNotPassEventsToChildren="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="35" SuggestedHeight="35" HorizontalAlignment="Center" Sprite="Encyclopedia\star_without_glow" Color="#80AEE8FF" />
+          
+          <!--Space if not bookmarked-->
+          <Widget IsHidden="@IsBookmarked" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="35" SuggestedHeight="35" HorizontalAlignment="Center" VerticalAlignment="Center" />
+      
+          <!--Name-->
+          <ScrollingTextWidget Id="ListItemNameTextWidget" WidthSizePolicy="Fixed" HeightSizePolicy="CoverChildren" VerticalAlignment="Center" SuggestedWidth="500" MarginLeft="5" Text="@Name"/>
+
+          <!--Compared Value-->
+          <TextWidget Id="ListComparedValueTextWidget" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" VerticalAlignment="Center" MarginLeft="30" Text="@ComparedValue"/>
+        </Children>
+      </ListPanel>
+
+    </Children>
+  </EncyclopediaListItemButtonWidget>
+
+</Window>

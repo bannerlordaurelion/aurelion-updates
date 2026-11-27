@@ -28,8 +28,8 @@
         {
           "path": "aurelion/build.json",
           "size": 76,
-          "sha256": "217B26A2CF8C328B15EED8A997B3DDD3CE49A4CB16DAA9E08C0A42319E8A7709",
-          "url": "217b26a2_build.json"
+          "sha256": "05DDC907EBE7CD3EC55E57ADAABEA7D325C9B221A07D5E32ADDF8DFBD8C7A549",
+          "url": "05ddc907_build.json"
         },
         {
           "path": "aurelion/prices.json",
@@ -51,9 +51,9 @@
         },
         {
           "path": "aurelion/studio-project.json",
-          "size": 882181,
-          "sha256": "93372006F1327CAE89DFCFA25FA0D406C81C0ACF30CFBDFB6DF78A4B48DAFAB9",
-          "url": "93372006_studio-project.json"
+          "size": 883857,
+          "sha256": "55F6BF938429A40EB11DF2BA79CF6DD73CDE665BF92E33DC72EBA67A063A60F8",
+          "url": "55f6bf93_studio-project.json"
         },
         {
           "path": "aurelion/update-server.ps1",
@@ -69,9 +69,9 @@
         },
         {
           "path": "bin/Win64_Shipping_Client/Aurelion.Core.dll",
-          "size": 603648,
-          "sha256": "F3A29A16B7E576442A3F647416F0231EE87EE00D9C38F980EA9F211952CC3788",
-          "url": "f3a29a16_Aurelion.Core.dll"
+          "size": 604672,
+          "sha256": "0931BE73D7EAE3510E50350FF2747F98FBE87C99604B0D5D94802B59AA8D695A",
+          "url": "0931be73_Aurelion.Core.dll"
         },
         {
           "path": "bin/Win64_Shipping_Client/Autofac.dll",
@@ -608,6 +608,24 @@
           "url": "a93148e2_EncounterOverlay.xml"
         },
         {
+          "path": "GUI/AurelionScreens/EncyclopediaBar.xml",
+          "size": 11265,
+          "sha256": "960F542C709D6D7BE463EA3AE4561D70C1BDD47AD87BD7DF0FE8904A0B6F499D",
+          "url": "960f542c_EncyclopediaBar.xml"
+        },
+        {
+          "path": "GUI/AurelionScreens/EncyclopediaHeroPage.xml",
+          "size": 27052,
+          "sha256": "BB005062045A6775D0EE059B643F15B20983E59F3DBEA65C48814EB5E9915282",
+          "url": "bb005062_EncyclopediaHeroPage.xml"
+        },
+        {
+          "path": "GUI/AurelionScreens/EncyclopediaItemListItem.xml",
+          "size": 1993,
+          "sha256": "EC8CD5BBE35FF7D5469D047ABFC94CC924C693BB5D44F982155381AC7E58BD88",
+          "url": "ec8cd5bb_EncyclopediaItemListItem.xml"
+        },
+        {
           "path": "GUI/AurelionScreens/EscapeMenu.xml",
           "size": 6205,
           "sha256": "807E75147AFB37E5BBEF0AADE5A43012C174C7047063C571FC2BAAB38A724A2C",
@@ -729,9 +747,9 @@
         },
         {
           "path": "GUI/AurelionScreens/Inventory.xml",
-          "size": 67416,
-          "sha256": "FD913475F1B5F8E3BF96B328928FF9D5EB25B23BC0D4CDEC44900C515CF866ED",
-          "url": "fd913475_Inventory.xml"
+          "size": 67380,
+          "sha256": "99094155F50325AF9188682CFAE2740FE44E4784825CC38D4C805DFF8FD23BC9",
+          "url": "99094155_Inventory.xml"
         },
         {
           "path": "GUI/AurelionScreens/InventoryItemTuple.xml",
@@ -792,6 +810,18 @@
           "size": 8370,
           "sha256": "8153F3C793CD41EE80779762E8001BE23ED391428AD231DF66B709EAAC4C4967",
           "url": "8153f3c7_PropertyBasedTooltip.xml"
+        },
+        {
+          "path": "GUI/AurelionScreens/QuestsScreen.xml",
+          "size": 37820,
+          "sha256": "59D22CA28422B1E24C4F843705BFAEE5C5E2F3ADA2636539D7440BFF2A3DC8C7",
+          "url": "59d22ca2_QuestsScreen.xml"
+        },
+        {
+          "path": "GUI/AurelionScreens/RecruitmentPopup.xml",
+          "size": 20589,
+          "sha256": "BD4555EC1009BCF959A3BB204AD44B4D30DF1870379EAC17227A0E802FC576D0",
+          "url": "bd4555ec_RecruitmentPopup.xml"
         },
         {
           "path": "GUI/AurelionScreens/RecruitTroopPanel.xml",
@@ -864,6 +894,12 @@
           "size": 6398,
           "sha256": "A19E563297201FA21339532E79C057F97E2B02BFFA0DA3921D4A88FBA1A21162",
           "url": "a19e5632_TextQueryPopup.xml"
+        },
+        {
+          "path": "GUI/AurelionScreens/Tournament.xml",
+          "size": 34223,
+          "sha256": "6811A3BAB9DB7632FB3656EF4E730FFDA091B64D3AA50E7671CB4A76E1924B8C",
+          "url": "6811a3ba_Tournament.xml"
         },
         {
           "path": "GUI/AurelionScreens/TownManagement.xml",
@@ -1035,9 +1071,9 @@
         },
         {
           "path": "GUI/Prefabs/CoopTournamentScreen.xml",
-          "size": 35453,
-          "sha256": "F5449EA591B4669BA268C7B447E782833BABC82C96CAE36269ACE40403985A7C",
-          "url": "CoopTournamentScreen.xml"
+          "size": 35505,
+          "sha256": "6F3FFBFE1D48514C5415246F9750BD5A960189DDCB563A458CEB549667C6EC61",
+          "url": "6f3ffbfe_CoopTournamentScreen.xml"
         },
         {
           "path": "GUI/Prefabs/CoopVoiceSpeakers.xml",
@@ -1143,9 +1179,9 @@
         },
         {
           "path": "GUI/SpriteSheets/aur_hud_1.png",
-          "size": 14725,
-          "sha256": "749065B120BCE10AC3D761198CFEEB5D798CCFC4D36C35664DCA5A15B48A873C",
-          "url": "749065b1_aur_hud_1.png"
+          "size": 29303,
+          "sha256": "D588B08D38EAB7DCDA84AB9365B67DDFE9AA5050E7FF3E7BD33F3A5A0400F755",
+          "url": "d588b08d_aur_hud_1.png"
         },
         {
           "path": "GUI/SpriteSheets/aur_load_1.png",
@@ -1215,9 +1251,9 @@
         },
         {
           "path": "GUI/Sprites/AurelionSpriteData.xml",
-          "size": 221264,
-          "sha256": "974912CF84D2F86C8C1FDB8B75C9D22E7BC7B7427DCB63A7FFE495FED4A7F2D5",
-          "url": "974912cf_AurelionSpriteData.xml"
+          "size": 221638,
+          "sha256": "C53F130CB2A007E8150703CE940FBAE4C6FD9F0A116772FAE1B0F8FE7891D53C",
+          "url": "c53f130c_AurelionSpriteData.xml"
         },
         {
           "path": "mod-config.default.json",

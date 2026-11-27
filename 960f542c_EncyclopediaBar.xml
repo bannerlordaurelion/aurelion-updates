@@ -1,0 +1,138 @@
+<Prefab>
+  <!-- Aurelion (identity): our dark backdrop and bordeaux title header; the frame, lists and pages are recoloured by UiSkin -->
+  <Constants>
+    <Constant Name="Search.Popup.MarginLeft" Value="221"/>
+    <Constant Name="Search.Popup.MarginRight" Value="221"/>
+    <Constant Name="Search.Popup.MarginBottom" Value="0"/>
+    <Constant Name="Search.Popup.MarginTop" Value="0"/>
+    <!--Sycned with other Encyclopedia Pages-->
+
+    <Constant Name="SearchResult.Popup.MarginRight" Value="!Search.Popup.MarginRight" Additive="-5"/>
+
+    <Constant Name="Search.TextField.Height" Value="40"/>
+    <Constant Name="Search.TextField.MarginTop" Value="!Search.Popup.MarginTop" Additive="!Search.TextField.Height"/>
+
+    <Constant Name="Encyclopedia.Frame.Width" BrushName="Encyclopedia.Frame" BrushLayer="Default" BrushValueType="Width" />
+    <Constant Name="Encyclopedia.Frame.Height" BrushName="Encyclopedia.Frame" BrushLayer="Default" BrushValueType="Height" />
+
+    <Constant Name="DoneButton.Margin.Top" Value="!Encyclopedia.Frame.Height" Additive="-10"/>
+
+    <Constant Name="Popup.CloseButton.Width" BrushName="Popup.CloseButton" BrushLayer="Default" BrushValueType="Width"/>
+    <Constant Name="Popup.CloseButton.Height" BrushName="Popup.CloseButton" BrushLayer="Default" BrushValueType="Height"/>
+  </Constants>
+
+  <Window>
+    <BrushWidget HeightSizePolicy ="StretchToParent" WidthSizePolicy="StretchToParent" Brush="Encyclopedia.SoundBrush" Sprite="BlankWhiteSquare_9" Brush.Color="#0B0A0CE6">
+      <Children>
+
+        <NavigationForcedScopeCollectionTargeter CollectionID="EncyclopediaForcedScopeCollection" UseRootAsTarget="true" />
+
+        <BrushWidget HeightSizePolicy ="Fixed" WidthSizePolicy="Fixed" SuggestedHeight="!Encyclopedia.Frame.Height" SuggestedWidth="!Encyclopedia.Frame.Width" HorizontalAlignment="Center" VerticalAlignment="Center" MarginTop="!Search.Popup.MarginTop" Brush="Encyclopedia.Frame" >
+          <Children>
+
+            <Widget HeightSizePolicy ="Fixed" WidthSizePolicy="StretchToParent" SuggestedHeight="150">
+              <Children>
+
+                <!--Back History Button-->
+                <ButtonWidget Command.Click="ExecuteBack" HeightSizePolicy ="Fixed" WidthSizePolicy="Fixed" SuggestedHeight="48" SuggestedWidth="41" VerticalAlignment="Top" HorizontalAlignment="Left" MarginLeft="45" MarginTop="40" Brush="ButtonRightBigArrowBrush1" IsEnabled="@IsBackEnabled">
+                  <Children>
+                    <Widget DoNotAcceptEvents="true" DoNotPassEventsToChildren="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="60" SuggestedHeight="60" HorizontalAlignment="Left" VerticalAlignment="Center" PositionYOffset="-25" PositionXOffset="-30" IsVisible="@CanSwitchTabs">
+                      <Children>
+                        <InputKeyVisualWidget DataSource="{PreviousPageInputKey}" HeightSizePolicy="StretchToParent" WidthSizePolicy="StretchToParent" KeyID="@KeyID" IsVisible="@IsVisible" />
+                  </Children>
+                    </Widget>
+                  </Children>
+                </ButtonWidget>
+
+                <!--Forward History Button-->
+                <ButtonWidget Command.Click="ExecuteForward" HeightSizePolicy ="Fixed" WidthSizePolicy="Fixed" SuggestedHeight="48" SuggestedWidth="41" VerticalAlignment="Top" HorizontalAlignment="Left" MarginLeft="100" MarginTop="40" Brush="ButtonLeftBigArrowBrush1" IsEnabled="@IsForwardEnabled">
+                  <Children>
+                    <Widget DoNotAcceptEvents="true"  DoNotPassEventsToChildren="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="60" SuggestedHeight="60" HorizontalAlignment="Left" VerticalAlignment="Center" PositionYOffset="-25" PositionXOffset="15" IsVisible="@CanSwitchTabs">
+                      <Children>
+                        <InputKeyVisualWidget DataSource="{NextPageInputKey}" HeightSizePolicy="StretchToParent" WidthSizePolicy="StretchToParent" KeyID="@KeyID" IsVisible="@IsVisible" />
+                  </Children>
+                    </Widget>
+                  </Children>
+                </ButtonWidget>
+
+                <!--Page Title-->
+                <Widget WidthSizePolicy = "Fixed" HeightSizePolicy = "Fixed" SuggestedHeight="150" SuggestedWidth="576" PositionYOffset="-17" HorizontalAlignment="Center" DoNotAcceptEvents="true">
+                  <Children>
+                    <!-- Aurelion: the page title in our bordeaux header --><Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="520" SuggestedHeight="64" HorizontalAlignment="Center" VerticalAlignment="Top" MarginTop="21" Sprite="aur_v6\hd_9" DoNotAcceptEvents="true" /><RichTextWidget WidthSizePolicy = "StretchToParent" HeightSizePolicy = "CoverChildren" VerticalAlignment="Center" PositionYOffset="-22" Brush="Aur.V6.H2C" Text="@PageName" Brush.FontSize="30"/>
+                  </Children>
+                </Widget>
+
+                <!--Current Path Bar-->
+                <Widget HeightSizePolicy ="Fixed" WidthSizePolicy="CoverChildren" SuggestedHeight="48" MinWidth="508" MarginLeft="40" MarginTop="100" Sprite="Encyclopedia\navbar">
+                  <Children>
+                    <RichTextWidget Id="PathBarTextWidget" HeightSizePolicy ="CoverChildren" WidthSizePolicy="CoverChildren" Text="@NavBarString" Command.LinkClick="ExecuteBarLink" Brush="EncyclopediaNavBar.Text" Brush.TextHorizontalAlignment="Left" Brush.TextVerticalAlignment="Center" VerticalAlignment="Center" Brush.FontSize="22" MarginLeft="16">
+                    </RichTextWidget>
+                  </Children>
+                </Widget>
+
+              </Children>
+            </Widget>
+
+          </Children>
+        </BrushWidget>
+
+
+        <!--Search Text Bar-->
+        <NavigationScopeTargeter ScopeID="EncyclopediaSearchButtonScope" ScopeParent="..\SearchButton" ScopeMovements="Vertical" NavigateFromScopeEdges="true" />
+        <EncyclopediaSearchBarBrushWidget Id="SearchButton" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="331" SuggestedHeight="94" Sprite="Encyclopedia\search_bar" VerticalAlignment="Center" HorizontalAlignment="Center" MarginLeft="1000" MarginBottom="840" DoNotAcceptEvents="true" SearchResultPanel="..\SearchResultListScrollablePanel" SearchInputWidget="SearchInputWidget" MinCharAmountToShowResults="@MinCharAmountToShowResults" ShowResults="@IsSearchResultsShown" Command.SearchBarClick="ExecuteOnSearchActivated">
+          <Children>
+            <EditableTextWidget Id="SearchInputWidget" Text="@SearchText" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedHeight="!Search.TextField.Height" SuggestedWidth="255" VerticalAlignment="Center" HorizontalAlignment="Center" Brush="Encyclopedia.Search.TextBox" MarginLeft="12" GamepadNavigationIndex="0"/>
+            <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="25" SuggestedHeight="24" Sprite="Encyclopedia\icon_search" VerticalAlignment="Center" HorizontalAlignment="Right" IsDisabled="true" MarginRight="38"/>
+            <TutorialHighlightItemBrushWidget DoNotAcceptEvents="true" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" MarginLeft="25" MarginRight="15" MarginTop="15" MarginBottom="18" Brush="TutorialHighlightBrush" IsEnabled="false" IsHighlightEnabled="@IsHighlightEnabled" IsVisible="false" />
+          </Children>
+        </EncyclopediaSearchBarBrushWidget>
+
+
+        <ScrollbarWidget HeightSizePolicy ="Fixed" WidthSizePolicy="Fixed" Id="SearchResultListScrollbar" SuggestedHeight="110" SuggestedWidth="15" MinValue = "0" MaxValue = "100" VerticalAlignment="Top" HorizontalAlignment="Center" MarginLeft="1000" MarginTop="115" AlignmentAxis="Vertical"   Handle = "SearchResultListScrollbarHandle" IsVisible="false" IsEnabled="false">
+          <Children>
+            <Widget HeightSizePolicy ="StretchToParent" WidthSizePolicy="Fixed" SuggestedWidth="5"  HorizontalAlignment="Center" IsVisible="false"/>
+            <ImageWidget Id="SearchResultListScrollbarHandle" WidthSizePolicy = "StretchToParent" MarginRight="3" MarginLeft="3" HeightSizePolicy="Fixed" HorizontalAlignment = "Center" IsVisible="false"/>
+          </Children>
+        </ScrollbarWidget>
+
+        <ScrollablePanel Id="SearchResultListScrollablePanel"  HeightSizePolicy ="Fixed" WidthSizePolicy="Fixed" SuggestedHeight="115" SuggestedWidth="260" InnerPanel="SearchResultListRect\SearchResultList" ClipRect="SearchResultListRect" MouseScrollAxis="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center" MarginLeft="1000" MarginBottom="700" VerticalScrollbar="..\SearchResultListScrollbar" AutoHideScrollBars="true" AutoHideScrollBarHandle="true" Sprite="Encyclopedia\search_bar_expansion">
+          <Children>
+
+            <Widget Id="SearchResultListRect" WidthSizePolicy = "StretchToParent" HeightSizePolicy = "StretchToParent" ClipContents = "true" MarginBottom="15" MarginRight="20" MarginLeft="20" MarginTop="5">
+              <Children>
+
+                <NavigationForcedScopeCollectionTargeter CollectionID="EncyclopediaSearchResultsCollection" CollectionParent="..\." CollectionOrder="999" />
+                <NavigationScopeTargeter ScopeID="EncyclopediaSearchResultsScope" ScopeParent="..\SearchResultList" ScopeMovements="Vertical" />
+                <NavigatableListPanel DataSource="{SearchResults}" Id="SearchResultList" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" VerticalAlignment="Top" HorizontalAlignment="Right"  StackLayout.LayoutMethod = "VerticalBottomToTop" >
+                  <ItemTemplate>
+
+                    <ButtonWidget Id="SearchItemButtonWidget" WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="22" Brush="Encyclopedia.ListButton" Command.Click="Execute" >
+                      <Children>
+                        <RichTextWidget WidthSizePolicy = "CoverChildren" HeightSizePolicy="Fixed" SuggestedHeight="20" Text="@NameText" Brush="EncyclopediaSearchResult.Text" Brush.FontSize="20" IsDisabled="true" />
+                      </Children>
+                    </ButtonWidget>
+
+                  </ItemTemplate>
+                </NavigatableListPanel>
+
+              </Children>
+            </Widget>
+
+          </Children>
+        </ScrollablePanel>
+
+        <!--Close Encyclopedia Button-->
+        <ButtonWidget Command.Click="ExecuteCloseEncyclopedia" HeightSizePolicy ="Fixed" WidthSizePolicy="Fixed" SuggestedHeight="!Popup.CloseButton.Height" SuggestedWidth="!Popup.CloseButton.Width" VerticalAlignment="Center" HorizontalAlignment="Center" PositionYOffset="-465" MarginLeft="1465" Brush="Popup.CloseButton">
+          <Children>
+            <Widget DoNotAcceptEvents="true" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Left" VerticalAlignment="Center" PositionXOffset="-25" IsHidden="@IsSearchResultsShown">
+              <Children>
+                <InputKeyVisualWidget DataSource="{CancelInputKey}" DoNotAcceptEvents="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="60" SuggestedHeight="60" KeyID="@KeyID" IsVisible="@IsVisible"/>
+              </Children>
+            </Widget>
+          </Children>
+        </ButtonWidget>
+
+      </Children>
+    </BrushWidget>
+  </Window>
+</Prefab>
